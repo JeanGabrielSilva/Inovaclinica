@@ -30,10 +30,10 @@ namespace Inovaclinica {
             this.footerLabel = new System.Windows.Forms.Label();
             this.footerLabel1 = new System.Windows.Forms.Label();
             this.panelCabecalho = new System.Windows.Forms.Panel();
-            this.footerLabelCabecalho = new System.Windows.Forms.Label();
-            this.footerLabelCabecalho1 = new System.Windows.Forms.Label();
+            this.LogoCabecalho = new System.Windows.Forms.PictureBox();
             this.panelRodape.SuspendLayout();
             this.panelCabecalho.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.LogoCabecalho)).BeginInit();
             this.SuspendLayout();
             // 
             // panelRodape
@@ -71,36 +71,22 @@ namespace Inovaclinica {
             // 
             // panelCabecalho
             // 
-            this.panelCabecalho.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(94)))), ((int)(((byte)(220)))));
-            this.panelCabecalho.Controls.Add(this.footerLabelCabecalho);
-            this.panelCabecalho.Controls.Add(this.footerLabelCabecalho1);
+            this.panelCabecalho.BackColor = System.Drawing.Color.Transparent;
+            this.panelCabecalho.Controls.Add(this.LogoCabecalho);
             this.panelCabecalho.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelCabecalho.Location = new System.Drawing.Point(0, 0);
             this.panelCabecalho.Name = "panelCabecalho";
             this.panelCabecalho.Size = new System.Drawing.Size(1238, 80);
             this.panelCabecalho.TabIndex = 1;
             // 
-            // footerLabelCabecalho
+            // LogoCabecalho
             // 
-            this.footerLabelCabecalho.AutoSize = true;
-            this.footerLabelCabecalho.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Italic);
-            this.footerLabelCabecalho.Location = new System.Drawing.Point(10, 20);
-            this.footerLabelCabecalho.Name = "footerLabelCabecalho";
-            this.footerLabelCabecalho.Size = new System.Drawing.Size(104, 16);
-            this.footerLabelCabecalho.TabIndex = 0;
-            this.footerLabelCabecalho.Text = "INOVACLINICA";
-            this.footerLabelCabecalho.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // footerLabelCabecalho1
-            // 
-            this.footerLabelCabecalho1.AutoSize = true;
-            this.footerLabelCabecalho1.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Italic);
-            this.footerLabelCabecalho1.Location = new System.Drawing.Point(10, 40);
-            this.footerLabelCabecalho1.Name = "footerLabelCabecalho1";
-            this.footerLabelCabecalho1.Size = new System.Drawing.Size(75, 16);
-            this.footerLabelCabecalho1.TabIndex = 1;
-            this.footerLabelCabecalho1.Text = "Cabeçalho";
-            this.footerLabelCabecalho1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LogoCabecalho.Location = new System.Drawing.Point(24, 12);
+            this.LogoCabecalho.Name = "LogoCabecalho";
+            this.LogoCabecalho.Size = new System.Drawing.Size(100, 50);
+            this.LogoCabecalho.TabIndex = 0;
+            this.LogoCabecalho.TabStop = false;
+            this.LogoCabecalho.Click += new System.EventHandler(this.LogoCabecalho_Click);
             // 
             // FormTelaInicial
             // 
@@ -114,7 +100,7 @@ namespace Inovaclinica {
             this.panelRodape.ResumeLayout(false);
             this.panelRodape.PerformLayout();
             this.panelCabecalho.ResumeLayout(false);
-            this.panelCabecalho.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.LogoCabecalho)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -125,8 +111,7 @@ namespace Inovaclinica {
         private Label footerLabel;
         private Label footerLabel1;
         private Panel panelCabecalho;
-        private Label footerLabelCabecalho;
-        private Label footerLabelCabecalho1;
+        private PictureBox LogoCabecalho;
     }
 }
 
