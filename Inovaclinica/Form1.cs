@@ -21,7 +21,7 @@ namespace Inovaclinica {
             string connectionString = ConfigurationManager.ConnectionStrings["InovaclinicaConnectionString"].ConnectionString;
 
             // Query SQL para buscar os dados da tabela 'Produtos'
-            string query = "SELECT * FROM Produtos";
+            string query = "SELECT ProdutoId, Nome, Preco FROM Produtos";
 
             // Usa SqlConnection e SqlDataAdapter para preencher o DataGridView
             using (SqlConnection connection = new SqlConnection(connectionString)) {
