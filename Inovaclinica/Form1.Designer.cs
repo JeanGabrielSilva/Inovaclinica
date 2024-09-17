@@ -34,15 +34,15 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(168, 12);
+            this.dataGridView1.Location = new System.Drawing.Point(40, 12);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(458, 133);
+            this.dataGridView1.Size = new System.Drawing.Size(737, 295);
             this.dataGridView1.TabIndex = 1;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // btnAdicionarProduto
             // 
-            this.btnAdicionarProduto.Location = new System.Drawing.Point(295, 372);
+            this.btnAdicionarProduto.Location = new System.Drawing.Point(298, 403);
             this.btnAdicionarProduto.Name = "btnAdicionarProduto";
             this.btnAdicionarProduto.Size = new System.Drawing.Size(169, 35);
             this.btnAdicionarProduto.TabIndex = 2;
@@ -52,7 +52,7 @@
             // 
             // txtNome
             // 
-            this.txtNome.Location = new System.Drawing.Point(268, 219);
+            this.txtNome.Location = new System.Drawing.Point(264, 313);
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(247, 20);
             this.txtNome.TabIndex = 3;
@@ -60,7 +60,7 @@
             // 
             // txtDescricao
             // 
-            this.txtDescricao.Location = new System.Drawing.Point(267, 259);
+            this.txtDescricao.Location = new System.Drawing.Point(264, 339);
             this.txtDescricao.Name = "txtDescricao";
             this.txtDescricao.Size = new System.Drawing.Size(247, 20);
             this.txtDescricao.TabIndex = 4;
@@ -68,7 +68,7 @@
             // 
             // txtPreco
             // 
-            this.txtPreco.Location = new System.Drawing.Point(264, 298);
+            this.txtPreco.Location = new System.Drawing.Point(264, 365);
             this.txtPreco.Name = "txtPreco";
             this.txtPreco.Size = new System.Drawing.Size(250, 20);
             this.txtPreco.TabIndex = 5;
