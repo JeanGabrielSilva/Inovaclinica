@@ -20,7 +20,7 @@ namespace Inovaclinica {
 
         private void AdicionarRodape() {
             panelRodape.BackColor = ColorTranslator.FromHtml("#945EDC");
-            panelRodape.Dock = DockStyle.Bottom; 
+            panelRodape.Dock = DockStyle.Bottom;
             panelRodape.Height = 80;
 
             Label footerLabelRodape = new Label();
@@ -48,32 +48,27 @@ namespace Inovaclinica {
             panelCabecalho.Height = 80;
 
             string imagePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Img", "LogoTemporario.png");
-                LogoCabecalho.Image = Image.FromFile(imagePath);
+            LogoCabecalho.Image = Image.FromFile(imagePath);
 
-                LogoCabecalho.SizeMode = PictureBoxSizeMode.Zoom;
-                LogoCabecalho.Width = 120;  // Ajuste a largura conforme necessário
-                LogoCabecalho.Height = 60;  // Ajuste a altura conforme necessário
+            LogoCabecalho.SizeMode = PictureBoxSizeMode.Zoom;
+            LogoCabecalho.Width = 120;  // Ajuste a largura conforme necessário
+            LogoCabecalho.Height = 60;  // Ajuste a altura conforme necessário
 
-                // Definir a posição do PictureBox
-                LogoCabecalho.Location = new Point(10, (panelCabecalho.Height - LogoCabecalho.Height) / 2);
+            // Definir a posição do PictureBox
+            LogoCabecalho.Location = new Point(10, (panelCabecalho.Height - LogoCabecalho.Height) / 2);
 
-                // Adicionar o PictureBox ao painel
-                panelCabecalho.Controls.Add(LogoCabecalho);
+            // Adicionar o PictureBox ao painel
+            panelCabecalho.Controls.Add(LogoCabecalho);
 
         }
 
         private void LogoCabecalho_Click(object sender, EventArgs e) {
-            
+
         }
-
-
-
 
         private string GetAssemblyVersion() {
             // Obtém a versão do assembly do projeto
             return System.Reflection.Assembly.GetExecutingAssembly().GetName().Version.ToString();
         }
-
-
     }
 }
