@@ -16,6 +16,7 @@ namespace Inovaclinica {
         private void FormTelaInicial_Load(object sender, EventArgs e) {
             AdicionarRodape();
             AdicionarCabecalho();
+
         }
 
         private void AdicionarRodape() {
@@ -70,5 +71,6 @@ namespace Inovaclinica {
             // Obtém a versão do assembly do projeto
             return System.Reflection.Assembly.GetExecutingAssembly().GetName().Version.ToString();
         }
+
     }
 }
