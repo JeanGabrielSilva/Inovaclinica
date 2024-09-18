@@ -72,5 +72,11 @@ namespace Inovaclinica {
             return System.Reflection.Assembly.GetExecutingAssembly().GetName().Version.ToString();
         }
 
+        private void btnMenuCliente_Click(object sender, EventArgs e)
+        {
+            FormClientes formclientes = new FormClientes();
+            formclientes.Show();
+        }
+
     }
 }
