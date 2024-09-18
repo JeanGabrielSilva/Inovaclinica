@@ -42,7 +42,7 @@ namespace Inovaclinica {
             this.label3 = new System.Windows.Forms.Label();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.button1 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btnMenuCliente = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
@@ -242,7 +242,7 @@ namespace Inovaclinica {
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel2.Controls.Add(this.button1, 0, 1);
-            this.tableLayoutPanel2.Controls.Add(this.button4, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.btnMenuCliente, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.button7, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.button8, 1, 1);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -267,17 +267,18 @@ namespace Inovaclinica {
             this.button1.Text = "button6";
             this.button1.UseVisualStyleBackColor = false;
             // 
-            // button4
+            // btnMenuCliente
             // 
-            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.button4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(3, 3);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(197, 204);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "Clientes";
-            this.button4.UseVisualStyleBackColor = false;
+            this.btnMenuCliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.btnMenuCliente.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnMenuCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMenuCliente.Location = new System.Drawing.Point(3, 3);
+            this.btnMenuCliente.Name = "btnMenuCliente";
+            this.btnMenuCliente.Size = new System.Drawing.Size(197, 204);
+            this.btnMenuCliente.TabIndex = 3;
+            this.btnMenuCliente.Text = "Clientes";
+            this.btnMenuCliente.UseVisualStyleBackColor = false;
+            this.btnMenuCliente.Click += new System.EventHandler(this.btnMenuCliente_Click);
             // 
             // button7
             // 
@@ -410,7 +411,7 @@ namespace Inovaclinica {
         private Button button6;
         private TableLayoutPanel tableLayoutPanel2;
         private Button button1;
-        private Button button4;
+        private Button btnMenuCliente;
         private Button button7;
         private Button button8;
         private TableLayoutPanel tableLayoutPanel3;
