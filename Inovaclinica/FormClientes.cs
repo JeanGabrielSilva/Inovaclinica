@@ -73,25 +73,40 @@ namespace Inovaclinica
 
         private void CustomizeDataGridView()
         {
-            dataGridClientes.ColumnHeadersDefaultCellStyle.BackColor = Color.Navy;
+            // Cores
+            Color headerColor = Color.FromArgb(45, 45, 45);
+            Color rowColor1 = Color.White;
+            Color rowColor2 = Color.FromArgb(230, 230, 255);
+            Color selectionBackColor = Color.FromArgb(153, 102, 255);
+            Color selectionForeColor = Color.White;
+            Color gridColor = Color.LightGray;
+
+            // Aplicando as cores
+            dataGridClientes.ColumnHeadersDefaultCellStyle.BackColor = headerColor;
             dataGridClientes.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
-            dataGridClientes.ColumnHeadersDefaultCellStyle.Font = new Font(dataGridClientes.Font, FontStyle.Bold);
+            dataGridClientes.RowTemplate.DefaultCellStyle.BackColor = rowColor1; // Cor padrão para todas as linhas
+            dataGridClientes.AlternatingRowsDefaultCellStyle.BackColor = rowColor2; // Cor alternada para linhas pares
+            dataGridClientes.DefaultCellStyle.SelectionBackColor = selectionBackColor;
+            dataGridClientes.DefaultCellStyle.SelectionForeColor = selectionForeColor;
+            dataGridClientes.GridColor = gridColor;
 
-            dataGridClientes.DefaultCellStyle.BackColor = Color.LightGray;
-            dataGridClientes.DefaultCellStyle.ForeColor = Color.Black;
-            dataGridClientes.DefaultCellStyle.SelectionBackColor = Color.DarkBlue;
-            dataGridClientes.DefaultCellStyle.SelectionForeColor = Color.White;
+            // Fontes
+            dataGridClientes.Font = new Font("Arial", 10F); // Aumentei o tamanho da fonte para melhor legibilidade
+            dataGridClientes.ColumnHeadersDefaultCellStyle.Font = new Font("Arial", 10F, FontStyle.Bold);
 
-            dataGridClientes.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
-            dataGridClientes.GridColor = Color.LightGray;
+            // Layout
             dataGridClientes.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridClientes.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
-            dataGridClientes.Dock = DockStyle.Fill;
+            dataGridClientes.Dock = DockStyle.Fill; // Ocupa todo o espaço disponível
+            dataGridClientes.RowHeadersVisible = false;
+            dataGridClientes.EnableHeadersVisualStyles = false;
+            dataGridClientes.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            dataGridClientes.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
 
+            // Adicionando uma coluna de seleção (opcional)
             DataGridViewCheckBoxColumn checkBoxColumn = new DataGridViewCheckBoxColumn();
             checkBoxColumn.HeaderText = "Selecionar";
             checkBoxColumn.Name = "checkBoxColumn";
-            dataGridClientes.Columns.Add(checkBoxColumn);
+            dataGridClientes.Columns.Insert(0, checkBoxColumn);
         }
 
         private void label1_Click(object sender, EventArgs e)
