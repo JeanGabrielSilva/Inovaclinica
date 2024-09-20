@@ -9,6 +9,8 @@ using System.IO;
 namespace Inovaclinica {
     public partial class FormTelaInicial : Form {
         public FormTelaInicial() {
+
+            this.WindowState = FormWindowState.Maximized;
             InitializeComponent();
             this.Load += new EventHandler(FormTelaInicial_Load);
         }
@@ -75,6 +77,8 @@ namespace Inovaclinica {
         private void btnMenuCliente_Click(object sender, EventArgs e)
         {
             FormClientes formclientes = new FormClientes();
+            formclientes.StartPosition = FormStartPosition.CenterScreen;
+            formclientes.WindowState = FormWindowState.Maximized;
             formclientes.Show();
         }
 

@@ -1,0 +1,71 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Configuration;
+using System.Data;
+using System.Data.SqlClient;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace Inovaclinica {
+    public partial class modalAdicionarCliente : Form {
+        public modalAdicionarCliente() {
+            InitializeComponent();
+        }
+
+        private void btnAdicionarCliente_Click(object sender, EventArgs e) {
+            // Captura os valores inseridos pelo usuário
+            string nome = nomeAdicionarCliente.Text;
+            string cpf = cpfAdicionarCliente.Text;
+            DateTime dataNascimento = dataNascimentoAdicionarCliente.Value;
+
+
+            // Chama o método para adicionar o produto ao banco de dados
+            AdicionarCliente(nome, cpf, dataNascimento);
+
+        }
+
+
+        // Método para adicionar o produto no banco de dados
+        private void AdicionarCliente(string nome, string cpf, DateTime dataNascimento) {
+            // Obtém a string de conexão do App.config
+            string connectionString = ConfigurationManager.ConnectionStrings["InovaclinicaConnectionString"].ConnectionString;
+
+            // Define a query SQL de inserção
+            string query = "INSERT INTO Clientes (Nome, CPF, DataNascimento, DataCadastro) VALUES (@Nome, @cpf, @DataNascimento, @DataCadastro)";
+
+
+            using (SqlConnection connection = new SqlConnection(connectionString)) {
+                // Cria o comando SQL para a inserção
+                SqlCommand command = new SqlCommand(query, connection);
+                // Define os parâmetros da query
+                command.Parameters.AddWithValue("@Nome", nome);
+                command.Parameters.AddWithValue("@CPF", cpf);
+                command.Parameters.AddWithValue("@DataNascimento", dataNascimento);
+                command.Parameters.AddWithValue("@DataCadastro", DateTime.Now);
+
+                try {
+                    // Abre a conexão
+                    connection.Open();
+                    // Executa o comando
+                    int result = command.ExecuteNonQuery();
+
+                    // Verifica se o produto foi inserido com sucesso
+                    if (result > 0) {
+                        MessageBox.Show($"Cliente {nome} adicionado com sucesso!");
+                        // Limpa os campos de entrada
+                        nomeAdicionarCliente.Clear();
+                        cpfAdicionarCliente.Clear();
+                    } else {
+                        MessageBox.Show("Ocorreu um erro ao adicionar o cliente.");
+                    }
+                } catch (Exception ex) {
+                    MessageBox.Show($"Erro: {ex.Message}");
+                }
+            }
+        }
+    }
+}

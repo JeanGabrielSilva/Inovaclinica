@@ -32,13 +32,13 @@ namespace Inovaclinica
         }
 
         // Método para carregar os dados do banco de dados e preencher o DataGridView
-        private void LoadData()
+        public void LoadData()
         {
             // Obtém a string de conexão a partir do App.config
             string connectionString = ConfigurationManager.ConnectionStrings["InovaclinicaConnectionString"].ConnectionString;
 
             // Query SQL para buscar os dados da tabela 'Produtos'
-            string query = "SELECT ClienteID as ID, Nome, CPF, DataNascimento as [Data Nascimento], Telefone FROM Clientes";
+            string query = "SELECT ClienteID as Código, Nome, CPF, DataNascimento as [Data Nascimento], Telefone FROM Clientes";
 
             // Usa SqlConnection e SqlDataAdapter para preencher o DataGridView
             using (SqlConnection connection = new SqlConnection(connectionString))
@@ -87,6 +87,11 @@ namespace Inovaclinica
             dataGridClientes.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridClientes.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
             dataGridClientes.Dock = DockStyle.Fill;
+
+            DataGridViewCheckBoxColumn checkBoxColumn = new DataGridViewCheckBoxColumn();
+            checkBoxColumn.HeaderText = "Selecionar";
+            checkBoxColumn.Name = "checkBoxColumn";
+            dataGridClientes.Columns.Add(checkBoxColumn);
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -107,6 +112,25 @@ namespace Inovaclinica
         private void pictureBox4_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void tablePanelMenuClientes_Paint(object sender, PaintEventArgs e) {
+
+        }
+
+        private void btnAbrirModalAdicionarCliente_Click(object sender, EventArgs e) {
+            modalAdicionarCliente modaladicionarcliente = new modalAdicionarCliente();
+            modaladicionarcliente.StartPosition = FormStartPosition.CenterParent;  
+            modaladicionarcliente.ShowDialog();
+
+        }
+
+        private void atualizarGridClientes_Click(object sender, EventArgs e) {
+            LoadData();
+        }
+
+        private void dataGridClientes_CellContentClick(object sender, DataGridViewCellEventArgs e) {
+            
         }
     }
 }
