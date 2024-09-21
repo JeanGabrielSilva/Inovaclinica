@@ -42,7 +42,7 @@
             this.btnAbrirModalAdicionarCliente = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.imgProcurar = new System.Windows.Forms.PictureBox();
+            this.btnBarraPesquisaClientes = new System.Windows.Forms.PictureBox();
             this.barraPesquisaClientes = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.dataGridClientes = new System.Windows.Forms.DataGridView();
@@ -54,7 +54,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnAbrirModalAdicionarCliente)).BeginInit();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.imgProcurar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnBarraPesquisaClientes)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridClientes)).BeginInit();
             this.SuspendLayout();
@@ -236,7 +236,7 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.imgProcurar);
+            this.panel1.Controls.Add(this.btnBarraPesquisaClientes);
             this.panel1.Controls.Add(this.barraPesquisaClientes);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -244,19 +244,20 @@
             this.panel1.Size = new System.Drawing.Size(947, 78);
             this.panel1.TabIndex = 2;
             // 
-            // imgProcurar
+            // btnBarraPesquisaClientes
             // 
-            this.imgProcurar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(94)))), ((int)(((byte)(220)))));
-            this.imgProcurar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.imgProcurar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.imgProcurar.Image = ((System.Drawing.Image)(resources.GetObject("imgProcurar.Image")));
-            this.imgProcurar.InitialImage = ((System.Drawing.Image)(resources.GetObject("imgProcurar.InitialImage")));
-            this.imgProcurar.Location = new System.Drawing.Point(26, 12);
-            this.imgProcurar.Name = "imgProcurar";
-            this.imgProcurar.Size = new System.Drawing.Size(48, 47);
-            this.imgProcurar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.imgProcurar.TabIndex = 1;
-            this.imgProcurar.TabStop = false;
+            this.btnBarraPesquisaClientes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(94)))), ((int)(((byte)(220)))));
+            this.btnBarraPesquisaClientes.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.btnBarraPesquisaClientes.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnBarraPesquisaClientes.Image = ((System.Drawing.Image)(resources.GetObject("btnBarraPesquisaClientes.Image")));
+            this.btnBarraPesquisaClientes.InitialImage = ((System.Drawing.Image)(resources.GetObject("btnBarraPesquisaClientes.InitialImage")));
+            this.btnBarraPesquisaClientes.Location = new System.Drawing.Point(26, 12);
+            this.btnBarraPesquisaClientes.Name = "btnBarraPesquisaClientes";
+            this.btnBarraPesquisaClientes.Size = new System.Drawing.Size(48, 47);
+            this.btnBarraPesquisaClientes.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.btnBarraPesquisaClientes.TabIndex = 1;
+            this.btnBarraPesquisaClientes.TabStop = false;
+            this.btnBarraPesquisaClientes.Click += new System.EventHandler(this.btnBarraPesquisaClientes_Click);
             // 
             // barraPesquisaClientes
             // 
@@ -309,7 +310,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnAbrirModalAdicionarCliente)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.imgProcurar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnBarraPesquisaClientes)).EndInit();
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridClientes)).EndInit();
             this.ResumeLayout(false);
@@ -323,7 +324,7 @@
         private System.Windows.Forms.TextBox barraPesquisaClientes;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.DataGridView dataGridClientes;
-        private System.Windows.Forms.PictureBox imgProcurar;
+        private System.Windows.Forms.PictureBox btnBarraPesquisaClientes;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox btnAbrirModalAdicionarCliente;
