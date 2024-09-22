@@ -37,7 +37,7 @@ namespace Inovaclinica
             LoadData(); // Chama o método para carregar os dados
             foreach (DataGridViewRow row in dataGridClientes.Rows) {
                 string cpf = row.Cells["CPF"].Value.ToString();
-                row.Cells["CPF"].Value = FormatarCPF(cpf);
+
             }
         }
 
@@ -138,8 +138,10 @@ namespace Inovaclinica
             dataGridClientes.AllowUserToDeleteRows = false;
             dataGridClientes.AllowUserToOrderColumns = false;
             dataGridClientes.AllowUserToResizeRows = false;
-            dataGridClientes.AllowUserToResizeColumns = false;  
+            dataGridClientes.AllowUserToResizeColumns = false;
 
+            // Ação necessário para conseguir selecionar a linha para visualização dos clientes
+            dataGridClientes.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
 
         }
 
@@ -225,10 +227,23 @@ namespace Inovaclinica
         }
 
         private void btnAbrirModalAdicionarCliente_Click(object sender, EventArgs e) {
-            modalAdicionarCliente modaladicionarcliente = new modalAdicionarCliente();
+            modalAdicionarCliente modaladicionarcliente = new modalAdicionarCliente(this);
             modaladicionarcliente.StartPosition = FormStartPosition.CenterParent;  
             modaladicionarcliente.ShowDialog();
 
+        }
+
+        private void btnAbrirModalVisualizarClientes_Click(object sender, EventArgs e) {
+            if (dataGridClientes.SelectedRows.Count > 0) {
+                var selectedRow = dataGridClientes.SelectedRows[0];
+                string clientID = selectedRow.Cells["Código"].Value.ToString();
+
+                modalVisualizarClientes modalvisualizarcliente = new modalVisualizarClientes(clientID, this);
+                modalvisualizarcliente.StartPosition = FormStartPosition.CenterParent;
+                modalvisualizarcliente.ShowDialog();
+            } else {
+                MessageBox.Show("Selecione um cliente para visualizar.");
+            }
         }
 
         private void atualizarGridClientes_Click(object sender, EventArgs e) {
@@ -295,21 +310,8 @@ namespace Inovaclinica
             }
         }
 
-        // 
-        private string FormatarCPF(string cpf) {
-            // Remove caracteres não numéricos
-            cpf = new string(cpf.Where(char.IsDigit).ToArray());
 
-            // Formata o CPF
-            if (cpf.Length == 11) {
-                return string.Format("{0}.{1}.{2}-{3}",
-                    cpf.Substring(0, 3),
-                    cpf.Substring(3, 3),
-                    cpf.Substring(6, 3),
-                    cpf.Substring(9, 2));
-            }
-            return cpf; // Retorna sem formatação se não for válido
-        }
+
 
     }
 }

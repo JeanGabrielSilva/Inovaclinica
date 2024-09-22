@@ -12,8 +12,13 @@ using System.Windows.Forms;
 
 namespace Inovaclinica {
     public partial class modalAdicionarCliente : Form {
-        public modalAdicionarCliente() {
+
+        private FormClientes _formClientes;
+
+        public modalAdicionarCliente(FormClientes formClientes) {
             InitializeComponent();
+
+            _formClientes = formClientes;
         }
 
         private void btnAdicionarCliente_Click(object sender, EventArgs e) {
@@ -22,14 +27,29 @@ namespace Inovaclinica {
             string cpf = cpfAdicionarCliente.Text;
             DateTime dataNascimento = dataNascimentoAdicionarCliente.Value;
 
+            cpf = FormatarCPF(cpf);
 
-            // Chama o método para adicionar o produto ao banco de dados
             AdicionarCliente(nome, cpf, dataNascimento);
 
         }
 
 
-        // Método para adicionar o produto no banco de dados
+        public string FormatarCPF(string cpf) {
+            // Remove caracteres não numéricos
+            cpf = new string(cpf.Where(char.IsDigit).ToArray());
+
+            // Formata o CPF
+            if (cpf.Length == 11) {
+                return string.Format("{0}.{1}.{2}-{3}",
+                    cpf.Substring(0, 3),
+                    cpf.Substring(3, 3),
+                    cpf.Substring(6, 3),
+                    cpf.Substring(9, 2));
+            }
+            return cpf; // Retorna sem formatação se não for válido
+        }
+
+        // Método para adicionar o cliente no banco de dados
         private void AdicionarCliente(string nome, string cpf, DateTime dataNascimento) {
             // Obtém a string de conexão do App.config
             string connectionString = ConfigurationManager.ConnectionStrings["InovaclinicaConnectionString"].ConnectionString;
@@ -53,12 +73,13 @@ namespace Inovaclinica {
                     // Executa o comando
                     int result = command.ExecuteNonQuery();
 
-                    // Verifica se o produto foi inserido com sucesso
+                    // Verifica se o cliente foi inserido com sucesso
                     if (result > 0) {
                         MessageBox.Show($"Cliente {nome} adicionado com sucesso!");
                         // Limpa os campos de entrada
                         nomeAdicionarCliente.Clear();
                         cpfAdicionarCliente.Clear();
+                        _formClientes.LoadData();
                     } else {
                         MessageBox.Show("Ocorreu um erro ao adicionar o cliente.");
                     }
