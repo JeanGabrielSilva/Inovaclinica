@@ -49,21 +49,6 @@ namespace Inovaclinica {
         }
 
 
-        public string FormatarCPF(string cpf) {
-            // Remove caracteres não numéricos
-            cpf = new string(cpf.Where(char.IsDigit).ToArray());
-
-            // Formata o CPF
-            if (cpf.Length == 11) {
-                return string.Format("{0}.{1}.{2}-{3}",
-                    cpf.Substring(0, 3),
-                    cpf.Substring(3, 3),
-                    cpf.Substring(6, 3),
-                    cpf.Substring(9, 2));
-            }
-            return cpf; // Retorna sem formatação se não for válido
-        }
-
         // Método para adicionar o cliente no banco de dados
         private void AdicionarCliente(string nome, string cpf, DateTime dataNascimento) {
             // Obtém a string de conexão do App.config
