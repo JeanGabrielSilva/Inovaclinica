@@ -22,10 +22,26 @@ namespace Inovaclinica {
             string cpf = cpfAdicionarCliente.Text;
             DateTime dataNascimento = dataNascimentoAdicionarCliente.Value;
 
+            cpf = FormatarCPF(cpf);
 
             // Chama o método para adicionar o produto ao banco de dados
             AdicionarCliente(nome, cpf, dataNascimento);
 
+        }
+
+        private string FormatarCPF(string cpf) {
+            // Remove caracteres não numéricos
+            cpf = new string(cpf.Where(char.IsDigit).ToArray());
+
+            // Formata o CPF
+            if (cpf.Length == 11) {
+                return string.Format("{0}.{1}.{2}-{3}",
+                    cpf.Substring(0, 3),
+                    cpf.Substring(3, 3),
+                    cpf.Substring(6, 3),
+                    cpf.Substring(9, 2));
+            }
+            return cpf; // Retorna sem formatação se não for válido
         }
 
 
