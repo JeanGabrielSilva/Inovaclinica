@@ -35,6 +35,10 @@ namespace Inovaclinica
         private void FormClientes_Load(object sender, EventArgs e)
         {
             LoadData(); // Chama o método para carregar os dados
+            foreach (DataGridViewRow row in dataGridClientes.Rows) {
+                string cpf = row.Cells["CPF"].Value.ToString();
+                row.Cells["CPF"].Value = FormatarCPF(cpf);
+            }
         }
 
         // Método para carregar os dados do banco de dados e preencher o DataGridView
@@ -120,6 +124,7 @@ namespace Inovaclinica
             dataGridClientes.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
             dataGridClientes.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
             dataGridClientes.BackgroundColor = SystemColors.Control;
+            dataGridClientes.RowTemplate.Height = 40;
 
             // Adicionando uma coluna de seleção (opcional)
             DataGridViewCheckBoxColumn checkBoxColumn = new DataGridViewCheckBoxColumn();
@@ -135,8 +140,10 @@ namespace Inovaclinica
             dataGridClientes.AllowUserToResizeRows = false;
             dataGridClientes.AllowUserToResizeColumns = false;  
 
+
         }
 
+        // Metodo criado para que o datagrid fique com cores alternadas
         private void ApplyRowColors()
         {
             for (int i = 0; i < dataGridClientes.Rows.Count; i++)
@@ -152,6 +159,7 @@ namespace Inovaclinica
             }
         }
 
+        //
         private void DataGridClientes_CellValueChanged(object sender, DataGridViewCellEventArgs e)
         {
             // Verifica se a coluna é a checkbox
@@ -263,6 +271,9 @@ namespace Inovaclinica
 
                     // Define a fonte de dados do DataGridView como o DataTable
                     dataGridClientes.DataSource = dataTable;
+
+                    // Aplica as cores das linhas
+                    ApplyRowColors();
                 }
                 catch (Exception ex)
                 {
@@ -282,6 +293,22 @@ namespace Inovaclinica
                 e.SuppressKeyPress = true; // Cancela o som padrão de "ding"
                 btnBarraPesquisaClientes_Click(this, EventArgs.Empty); // Chama o método do botão de pesquisa
             }
+        }
+
+        // 
+        private string FormatarCPF(string cpf) {
+            // Remove caracteres não numéricos
+            cpf = new string(cpf.Where(char.IsDigit).ToArray());
+
+            // Formata o CPF
+            if (cpf.Length == 11) {
+                return string.Format("{0}.{1}.{2}-{3}",
+                    cpf.Substring(0, 3),
+                    cpf.Substring(3, 3),
+                    cpf.Substring(6, 3),
+                    cpf.Substring(9, 2));
+            }
+            return cpf; // Retorna sem formatação se não for válido
         }
 
     }
