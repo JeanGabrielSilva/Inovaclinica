@@ -69,5 +69,15 @@ namespace Inovaclinica.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap verifique_o_circulo {
+            get {
+                object obj = ResourceManager.GetObject("verifique-o-circulo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

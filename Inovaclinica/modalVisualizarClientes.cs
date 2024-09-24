@@ -10,6 +10,7 @@ using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms.VisualStyles;
 
 namespace Inovaclinica {
 
@@ -25,6 +26,10 @@ namespace Inovaclinica {
             BuscarClientePeloID(clientID);
             _formClientes = formClientes;
 
+            tabPage1.Text = "Informações";
+            tabPage2.Text = "Convênio";
+
+
         }
 
         private string clientID;
@@ -33,7 +38,7 @@ namespace Inovaclinica {
             string connectionString = ConfigurationManager.ConnectionStrings["InovaclinicaConnectionString"].ConnectionString;
 
             using (SqlConnection connection = new SqlConnection(connectionString)) {
-                string query = $"SELECT Nome, CPF, DataNascimento, Telefone, Endereco, Ativo, DataCadastro FROM Clientes WHERE ClienteID = @ClienteID";
+                string query = $"SELECT ClienteID, Nome, CPF, DataNascimento, Telefone, Endereco, Ativo, DataCadastro FROM Clientes WHERE ClienteID = @ClienteID";
 
                 SqlCommand command = new SqlCommand(query, connection);
                 command.Parameters.AddWithValue("@ClienteID", codigo); // Utiliza parâmetros para evitar SQL Injection
@@ -42,6 +47,8 @@ namespace Inovaclinica {
                 SqlDataReader reader = command.ExecuteReader();
 
                 if (reader.Read()) {
+                    labelClienteID.Text = reader["ClienteID"].ToString();
+                    lblNomeCliente.Text = reader["Nome"].ToString();
                     textBoxNomeCliente.Text = reader["Nome"].ToString();
                     maskTextBoxCpfCliente.Text = FormatarCPF(reader["CPF"].ToString());
                     dateTimePickerDataNascimento.Value = Convert.ToDateTime(reader["DataNascimento"]);
@@ -102,6 +109,61 @@ namespace Inovaclinica {
                     CPF.Substring(9, 2));
             }
             return CPF; // Retorna sem formatação se não for válido
+        }
+
+        private void toolStripContainer1_TopToolStripPanel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void tabPage1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void modalVisualizarClientes_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBoxAtivoCliente_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelClienteID_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelDataCadastro_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnSalvarAlteracaoCliente_Click_1(object sender, EventArgs e)
+        {
+
         }
     }
 

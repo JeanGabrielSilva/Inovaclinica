@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -19,6 +20,7 @@ namespace Inovaclinica {
             InitializeComponent();
 
             _formClientes = formClientes;
+
         }
 
         private void btnAdicionarCliente_Click(object sender, EventArgs e) {
