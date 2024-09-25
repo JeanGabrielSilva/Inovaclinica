@@ -133,6 +133,8 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Img\verifique-o-circulo.png" />
+    <None Include="Resources\circulo-x %281%29.png" />
+    <None Include="Resources\circulo-x.png" />
     <None Include="Resources\verifique-o-circulo.png" />
     <None Include="Resources\adicionar-usuario.png" />
   </ItemGroup>
