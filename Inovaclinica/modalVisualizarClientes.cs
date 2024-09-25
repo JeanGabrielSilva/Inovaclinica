@@ -12,32 +12,38 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows.Forms.VisualStyles;
 
-namespace Inovaclinica {
+namespace Inovaclinica
+{
 
-    public partial class modalVisualizarClientes : Form {
+    public partial class modalVisualizarClientes : Form
+    {
 
         private FormClientes _formClientes;
 
 
-        public modalVisualizarClientes(string clientID, FormClientes formClientes) {
+        public modalVisualizarClientes(string clientID, FormClientes formClientes)
+        {
             InitializeComponent();
-            
+
             this.clientID = clientID;
             BuscarClientePeloID(clientID);
             _formClientes = formClientes;
 
             tabPage1.Text = "Informações";
             tabPage2.Text = "Convênio";
-
+            tabPage3.Text = "Procedimentos";
+            tabPage4.Text = "Agendamentos";
 
         }
 
         private string clientID;
 
-        private void BuscarClientePeloID(string codigo) {
+        private void BuscarClientePeloID(string codigo)
+        {
             string connectionString = ConfigurationManager.ConnectionStrings["InovaclinicaConnectionString"].ConnectionString;
 
-            using (SqlConnection connection = new SqlConnection(connectionString)) {
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
                 string query = $"SELECT ClienteID, Nome, CPF, DataNascimento, Telefone, Endereco, Ativo, DataCadastro FROM Clientes WHERE ClienteID = @ClienteID";
 
                 SqlCommand command = new SqlCommand(query, connection);
@@ -46,7 +52,8 @@ namespace Inovaclinica {
                 connection.Open();
                 SqlDataReader reader = command.ExecuteReader();
 
-                if (reader.Read()) {
+                if (reader.Read())
+                {
                     labelClienteID.Text = reader["ClienteID"].ToString();
                     lblNomeCliente.Text = reader["Nome"].ToString();
                     textBoxNomeCliente.Text = reader["Nome"].ToString();
@@ -57,51 +64,33 @@ namespace Inovaclinica {
                     checkBoxAtivoCliente.Checked = reader.GetBoolean(reader.GetOrdinal("Ativo"));
                     DateTime dataCadastro = Convert.ToDateTime(reader["DataCadastro"]);
                     labelDataCadastro.Text = dataCadastro.ToString("dd/MM/yyyy HH:MM");
+
+
                 }
             }
         }
 
-        private void lblNome_Click(object sender, EventArgs e) {
+        private void lblNome_Click(object sender, EventArgs e)
+        {
         }
 
 
 
-        private void textBoxNomeCliente_TextChanged(object sender, EventArgs e) {
+        private void textBoxNomeCliente_TextChanged(object sender, EventArgs e)
+        {
 
         }
 
-        private void btnSalvarAlteracaoCliente_Click(object sender, EventArgs e) {
-            string connectionString = ConfigurationManager.ConnectionStrings["InovaclinicaConnectionString"].ConnectionString;
-
-            using (SqlConnection connection = new SqlConnection(connectionString)) {
-                string query = $"UPDATE Clientes SET Nome = @Nome, CPF = @CPF, DataNascimento = @DataNascimento, Telefone = @Telefone, Ativo = @Ativo WHERE ClienteID = @ClientID";
-                SqlCommand command = new SqlCommand(query, connection);
-                command.Parameters.AddWithValue("@Nome", textBoxNomeCliente.Text);
-                command.Parameters.AddWithValue("@CPF", FormatarCPF(maskTextBoxCpfCliente.Text));
-                command.Parameters.AddWithValue("@DataNascimento", dateTimePickerDataNascimento.Value);
-                command.Parameters.AddWithValue("@Telefone", textBoxTelefone.Text);
-                command.Parameters.AddWithValue("@ClientID", this.clientID);
-                command.Parameters.AddWithValue("@Ativo", checkBoxAtivoCliente.Checked);
 
 
-                connection.Open();
-                int rowsAffected = command.ExecuteNonQuery(); // Executa o comando SQL
-
-                if (rowsAffected > 0) {
-                    MessageBox.Show("Cliente atualizado com sucesso!");
-                    _formClientes.LoadData();
-                } else {
-                    MessageBox.Show("Nenhuma alteração foi feita.");
-                }
-            }
-        }
-
-        public string FormatarCPF(string CPF) {
+        public string FormatarCPF(string CPF)
+        {
             // Remove caracteres não numéricos
             CPF = new string(CPF.Where(char.IsDigit).ToArray());
 
             // Formata o CPF
-            if (CPF.Length == 11) {
+            if (CPF.Length == 11)
+            {
                 return string.Format("{0}.{1}.{2}-{3}",
                     CPF.Substring(0, 3),
                     CPF.Substring(3, 3),
@@ -162,6 +151,63 @@ namespace Inovaclinica {
         }
 
         private void btnSalvarAlteracaoCliente_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnCancelarAlteracaoCliente_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void tabPage3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnSalvarAlteracaoCliente_Click(object sender, EventArgs e)
+        {
+            string connectionString = ConfigurationManager.ConnectionStrings["InovaclinicaConnectionString"].ConnectionString;
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                string query = $"UPDATE Clientes SET Nome = @Nome, CPF = @CPF, DataNascimento = @DataNascimento, Telefone = @Telefone, Ativo = @Ativo WHERE ClienteID = @ClientID";
+                SqlCommand command = new SqlCommand(query, connection);
+                command.Parameters.AddWithValue("@Nome", textBoxNomeCliente.Text);
+                command.Parameters.AddWithValue("@CPF", FormatarCPF(maskTextBoxCpfCliente.Text));
+                command.Parameters.AddWithValue("@DataNascimento", dateTimePickerDataNascimento.Value);
+                command.Parameters.AddWithValue("@Telefone", textBoxTelefone.Text);
+                command.Parameters.AddWithValue("@ClientID", this.clientID);
+                command.Parameters.AddWithValue("@Ativo", checkBoxAtivoCliente.Checked);
+
+
+                connection.Open();
+                int rowsAffected = command.ExecuteNonQuery(); // Executa o comando SQL
+
+                if (rowsAffected > 0)
+                {
+                    MessageBox.Show("Cliente atualizado com sucesso!");
+                    _formClientes.LoadData();
+                }
+                else
+                {
+                    MessageBox.Show("Nenhuma alteração foi feita.");
+                }
+            }
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblNomeCliente_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
         {
 
         }

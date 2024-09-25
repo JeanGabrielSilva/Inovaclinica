@@ -238,7 +238,9 @@ namespace Inovaclinica
                 var selectedRow = dataGridClientes.SelectedRows[0];
                 string clientID = selectedRow.Cells["Código"].Value.ToString();
 
+
                 modalVisualizarClientes modalvisualizarcliente = new modalVisualizarClientes(clientID, this);
+                modalvisualizarcliente.Text = "Visualizar Cliente";
                 modalvisualizarcliente.StartPosition = FormStartPosition.CenterParent;
                 modalvisualizarcliente.ShowDialog();
             } else {
@@ -310,8 +312,9 @@ namespace Inovaclinica
             }
         }
 
+        private void label3_Click(object sender, EventArgs e)
+        {
 
-
-
+        }
     }
 }

@@ -124,6 +124,7 @@
             this.label3.TabIndex = 5;
             this.label3.Text = "Atualizar";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // pictureBox1
             // 
