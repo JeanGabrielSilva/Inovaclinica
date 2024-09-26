@@ -20,20 +20,10 @@ namespace Inovaclinica {
             InitializeComponent();
 
             _formClientes = formClientes;
+            tabPage1.Text = "Informações";
 
         }
 
-        private void btnAdicionarCliente_Click(object sender, EventArgs e) {
-            // Captura os valores inseridos pelo usuário
-            string nome = nomeAdicionarCliente.Text;
-            string cpf = cpfAdicionarCliente.Text;
-            DateTime dataNascimento = dataNascimentoAdicionarCliente.Value;
-
-            cpf = FormatarCPF(cpf);
-
-            AdicionarCliente(nome, cpf, dataNascimento);
-
-        }
 
         private string FormatarCPF(string cpf) {
             // Remove caracteres não numéricos
@@ -51,23 +41,51 @@ namespace Inovaclinica {
         }
 
 
+        private void btnAdicionarCliente_Click(object sender, EventArgs e)
+        {
+            // Captura os valores inseridos pelo usuário
+            string Nome = nomeAdicionarCliente.Text;
+            string cpf = cpfAdicionarCliente.Text;
+            DateTime dataNascimento = dataNascimentoAdicionarCliente.Value;
+            string telefone = telefoneAdicionarCliente.Text;
+            string sexo = sexoAdicionarCliente.Text;
+            string cidade = cidadeAdicionarCliente.Text;
+            string rua = ruaAdicionarCliente.Text;
+            string cep = cepAdicionarCliente.Text;
+            string estado = estadoAdicionarCliente.Text;
+            string observacao = observacaoAdicionarCliente.Text;
+            MessageBox.Show($"{Nome}, {cpf}, {dataNascimento}, {telefone}, {sexo}, {cidade}, {rua}, {cep}, {observacao}");
+            cpf = FormatarCPF(cpf);
+
+            AdicionarCliente(Nome, cpf, dataNascimento, telefone, sexo, cidade, rua, cep, estado, observacao);
+        }
+
+
         // Método para adicionar o cliente no banco de dados
-        private void AdicionarCliente(string nome, string cpf, DateTime dataNascimento) {
+        private void AdicionarCliente(string Nome, string cpf, DateTime dataNascimento, string telefone, string sexo, string cidade, string rua, string cep, string estado, string observacao) {
             // Obtém a string de conexão do App.config
             string connectionString = ConfigurationManager.ConnectionStrings["InovaclinicaConnectionString"].ConnectionString;
 
             // Define a query SQL de inserção
-            string query = "INSERT INTO Clientes (Nome, CPF, DataNascimento, DataCadastro) VALUES (@Nome, @cpf, @DataNascimento, @DataCadastro)";
+            string query = "INSERT INTO Clientes (Nome, CPF, DataNascimento, DataCadastro, Genero, Telefone, Endereco, Cidade, Estado, CEP, Observacoes) VALUES (@Nome, @CPF, @DataNascimento, @DataCadastro, @Genero, @Telefone, @Endereco, @Cidade, @Estado, @CEP, @Observacoes)";
 
 
             using (SqlConnection connection = new SqlConnection(connectionString)) {
                 // Cria o comando SQL para a inserção
                 SqlCommand command = new SqlCommand(query, connection);
                 // Define os parâmetros da query
-                command.Parameters.AddWithValue("@Nome", nome);
+                command.Parameters.AddWithValue("@Nome", Nome);
                 command.Parameters.AddWithValue("@CPF", cpf);
                 command.Parameters.AddWithValue("@DataNascimento", dataNascimento);
                 command.Parameters.AddWithValue("@DataCadastro", DateTime.Now);
+                command.Parameters.AddWithValue("@Genero", sexo);
+                command.Parameters.AddWithValue("@Telefone", telefone);
+                command.Parameters.AddWithValue("@Endereco", rua);
+                command.Parameters.AddWithValue("@Cidade", cidade);
+                command.Parameters.AddWithValue("@Estado", estado);
+                command.Parameters.AddWithValue("@CEP", cep);
+                command.Parameters.AddWithValue("@Observacoes", observacao);
+
 
                 try {
                     // Abre a conexão
@@ -77,7 +95,7 @@ namespace Inovaclinica {
 
                     // Verifica se o cliente foi inserido com sucesso
                     if (result > 0) {
-                        MessageBox.Show($"Cliente {nome} adicionado com sucesso!");
+                        MessageBox.Show($"Cliente {Nome} adicionado com sucesso!");
                         // Limpa os campos de entrada
                         nomeAdicionarCliente.Clear();
                         cpfAdicionarCliente.Clear();
@@ -86,9 +104,17 @@ namespace Inovaclinica {
                         MessageBox.Show("Ocorreu um erro ao adicionar o cliente.");
                     }
                 } catch (Exception ex) {
-                    MessageBox.Show($"Erro: {ex.Message}");
+                    MessageBox.Show($"Erro: {ex.Message}\n{ex.InnerException?.Message}");
                 }
             }
         }
+
+
+
+        private void btnCancelarAlteracaoCliente_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+  
     }
 }
