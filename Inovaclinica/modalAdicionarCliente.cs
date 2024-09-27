@@ -24,7 +24,6 @@ namespace Inovaclinica {
 
         }
 
-
         private string FormatarCPF(string cpf) {
             // Remove caracteres não numéricos
             cpf = new string(cpf.Where(char.IsDigit).ToArray());
@@ -54,20 +53,20 @@ namespace Inovaclinica {
             string cep = cepAdicionarCliente.Text;
             string estado = estadoAdicionarCliente.Text;
             string observacao = observacaoAdicionarCliente.Text;
-            MessageBox.Show($"{Nome}, {cpf}, {dataNascimento}, {telefone}, {sexo}, {cidade}, {rua}, {cep}, {observacao}");
+            string email = emailAdicionarCliente.Text;
             cpf = FormatarCPF(cpf);
 
-            AdicionarCliente(Nome, cpf, dataNascimento, telefone, sexo, cidade, rua, cep, estado, observacao);
+            AdicionarCliente(Nome, cpf, dataNascimento, telefone, sexo, cidade, rua, cep, estado, observacao, email);
         }
 
 
         // Método para adicionar o cliente no banco de dados
-        private void AdicionarCliente(string Nome, string cpf, DateTime dataNascimento, string telefone, string sexo, string cidade, string rua, string cep, string estado, string observacao) {
+        private void AdicionarCliente(string Nome, string cpf, DateTime dataNascimento, string telefone, string sexo, string cidade, string rua, string cep, string estado, string observacao, string email) {
             // Obtém a string de conexão do App.config
             string connectionString = ConfigurationManager.ConnectionStrings["InovaclinicaConnectionString"].ConnectionString;
 
             // Define a query SQL de inserção
-            string query = "INSERT INTO Clientes (Nome, CPF, DataNascimento, DataCadastro, Genero, Telefone, Endereco, Cidade, Estado, CEP, Observacoes) VALUES (@Nome, @CPF, @DataNascimento, @DataCadastro, @Genero, @Telefone, @Endereco, @Cidade, @Estado, @CEP, @Observacoes)";
+            string query = "INSERT INTO Clientes (Nome, CPF, DataNascimento, DataCadastro, Genero, Telefone, Endereco, Cidade, Estado, CEP, Observacoes, Email) VALUES (@Nome, @CPF, @DataNascimento, @DataCadastro, @Genero, @Telefone, @Endereco, @Cidade, @Estado, @CEP, @Observacoes, @Email)";
 
 
             using (SqlConnection connection = new SqlConnection(connectionString)) {
@@ -85,6 +84,7 @@ namespace Inovaclinica {
                 command.Parameters.AddWithValue("@Estado", estado);
                 command.Parameters.AddWithValue("@CEP", cep);
                 command.Parameters.AddWithValue("@Observacoes", observacao);
+                command.Parameters.AddWithValue("@Email", email);
 
 
                 try {
@@ -108,8 +108,6 @@ namespace Inovaclinica {
                 }
             }
         }
-
-
 
         private void btnCancelarAlteracaoCliente_Click(object sender, EventArgs e)
         {

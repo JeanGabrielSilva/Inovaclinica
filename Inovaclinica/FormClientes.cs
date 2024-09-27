@@ -67,6 +67,13 @@ namespace Inovaclinica
                     // Preenche o DataTable com os dados retornados da consulta
                     dataAdapter.Fill(dataTable);
 
+                    // Formatar o CPF antes de exibir
+                    foreach (DataRow row in dataTable.Rows) {
+                        string cpf = row["CPF"].ToString();
+                        row["CPF"] = FormatarCPF(cpf); // Aplica a função de formatação
+                    }
+
+
                     // Define a fonte de dados do DataGridView como o DataTable
                     dataGridClientes.DataSource = dataTable;
 
@@ -88,9 +95,19 @@ namespace Inovaclinica
                     MessageBox.Show($"Erro ao carregar dados: {ex.Message}");
                 }
             }
+        }
 
+        public string FormatarCPF(string CPF) {
+            CPF = new string(CPF.Where(char.IsDigit).ToArray());
 
-
+            if (CPF.Length == 11) {
+                return string.Format("{0}.{1}.{2}-{3}",
+                    CPF.Substring(0, 3),
+                    CPF.Substring(3, 3),
+                    CPF.Substring(6, 3),
+                    CPF.Substring(9, 2));
+            }
+            return CPF;
         }
 
         private void CustomizeDataGridView()
@@ -202,29 +219,6 @@ namespace Inovaclinica
             }
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tablePanelMenuClientes_Paint(object sender, PaintEventArgs e) {
-
-        }
 
         private void btnAbrirModalAdicionarCliente_Click(object sender, EventArgs e) {
             modalAdicionarCliente modaladicionarcliente = new modalAdicionarCliente(this);
@@ -247,6 +241,7 @@ namespace Inovaclinica
                 MessageBox.Show("Selecione um cliente para visualizar.");
             }
         }
+
 
         private void atualizarGridClientes_Click(object sender, EventArgs e) {
             LoadData();
@@ -312,9 +307,14 @@ namespace Inovaclinica
             }
         }
 
-        private void label3_Click(object sender, EventArgs e)
-        {
+        private void btnAbrirModalFiltrarClientes_Click(object sender, EventArgs e) {
+            modalFiltrarCliente modalfiltracliente = new modalFiltrarCliente();
+            modalfiltracliente.StartPosition = FormStartPosition.CenterParent;
+            modalfiltracliente.ShowDialog();
+        }
 
+        private void button1_Click(object sender, EventArgs e) {
+            MessageBox.Show("a");
         }
     }
 }

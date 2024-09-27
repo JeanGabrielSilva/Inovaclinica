@@ -81,6 +81,5 @@ namespace Inovaclinica {
             formclientes.WindowState = FormWindowState.Maximized;
             formclientes.Show();
         }
-
     }
 }

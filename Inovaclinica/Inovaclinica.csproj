@@ -68,6 +68,12 @@
     <Compile Include="modalAdicionarCliente.Designer.cs">
       <DependentUpon>modalAdicionarCliente.cs</DependentUpon>
     </Compile>
+    <Compile Include="modalFiltrarCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="modalFiltrarCliente.Designer.cs">
+      <DependentUpon>modalFiltrarCliente.cs</DependentUpon>
+    </Compile>
     <Compile Include="modalVisualizarClientes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -89,6 +95,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="modalAdicionarCliente.resx">
       <DependentUpon>modalAdicionarCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="modalFiltrarCliente.resx">
+      <DependentUpon>modalFiltrarCliente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="modalVisualizarClientes.resx">
       <DependentUpon>modalVisualizarClientes.cs</DependentUpon>

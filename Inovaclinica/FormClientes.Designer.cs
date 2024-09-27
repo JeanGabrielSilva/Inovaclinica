@@ -31,13 +31,13 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormClientes));
             this.panelRodape = new System.Windows.Forms.Panel();
             this.tablePanelMenuClientes = new System.Windows.Forms.TableLayoutPanel();
+            this.btnAbrirModalFiltrarClientes = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.atualizarGridClientes = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
             this.btnAbrirModalVisualizarClientes = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.btnAbrirModalAdicionarCliente = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -48,10 +48,10 @@
             this.dataGridClientes = new System.Windows.Forms.DataGridView();
             this.panelRodape.SuspendLayout();
             this.tablePanelMenuClientes.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnAbrirModalFiltrarClientes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.atualizarGridClientes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnAbrirModalVisualizarClientes)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnAbrirModalAdicionarCliente)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnBarraPesquisaClientes)).BeginInit();
@@ -78,13 +78,13 @@
             this.tablePanelMenuClientes.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tablePanelMenuClientes.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tablePanelMenuClientes.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tablePanelMenuClientes.Controls.Add(this.btnAbrirModalFiltrarClientes, 0, 0);
             this.tablePanelMenuClientes.Controls.Add(this.label1, 3, 1);
             this.tablePanelMenuClientes.Controls.Add(this.label3, 4, 1);
             this.tablePanelMenuClientes.Controls.Add(this.pictureBox1, 3, 0);
             this.tablePanelMenuClientes.Controls.Add(this.atualizarGridClientes, 4, 0);
             this.tablePanelMenuClientes.Controls.Add(this.label5, 2, 1);
             this.tablePanelMenuClientes.Controls.Add(this.btnAbrirModalVisualizarClientes, 2, 0);
-            this.tablePanelMenuClientes.Controls.Add(this.pictureBox4, 0, 0);
             this.tablePanelMenuClientes.Controls.Add(this.label2, 1, 1);
             this.tablePanelMenuClientes.Controls.Add(this.btnAbrirModalAdicionarCliente, 1, 0);
             this.tablePanelMenuClientes.Controls.Add(this.label4, 0, 1);
@@ -96,7 +96,20 @@
             this.tablePanelMenuClientes.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tablePanelMenuClientes.Size = new System.Drawing.Size(431, 66);
             this.tablePanelMenuClientes.TabIndex = 10;
-            this.tablePanelMenuClientes.Paint += new System.Windows.Forms.PaintEventHandler(this.tablePanelMenuClientes_Paint);
+            // 
+            // btnAbrirModalFiltrarClientes
+            // 
+            this.btnAbrirModalFiltrarClientes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(94)))), ((int)(((byte)(220)))));
+            this.btnAbrirModalFiltrarClientes.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAbrirModalFiltrarClientes.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnAbrirModalFiltrarClientes.Image = ((System.Drawing.Image)(resources.GetObject("btnAbrirModalFiltrarClientes.Image")));
+            this.btnAbrirModalFiltrarClientes.Location = new System.Drawing.Point(3, 3);
+            this.btnAbrirModalFiltrarClientes.Name = "btnAbrirModalFiltrarClientes";
+            this.btnAbrirModalFiltrarClientes.Size = new System.Drawing.Size(80, 46);
+            this.btnAbrirModalFiltrarClientes.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.btnAbrirModalFiltrarClientes.TabIndex = 6;
+            this.btnAbrirModalFiltrarClientes.TabStop = false;
+            this.btnAbrirModalFiltrarClientes.Click += new System.EventHandler(this.btnAbrirModalFiltrarClientes_Click);
             // 
             // label1
             // 
@@ -110,7 +123,6 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Excluir";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label3
             // 
@@ -124,7 +136,6 @@
             this.label3.TabIndex = 5;
             this.label3.Text = "Atualizar";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // pictureBox1
             // 
@@ -180,20 +191,6 @@
             this.btnAbrirModalVisualizarClientes.TabStop = false;
             this.btnAbrirModalVisualizarClientes.Click += new System.EventHandler(this.btnAbrirModalVisualizarClientes_Click);
             // 
-            // pictureBox4
-            // 
-            this.pictureBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(94)))), ((int)(((byte)(220)))));
-            this.pictureBox4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(3, 3);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(80, 46);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox4.TabIndex = 6;
-            this.pictureBox4.TabStop = false;
-            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -206,7 +203,6 @@
             this.label2.TabIndex = 3;
             this.label2.Text = "Adicionar";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // btnAbrirModalAdicionarCliente
             // 
@@ -234,7 +230,6 @@
             this.label4.TabIndex = 7;
             this.label4.Text = "Filtrar";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // panel1
             // 
@@ -305,10 +300,10 @@
             this.panelRodape.ResumeLayout(false);
             this.tablePanelMenuClientes.ResumeLayout(false);
             this.tablePanelMenuClientes.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnAbrirModalFiltrarClientes)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.atualizarGridClientes)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnAbrirModalVisualizarClientes)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnAbrirModalAdicionarCliente)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -334,7 +329,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox atualizarGridClientes;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.PictureBox btnAbrirModalFiltrarClientes;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.PictureBox btnAbrirModalVisualizarClientes;
         private System.Windows.Forms.TableLayoutPanel tablePanelMenuClientes;

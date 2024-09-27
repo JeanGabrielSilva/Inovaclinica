@@ -52,6 +52,8 @@
             this.dataNascimentoAdicionarCliente = new System.Windows.Forms.DateTimePicker();
             this.ruaAdicionarCliente = new System.Windows.Forms.TextBox();
             this.cpfAdicionarCliente = new System.Windows.Forms.MaskedTextBox();
+            this.emailAdicionarCliente = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
             this.panelRodape.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnAdicionarCliente)).BeginInit();
@@ -146,14 +148,16 @@
             // 
             this.Dados.Controls.Add(this.tabPage1);
             this.Dados.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Dados.Location = new System.Drawing.Point(0, 65);
+            this.Dados.Location = new System.Drawing.Point(0, 62);
             this.Dados.Name = "Dados";
             this.Dados.SelectedIndex = 0;
-            this.Dados.Size = new System.Drawing.Size(800, 320);
+            this.Dados.Size = new System.Drawing.Size(800, 323);
             this.Dados.TabIndex = 21;
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.emailAdicionarCliente);
+            this.tabPage1.Controls.Add(this.label13);
             this.tabPage1.Controls.Add(this.label12);
             this.tabPage1.Controls.Add(this.observacaoAdicionarCliente);
             this.tabPage1.Controls.Add(this.label11);
@@ -177,7 +181,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 27);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(792, 289);
+            this.tabPage1.Size = new System.Drawing.Size(792, 292);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "tabPage1";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -309,9 +313,9 @@
             "AL",
             "AP",
             "AM",
-            " BA",
+            "BA",
             "CE",
-            " DF      ",
+            "DF      ",
             "ES",
             "GO",
             "MA",
@@ -401,6 +405,24 @@
             this.cpfAdicionarCliente.Size = new System.Drawing.Size(109, 24);
             this.cpfAdicionarCliente.TabIndex = 11;
             // 
+            // emailAdicionarCliente
+            // 
+            this.emailAdicionarCliente.Location = new System.Drawing.Point(600, 233);
+            this.emailAdicionarCliente.Name = "emailAdicionarCliente";
+            this.emailAdicionarCliente.Size = new System.Drawing.Size(169, 24);
+            this.emailAdicionarCliente.TabIndex = 36;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Arial Black", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.label13.Location = new System.Drawing.Point(529, 233);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(61, 22);
+            this.label13.TabIndex = 35;
+            this.label13.Text = "E-mail";
+            // 
             // modalAdicionarCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -451,5 +473,7 @@
         private System.Windows.Forms.DateTimePicker dataNascimentoAdicionarCliente;
         private System.Windows.Forms.TextBox ruaAdicionarCliente;
         private System.Windows.Forms.MaskedTextBox cpfAdicionarCliente;
+        private System.Windows.Forms.TextBox emailAdicionarCliente;
+        private System.Windows.Forms.Label label13;
     }
 }

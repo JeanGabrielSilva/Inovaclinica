@@ -30,7 +30,6 @@ namespace Inovaclinica {
             this.footerLabel = new System.Windows.Forms.Label();
             this.footerLabel1 = new System.Windows.Forms.Label();
             this.panelCabecalho = new System.Windows.Forms.Panel();
-            this.LogoCabecalho = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanelTelaInicial = new System.Windows.Forms.TableLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
@@ -50,13 +49,14 @@ namespace Inovaclinica {
             this.button10 = new System.Windows.Forms.Button();
             this.button11 = new System.Windows.Forms.Button();
             this.button12 = new System.Windows.Forms.Button();
+            this.LogoCabecalho = new System.Windows.Forms.PictureBox();
             this.panelRodape.SuspendLayout();
             this.panelCabecalho.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.LogoCabecalho)).BeginInit();
             this.tableLayoutPanelTelaInicial.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.LogoCabecalho)).BeginInit();
             this.SuspendLayout();
             // 
             // panelRodape
@@ -101,15 +101,6 @@ namespace Inovaclinica {
             this.panelCabecalho.Name = "panelCabecalho";
             this.panelCabecalho.Size = new System.Drawing.Size(1238, 80);
             this.panelCabecalho.TabIndex = 1;
-            // 
-            // LogoCabecalho
-            // 
-            this.LogoCabecalho.Location = new System.Drawing.Point(24, 12);
-            this.LogoCabecalho.Name = "LogoCabecalho";
-            this.LogoCabecalho.Size = new System.Drawing.Size(100, 50);
-            this.LogoCabecalho.TabIndex = 0;
-            this.LogoCabecalho.TabStop = false;
-            this.LogoCabecalho.Click += new System.EventHandler(this.LogoCabecalho_Click);
             // 
             // tableLayoutPanelTelaInicial
             // 
@@ -370,6 +361,15 @@ namespace Inovaclinica {
             this.button12.Text = "button6";
             this.button12.UseVisualStyleBackColor = false;
             // 
+            // LogoCabecalho
+            // 
+            this.LogoCabecalho.Location = new System.Drawing.Point(24, 12);
+            this.LogoCabecalho.Name = "LogoCabecalho";
+            this.LogoCabecalho.Size = new System.Drawing.Size(100, 50);
+            this.LogoCabecalho.TabIndex = 0;
+            this.LogoCabecalho.TabStop = false;
+            this.LogoCabecalho.Click += new System.EventHandler(this.LogoCabecalho_Click);
+            // 
             // FormTelaInicial
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -383,12 +383,12 @@ namespace Inovaclinica {
             this.panelRodape.ResumeLayout(false);
             this.panelRodape.PerformLayout();
             this.panelCabecalho.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.LogoCabecalho)).EndInit();
             this.tableLayoutPanelTelaInicial.ResumeLayout(false);
             this.tableLayoutPanelTelaInicial.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.LogoCabecalho)).EndInit();
             this.ResumeLayout(false);
 
         }
