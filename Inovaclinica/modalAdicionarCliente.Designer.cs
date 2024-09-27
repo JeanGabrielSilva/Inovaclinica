@@ -32,6 +32,8 @@
             this.btnCancelarAlteracaoCliente = new System.Windows.Forms.PictureBox();
             this.Dados = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.emailAdicionarCliente = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.observacaoAdicionarCliente = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
@@ -52,8 +54,6 @@
             this.dataNascimentoAdicionarCliente = new System.Windows.Forms.DateTimePicker();
             this.ruaAdicionarCliente = new System.Windows.Forms.TextBox();
             this.cpfAdicionarCliente = new System.Windows.Forms.MaskedTextBox();
-            this.emailAdicionarCliente = new System.Windows.Forms.TextBox();
-            this.label13 = new System.Windows.Forms.Label();
             this.panelRodape.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnAdicionarCliente)).BeginInit();
@@ -186,6 +186,24 @@
             this.tabPage1.Text = "tabPage1";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // emailAdicionarCliente
+            // 
+            this.emailAdicionarCliente.Location = new System.Drawing.Point(600, 233);
+            this.emailAdicionarCliente.Name = "emailAdicionarCliente";
+            this.emailAdicionarCliente.Size = new System.Drawing.Size(169, 24);
+            this.emailAdicionarCliente.TabIndex = 36;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Arial Black", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.label13.Location = new System.Drawing.Point(529, 233);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(61, 22);
+            this.label13.TabIndex = 35;
+            this.label13.Text = "E-mail";
+            // 
             // label12
             // 
             this.label12.AutoSize = true;
@@ -297,7 +315,7 @@
             // 
             this.lblNome.AutoSize = true;
             this.lblNome.Font = new System.Drawing.Font("Arial Black", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNome.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.lblNome.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.lblNome.Location = new System.Drawing.Point(6, 20);
             this.lblNome.Name = "lblNome";
             this.lblNome.Size = new System.Drawing.Size(58, 22);
@@ -404,24 +422,6 @@
             this.cpfAdicionarCliente.Name = "cpfAdicionarCliente";
             this.cpfAdicionarCliente.Size = new System.Drawing.Size(109, 24);
             this.cpfAdicionarCliente.TabIndex = 11;
-            // 
-            // emailAdicionarCliente
-            // 
-            this.emailAdicionarCliente.Location = new System.Drawing.Point(600, 233);
-            this.emailAdicionarCliente.Name = "emailAdicionarCliente";
-            this.emailAdicionarCliente.Size = new System.Drawing.Size(169, 24);
-            this.emailAdicionarCliente.TabIndex = 36;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Arial Black", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.label13.Location = new System.Drawing.Point(529, 233);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(61, 22);
-            this.label13.TabIndex = 35;
-            this.label13.Text = "E-mail";
             // 
             // modalAdicionarCliente
             // 

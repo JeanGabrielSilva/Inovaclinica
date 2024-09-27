@@ -265,6 +265,7 @@
             this.barraPesquisaClientes.Name = "barraPesquisaClientes";
             this.barraPesquisaClientes.Size = new System.Drawing.Size(873, 47);
             this.barraPesquisaClientes.TabIndex = 0;
+            this.barraPesquisaClientes.TextChanged += new System.EventHandler(this.barraPesquisaClientes_TextChanged);
             // 
             // panel2
             // 

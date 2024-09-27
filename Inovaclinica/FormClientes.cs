@@ -308,13 +308,18 @@ namespace Inovaclinica
         }
 
         private void btnAbrirModalFiltrarClientes_Click(object sender, EventArgs e) {
-            modalFiltrarCliente modalfiltracliente = new modalFiltrarCliente();
+            modalFiltrarCliente modalfiltracliente = new modalFiltrarCliente(this);
             modalfiltracliente.StartPosition = FormStartPosition.CenterParent;
             modalfiltracliente.ShowDialog();
         }
 
         private void button1_Click(object sender, EventArgs e) {
             MessageBox.Show("a");
+        }
+
+        private void barraPesquisaClientes_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
