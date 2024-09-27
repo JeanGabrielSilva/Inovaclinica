@@ -34,8 +34,10 @@
             this.dateTimePickerDataNascimento = new System.Windows.Forms.DateTimePicker();
             this.Dados = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.txtBoxEmailCliente = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.visualizarObservacaoCliente = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -45,10 +47,10 @@
             this.label4 = new System.Windows.Forms.Label();
             this.lblCPF = new System.Windows.Forms.Label();
             this.lblNome = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBoxSexo = new System.Windows.Forms.ComboBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.visualizarEstado = new System.Windows.Forms.ComboBox();
+            this.visualizarGeneroCliente = new System.Windows.Forms.ComboBox();
+            this.visualizarCepCliente = new System.Windows.Forms.TextBox();
+            this.visualizarCidadeCliente = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tabPage3 = new System.Windows.Forms.TabPage();
@@ -76,8 +78,6 @@
             this.textBoxNomeCliente.Name = "textBoxNomeCliente";
             this.textBoxNomeCliente.Size = new System.Drawing.Size(510, 24);
             this.textBoxNomeCliente.TabIndex = 3;
-            this.textBoxNomeCliente.Text = "Nome";
-            this.textBoxNomeCliente.TextChanged += new System.EventHandler(this.textBoxNomeCliente_TextChanged);
             // 
             // textBoxTelefone
             // 
@@ -85,7 +85,6 @@
             this.textBoxTelefone.Name = "textBoxTelefone";
             this.textBoxTelefone.Size = new System.Drawing.Size(158, 24);
             this.textBoxTelefone.TabIndex = 5;
-            this.textBoxTelefone.Text = "Telefone";
             // 
             // textBoxEndereco
             // 
@@ -93,7 +92,6 @@
             this.textBoxEndereco.Name = "textBoxEndereco";
             this.textBoxEndereco.Size = new System.Drawing.Size(161, 24);
             this.textBoxEndereco.TabIndex = 7;
-            this.textBoxEndereco.Text = "Rua";
             // 
             // labelClienteID
             // 
@@ -105,7 +103,6 @@
             this.labelClienteID.Size = new System.Drawing.Size(114, 28);
             this.labelClienteID.TabIndex = 8;
             this.labelClienteID.Text = "ClienteID";
-            this.labelClienteID.Click += new System.EventHandler(this.labelClienteID_Click);
             // 
             // checkBoxAtivoCliente
             // 
@@ -119,7 +116,6 @@
             this.checkBoxAtivoCliente.TabIndex = 9;
             this.checkBoxAtivoCliente.Text = "Ativo";
             this.checkBoxAtivoCliente.UseVisualStyleBackColor = true;
-            this.checkBoxAtivoCliente.CheckedChanged += new System.EventHandler(this.checkBoxAtivoCliente_CheckedChanged);
             // 
             // labelDataCadastro
             // 
@@ -132,19 +128,20 @@
             this.labelDataCadastro.Size = new System.Drawing.Size(96, 17);
             this.labelDataCadastro.TabIndex = 10;
             this.labelDataCadastro.Text = "DataCadastro";
-            this.labelDataCadastro.Click += new System.EventHandler(this.labelDataCadastro_Click);
             // 
             // maskTextBoxCpfCliente
             // 
             this.maskTextBoxCpfCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.maskTextBoxCpfCliente.Location = new System.Drawing.Point(660, 18);
-            this.maskTextBoxCpfCliente.Mask = "000.000.000-00";
+            this.maskTextBoxCpfCliente.Mask = "000,000,000-00";
             this.maskTextBoxCpfCliente.Name = "maskTextBoxCpfCliente";
             this.maskTextBoxCpfCliente.Size = new System.Drawing.Size(109, 24);
             this.maskTextBoxCpfCliente.TabIndex = 11;
+            this.maskTextBoxCpfCliente.ValidatingType = typeof(int);
             // 
             // dateTimePickerDataNascimento
             // 
+            this.dateTimePickerDataNascimento.CustomFormat = "";
             this.dateTimePickerDataNascimento.Location = new System.Drawing.Point(416, 69);
             this.dateTimePickerDataNascimento.Name = "dateTimePickerDataNascimento";
             this.dateTimePickerDataNascimento.Size = new System.Drawing.Size(162, 24);
@@ -165,8 +162,10 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.txtBoxEmailCliente);
+            this.tabPage1.Controls.Add(this.label13);
             this.tabPage1.Controls.Add(this.label12);
-            this.tabPage1.Controls.Add(this.textBox2);
+            this.tabPage1.Controls.Add(this.visualizarObservacaoCliente);
             this.tabPage1.Controls.Add(this.label11);
             this.tabPage1.Controls.Add(this.label10);
             this.tabPage1.Controls.Add(this.label9);
@@ -176,10 +175,10 @@
             this.tabPage1.Controls.Add(this.label4);
             this.tabPage1.Controls.Add(this.lblCPF);
             this.tabPage1.Controls.Add(this.lblNome);
-            this.tabPage1.Controls.Add(this.comboBox2);
-            this.tabPage1.Controls.Add(this.comboBoxSexo);
-            this.tabPage1.Controls.Add(this.textBox3);
-            this.tabPage1.Controls.Add(this.textBox1);
+            this.tabPage1.Controls.Add(this.visualizarEstado);
+            this.tabPage1.Controls.Add(this.visualizarGeneroCliente);
+            this.tabPage1.Controls.Add(this.visualizarCepCliente);
+            this.tabPage1.Controls.Add(this.visualizarCidadeCliente);
             this.tabPage1.Controls.Add(this.textBoxNomeCliente);
             this.tabPage1.Controls.Add(this.textBoxTelefone);
             this.tabPage1.Controls.Add(this.dateTimePickerDataNascimento);
@@ -194,7 +193,24 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "tabPage1";
             this.tabPage1.UseVisualStyleBackColor = true;
-            this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
+            // 
+            // txtBoxEmailCliente
+            // 
+            this.txtBoxEmailCliente.Location = new System.Drawing.Point(600, 229);
+            this.txtBoxEmailCliente.Name = "txtBoxEmailCliente";
+            this.txtBoxEmailCliente.Size = new System.Drawing.Size(167, 24);
+            this.txtBoxEmailCliente.TabIndex = 34;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Arial Black", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.label13.Location = new System.Drawing.Point(527, 229);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(61, 22);
+            this.label13.TabIndex = 33;
+            this.label13.Text = "E-mail";
             // 
             // label12
             // 
@@ -207,14 +223,13 @@
             this.label12.TabIndex = 32;
             this.label12.Text = "Observação";
             // 
-            // textBox2
+            // visualizarObservacaoCliente
             // 
-            this.textBox2.Location = new System.Drawing.Point(119, 179);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(388, 89);
-            this.textBox2.TabIndex = 31;
-            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            this.visualizarObservacaoCliente.Location = new System.Drawing.Point(119, 179);
+            this.visualizarObservacaoCliente.Multiline = true;
+            this.visualizarObservacaoCliente.Name = "visualizarObservacaoCliente";
+            this.visualizarObservacaoCliente.Size = new System.Drawing.Size(388, 89);
+            this.visualizarObservacaoCliente.TabIndex = 31;
             // 
             // label11
             // 
@@ -281,7 +296,6 @@
             this.label6.Size = new System.Drawing.Size(153, 22);
             this.label6.TabIndex = 25;
             this.label6.Text = "Data Nascimento";
-            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // label4
             // 
@@ -316,18 +330,18 @@
             this.lblNome.TabIndex = 22;
             this.lblNome.Text = "Nome";
             // 
-            // comboBox2
+            // visualizarEstado
             // 
-            this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
+            this.visualizarEstado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.visualizarEstado.FormattingEnabled = true;
+            this.visualizarEstado.Items.AddRange(new object[] {
             "AC",
             "AL",
             "AP",
             "AM",
-            " BA",
+            "BA",
             "CE",
-            " DF      ",
+            "DF      ",
             "ES",
             "GO",
             "MA",
@@ -348,39 +362,37 @@
             "SP",
             "SE",
             "TO"});
-            this.comboBox2.Location = new System.Drawing.Point(600, 178);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(169, 26);
-            this.comboBox2.TabIndex = 21;
+            this.visualizarEstado.Location = new System.Drawing.Point(600, 178);
+            this.visualizarEstado.Name = "visualizarEstado";
+            this.visualizarEstado.Size = new System.Drawing.Size(169, 26);
+            this.visualizarEstado.TabIndex = 21;
             // 
-            // comboBoxSexo
+            // visualizarGeneroCliente
             // 
-            this.comboBoxSexo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxSexo.FormattingEnabled = true;
-            this.comboBoxSexo.Items.AddRange(new object[] {
+            this.visualizarGeneroCliente.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.visualizarGeneroCliente.FormattingEnabled = true;
+            this.visualizarGeneroCliente.Items.AddRange(new object[] {
             "Homem",
             "Mulher",
             "Indefinido"});
-            this.comboBoxSexo.Location = new System.Drawing.Point(661, 69);
-            this.comboBoxSexo.Name = "comboBoxSexo";
-            this.comboBoxSexo.Size = new System.Drawing.Size(109, 26);
-            this.comboBoxSexo.TabIndex = 20;
+            this.visualizarGeneroCliente.Location = new System.Drawing.Point(661, 69);
+            this.visualizarGeneroCliente.Name = "visualizarGeneroCliente";
+            this.visualizarGeneroCliente.Size = new System.Drawing.Size(109, 26);
+            this.visualizarGeneroCliente.TabIndex = 20;
             // 
-            // textBox3
+            // visualizarCepCliente
             // 
-            this.textBox3.Location = new System.Drawing.Point(611, 125);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(159, 24);
-            this.textBox3.TabIndex = 19;
-            this.textBox3.Text = "CEP";
+            this.visualizarCepCliente.Location = new System.Drawing.Point(611, 125);
+            this.visualizarCepCliente.Name = "visualizarCepCliente";
+            this.visualizarCepCliente.Size = new System.Drawing.Size(159, 24);
+            this.visualizarCepCliente.TabIndex = 19;
             // 
-            // textBox1
+            // visualizarCidadeCliente
             // 
-            this.textBox1.Location = new System.Drawing.Point(76, 125);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(160, 24);
-            this.textBox1.TabIndex = 17;
-            this.textBox1.Text = "Cidade";
+            this.visualizarCidadeCliente.Location = new System.Drawing.Point(76, 125);
+            this.visualizarCidadeCliente.Name = "visualizarCidadeCliente";
+            this.visualizarCidadeCliente.Size = new System.Drawing.Size(160, 24);
+            this.visualizarCidadeCliente.TabIndex = 17;
             // 
             // label2
             // 
@@ -393,7 +405,6 @@
             this.label2.Size = new System.Drawing.Size(124, 17);
             this.label2.TabIndex = 16;
             this.label2.Text = "Data do Cadastro:";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // tabPage2
             // 
@@ -414,7 +425,6 @@
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "tabPage3";
             this.tabPage3.UseVisualStyleBackColor = true;
-            this.tabPage3.Click += new System.EventHandler(this.tabPage3_Click);
             // 
             // tabPage4
             // 
@@ -458,7 +468,6 @@
             this.lblNomeCliente.Size = new System.Drawing.Size(153, 28);
             this.lblNomeCliente.TabIndex = 18;
             this.lblNomeCliente.Text = "NomeCliente";
-            this.lblNomeCliente.Click += new System.EventHandler(this.lblNomeCliente_Click);
             // 
             // panelRodape
             // 
@@ -488,7 +497,6 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(152, 66);
             this.tableLayoutPanel1.TabIndex = 17;
-            this.tableLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel1_Paint);
             // 
             // label5
             // 
@@ -515,7 +523,6 @@
             this.labelCancelarVisualizarClientes.TabIndex = 15;
             this.labelCancelarVisualizarClientes.Text = "Cancelar";
             this.labelCancelarVisualizarClientes.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.labelCancelarVisualizarClientes.Click += new System.EventHandler(this.label4_Click);
             // 
             // btnSalvarAlteracaoCliente
             // 
@@ -559,7 +566,6 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "modalVisualizarClientes";
             this.Text = "modalVisualizarClientes";
-            this.Load += new System.EventHandler(this.modalVisualizarClientes_Load);
             this.Dados.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
@@ -598,20 +604,22 @@
         private System.Windows.Forms.PictureBox btnCancelarAlteracaoCliente;
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.TabPage tabPage4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.TextBox visualizarCepCliente;
+        private System.Windows.Forms.TextBox visualizarCidadeCliente;
+        private System.Windows.Forms.ComboBox visualizarEstado;
         private System.Windows.Forms.Label lblCPF;
         private System.Windows.Forms.Label lblNome;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ComboBox comboBoxSexo;
+        private System.Windows.Forms.ComboBox visualizarGeneroCliente;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox visualizarObservacaoCliente;
         private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.TextBox txtBoxEmailCliente;
+        private System.Windows.Forms.Label label13;
     }
 }

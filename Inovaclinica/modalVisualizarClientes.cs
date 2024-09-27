@@ -44,7 +44,7 @@ namespace Inovaclinica
 
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
-                string query = $"SELECT ClienteID, Nome, CPF, DataNascimento, Telefone, Endereco, Ativo, DataCadastro FROM Clientes WHERE ClienteID = @ClienteID";
+                string query = $"SELECT ClienteID, Nome, CPF, DataNascimento, Telefone, Endereco, Ativo, DataCadastro, Email, Estado, CEP, Genero, Observacoes, Cidade FROM Clientes WHERE ClienteID = @ClienteID";
 
                 SqlCommand command = new SqlCommand(query, connection);
                 command.Parameters.AddWithValue("@ClienteID", codigo); // Utiliza parâmetros para evitar SQL Injection
@@ -57,31 +57,22 @@ namespace Inovaclinica
                     labelClienteID.Text = reader["ClienteID"].ToString();
                     lblNomeCliente.Text = reader["Nome"].ToString();
                     textBoxNomeCliente.Text = reader["Nome"].ToString();
-                    maskTextBoxCpfCliente.Text = FormatarCPF(reader["CPF"].ToString());
+                    maskTextBoxCpfCliente.Text = reader["CPF"].ToString();
                     dateTimePickerDataNascimento.Value = Convert.ToDateTime(reader["DataNascimento"]);
                     textBoxTelefone.Text = reader["Telefone"].ToString();
                     textBoxEndereco.Text = reader["Endereco"].ToString();
                     checkBoxAtivoCliente.Checked = reader.GetBoolean(reader.GetOrdinal("Ativo"));
                     DateTime dataCadastro = Convert.ToDateTime(reader["DataCadastro"]);
-                    labelDataCadastro.Text = dataCadastro.ToString("dd/MM/yyyy HH:MM");
-
-
+                    labelDataCadastro.Text = dataCadastro.ToString("dd/MM/yyyy HH:mm");
+                    txtBoxEmailCliente.Text = reader["Email"].ToString();
+                    visualizarEstado.Text = reader["Estado"].ToString();
+                    visualizarCepCliente.Text = reader["CEP"].ToString();
+                    visualizarObservacaoCliente.Text = reader["Observacoes"].ToString();
+                    visualizarGeneroCliente.Text = reader["Genero"].ToString();
+                    visualizarCidadeCliente.Text = reader["Cidade"].ToString();
                 }
             }
         }
-
-        private void lblNome_Click(object sender, EventArgs e)
-        {
-        }
-
-
-
-        private void textBoxNomeCliente_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-
 
         public string FormatarCPF(string CPF)
         {
@@ -100,69 +91,14 @@ namespace Inovaclinica
             return CPF; // Retorna sem formatação se não for válido
         }
 
-        private void toolStripContainer1_TopToolStripPanel_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        private void tabPage1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void modalVisualizarClientes_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void checkBoxAtivoCliente_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void labelClienteID_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void labelDataCadastro_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnSalvarAlteracaoCliente_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnCancelarAlteracaoCliente_Click(object sender, EventArgs e)
         {
             this.Close();
-        }
-
-        private void tabPage3_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void btnSalvarAlteracaoCliente_Click(object sender, EventArgs e)
@@ -171,14 +107,20 @@ namespace Inovaclinica
 
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
-                string query = $"UPDATE Clientes SET Nome = @Nome, CPF = @CPF, DataNascimento = @DataNascimento, Telefone = @Telefone, Ativo = @Ativo WHERE ClienteID = @ClientID";
+                string query = $"UPDATE Clientes SET Nome = @Nome, CPF = @CPF, DataNascimento = @DataNascimento, Telefone = @Telefone, Ativo = @Ativo, Email = @Email, Estado = @Estado, CEP = @CEP, Observacoes = @Observacoes, Genero = @Genero, Cidade = @Cidade WHERE ClienteID = @ClientID";
                 SqlCommand command = new SqlCommand(query, connection);
                 command.Parameters.AddWithValue("@Nome", textBoxNomeCliente.Text);
-                command.Parameters.AddWithValue("@CPF", FormatarCPF(maskTextBoxCpfCliente.Text));
+                command.Parameters.AddWithValue("@CPF", maskTextBoxCpfCliente.Text);
                 command.Parameters.AddWithValue("@DataNascimento", dateTimePickerDataNascimento.Value);
                 command.Parameters.AddWithValue("@Telefone", textBoxTelefone.Text);
                 command.Parameters.AddWithValue("@ClientID", this.clientID);
                 command.Parameters.AddWithValue("@Ativo", checkBoxAtivoCliente.Checked);
+                command.Parameters.AddWithValue("@Email", txtBoxEmailCliente.Text);
+                command.Parameters.AddWithValue("CEP", visualizarCepCliente.Text);
+                command.Parameters.AddWithValue("Estado", visualizarEstado.Text);
+                command.Parameters.AddWithValue("Genero", visualizarGeneroCliente.Text);
+                command.Parameters.AddWithValue("Observacoes", visualizarObservacaoCliente.Text);
+                command.Parameters.AddWithValue("Cidade", visualizarCidadeCliente.Text);
 
 
                 connection.Open();
@@ -197,20 +139,6 @@ namespace Inovaclinica
 
         }
 
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblNomeCliente_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 
 }
