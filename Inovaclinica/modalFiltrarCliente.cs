@@ -11,13 +11,27 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Inovaclinica {
-    public partial class modalFiltrarCliente : Form {
+    public partial class modalFiltrarCliente : Form
+    {
+        public string filtroNomeCliente { get; set; }
+        public string filtroCpfCliente { get; set; }
+        public string filtroCidadeCliente { get; set; }
+        public string filtroSexoCliente { get; set; }
+
 
         private FormClientes _formClientes;
         public modalFiltrarCliente(FormClientes formClientes) {
             InitializeComponent();
             _formClientes = formClientes;
+            
+        }
 
+        private void LimparCampos()
+        {
+            textBoxFiltrarClientesNome.Clear();
+            textBoxFiltrarClientesCPF.Clear();
+            textBoxFiltrarClientesCidade.Clear();
+            ComboBoxFiltrarClientesSexo.SelectedIndex = -1;
         }
 
         private void btnCancelarAlteracaoCliente_Click(object sender, EventArgs e)
@@ -25,69 +39,22 @@ namespace Inovaclinica {
             this.Close();
         }
 
-        private void textBox3_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnFiltrarClientes_Click(object sender, EventArgs e)
         {
-            var filtroNomeCliente = textBoxFiltrarClientesNome.Text;
-            var filtroCpfCliente = textBoxFiltrarClientesCPF.Text;
-            var filtroCidadeCliente = textBoxFiltrarClientesCidade.Text;
-            var filtroSexoCliente = ComboBoxFiltrarClientesSexo.Text;
-            var filtroDataNascimentoInicio = maskFiltrarClientesDataInicio.Text;
-            var filtroDataNascimentoFinal = maskFiltrarClientesDataFinal.Text;
-
-            FiltrarClientes(filtroNomeCliente, filtroCpfCliente, filtroCidadeCliente, filtroSexoCliente, filtroDataNascimentoInicio, filtroDataNascimentoFinal);
+            filtroNomeCliente = textBoxFiltrarClientesNome.Text;
+            filtroCpfCliente = LimparMascaraCPF(textBoxFiltrarClientesCPF.Text);
+            filtroCidadeCliente = textBoxFiltrarClientesCidade.Text;
+            filtroSexoCliente = ComboBoxFiltrarClientesSexo.Text;
+            LimparCampos();
+            this.Close();
 
         }
 
-        private void FiltrarClientes(string filtroNomeCliente,string filtroCpfCliente, string filtroCidadeCliente,string filtroSexoCliente,string filtroDataNascimentoInicio,string filtroDataNascimentoFinal)
+        private string LimparMascaraCPF(string cpfComMascara)
         {
-            string connectionString = ConfigurationManager.ConnectionStrings["InovaclinicaConnectionString"].ConnectionString;
-
-            var queryFiltrar = $"SELECT ClienteID as Código, Nome, CPF, DataNascimento as [Data Nascimento] FROM Clientes WHERE Ativo = 1 OR Nome = {filtroNomeCliente} OR CPF = {filtroCpfCliente} OR Cidade = {filtroCidadeCliente} OR Genero = {filtroSexoCliente}";
-
-            using (SqlConnection connection = new SqlConnection(connectionString))
-            {
-                try
-                {
-                    // Abre a conexão
-                    connection.Open();
-
-                    // SqlDataAdapter para executar a consulta e preencher os dados
-                    SqlDataAdapter dataAdapter = new SqlDataAdapter(queryFiltrar, connection);
-
-                    // Cria um DataTable para armazenar os dados
-                    DataTable dataTable = new DataTable();
-
-                    // Preenche o DataTable com os dados retornados da consulta
-                    dataAdapter.Fill(dataTable);
-
-                    // Define a fonte de dados do DataGridView como o DataTable
-                    dataGridClientes.DataSource = dataTable;
-
-                    // Aplica as cores das linhas
-                    ApplyRowColors();
-                }
-                catch (Exception ex)
-                {
-                    // Exibe uma mensagem de erro caso ocorra uma exceção
-                    MessageBox.Show($"Erro ao carregar dados: {ex.Message}");
-                }
-
-            }
+            // Remove qualquer caractere que não seja dígito
+            return new string(cpfComMascara.Where(char.IsDigit).ToArray());
         }
+
     }
 }

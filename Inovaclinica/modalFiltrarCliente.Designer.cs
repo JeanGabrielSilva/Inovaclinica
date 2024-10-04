@@ -38,11 +38,11 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.textBoxFiltrarClientesNome = new System.Windows.Forms.TextBox();
-            this.textBoxFiltrarClientesCPF = new System.Windows.Forms.TextBox();
             this.textBoxFiltrarClientesCidade = new System.Windows.Forms.TextBox();
             this.maskFiltrarClientesDataInicio = new System.Windows.Forms.MaskedTextBox();
             this.maskFiltrarClientesDataFinal = new System.Windows.Forms.MaskedTextBox();
             this.ComboBoxFiltrarClientesSexo = new System.Windows.Forms.ComboBox();
+            this.textBoxFiltrarClientesCPF = new System.Windows.Forms.MaskedTextBox();
             this.panelRodape.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnFiltrarClientes)).BeginInit();
@@ -185,7 +185,6 @@
             this.label2.Size = new System.Drawing.Size(32, 22);
             this.label2.TabIndex = 5;
             this.label2.Text = "De";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label3
             // 
@@ -217,15 +216,6 @@
             this.textBoxFiltrarClientesNome.Size = new System.Drawing.Size(201, 24);
             this.textBoxFiltrarClientesNome.TabIndex = 8;
             // 
-            // textBoxFiltrarClientesCPF
-            // 
-            this.textBoxFiltrarClientesCPF.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxFiltrarClientesCPF.Location = new System.Drawing.Point(101, 76);
-            this.textBoxFiltrarClientesCPF.Name = "textBoxFiltrarClientesCPF";
-            this.textBoxFiltrarClientesCPF.Size = new System.Drawing.Size(155, 24);
-            this.textBoxFiltrarClientesCPF.TabIndex = 9;
-            this.textBoxFiltrarClientesCPF.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
-            // 
             // textBoxFiltrarClientesCidade
             // 
             this.textBoxFiltrarClientesCidade.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -233,7 +223,6 @@
             this.textBoxFiltrarClientesCidade.Name = "textBoxFiltrarClientesCidade";
             this.textBoxFiltrarClientesCidade.Size = new System.Drawing.Size(130, 24);
             this.textBoxFiltrarClientesCidade.TabIndex = 10;
-            this.textBoxFiltrarClientesCidade.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
             // maskFiltrarClientesDataInicio
             // 
@@ -269,18 +258,27 @@
             this.ComboBoxFiltrarClientesSexo.Size = new System.Drawing.Size(109, 26);
             this.ComboBoxFiltrarClientesSexo.TabIndex = 21;
             // 
+            // textBoxFiltrarClientesCPF
+            // 
+            this.textBoxFiltrarClientesCPF.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxFiltrarClientesCPF.Location = new System.Drawing.Point(101, 76);
+            this.textBoxFiltrarClientesCPF.Mask = "000,000,000-00";
+            this.textBoxFiltrarClientesCPF.Name = "textBoxFiltrarClientesCPF";
+            this.textBoxFiltrarClientesCPF.Size = new System.Drawing.Size(109, 24);
+            this.textBoxFiltrarClientesCPF.TabIndex = 23;
+            // 
             // modalFiltrarCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(329, 410);
+            this.Controls.Add(this.textBoxFiltrarClientesCPF);
             this.Controls.Add(this.ComboBoxFiltrarClientesSexo);
             this.Controls.Add(this.maskFiltrarClientesDataFinal);
             this.Controls.Add(this.maskFiltrarClientesDataInicio);
             this.Controls.Add(this.panelRodape);
             this.Controls.Add(this.textBoxFiltrarClientesCidade);
             this.Controls.Add(this.lblFiltrarNomeCliente);
-            this.Controls.Add(this.textBoxFiltrarClientesCPF);
             this.Controls.Add(this.lblFiltrarClienteCPF);
             this.Controls.Add(this.textBoxFiltrarClientesNome);
             this.Controls.Add(this.lblFiltrarClienteCidade);
@@ -316,10 +314,10 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBoxFiltrarClientesNome;
-        private System.Windows.Forms.TextBox textBoxFiltrarClientesCPF;
         private System.Windows.Forms.TextBox textBoxFiltrarClientesCidade;
         private System.Windows.Forms.MaskedTextBox maskFiltrarClientesDataInicio;
         private System.Windows.Forms.MaskedTextBox maskFiltrarClientesDataFinal;
         private System.Windows.Forms.ComboBox ComboBoxFiltrarClientesSexo;
+        private System.Windows.Forms.MaskedTextBox textBoxFiltrarClientesCPF;
     }
 }

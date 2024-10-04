@@ -14,6 +14,7 @@ namespace Inovaclinica
 {
     public partial class FormClientes : Form
     {
+        private modalFiltrarCliente _modalFiltrarCliente;
         public FormClientes()
         {
             // Inicializa os componentes do formulário
@@ -307,10 +308,15 @@ namespace Inovaclinica
             }
         }
 
-        private void btnAbrirModalFiltrarClientes_Click(object sender, EventArgs e) {
-            modalFiltrarCliente modalfiltracliente = new modalFiltrarCliente(this);
-            modalfiltracliente.StartPosition = FormStartPosition.CenterParent;
-            modalfiltracliente.ShowDialog();
+        private void btnAbrirModalFiltrarClientes_Click(object sender, EventArgs e)
+        {
+            if (_modalFiltrarCliente == null)
+            {
+                _modalFiltrarCliente = new modalFiltrarCliente(this);
+            }
+            _modalFiltrarCliente.StartPosition = FormStartPosition.CenterParent;
+            _modalFiltrarCliente.FormClosed += modalFiltrarCliente_FormClosed;
+            _modalFiltrarCliente.ShowDialog();
         }
 
         private void button1_Click(object sender, EventArgs e) {
@@ -320,6 +326,85 @@ namespace Inovaclinica
         private void barraPesquisaClientes_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void modalFiltrarCliente_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            if (_modalFiltrarCliente != null)
+            {
+                string nome = _modalFiltrarCliente.filtroNomeCliente;
+                string cpf = _modalFiltrarCliente.filtroCpfCliente;
+                string cidade = _modalFiltrarCliente.filtroCidadeCliente;
+                string sexo = _modalFiltrarCliente.filtroSexoCliente;
+
+                FiltrarClientes(nome, cpf, cidade, sexo);
+
+            }
+        }
+
+        private void FiltrarClientes(string nome, string cpf, string cidade, string sexo)
+        {
+            string connectionString = ConfigurationManager.ConnectionStrings["InovaclinicaConnectionString"].ConnectionString;
+
+            // Inicia a consulta sem qualquer critério adicional.
+            string queryFiltrar = "SELECT ClienteID as Código, Nome, CPF, DataNascimento as [Data Nascimento], Telefone FROM Clientes WHERE Ativo = 1";
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            using (SqlCommand command = new SqlCommand(queryFiltrar, connection))
+            {
+                // Adiciona condições à consulta conforme os parâmetros não vazios
+                if (!string.IsNullOrEmpty(nome))
+                {
+                    queryFiltrar += " AND Nome LIKE @Nome";
+                    command.Parameters.AddWithValue("@Nome", "%" + nome + "%");
+                }
+
+                if (!string.IsNullOrEmpty(cpf))
+                {
+                    queryFiltrar += " AND CPF LIKE @CPF";
+                    command.Parameters.AddWithValue("@CPF", "%" + cpf + "%");
+
+                }
+
+                if (!string.IsNullOrEmpty(cidade))
+                {
+                    queryFiltrar += " AND CIDADE LIKE @CIDADE";
+                    command.Parameters.AddWithValue("@CIDADE", "%" + cidade + "%");
+                }
+
+                if (!string.IsNullOrEmpty(sexo))
+                {
+                    queryFiltrar += " AND GENERO LIKE @SEXO";
+                    command.Parameters.AddWithValue("@SEXO", "%" + sexo + "%");
+                }
+
+                command.CommandText = queryFiltrar; // Atualiza o comando SQL com a query completa
+
+                try
+                {
+                    connection.Open();
+                    SqlDataAdapter adapter = new SqlDataAdapter(command);
+                    DataTable dataTable = new DataTable();
+                    adapter.Fill(dataTable);
+
+                    // Verifica se foram encontrados registros
+                    if (dataTable.Rows.Count > 0)
+                    {
+                        // Preenche o DataGridView e aplica as cores
+                        dataGridClientes.DataSource = dataTable;
+                        dataGridClientes.Refresh();
+                        ApplyRowColors();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Nenhum cliente encontrado com os critérios especificados.");
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Erro ao filtrar os dados: " + ex.Message);
+                }
+            }
         }
     }
 }
