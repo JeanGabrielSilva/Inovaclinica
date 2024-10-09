@@ -81,5 +81,14 @@ namespace Inovaclinica {
             formclientes.WindowState = FormWindowState.Maximized;
             formclientes.Show();
         }
+
+        private void btnMenuProduto_Click(object sender, EventArgs e)
+        {
+            FormProdutos formprodutos = new FormProdutos();
+            formprodutos.StartPosition = FormStartPosition.CenterScreen;
+            formprodutos.WindowState = FormWindowState.Maximized;
+            formprodutos.Show();    
+
+        }
     }
 }

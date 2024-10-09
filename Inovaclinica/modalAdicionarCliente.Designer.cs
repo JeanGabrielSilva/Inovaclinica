@@ -28,8 +28,6 @@
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.label5 = new System.Windows.Forms.Label();
             this.labelCancelarVisualizarClientes = new System.Windows.Forms.Label();
-            this.btnAdicionarCliente = new System.Windows.Forms.PictureBox();
-            this.btnCancelarAlteracaoCliente = new System.Windows.Forms.PictureBox();
             this.Dados = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.emailAdicionarCliente = new System.Windows.Forms.TextBox();
@@ -54,12 +52,14 @@
             this.dataNascimentoAdicionarCliente = new System.Windows.Forms.DateTimePicker();
             this.ruaAdicionarCliente = new System.Windows.Forms.TextBox();
             this.cpfAdicionarCliente = new System.Windows.Forms.MaskedTextBox();
+            this.btnAdicionarCliente = new System.Windows.Forms.PictureBox();
+            this.btnCancelarAlteracaoCliente = new System.Windows.Forms.PictureBox();
             this.panelRodape.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnAdicionarCliente)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnCancelarAlteracaoCliente)).BeginInit();
             this.Dados.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnAdicionarCliente)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnCancelarAlteracaoCliente)).BeginInit();
             this.SuspendLayout();
             // 
             // panelRodape
@@ -116,39 +116,11 @@
             this.labelCancelarVisualizarClientes.Text = "Cancelar";
             this.labelCancelarVisualizarClientes.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // btnAdicionarCliente
-            // 
-            this.btnAdicionarCliente.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAdicionarCliente.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAdicionarCliente.Image = ((System.Drawing.Image)(resources.GetObject("btnAdicionarCliente.Image")));
-            this.btnAdicionarCliente.Location = new System.Drawing.Point(3, 3);
-            this.btnAdicionarCliente.Name = "btnAdicionarCliente";
-            this.btnAdicionarCliente.Size = new System.Drawing.Size(70, 38);
-            this.btnAdicionarCliente.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.btnAdicionarCliente.TabIndex = 14;
-            this.btnAdicionarCliente.TabStop = false;
-            this.btnAdicionarCliente.Click += new System.EventHandler(this.btnAdicionarCliente_Click);
-            // 
-            // btnCancelarAlteracaoCliente
-            // 
-            this.btnCancelarAlteracaoCliente.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCancelarAlteracaoCliente.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnCancelarAlteracaoCliente.Image = global::Inovaclinica.Properties.Resources.circulo_x__1_;
-            this.btnCancelarAlteracaoCliente.Location = new System.Drawing.Point(79, 3);
-            this.btnCancelarAlteracaoCliente.Name = "btnCancelarAlteracaoCliente";
-            this.btnCancelarAlteracaoCliente.Size = new System.Drawing.Size(70, 38);
-            this.btnCancelarAlteracaoCliente.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.btnCancelarAlteracaoCliente.TabIndex = 17;
-            this.btnCancelarAlteracaoCliente.TabStop = false;
-            this.btnCancelarAlteracaoCliente.Click += new System.EventHandler(this.btnCancelarAlteracaoCliente_Click);
-            // 
             // Dados
             // 
             this.Dados.Controls.Add(this.tabPage1);
             this.Dados.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Dados.Location = new System.Drawing.Point(0, 62);
+            this.Dados.Location = new System.Drawing.Point(0, 58);
             this.Dados.Name = "Dados";
             this.Dados.SelectedIndex = 0;
             this.Dados.Size = new System.Drawing.Size(800, 323);
@@ -315,7 +287,7 @@
             // 
             this.lblNome.AutoSize = true;
             this.lblNome.Font = new System.Drawing.Font("Arial Black", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNome.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.lblNome.ForeColor = System.Drawing.SystemColors.ControlDark;
             this.lblNome.Location = new System.Drawing.Point(6, 20);
             this.lblNome.Name = "lblNome";
             this.lblNome.Size = new System.Drawing.Size(58, 22);
@@ -423,6 +395,34 @@
             this.cpfAdicionarCliente.Size = new System.Drawing.Size(109, 24);
             this.cpfAdicionarCliente.TabIndex = 11;
             // 
+            // btnAdicionarCliente
+            // 
+            this.btnAdicionarCliente.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAdicionarCliente.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAdicionarCliente.Image = ((System.Drawing.Image)(resources.GetObject("btnAdicionarCliente.Image")));
+            this.btnAdicionarCliente.Location = new System.Drawing.Point(3, 3);
+            this.btnAdicionarCliente.Name = "btnAdicionarCliente";
+            this.btnAdicionarCliente.Size = new System.Drawing.Size(70, 38);
+            this.btnAdicionarCliente.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.btnAdicionarCliente.TabIndex = 14;
+            this.btnAdicionarCliente.TabStop = false;
+            this.btnAdicionarCliente.Click += new System.EventHandler(this.btnAdicionarCliente_Click);
+            // 
+            // btnCancelarAlteracaoCliente
+            // 
+            this.btnCancelarAlteracaoCliente.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCancelarAlteracaoCliente.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnCancelarAlteracaoCliente.Image = global::Inovaclinica.Properties.Resources.circulo_x__1_;
+            this.btnCancelarAlteracaoCliente.Location = new System.Drawing.Point(79, 3);
+            this.btnCancelarAlteracaoCliente.Name = "btnCancelarAlteracaoCliente";
+            this.btnCancelarAlteracaoCliente.Size = new System.Drawing.Size(70, 38);
+            this.btnCancelarAlteracaoCliente.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.btnCancelarAlteracaoCliente.TabIndex = 17;
+            this.btnCancelarAlteracaoCliente.TabStop = false;
+            this.btnCancelarAlteracaoCliente.Click += new System.EventHandler(this.btnCancelarAlteracaoCliente_Click);
+            // 
             // modalAdicionarCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -435,11 +435,11 @@
             this.panelRodape.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnAdicionarCliente)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnCancelarAlteracaoCliente)).EndInit();
             this.Dados.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnAdicionarCliente)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnCancelarAlteracaoCliente)).EndInit();
             this.ResumeLayout(false);
 
         }

@@ -117,38 +117,25 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="adicionar-usuario" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\adicionar-usuario.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="lixeira-xmark" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\lixeira-xmark.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="verifique-o-circulo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\verifique-o-circulo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="adicionar-produto (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\adicionar-produto (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="circulo-x (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\circulo-x (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="circulo-x" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\circulo-x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="adicionar-produto" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\adicionar-produto.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="botao-adicionar" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\botao-adicionar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="botao-adicionar (1)1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\botao-adicionar (1)1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="botao-adicionar (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\botao-adicionar (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="botao-adicionar1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\botao-adicionar1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="btnAdicionarProduto.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        vAAADrwBlbxySQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAMmSURBVFhHrZfL
+        ahRBFIZHDQbJJG6E4FINYjCIDxB3QkwkCyEJKuJCjaIgPoGbQIhrk2gmPoWXrSCKGF36BN4luvQWr+P3
+        95zurq6pnunOzAcf9Jw6p6pvVV1TKUq9Xu/HU3gHX+An/GXq+Dmu4knst7LOobPdeBu/YVGUqxMdsm7K
+        Q/EOnMOvuFl0d25gr3VbDAqG8CV2i6c4aN23hsTDuK6qAG9wEY/hAewzdTyOS/gWQ6h2xIYJQ4KuPDT4
+        O7yA2yw1F3J6cBbfo89rDN8JGvTMQ7f9LpZ+q1WD99SBhx5H8ztBUC+cz03caimlUS3qkfksWEoDAppq
+        /tuuK9/04DHqA/078RP3WUqUpHnuomfetcWEvgbwgzp2WI0b9az8ReZ81LgJqD1khxmIX4x6TtEdr6pB
+        y6uLpkvbtz0EdafxD85ZKIGYZofurMuMGrRkuixaTSmoO4saPOa6NSUQW240JdQU1IfFZdzyMxDPfSFp
+        O4d/VezwG4ctJYLfx6OWlDUFPzeOE/ZbfgKxnbiGZyyUQEyLjj+4vgFTlpJATCumy7qCmhIuVcuP4LeW
+        2sdRS73+D69YU97g6u+EpWQgXo0yUjZCJ5BMP4634MMomqKTuIxX7dhlAyetvAnaNONcohNo+Qj4PYW6
+        pS4a2B/8B05YWRDag49AOxmXppeQ2CTq6vL4jmOWngs5/kv4TEFto1yWLD8D8THUQD5axI5aWkvIuxVV
+        pKwoqD2ci77nPVaTgfgovlKSoeNRa24JeaGFaFoNoaV41uqaoE2fbZ3IER1buC3kXkKXL9gXN/qroTYT
+        3fwYaR35qI4datYcJWgn5L/p+oR263P8QB066IXeYykNCGj36qPNRKcbEu0TfeYtJYVgL2q75HMfByyt
+        MNTotvtXLp7gdkvLQsMg6nPso8XqGgZnh4tyUN9+fwMi8jelMSSMYOgkhKaR5vIEDqPWdqljLTJq86da
+        jAY/aMO0hsRd+EhVXaL4H5MYCvROLKD/sSqDaucx/MyLQPFe1HJd5j+iFpkaZqdaJ9CZnvUMrqA2J/oH
+        pSuUOlZMu+tpbKxwbalU/gNAjSRJ1hFppAAAAABJRU5ErkJggg==
+</value>
   </data>
 </root>
