@@ -63,9 +63,69 @@ namespace Inovaclinica.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap adicionar_produto {
+            get {
+                object obj = ResourceManager.GetObject("adicionar-produto", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap adicionar_produto__1_ {
+            get {
+                object obj = ResourceManager.GetObject("adicionar-produto (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap adicionar_usuario {
             get {
                 object obj = ResourceManager.GetObject("adicionar-usuario", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap botao_adicionar {
+            get {
+                object obj = ResourceManager.GetObject("botao-adicionar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap botao_adicionar__1_ {
+            get {
+                object obj = ResourceManager.GetObject("botao-adicionar (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap botao_adicionar__1_1 {
+            get {
+                object obj = ResourceManager.GetObject("botao-adicionar (1)1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap botao_adicionar1 {
+            get {
+                object obj = ResourceManager.GetObject("botao-adicionar1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -86,6 +146,16 @@ namespace Inovaclinica.Properties {
         internal static System.Drawing.Bitmap circulo_x__1_ {
             get {
                 object obj = ResourceManager.GetObject("circulo-x (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap lixeira_xmark {
+            get {
+                object obj = ResourceManager.GetObject("lixeira-xmark", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
