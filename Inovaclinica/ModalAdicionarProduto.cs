@@ -16,11 +16,12 @@ namespace Inovaclinica
 {
     public partial class modalAdicionarProduto : Form
     {
-        public modalAdicionarProduto()
+        private FormProdutos _formProdutos;
+        public modalAdicionarProduto(FormProdutos formProdutos)
         {
             InitializeComponent();
             tabPage1.Text = "Informações";
-           
+            _formProdutos = formProdutos;
         }
 
         private void btnAdicionarProduto_Click(object sender, EventArgs e)
@@ -73,7 +74,7 @@ namespace Inovaclinica
                         nomeProduto.Clear();
                         descricaoProduto.Clear();
                         dataValidadeProduto.Clear();
-                        //_formClientes.LoadData();
+                        _formProdutos.LoadData();
                     }
                     else
                     {
