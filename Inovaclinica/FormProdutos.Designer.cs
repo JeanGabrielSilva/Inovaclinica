@@ -30,21 +30,23 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormProdutos));
             this.panelBarraPesquisa = new System.Windows.Forms.Panel();
+            this.btnBarraPesquisaProdutos = new System.Windows.Forms.PictureBox();
             this.barraPesquisaProdutos = new System.Windows.Forms.TextBox();
             this.panelRodape = new System.Windows.Forms.Panel();
             this.tablePanelMenuClientes = new System.Windows.Forms.TableLayoutPanel();
+            this.btnAbrirModalFiltrarProdutos = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.btnAbrirModalFiltrarProdutos = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.atualizarGridProdutos = new System.Windows.Forms.PictureBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.btnAbrirModalVisualizarProdutos = new System.Windows.Forms.PictureBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.btnAbrirModalAdicionarProduto = new System.Windows.Forms.PictureBox();
-            this.btnBarraPesquisaProdutos = new System.Windows.Forms.PictureBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.DataGridProdutos = new System.Windows.Forms.DataGridView();
             this.panelBarraPesquisa.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnBarraPesquisaProdutos)).BeginInit();
             this.panelRodape.SuspendLayout();
             this.tablePanelMenuClientes.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnAbrirModalFiltrarProdutos)).BeginInit();
@@ -52,7 +54,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.atualizarGridProdutos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnAbrirModalVisualizarProdutos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnAbrirModalAdicionarProduto)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnBarraPesquisaProdutos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DataGridProdutos)).BeginInit();
             this.SuspendLayout();
             // 
             // panelBarraPesquisa
@@ -64,6 +66,21 @@
             this.panelBarraPesquisa.Name = "panelBarraPesquisa";
             this.panelBarraPesquisa.Size = new System.Drawing.Size(943, 78);
             this.panelBarraPesquisa.TabIndex = 3;
+            // 
+            // btnBarraPesquisaProdutos
+            // 
+            this.btnBarraPesquisaProdutos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(94)))), ((int)(((byte)(220)))));
+            this.btnBarraPesquisaProdutos.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.btnBarraPesquisaProdutos.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnBarraPesquisaProdutos.Image = ((System.Drawing.Image)(resources.GetObject("btnBarraPesquisaProdutos.Image")));
+            this.btnBarraPesquisaProdutos.InitialImage = ((System.Drawing.Image)(resources.GetObject("btnBarraPesquisaProdutos.InitialImage")));
+            this.btnBarraPesquisaProdutos.Location = new System.Drawing.Point(13, 16);
+            this.btnBarraPesquisaProdutos.Name = "btnBarraPesquisaProdutos";
+            this.btnBarraPesquisaProdutos.Size = new System.Drawing.Size(48, 47);
+            this.btnBarraPesquisaProdutos.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.btnBarraPesquisaProdutos.TabIndex = 1;
+            this.btnBarraPesquisaProdutos.TabStop = false;
+            this.btnBarraPesquisaProdutos.Click += new System.EventHandler(this.btnBarraPesquisaProdutos_Click);
             // 
             // barraPesquisaProdutos
             // 
@@ -113,6 +130,19 @@
             this.tablePanelMenuClientes.Size = new System.Drawing.Size(431, 66);
             this.tablePanelMenuClientes.TabIndex = 10;
             // 
+            // btnAbrirModalFiltrarProdutos
+            // 
+            this.btnAbrirModalFiltrarProdutos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(94)))), ((int)(((byte)(220)))));
+            this.btnAbrirModalFiltrarProdutos.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAbrirModalFiltrarProdutos.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnAbrirModalFiltrarProdutos.Image = ((System.Drawing.Image)(resources.GetObject("btnAbrirModalFiltrarProdutos.Image")));
+            this.btnAbrirModalFiltrarProdutos.Location = new System.Drawing.Point(3, 3);
+            this.btnAbrirModalFiltrarProdutos.Name = "btnAbrirModalFiltrarProdutos";
+            this.btnAbrirModalFiltrarProdutos.Size = new System.Drawing.Size(80, 46);
+            this.btnAbrirModalFiltrarProdutos.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.btnAbrirModalFiltrarProdutos.TabIndex = 6;
+            this.btnAbrirModalFiltrarProdutos.TabStop = false;
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -139,58 +169,6 @@
             this.label3.Text = "Atualizar";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label5.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.SystemColors.Control;
-            this.label5.Location = new System.Drawing.Point(175, 52);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(80, 14);
-            this.label5.TabIndex = 9;
-            this.label5.Text = "Visualizar";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label2.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.Control;
-            this.label2.Location = new System.Drawing.Point(89, 52);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(80, 14);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Adicionar";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label4.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.SystemColors.Control;
-            this.label4.Location = new System.Drawing.Point(3, 52);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(80, 14);
-            this.label4.TabIndex = 7;
-            this.label4.Text = "Filtrar";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // btnAbrirModalFiltrarProdutos
-            // 
-            this.btnAbrirModalFiltrarProdutos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(94)))), ((int)(((byte)(220)))));
-            this.btnAbrirModalFiltrarProdutos.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAbrirModalFiltrarProdutos.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnAbrirModalFiltrarProdutos.Image = ((System.Drawing.Image)(resources.GetObject("btnAbrirModalFiltrarProdutos.Image")));
-            this.btnAbrirModalFiltrarProdutos.Location = new System.Drawing.Point(3, 3);
-            this.btnAbrirModalFiltrarProdutos.Name = "btnAbrirModalFiltrarProdutos";
-            this.btnAbrirModalFiltrarProdutos.Size = new System.Drawing.Size(80, 46);
-            this.btnAbrirModalFiltrarProdutos.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.btnAbrirModalFiltrarProdutos.TabIndex = 6;
-            this.btnAbrirModalFiltrarProdutos.TabStop = false;
-            // 
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(94)))), ((int)(((byte)(220)))));
@@ -216,6 +194,20 @@
             this.atualizarGridProdutos.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.atualizarGridProdutos.TabIndex = 4;
             this.atualizarGridProdutos.TabStop = false;
+            this.atualizarGridProdutos.Click += new System.EventHandler(this.atualizarGridProdutos_Click);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label5.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.SystemColors.Control;
+            this.label5.Location = new System.Drawing.Point(175, 52);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(80, 14);
+            this.label5.TabIndex = 9;
+            this.label5.Text = "Visualizar";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnAbrirModalVisualizarProdutos
             // 
@@ -229,6 +221,19 @@
             this.btnAbrirModalVisualizarProdutos.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.btnAbrirModalVisualizarProdutos.TabIndex = 8;
             this.btnAbrirModalVisualizarProdutos.TabStop = false;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label2.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.Control;
+            this.label2.Location = new System.Drawing.Point(89, 52);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(80, 14);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "Adicionar";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnAbrirModalAdicionarProduto
             // 
@@ -244,31 +249,44 @@
             this.btnAbrirModalAdicionarProduto.TabStop = false;
             this.btnAbrirModalAdicionarProduto.Click += new System.EventHandler(this.btnAbrirModalAdicionarProduto_Click);
             // 
-            // btnBarraPesquisaProdutos
+            // label4
             // 
-            this.btnBarraPesquisaProdutos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(94)))), ((int)(((byte)(220)))));
-            this.btnBarraPesquisaProdutos.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.btnBarraPesquisaProdutos.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnBarraPesquisaProdutos.Image = ((System.Drawing.Image)(resources.GetObject("btnBarraPesquisaProdutos.Image")));
-            this.btnBarraPesquisaProdutos.InitialImage = ((System.Drawing.Image)(resources.GetObject("btnBarraPesquisaProdutos.InitialImage")));
-            this.btnBarraPesquisaProdutos.Location = new System.Drawing.Point(13, 16);
-            this.btnBarraPesquisaProdutos.Name = "btnBarraPesquisaProdutos";
-            this.btnBarraPesquisaProdutos.Size = new System.Drawing.Size(48, 47);
-            this.btnBarraPesquisaProdutos.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.btnBarraPesquisaProdutos.TabIndex = 1;
-            this.btnBarraPesquisaProdutos.TabStop = false;
+            this.label4.AutoSize = true;
+            this.label4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label4.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.SystemColors.Control;
+            this.label4.Location = new System.Drawing.Point(3, 52);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(80, 14);
+            this.label4.TabIndex = 7;
+            this.label4.Text = "Filtrar";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // DataGridProdutos
+            // 
+            this.DataGridProdutos.AllowUserToAddRows = false;
+            this.DataGridProdutos.AllowUserToDeleteRows = false;
+            this.DataGridProdutos.AllowUserToOrderColumns = true;
+            this.DataGridProdutos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DataGridProdutos.Location = new System.Drawing.Point(0, 78);
+            this.DataGridProdutos.Name = "DataGridProdutos";
+            this.DataGridProdutos.ReadOnly = true;
+            this.DataGridProdutos.Size = new System.Drawing.Size(942, 411);
+            this.DataGridProdutos.TabIndex = 5;
             // 
             // FormProdutos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(943, 558);
+            this.Controls.Add(this.DataGridProdutos);
             this.Controls.Add(this.panelRodape);
             this.Controls.Add(this.panelBarraPesquisa);
             this.Name = "FormProdutos";
-            this.Text = "Form1";
+            this.Text = "Produtos";
             this.panelBarraPesquisa.ResumeLayout(false);
             this.panelBarraPesquisa.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnBarraPesquisaProdutos)).EndInit();
             this.panelRodape.ResumeLayout(false);
             this.tablePanelMenuClientes.ResumeLayout(false);
             this.tablePanelMenuClientes.PerformLayout();
@@ -277,7 +295,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.atualizarGridProdutos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnAbrirModalVisualizarProdutos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnAbrirModalAdicionarProduto)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnBarraPesquisaProdutos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DataGridProdutos)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -299,5 +317,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox btnAbrirModalAdicionarProduto;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.DataGridView DataGridProdutos;
     }
 }
