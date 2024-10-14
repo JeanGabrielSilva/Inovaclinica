@@ -257,5 +257,24 @@ namespace Inovaclinica
                 btnBarraPesquisaProdutos_Click(this, EventArgs.Empty); // Chama o método do botão de pesquisa
             }
         }
+
+        private void btnAbrirModalVisualizarProdutos_Click(object sender, EventArgs e)
+        {
+            if (DataGridProdutos.SelectedRows.Count > 0)
+            {
+                var selectedRow = DataGridProdutos.SelectedRows[0];
+                string produtoID = selectedRow.Cells["Código"].Value.ToString();
+
+
+                modalVisualizarProdutos modalvisualizarprodutos = new modalVisualizarProdutos(produtoID, this);
+                modalvisualizarprodutos.Text = "Visualizar Cliente";
+                modalvisualizarprodutos.StartPosition = FormStartPosition.CenterParent;
+                modalvisualizarprodutos.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Selecione um cliente para visualizar.");
+            }
+        }
     }
 }

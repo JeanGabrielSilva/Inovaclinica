@@ -221,6 +221,7 @@
             this.btnAbrirModalVisualizarProdutos.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.btnAbrirModalVisualizarProdutos.TabIndex = 8;
             this.btnAbrirModalVisualizarProdutos.TabStop = false;
+            this.btnAbrirModalVisualizarProdutos.Click += new System.EventHandler(this.btnAbrirModalVisualizarProdutos_Click);
             // 
             // label2
             // 
