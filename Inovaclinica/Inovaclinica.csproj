@@ -98,6 +98,12 @@
     <Compile Include="modalVisualizarClientes.Designer.cs">
       <DependentUpon>modalVisualizarClientes.cs</DependentUpon>
     </Compile>
+    <Compile Include="modalVisualizarProdutos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="modalVisualizarProdutos.Designer.cs">
+      <DependentUpon>modalVisualizarProdutos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="_inovaclinica_serverDataSet.Designer.cs">
@@ -125,6 +131,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="modalVisualizarClientes.resx">
       <DependentUpon>modalVisualizarClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="modalVisualizarProdutos.resx">
+      <DependentUpon>modalVisualizarProdutos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
