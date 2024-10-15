@@ -92,6 +92,12 @@
     <Compile Include="modalFiltrarCliente.Designer.cs">
       <DependentUpon>modalFiltrarCliente.cs</DependentUpon>
     </Compile>
+    <Compile Include="modalFiltrarProdutos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="modalFiltrarProdutos.Designer.cs">
+      <DependentUpon>modalFiltrarProdutos.cs</DependentUpon>
+    </Compile>
     <Compile Include="modalVisualizarClientes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -128,6 +134,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="modalFiltrarCliente.resx">
       <DependentUpon>modalFiltrarCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="modalFiltrarProdutos.resx">
+      <DependentUpon>modalFiltrarProdutos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="modalVisualizarClientes.resx">
       <DependentUpon>modalVisualizarClientes.cs</DependentUpon>
@@ -175,6 +184,12 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Img\verifique-o-circulo.png" />
+    <None Include="Resources\circulo-usd %281%29.png" />
+    <None Include="Resources\circulo-usd.png" />
+    <None Include="Resources\usuarios %281%29.png" />
+    <None Include="Resources\usuarios.png" />
+    <None Include="Resources\caixa-aberta %283%29.png" />
+    <None Include="Resources\caixa-aberta %284%29.png" />
     <None Include="Resources\moedas.png" />
     <None Include="Resources\caixa-aberta %282%29.png" />
     <None Include="Resources\do-utilizador %281%29.png" />

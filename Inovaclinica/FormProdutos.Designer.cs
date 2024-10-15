@@ -142,6 +142,7 @@
             this.btnAbrirModalFiltrarProdutos.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.btnAbrirModalFiltrarProdutos.TabIndex = 6;
             this.btnAbrirModalFiltrarProdutos.TabStop = false;
+            this.btnAbrirModalFiltrarProdutos.Click += new System.EventHandler(this.btnAbrirModalFiltrarProdutos_Click);
             // 
             // label1
             // 
