@@ -139,11 +139,23 @@
   <data name="do-utilizador (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\do-utilizador (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="moedas" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\moedas.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="circulo-x" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\circulo-x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="botao-adicionar1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\botao-adicionar1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="usuarios (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\usuarios (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="circulo-usd (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\circulo-usd (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="usuarios" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\usuarios.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="adicionar-produto" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\adicionar-produto.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -151,8 +163,14 @@
   <data name="botao-adicionar (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\botao-adicionar (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="circulo-usd" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\circulo-usd.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="caixa-aberta (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\caixa-aberta (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="caixa-aberta (4)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\caixa-aberta (4).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="verifique-o-circulo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\verifique-o-circulo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -169,7 +187,10 @@
   <data name="adicionar-produto (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\adicionar-produto (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="moedas" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\moedas.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="caixa-aberta (3)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\caixa-aberta (3).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LogoTemporario" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Img\LogoTemporario.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

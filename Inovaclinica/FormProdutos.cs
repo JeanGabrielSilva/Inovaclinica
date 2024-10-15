@@ -14,6 +14,7 @@ namespace Inovaclinica
 {
     public partial class FormProdutos : Form
     {
+        private modalFiltrarProdutos _modalFiltrarProdutos;
         public FormProdutos()
         {
             InitializeComponent();
@@ -274,6 +275,89 @@ namespace Inovaclinica
             else
             {
                 MessageBox.Show("Selecione um cliente para visualizar.");
+            }
+        }
+
+        private void btnAbrirModalFiltrarProdutos_Click(object sender, EventArgs e)
+        {
+            if (_modalFiltrarProdutos == null)
+            {
+                _modalFiltrarProdutos = new modalFiltrarProdutos(this);
+            }
+            _modalFiltrarProdutos.StartPosition = FormStartPosition.CenterParent;
+            _modalFiltrarProdutos.FormClosed += modalFiltrarProdutos_FormClosed;
+            _modalFiltrarProdutos.ShowDialog();
+        }
+
+
+        private void modalFiltrarProdutos_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            if (_modalFiltrarProdutos != null)
+            {
+                string NomeProduto = _modalFiltrarProdutos.filtroNomeProduto;
+                string EstoqueProduto = _modalFiltrarProdutos.filtroEstoque;
+                string PrecoProduto = _modalFiltrarProdutos.filtroPreco;
+                FiltrarProdutos(NomeProduto, EstoqueProduto, PrecoProduto);
+
+            }
+        }
+
+        private void FiltrarProdutos(string NomeProduto, string EstoqueProduto, string PrecoProduto)
+        {
+            string connectionString = ConfigurationManager.ConnectionStrings["InovaclinicaConnectionString"].ConnectionString;
+
+            // Inicia a consulta sem qualquer critério adicional.
+            string queryFiltrar = "SELECT ProdutoID as Código, Nome as [Nome do Produto], Descricao as [Descrição do Produto], Preco as [Preço], Estoque, DataValidade as [Data de Validade] From Produtos WHERE Ativo = 1";
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            using (SqlCommand command = new SqlCommand(queryFiltrar, connection))
+            {
+                // Adiciona condições à consulta conforme os parâmetros não vazios
+                if (!string.IsNullOrEmpty(NomeProduto))
+                {
+                    queryFiltrar += " AND Nome LIKE @Nome";
+                    command.Parameters.AddWithValue("@Nome", "%" + NomeProduto + "%");
+                }
+
+                if (!string.IsNullOrEmpty(EstoqueProduto))
+                {
+                    queryFiltrar += " AND Estoque LIKE @Estoque";
+                    command.Parameters.AddWithValue("@Estoque", "%" + EstoqueProduto + "%");
+
+                }
+
+                if (!string.IsNullOrEmpty(PrecoProduto))
+                {
+                    queryFiltrar += " AND Preco LIKE @Preco";
+                    command.Parameters.AddWithValue("@Preco", "%" + PrecoProduto + "%");
+                }
+
+                command.CommandText = queryFiltrar; // Atualiza o comando SQL com a query completa
+
+                try
+                {
+                    connection.Open();
+                    SqlDataAdapter adapter = new SqlDataAdapter(command);
+                    DataTable dataTable = new DataTable();
+                    adapter.Fill(dataTable);
+
+                    // Verifica se foram encontrados registros
+                    if (dataTable.Rows.Count > 0)
+                    {
+                        // Preenche o DataGridView e aplica as cores
+                        DataGridProdutos.DataSource = dataTable;
+                        DataGridProdutos.Refresh();
+                        ApplyRowColors();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Nenhum Produto encontrado com os critérios especificados.");
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Erro ao filtrar os dados: " + ex.Message);
+                }
             }
         }
     }

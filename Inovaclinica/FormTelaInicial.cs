@@ -34,6 +34,7 @@ namespace Inovaclinica {
             footerLabelRodape.TextAlign = ContentAlignment.MiddleCenter;
 
             Label footerLabelRodape1 = new Label();
+            footerLabelRodape.ForeColor = Color.White;
             footerLabelRodape1.Text = $"Versão: {GetAssemblyVersion()}";
             footerLabelRodape1.Font = new Font("Arial", 10, FontStyle.Italic);
             footerLabelRodape1.AutoSize = true;
