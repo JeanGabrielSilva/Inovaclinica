@@ -223,6 +223,26 @@ namespace Inovaclinica.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap circulo_usd__2_ {
+            get {
+                object obj = ResourceManager.GetObject("circulo-usd (2)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap circulo_usd__3_ {
+            get {
+                object obj = ResourceManager.GetObject("circulo-usd (3)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap circulo_x {
             get {
                 object obj = ResourceManager.GetObject("circulo-x", resourceCulture);
@@ -276,6 +296,26 @@ namespace Inovaclinica.Properties {
         internal static System.Drawing.Bitmap moedas {
             get {
                 object obj = ResourceManager.GetObject("moedas", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap seta_alt_circulo_para_baixo {
+            get {
+                object obj = ResourceManager.GetObject("seta-alt-circulo-para-baixo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap seta_alt_circulo_para_cima {
+            get {
+                object obj = ResourceManager.GetObject("seta-alt-circulo-para-cima", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
