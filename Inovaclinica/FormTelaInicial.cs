@@ -91,5 +91,13 @@ namespace Inovaclinica {
             formprodutos.Show();    
 
         }
+
+        private void btnMenuFinanceiro_Click(object sender, EventArgs e)
+        {
+            FormFinanceiro formfinanceiro = new FormFinanceiro();
+            formfinanceiro.StartPosition = FormStartPosition.CenterScreen;
+            formfinanceiro.WindowState = FormWindowState.Maximized;
+            formfinanceiro.Show();  
+        }
     }
 }

@@ -297,6 +297,7 @@ namespace Inovaclinica
                 string NomeProduto = _modalFiltrarProdutos.filtroNomeProduto;
                 string EstoqueProduto = _modalFiltrarProdutos.filtroEstoque;
                 string PrecoProduto = _modalFiltrarProdutos.filtroPreco;
+                MessageBox.Show($"{NomeProduto}, {EstoqueProduto}, {PrecoProduto}");
                 FiltrarProdutos(NomeProduto, EstoqueProduto, PrecoProduto);
 
             }
