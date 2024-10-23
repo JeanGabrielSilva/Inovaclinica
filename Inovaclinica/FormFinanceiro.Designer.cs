@@ -226,6 +226,7 @@
             this.btnAbrirModalAdicionarProduto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.btnAbrirModalAdicionarProduto.TabIndex = 2;
             this.btnAbrirModalAdicionarProduto.TabStop = false;
+            this.btnAbrirModalAdicionarProduto.Click += new System.EventHandler(this.btnAbrirModalAdicionarProduto_Click);
             // 
             // label4
             // 
@@ -279,7 +280,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Arial Black", 12F, System.Drawing.FontStyle.Bold);
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(21, 14);
+            this.label7.Location = new System.Drawing.Point(20, 15);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(70, 23);
             this.label7.TabIndex = 10;

@@ -313,6 +313,16 @@ namespace Inovaclinica.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap seta_alt_circulo_para_baixo__1_ {
+            get {
+                object obj = ResourceManager.GetObject("seta-alt-circulo-para-baixo (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap seta_alt_circulo_para_cima {
             get {
                 object obj = ResourceManager.GetObject("seta-alt-circulo-para-cima", resourceCulture);
@@ -323,9 +333,29 @@ namespace Inovaclinica.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap seta_alt_circulo_para_cima__1_ {
+            get {
+                object obj = ResourceManager.GetObject("seta-alt-circulo-para-cima (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap seta_alt_circulo_para_cima1 {
             get {
                 object obj = ResourceManager.GetObject("seta-alt-circulo-para-cima1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap seta_alt_circulo_para_cima2 {
+            get {
+                object obj = ResourceManager.GetObject("seta-alt-circulo-para-cima2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

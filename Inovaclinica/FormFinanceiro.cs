@@ -121,16 +121,16 @@ namespace Inovaclinica
                     // Chama as funções para calcular os totais após preencher o DataGridView
                     decimal totalEntradas = CalcularTotalEntradas();
                     decimal totalSaidas = CalcularTotalSaidas();
-                    decimal total = totalEntradas + totalSaidas;
+                    decimal total = totalEntradas - totalSaidas;
 
                     // Atualiza os rótulos ou botões com os valores calculados
                     labelTotalEntradas.Text = $"{totalEntradas}";
-                    labelTotalSaidas.Text = $"{totalSaidas}";
+                    labelTotalSaidas.Text = $"-{totalSaidas}";
                     labelTotal.Text = $"{total}";
 
                     // Criar a coluna de ícones
                     DataGridViewImageColumn colunaIcones = new DataGridViewImageColumn();
-                    colunaIcones.HeaderText = "Tipo";
+                    colunaIcones.HeaderText = "Operação";
                     colunaIcones.Name = "colunaIcones";
                     DataGridFinanceiro.Columns.Insert(6, colunaIcones);
 
@@ -153,7 +153,7 @@ namespace Inovaclinica
                 if (row.Cells["Valor"].Value != DBNull.Value)
                 {
                     decimal valor = Convert.ToDecimal(row.Cells["Valor"].Value);
-                    if (valor >= 0)
+                    if (valor >= 0 && Convert.ToString(row.Cells["Tipo"].Value) == "Entrada") // Validate type and value
                     {
                         total += valor;
                     }
@@ -170,7 +170,7 @@ namespace Inovaclinica
                 if (row.Cells["Valor"].Value != DBNull.Value)
                 {
                     decimal valor = Convert.ToDecimal(row.Cells["Valor"].Value);
-                    if (valor < 0)
+                    if (valor >= 0 && Convert.ToString(row.Cells["Tipo"].Value) == "Saída") // Validate type and value
                     {
                         total += valor;
                     }
@@ -209,5 +209,11 @@ namespace Inovaclinica
             }
         }
 
+        private void btnAbrirModalAdicionarProduto_Click(object sender, EventArgs e)
+        {
+            modalAdicionarLancamentoFinanceiro modaladicionarlancamentofinanceiro = new modalAdicionarLancamentoFinanceiro();
+            modaladicionarlancamentofinanceiro.StartPosition = FormStartPosition.CenterParent;
+            modaladicionarlancamentofinanceiro.ShowDialog();
+        }
     }
 }

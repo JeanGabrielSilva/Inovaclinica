@@ -86,6 +86,12 @@
     <Compile Include="modalAdicionarCliente.Designer.cs">
       <DependentUpon>modalAdicionarCliente.cs</DependentUpon>
     </Compile>
+    <Compile Include="modalAdicionarLancamentoFinanceiro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="modalAdicionarLancamentoFinanceiro.Designer.cs">
+      <DependentUpon>modalAdicionarLancamentoFinanceiro.cs</DependentUpon>
+    </Compile>
     <Compile Include="modalAdicionarProduto.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -143,6 +149,9 @@
     <EmbeddedResource Include="modalAdicionarCliente.resx">
       <DependentUpon>modalAdicionarCliente.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="modalAdicionarLancamentoFinanceiro.resx">
+      <DependentUpon>modalAdicionarLancamentoFinanceiro.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="modalAdicionarProduto.resx">
       <DependentUpon>modalAdicionarProduto.cs</DependentUpon>
     </EmbeddedResource>
@@ -193,6 +202,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Img\verifique-o-circulo.png" />
+    <None Include="Resources\seta-alt-circulo-para-cima %281%29.png" />
+    <None Include="Resources\seta-alt-circulo-para-baixo %281%29.png" />
+    <None Include="Resources\seta-alt-circulo-para-cima2.png" />
     <None Include="Resources\seta-alt-circulo-para-cima1.png" />
     <None Include="Resources\seta-para-baixo-preenchida1.png" />
     <None Include="Resources\seta-para-cima-preenchida1.png" />
