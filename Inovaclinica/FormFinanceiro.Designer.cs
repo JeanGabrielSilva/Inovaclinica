@@ -42,17 +42,19 @@
             this.btnAbrirModalAdicionarProduto = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label10 = new System.Windows.Forms.Label();
+            this.labelTotalSaidas = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label7 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.label11 = new System.Windows.Forms.Label();
+            this.labelTotal = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label9 = new System.Windows.Forms.Label();
+            this.labelTotalEntradas = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label6 = new System.Windows.Forms.Label();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.DataGridFinanceiro = new System.Windows.Forms.DataGridView();
             this.panelRodape.SuspendLayout();
             this.tablePanelMenuClientes.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnAbrirModalFiltrarProdutos)).BeginInit();
@@ -66,6 +68,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DataGridFinanceiro)).BeginInit();
             this.SuspendLayout();
             // 
             // panelRodape
@@ -73,9 +77,9 @@
             this.panelRodape.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(94)))), ((int)(((byte)(220)))));
             this.panelRodape.Controls.Add(this.tablePanelMenuClientes);
             this.panelRodape.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelRodape.Location = new System.Drawing.Point(0, 972);
+            this.panelRodape.Location = new System.Drawing.Point(0, 992);
             this.panelRodape.Name = "panelRodape";
-            this.panelRodape.Size = new System.Drawing.Size(1904, 69);
+            this.panelRodape.Size = new System.Drawing.Size(943, 69);
             this.panelRodape.TabIndex = 5;
             // 
             // tablePanelMenuClientes
@@ -98,7 +102,7 @@
             this.tablePanelMenuClientes.Controls.Add(this.btnAbrirModalAdicionarProduto, 1, 0);
             this.tablePanelMenuClientes.Controls.Add(this.label4, 0, 1);
             this.tablePanelMenuClientes.GrowStyle = System.Windows.Forms.TableLayoutPanelGrowStyle.FixedSize;
-            this.tablePanelMenuClientes.Location = new System.Drawing.Point(723, 0);
+            this.tablePanelMenuClientes.Location = new System.Drawing.Point(242, 0);
             this.tablePanelMenuClientes.Name = "tablePanelMenuClientes";
             this.tablePanelMenuClientes.RowCount = 2;
             this.tablePanelMenuClientes.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 80F));
@@ -240,29 +244,29 @@
             // 
             this.panel2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.panel2.Controls.Add(this.label10);
+            this.panel2.Controls.Add(this.labelTotalSaidas);
             this.panel2.Controls.Add(this.pictureBox3);
             this.panel2.Controls.Add(this.label7);
-            this.panel2.Location = new System.Drawing.Point(811, 49);
+            this.panel2.Location = new System.Drawing.Point(332, 37);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(215, 109);
             this.panel2.TabIndex = 7;
             // 
-            // label10
+            // labelTotalSaidas
             // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Arial Black", 20F, System.Drawing.FontStyle.Bold);
-            this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(12, 58);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(80, 38);
-            this.label10.TabIndex = 12;
-            this.label10.Text = "0,00";
-            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.labelTotalSaidas.AutoSize = true;
+            this.labelTotalSaidas.Font = new System.Drawing.Font("Arial Black", 20F, System.Drawing.FontStyle.Bold);
+            this.labelTotalSaidas.ForeColor = System.Drawing.Color.White;
+            this.labelTotalSaidas.Location = new System.Drawing.Point(12, 58);
+            this.labelTotalSaidas.Name = "labelTotalSaidas";
+            this.labelTotalSaidas.Size = new System.Drawing.Size(80, 38);
+            this.labelTotalSaidas.TabIndex = 12;
+            this.labelTotalSaidas.Text = "0,00";
+            this.labelTotalSaidas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // pictureBox3
             // 
-            this.pictureBox3.Image = global::Inovaclinica.Properties.Resources.seta_alt_circulo_para_baixo;
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
             this.pictureBox3.Location = new System.Drawing.Point(163, 8);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(45, 44);
@@ -286,16 +290,16 @@
             this.panel3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(100)))), ((int)(((byte)(150)))));
             this.panel3.Controls.Add(this.pictureBox4);
-            this.panel3.Controls.Add(this.label11);
+            this.panel3.Controls.Add(this.labelTotal);
             this.panel3.Controls.Add(this.label8);
-            this.panel3.Location = new System.Drawing.Point(1073, 49);
+            this.panel3.Location = new System.Drawing.Point(579, 37);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(215, 109);
             this.panel3.TabIndex = 8;
             // 
             // pictureBox4
             // 
-            this.pictureBox4.Image = global::Inovaclinica.Properties.Resources.circulo_usd__3_;
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
             this.pictureBox4.Location = new System.Drawing.Point(162, 8);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(45, 44);
@@ -303,17 +307,17 @@
             this.pictureBox4.TabIndex = 14;
             this.pictureBox4.TabStop = false;
             // 
-            // label11
+            // labelTotal
             // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Arial Black", 20F, System.Drawing.FontStyle.Bold);
-            this.label11.ForeColor = System.Drawing.Color.White;
-            this.label11.Location = new System.Drawing.Point(16, 58);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(80, 38);
-            this.label11.TabIndex = 13;
-            this.label11.Text = "0,00";
-            this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.labelTotal.AutoSize = true;
+            this.labelTotal.Font = new System.Drawing.Font("Arial Black", 20F, System.Drawing.FontStyle.Bold);
+            this.labelTotal.ForeColor = System.Drawing.Color.White;
+            this.labelTotal.Location = new System.Drawing.Point(16, 58);
+            this.labelTotal.Name = "labelTotal";
+            this.labelTotal.Size = new System.Drawing.Size(80, 38);
+            this.labelTotal.TabIndex = 13;
+            this.labelTotal.Text = "0,00";
+            this.labelTotal.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label8
             // 
@@ -330,29 +334,29 @@
             // 
             this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(150)))), ((int)(((byte)(100)))));
-            this.panel1.Controls.Add(this.label9);
+            this.panel1.Controls.Add(this.labelTotalEntradas);
             this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Controls.Add(this.label6);
-            this.panel1.Location = new System.Drawing.Point(551, 49);
+            this.panel1.Location = new System.Drawing.Point(88, 37);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(215, 109);
             this.panel1.TabIndex = 6;
             // 
-            // label9
+            // labelTotalEntradas
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Arial Black", 20F, System.Drawing.FontStyle.Bold);
-            this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(10, 58);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(80, 38);
-            this.label9.TabIndex = 9;
-            this.label9.Text = "0,00";
-            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.labelTotalEntradas.AutoSize = true;
+            this.labelTotalEntradas.Font = new System.Drawing.Font("Arial Black", 20F, System.Drawing.FontStyle.Bold);
+            this.labelTotalEntradas.ForeColor = System.Drawing.Color.White;
+            this.labelTotalEntradas.Location = new System.Drawing.Point(10, 58);
+            this.labelTotalEntradas.Name = "labelTotalEntradas";
+            this.labelTotalEntradas.Size = new System.Drawing.Size(80, 38);
+            this.labelTotalEntradas.TabIndex = 9;
+            this.labelTotalEntradas.Text = "0,00";
+            this.labelTotalEntradas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Image = global::Inovaclinica.Properties.Resources.seta_alt_circulo_para_cima;
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.Location = new System.Drawing.Point(161, 8);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(45, 44);
@@ -371,14 +375,38 @@
             this.label6.TabIndex = 9;
             this.label6.Text = "Entradas";
             // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.SystemColors.Control;
+            this.panel4.Controls.Add(this.panel1);
+            this.panel4.Controls.Add(this.panel3);
+            this.panel4.Controls.Add(this.panel2);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel4.Location = new System.Drawing.Point(0, 0);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(943, 187);
+            this.panel4.TabIndex = 9;
+            // 
+            // DataGridFinanceiro
+            // 
+            this.DataGridFinanceiro.AllowUserToAddRows = false;
+            this.DataGridFinanceiro.AllowUserToDeleteRows = false;
+            this.DataGridFinanceiro.AllowUserToOrderColumns = true;
+            this.DataGridFinanceiro.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DataGridFinanceiro.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.DataGridFinanceiro.Location = new System.Drawing.Point(0, 187);
+            this.DataGridFinanceiro.Name = "DataGridFinanceiro";
+            this.DataGridFinanceiro.ReadOnly = true;
+            this.DataGridFinanceiro.Size = new System.Drawing.Size(943, 805);
+            this.DataGridFinanceiro.TabIndex = 10;
+            // 
             // FormFinanceiro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1904, 1041);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.panel3);
-            this.Controls.Add(this.panel2);
+            this.ClientSize = new System.Drawing.Size(943, 1061);
+            this.Controls.Add(this.DataGridFinanceiro);
+            this.Controls.Add(this.panel4);
             this.Controls.Add(this.panelRodape);
             this.Name = "FormFinanceiro";
             this.Text = "FormFinanceiro";
@@ -399,6 +427,8 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.panel4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.DataGridFinanceiro)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -418,16 +448,18 @@
         private System.Windows.Forms.PictureBox btnAbrirModalAdicionarProduto;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label labelTotalSaidas;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label labelTotal;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label labelTotalEntradas;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.DataGridView DataGridFinanceiro;
     }
 }
