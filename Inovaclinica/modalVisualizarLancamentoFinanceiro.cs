@@ -5,6 +5,7 @@ using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,6 +15,7 @@ namespace Inovaclinica
 {
     public partial class modalVisualizarLancamentoFinanceiro : Form
     {
+        private string lancamentoID;
 
         private FormFinanceiro _formfinanceiro;
         private Color corPadrao = Color.Gray;
@@ -24,16 +26,12 @@ namespace Inovaclinica
         public modalVisualizarLancamentoFinanceiro(string lancamentoID, FormFinanceiro formFinanceiro)
         {
             InitializeComponent();
+            this.lancamentoID = lancamentoID;
             BuscarLancamentoFinanceiroPeloID(lancamentoID);
             _formfinanceiro = formFinanceiro;
-            btnVisualizarEntrada.BackColor = corPadrao;
-            btnVisualizarSaida.BackColor = corPadrao;
         }
 
-        private void btnCancelarLancamento_Click(object sender, EventArgs e)
-        {
-            this.Close();   
-        }
+
 
         private void BuscarLancamentoFinanceiroPeloID(string lancamentoID)
         {
@@ -90,6 +88,46 @@ namespace Inovaclinica
             btnVisualizarSaida.BackColor = corSaida;
             btnVisualizarEntrada.BackColor = corPadrao;
             tipoOperacao = "Saída";
+        }
+
+        private void btnSalvarAlteracaoLancamento_Click(object sender, EventArgs e)
+        {
+            string connectionString = ConfigurationManager.ConnectionStrings["InovaclinicaConnectionString"].ConnectionString;
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                DateTime dataVencimento = DateTime.ParseExact(maskVisualizaDataVencimentoLancamento.Text, "dd/MM/yyyy", CultureInfo.InvariantCulture);
+                string dataVencimentoFormatada = dataVencimento.ToString("yyyy-MM-dd");
+                string query = $"UPDATE Financeiro SET Descricao = @DescricaoLancamento, Valor = @ValorLancamento, Categoria = @CategoriaLancamento, Tipo = @TipoOperacao, DataVencimento = @DataVencimento WHERE ID = @lancamentoID";
+                SqlCommand command = new SqlCommand(query, connection);
+                command.Parameters.AddWithValue("@lancamentoID", lancamentoID);
+                command.Parameters.AddWithValue("@DescricaoLancamento", textBoxVisualizaDescricaoLancamento.Text);
+                command.Parameters.AddWithValue("@CategoriaLancamento", textBoxVisualizaCategoriaLancamento.Text);
+                command.Parameters.AddWithValue("@DataVencimento", dataVencimentoFormatada);
+                command.Parameters.AddWithValue("@TipoOperacao", tipoOperacao);
+                decimal valorLancamento = textBoxVisualizaValorLancamento.Value;
+                command.Parameters.AddWithValue("@ValorLancamento", valorLancamento);
+
+
+
+                connection.Open();
+                int rowsAffected = command.ExecuteNonQuery(); // Executa o comando SQL
+
+                if (rowsAffected > 0)
+                {
+                    MessageBox.Show("Produto atualizado com sucesso!");
+                    _formfinanceiro.LoadData();
+                }
+                else
+                {
+                    MessageBox.Show("Nenhuma alteração foi feita.");
+                }
+            }
+        }
+
+        private void btnCancelarAlteracaoLancamento_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

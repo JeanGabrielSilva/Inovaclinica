@@ -44,14 +44,14 @@
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.label5 = new System.Windows.Forms.Label();
             this.labelCancelarVisualizarClientes = new System.Windows.Forms.Label();
-            this.btnAdicionarLancamento = new System.Windows.Forms.PictureBox();
-            this.btnCancelarLancamento = new System.Windows.Forms.PictureBox();
+            this.btnSalvarAlteracaoLancamento = new System.Windows.Forms.PictureBox();
+            this.btnCancelarAlteracaoLancamento = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textBoxVisualizaValorLancamento)).BeginInit();
             this.panelRodape.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnAdicionarLancamento)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnCancelarLancamento)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnSalvarAlteracaoLancamento)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnCancelarAlteracaoLancamento)).BeginInit();
             this.SuspendLayout();
             // 
             // maskVisualizaDataVencimentoLancamento
@@ -200,8 +200,8 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.Controls.Add(this.label5, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.labelCancelarVisualizarClientes, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.btnAdicionarLancamento, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.btnCancelarLancamento, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.btnSalvarAlteracaoLancamento, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.btnCancelarAlteracaoLancamento, 1, 0);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(88, 1);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
@@ -237,32 +237,33 @@
             this.labelCancelarVisualizarClientes.Text = "Cancelar";
             this.labelCancelarVisualizarClientes.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // btnAdicionarLancamento
+            // btnSalvarAlteracaoLancamento
             // 
-            this.btnAdicionarLancamento.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.btnSalvarAlteracaoLancamento.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAdicionarLancamento.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAdicionarLancamento.Image = ((System.Drawing.Image)(resources.GetObject("btnAdicionarLancamento.Image")));
-            this.btnAdicionarLancamento.Location = new System.Drawing.Point(3, 3);
-            this.btnAdicionarLancamento.Name = "btnAdicionarLancamento";
-            this.btnAdicionarLancamento.Size = new System.Drawing.Size(70, 38);
-            this.btnAdicionarLancamento.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.btnAdicionarLancamento.TabIndex = 14;
-            this.btnAdicionarLancamento.TabStop = false;
+            this.btnSalvarAlteracaoLancamento.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSalvarAlteracaoLancamento.Image = ((System.Drawing.Image)(resources.GetObject("btnSalvarAlteracaoLancamento.Image")));
+            this.btnSalvarAlteracaoLancamento.Location = new System.Drawing.Point(3, 3);
+            this.btnSalvarAlteracaoLancamento.Name = "btnSalvarAlteracaoLancamento";
+            this.btnSalvarAlteracaoLancamento.Size = new System.Drawing.Size(70, 38);
+            this.btnSalvarAlteracaoLancamento.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.btnSalvarAlteracaoLancamento.TabIndex = 14;
+            this.btnSalvarAlteracaoLancamento.TabStop = false;
+            this.btnSalvarAlteracaoLancamento.Click += new System.EventHandler(this.btnSalvarAlteracaoLancamento_Click);
             // 
-            // btnCancelarLancamento
+            // btnCancelarAlteracaoLancamento
             // 
-            this.btnCancelarLancamento.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCancelarLancamento.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnCancelarLancamento.Image = global::Inovaclinica.Properties.Resources.circulo_x__1_;
-            this.btnCancelarLancamento.Location = new System.Drawing.Point(79, 3);
-            this.btnCancelarLancamento.Name = "btnCancelarLancamento";
-            this.btnCancelarLancamento.Size = new System.Drawing.Size(70, 38);
-            this.btnCancelarLancamento.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.btnCancelarLancamento.TabIndex = 17;
-            this.btnCancelarLancamento.TabStop = false;
-            this.btnCancelarLancamento.Click += new System.EventHandler(this.btnCancelarLancamento_Click);
+            this.btnCancelarAlteracaoLancamento.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCancelarAlteracaoLancamento.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnCancelarAlteracaoLancamento.Image = global::Inovaclinica.Properties.Resources.circulo_x__1_;
+            this.btnCancelarAlteracaoLancamento.Location = new System.Drawing.Point(79, 3);
+            this.btnCancelarAlteracaoLancamento.Name = "btnCancelarAlteracaoLancamento";
+            this.btnCancelarAlteracaoLancamento.Size = new System.Drawing.Size(70, 38);
+            this.btnCancelarAlteracaoLancamento.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.btnCancelarAlteracaoLancamento.TabIndex = 17;
+            this.btnCancelarAlteracaoLancamento.TabStop = false;
+            this.btnCancelarAlteracaoLancamento.Click += new System.EventHandler(this.btnCancelarAlteracaoLancamento_Click);
             // 
             // modalVisualizarLancamentoFinanceiro
             // 
@@ -289,8 +290,8 @@
             this.panelRodape.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnAdicionarLancamento)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnCancelarLancamento)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnSalvarAlteracaoLancamento)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnCancelarAlteracaoLancamento)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -313,7 +314,7 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label labelCancelarVisualizarClientes;
-        private System.Windows.Forms.PictureBox btnAdicionarLancamento;
-        private System.Windows.Forms.PictureBox btnCancelarLancamento;
+        private System.Windows.Forms.PictureBox btnSalvarAlteracaoLancamento;
+        private System.Windows.Forms.PictureBox btnCancelarAlteracaoLancamento;
     }
 }
