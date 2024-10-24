@@ -116,6 +116,12 @@
     <Compile Include="modalVisualizarClientes.Designer.cs">
       <DependentUpon>modalVisualizarClientes.cs</DependentUpon>
     </Compile>
+    <Compile Include="modalVisualizarLancamentoFinanceiro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="modalVisualizarLancamentoFinanceiro.Designer.cs">
+      <DependentUpon>modalVisualizarLancamentoFinanceiro.cs</DependentUpon>
+    </Compile>
     <Compile Include="modalVisualizarProdutos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -163,6 +169,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="modalVisualizarClientes.resx">
       <DependentUpon>modalVisualizarClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="modalVisualizarLancamentoFinanceiro.resx">
+      <DependentUpon>modalVisualizarLancamentoFinanceiro.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="modalVisualizarProdutos.resx">
       <DependentUpon>modalVisualizarProdutos.cs</DependentUpon>

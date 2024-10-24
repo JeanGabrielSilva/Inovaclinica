@@ -128,11 +128,18 @@ namespace Inovaclinica
                     labelTotalSaidas.Text = $"-{totalSaidas}";
                     labelTotal.Text = $"{total}";
 
-                    // Criar a coluna de ícones
-                    DataGridViewImageColumn colunaIcones = new DataGridViewImageColumn();
-                    colunaIcones.HeaderText = "Operação";
-                    colunaIcones.Name = "colunaIcones";
-                    DataGridFinanceiro.Columns.Insert(6, colunaIcones);
+
+                    // Verifica se a coluna já foi adicionada antes de criar uma nova
+                    if (!DataGridFinanceiro.Columns.Contains("colunaIcones"))
+                    {
+                        DataGridViewImageColumn colunaIcones = new DataGridViewImageColumn();
+                        colunaIcones.HeaderText = "Operação";
+                        colunaIcones.Name = "colunaIcones";
+                        DataGridFinanceiro.Columns.Insert(6, colunaIcones);
+
+                        // Associa o evento CellFormatting apenas uma vez
+                        DataGridFinanceiro.CellFormatting += DataGridFinanceiro_CellFormatting;
+                    }
 
                     // Associar o evento CellFormatting
                     DataGridFinanceiro.CellFormatting += DataGridFinanceiro_CellFormatting;
@@ -209,11 +216,30 @@ namespace Inovaclinica
             }
         }
 
-        private void btnAbrirModalAdicionarProduto_Click(object sender, EventArgs e)
+
+        private void btnAbrirModalAdicionarLancamentoFinanceiro_Click(object sender, EventArgs e)
         {
-            modalAdicionarLancamentoFinanceiro modaladicionarlancamentofinanceiro = new modalAdicionarLancamentoFinanceiro();
+            modalAdicionarLancamentoFinanceiro modaladicionarlancamentofinanceiro = new modalAdicionarLancamentoFinanceiro(this);
             modaladicionarlancamentofinanceiro.StartPosition = FormStartPosition.CenterParent;
             modaladicionarlancamentofinanceiro.ShowDialog();
+        }
+
+        private void btnAbrirModalVisualizarLancamentoFinanceiro_Click(object sender, EventArgs e)
+        {
+            if (DataGridFinanceiro.SelectedRows.Count > 0)
+            {
+                var selectedRow = DataGridFinanceiro.SelectedRows[0];
+                string lancamentoID = selectedRow.Cells["Código"].Value.ToString();
+
+
+                modalVisualizarLancamentoFinanceiro modalvisualizarlancamentofinanceiro = new modalVisualizarLancamentoFinanceiro(lancamentoID, this);
+                modalvisualizarlancamentofinanceiro.StartPosition = FormStartPosition.CenterParent;
+                modalvisualizarlancamentofinanceiro.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Selecione um cliente para visualizar.");
+            }
         }
     }
 }
