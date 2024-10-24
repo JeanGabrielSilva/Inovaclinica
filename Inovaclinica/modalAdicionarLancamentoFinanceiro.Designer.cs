@@ -33,11 +33,6 @@
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.label5 = new System.Windows.Forms.Label();
             this.labelCancelarVisualizarClientes = new System.Windows.Forms.Label();
-            this.btnSaida = new System.Windows.Forms.Button();
-            this.btnEntrada = new System.Windows.Forms.Button();
-            this.btnAdicionarLancamento = new System.Windows.Forms.PictureBox();
-            this.btnCancelarLancamento = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
             this.textBoxValorLancamento = new System.Windows.Forms.NumericUpDown();
             this.lblFiltrarNomeCliente = new System.Windows.Forms.Label();
@@ -46,12 +41,17 @@
             this.textBoxCategoriaLancamento = new System.Windows.Forms.TextBox();
             this.lblFiltrarDataNascimentoCliente = new System.Windows.Forms.Label();
             this.maskDataVencimentoLancamento = new System.Windows.Forms.MaskedTextBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.btnSaida = new System.Windows.Forms.Button();
+            this.btnEntrada = new System.Windows.Forms.Button();
+            this.btnAdicionarLancamento = new System.Windows.Forms.PictureBox();
+            this.btnCancelarLancamento = new System.Windows.Forms.PictureBox();
             this.panelRodape.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.textBoxValorLancamento)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnAdicionarLancamento)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCancelarLancamento)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textBoxValorLancamento)).BeginInit();
             this.SuspendLayout();
             // 
             // panelRodape
@@ -107,73 +107,6 @@
             this.labelCancelarVisualizarClientes.TabIndex = 15;
             this.labelCancelarVisualizarClientes.Text = "Cancelar";
             this.labelCancelarVisualizarClientes.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // btnSaida
-            // 
-            this.btnSaida.Font = new System.Drawing.Font("Arial Black", 9F, System.Drawing.FontStyle.Bold);
-            this.btnSaida.ForeColor = System.Drawing.Color.White;
-            this.btnSaida.Image = global::Inovaclinica.Properties.Resources.seta_alt_circulo_para_baixo__1_;
-            this.btnSaida.Location = new System.Drawing.Point(189, 262);
-            this.btnSaida.Name = "btnSaida";
-            this.btnSaida.Size = new System.Drawing.Size(119, 61);
-            this.btnSaida.TabIndex = 26;
-            this.btnSaida.Text = "Saída";
-            this.btnSaida.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.btnSaida.UseVisualStyleBackColor = true;
-            this.btnSaida.Click += new System.EventHandler(this.btnSaida_Click);
-            // 
-            // btnEntrada
-            // 
-            this.btnEntrada.Font = new System.Drawing.Font("Arial Black", 9F, System.Drawing.FontStyle.Bold);
-            this.btnEntrada.ForeColor = System.Drawing.Color.White;
-            this.btnEntrada.Image = global::Inovaclinica.Properties.Resources.seta_alt_circulo_para_cima__1_;
-            this.btnEntrada.Location = new System.Drawing.Point(24, 262);
-            this.btnEntrada.Name = "btnEntrada";
-            this.btnEntrada.Size = new System.Drawing.Size(119, 61);
-            this.btnEntrada.TabIndex = 25;
-            this.btnEntrada.Text = "Entrada";
-            this.btnEntrada.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.btnEntrada.UseVisualStyleBackColor = true;
-            this.btnEntrada.Click += new System.EventHandler(this.btnEntrada_Click);
-            // 
-            // btnAdicionarLancamento
-            // 
-            this.btnAdicionarLancamento.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAdicionarLancamento.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAdicionarLancamento.Image = ((System.Drawing.Image)(resources.GetObject("btnAdicionarLancamento.Image")));
-            this.btnAdicionarLancamento.Location = new System.Drawing.Point(3, 3);
-            this.btnAdicionarLancamento.Name = "btnAdicionarLancamento";
-            this.btnAdicionarLancamento.Size = new System.Drawing.Size(70, 38);
-            this.btnAdicionarLancamento.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.btnAdicionarLancamento.TabIndex = 14;
-            this.btnAdicionarLancamento.TabStop = false;
-            this.btnAdicionarLancamento.Click += new System.EventHandler(this.btnAdicionarLancamento_Click);
-            // 
-            // btnCancelarLancamento
-            // 
-            this.btnCancelarLancamento.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCancelarLancamento.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnCancelarLancamento.Image = global::Inovaclinica.Properties.Resources.circulo_x__1_;
-            this.btnCancelarLancamento.Location = new System.Drawing.Point(79, 3);
-            this.btnCancelarLancamento.Name = "btnCancelarLancamento";
-            this.btnCancelarLancamento.Size = new System.Drawing.Size(70, 38);
-            this.btnCancelarLancamento.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.btnCancelarLancamento.TabIndex = 17;
-            this.btnCancelarLancamento.TabStop = false;
-            this.btnCancelarLancamento.Click += new System.EventHandler(this.btnCancelarLancamento_Click);
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(94)))), ((int)(((byte)(220)))));
-            this.pictureBox3.Image = global::Inovaclinica.Properties.Resources.moedas;
-            this.pictureBox3.Location = new System.Drawing.Point(180, 211);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(29, 25);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox3.TabIndex = 57;
-            this.pictureBox3.TabStop = false;
             // 
             // label4
             // 
@@ -265,6 +198,73 @@
             this.maskDataVencimentoLancamento.TabIndex = 63;
             this.maskDataVencimentoLancamento.ValidatingType = typeof(System.DateTime);
             // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(94)))), ((int)(((byte)(220)))));
+            this.pictureBox3.Image = global::Inovaclinica.Properties.Resources.moedas;
+            this.pictureBox3.Location = new System.Drawing.Point(180, 211);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(29, 25);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox3.TabIndex = 57;
+            this.pictureBox3.TabStop = false;
+            // 
+            // btnSaida
+            // 
+            this.btnSaida.Font = new System.Drawing.Font("Arial Black", 9F, System.Drawing.FontStyle.Bold);
+            this.btnSaida.ForeColor = System.Drawing.Color.White;
+            this.btnSaida.Image = global::Inovaclinica.Properties.Resources.seta_alt_circulo_para_baixo__1_;
+            this.btnSaida.Location = new System.Drawing.Point(189, 262);
+            this.btnSaida.Name = "btnSaida";
+            this.btnSaida.Size = new System.Drawing.Size(119, 61);
+            this.btnSaida.TabIndex = 26;
+            this.btnSaida.Text = "Saída";
+            this.btnSaida.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btnSaida.UseVisualStyleBackColor = true;
+            this.btnSaida.Click += new System.EventHandler(this.btnSaida_Click);
+            // 
+            // btnEntrada
+            // 
+            this.btnEntrada.Font = new System.Drawing.Font("Arial Black", 9F, System.Drawing.FontStyle.Bold);
+            this.btnEntrada.ForeColor = System.Drawing.Color.White;
+            this.btnEntrada.Image = global::Inovaclinica.Properties.Resources.seta_alt_circulo_para_cima__1_;
+            this.btnEntrada.Location = new System.Drawing.Point(24, 262);
+            this.btnEntrada.Name = "btnEntrada";
+            this.btnEntrada.Size = new System.Drawing.Size(119, 61);
+            this.btnEntrada.TabIndex = 25;
+            this.btnEntrada.Text = "Entrada";
+            this.btnEntrada.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btnEntrada.UseVisualStyleBackColor = true;
+            this.btnEntrada.Click += new System.EventHandler(this.btnEntrada_Click);
+            // 
+            // btnAdicionarLancamento
+            // 
+            this.btnAdicionarLancamento.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAdicionarLancamento.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAdicionarLancamento.Image = ((System.Drawing.Image)(resources.GetObject("btnAdicionarLancamento.Image")));
+            this.btnAdicionarLancamento.Location = new System.Drawing.Point(3, 3);
+            this.btnAdicionarLancamento.Name = "btnAdicionarLancamento";
+            this.btnAdicionarLancamento.Size = new System.Drawing.Size(70, 38);
+            this.btnAdicionarLancamento.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.btnAdicionarLancamento.TabIndex = 14;
+            this.btnAdicionarLancamento.TabStop = false;
+            this.btnAdicionarLancamento.Click += new System.EventHandler(this.btnAdicionarLancamento_Click);
+            // 
+            // btnCancelarLancamento
+            // 
+            this.btnCancelarLancamento.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCancelarLancamento.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnCancelarLancamento.Image = global::Inovaclinica.Properties.Resources.circulo_x__1_;
+            this.btnCancelarLancamento.Location = new System.Drawing.Point(79, 3);
+            this.btnCancelarLancamento.Name = "btnCancelarLancamento";
+            this.btnCancelarLancamento.Size = new System.Drawing.Size(70, 38);
+            this.btnCancelarLancamento.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.btnCancelarLancamento.TabIndex = 17;
+            this.btnCancelarLancamento.TabStop = false;
+            this.btnCancelarLancamento.Click += new System.EventHandler(this.btnCancelarLancamento_Click);
+            // 
             // modalAdicionarLancamentoFinanceiro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -282,15 +282,16 @@
             this.Controls.Add(this.btnSaida);
             this.Controls.Add(this.btnEntrada);
             this.Controls.Add(this.panelRodape);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "modalAdicionarLancamentoFinanceiro";
             this.Text = "modalAdicionarLancamentoFinanceiro";
             this.panelRodape.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.textBoxValorLancamento)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnAdicionarLancamento)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCancelarLancamento)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textBoxValorLancamento)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

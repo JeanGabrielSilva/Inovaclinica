@@ -37,9 +37,9 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.atualizarGridProdutos = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.btnAbrirModalVisualizarProdutos = new System.Windows.Forms.PictureBox();
+            this.btnAbrirModalVisualizarLancamentoFinanceiro = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.btnAbrirModalAdicionarProduto = new System.Windows.Forms.PictureBox();
+            this.btnAbrirModalAdicionarLancamentoFinanceiro = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.labelTotalSaidas = new System.Windows.Forms.Label();
@@ -60,8 +60,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnAbrirModalFiltrarProdutos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.atualizarGridProdutos)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnAbrirModalVisualizarProdutos)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnAbrirModalAdicionarProduto)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnAbrirModalVisualizarLancamentoFinanceiro)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnAbrirModalAdicionarLancamentoFinanceiro)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panel3.SuspendLayout();
@@ -97,9 +97,9 @@
             this.tablePanelMenuClientes.Controls.Add(this.pictureBox1, 3, 0);
             this.tablePanelMenuClientes.Controls.Add(this.atualizarGridProdutos, 4, 0);
             this.tablePanelMenuClientes.Controls.Add(this.label5, 2, 1);
-            this.tablePanelMenuClientes.Controls.Add(this.btnAbrirModalVisualizarProdutos, 2, 0);
+            this.tablePanelMenuClientes.Controls.Add(this.btnAbrirModalVisualizarLancamentoFinanceiro, 2, 0);
             this.tablePanelMenuClientes.Controls.Add(this.label2, 1, 1);
-            this.tablePanelMenuClientes.Controls.Add(this.btnAbrirModalAdicionarProduto, 1, 0);
+            this.tablePanelMenuClientes.Controls.Add(this.btnAbrirModalAdicionarLancamentoFinanceiro, 1, 0);
             this.tablePanelMenuClientes.Controls.Add(this.label4, 0, 1);
             this.tablePanelMenuClientes.GrowStyle = System.Windows.Forms.TableLayoutPanelGrowStyle.FixedSize;
             this.tablePanelMenuClientes.Location = new System.Drawing.Point(242, 0);
@@ -188,18 +188,19 @@
             this.label5.Text = "Visualizar";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // btnAbrirModalVisualizarProdutos
+            // btnAbrirModalVisualizarLancamentoFinanceiro
             // 
-            this.btnAbrirModalVisualizarProdutos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(94)))), ((int)(((byte)(220)))));
-            this.btnAbrirModalVisualizarProdutos.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAbrirModalVisualizarProdutos.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnAbrirModalVisualizarProdutos.Image = ((System.Drawing.Image)(resources.GetObject("btnAbrirModalVisualizarProdutos.Image")));
-            this.btnAbrirModalVisualizarProdutos.Location = new System.Drawing.Point(175, 3);
-            this.btnAbrirModalVisualizarProdutos.Name = "btnAbrirModalVisualizarProdutos";
-            this.btnAbrirModalVisualizarProdutos.Size = new System.Drawing.Size(80, 46);
-            this.btnAbrirModalVisualizarProdutos.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.btnAbrirModalVisualizarProdutos.TabIndex = 8;
-            this.btnAbrirModalVisualizarProdutos.TabStop = false;
+            this.btnAbrirModalVisualizarLancamentoFinanceiro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(94)))), ((int)(((byte)(220)))));
+            this.btnAbrirModalVisualizarLancamentoFinanceiro.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAbrirModalVisualizarLancamentoFinanceiro.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnAbrirModalVisualizarLancamentoFinanceiro.Image = ((System.Drawing.Image)(resources.GetObject("btnAbrirModalVisualizarLancamentoFinanceiro.Image")));
+            this.btnAbrirModalVisualizarLancamentoFinanceiro.Location = new System.Drawing.Point(175, 3);
+            this.btnAbrirModalVisualizarLancamentoFinanceiro.Name = "btnAbrirModalVisualizarLancamentoFinanceiro";
+            this.btnAbrirModalVisualizarLancamentoFinanceiro.Size = new System.Drawing.Size(80, 46);
+            this.btnAbrirModalVisualizarLancamentoFinanceiro.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.btnAbrirModalVisualizarLancamentoFinanceiro.TabIndex = 8;
+            this.btnAbrirModalVisualizarLancamentoFinanceiro.TabStop = false;
+            this.btnAbrirModalVisualizarLancamentoFinanceiro.Click += new System.EventHandler(this.btnAbrirModalVisualizarLancamentoFinanceiro_Click);
             // 
             // label2
             // 
@@ -214,19 +215,19 @@
             this.label2.Text = "Adicionar";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // btnAbrirModalAdicionarProduto
+            // btnAbrirModalAdicionarLancamentoFinanceiro
             // 
-            this.btnAbrirModalAdicionarProduto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(94)))), ((int)(((byte)(220)))));
-            this.btnAbrirModalAdicionarProduto.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAbrirModalAdicionarProduto.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnAbrirModalAdicionarProduto.Image = ((System.Drawing.Image)(resources.GetObject("btnAbrirModalAdicionarProduto.Image")));
-            this.btnAbrirModalAdicionarProduto.Location = new System.Drawing.Point(89, 3);
-            this.btnAbrirModalAdicionarProduto.Name = "btnAbrirModalAdicionarProduto";
-            this.btnAbrirModalAdicionarProduto.Size = new System.Drawing.Size(80, 46);
-            this.btnAbrirModalAdicionarProduto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.btnAbrirModalAdicionarProduto.TabIndex = 2;
-            this.btnAbrirModalAdicionarProduto.TabStop = false;
-            this.btnAbrirModalAdicionarProduto.Click += new System.EventHandler(this.btnAbrirModalAdicionarProduto_Click);
+            this.btnAbrirModalAdicionarLancamentoFinanceiro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(94)))), ((int)(((byte)(220)))));
+            this.btnAbrirModalAdicionarLancamentoFinanceiro.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAbrirModalAdicionarLancamentoFinanceiro.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnAbrirModalAdicionarLancamentoFinanceiro.Image = ((System.Drawing.Image)(resources.GetObject("btnAbrirModalAdicionarLancamentoFinanceiro.Image")));
+            this.btnAbrirModalAdicionarLancamentoFinanceiro.Location = new System.Drawing.Point(89, 3);
+            this.btnAbrirModalAdicionarLancamentoFinanceiro.Name = "btnAbrirModalAdicionarLancamentoFinanceiro";
+            this.btnAbrirModalAdicionarLancamentoFinanceiro.Size = new System.Drawing.Size(80, 46);
+            this.btnAbrirModalAdicionarLancamentoFinanceiro.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.btnAbrirModalAdicionarLancamentoFinanceiro.TabIndex = 2;
+            this.btnAbrirModalAdicionarLancamentoFinanceiro.TabStop = false;
+            this.btnAbrirModalAdicionarLancamentoFinanceiro.Click += new System.EventHandler(this.btnAbrirModalAdicionarLancamentoFinanceiro_Click);
             // 
             // label4
             // 
@@ -417,8 +418,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnAbrirModalFiltrarProdutos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.atualizarGridProdutos)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnAbrirModalVisualizarProdutos)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnAbrirModalAdicionarProduto)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnAbrirModalVisualizarLancamentoFinanceiro)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnAbrirModalAdicionarLancamentoFinanceiro)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
@@ -444,9 +445,9 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox atualizarGridProdutos;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.PictureBox btnAbrirModalVisualizarProdutos;
+        private System.Windows.Forms.PictureBox btnAbrirModalVisualizarLancamentoFinanceiro;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.PictureBox btnAbrirModalAdicionarProduto;
+        private System.Windows.Forms.PictureBox btnAbrirModalAdicionarLancamentoFinanceiro;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label labelTotalSaidas;

@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Configuration;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -12,14 +14,17 @@ namespace Inovaclinica
 {
     public partial class modalAdicionarLancamentoFinanceiro : Form
     {
+        private FormFinanceiro _formFinanceiro;
         private Color corPadrao = Color.Gray;
         private Color corEntrada = Color.FromArgb(100, 150, 100);
         private Color corSaida = Color.FromArgb(200, 50, 50);
         private string tipoOperacao = "";
 
-        public modalAdicionarLancamentoFinanceiro()
+        public modalAdicionarLancamentoFinanceiro(FormFinanceiro formFinanceiro)
         {
             InitializeComponent();
+
+            _formFinanceiro = formFinanceiro;
             btnEntrada.BackColor = corPadrao;
             btnSaida.BackColor = corPadrao;
         }
@@ -40,8 +45,65 @@ namespace Inovaclinica
 
         private void btnAdicionarLancamento_Click(object sender, EventArgs e)
         {
-            MessageBox.Show($"Tipo de operação: {tipoOperacao}");
+            string descricaoLancamento = textBoxDescricaoLancamento.Text;
+            string categoriaLancamento = textBoxCategoriaLancamento.Text;
+            string dataComBarras = maskDataVencimentoLancamento.Text;
+            DateTime data = DateTime.ParseExact(dataComBarras, "dd/MM/yyyy", null);
+            string dataVencimento = data.ToString("yyyy-MM-dd");
+            decimal valorLancamento = textBoxValorLancamento.Value;
+            
 
+            AdicionarLancamento(descricaoLancamento, categoriaLancamento, dataVencimento, valorLancamento, tipoOperacao);
+
+        }
+
+        private void AdicionarLancamento(string descricaoLancamento, string categoriaLancamento, string dataVencimento, decimal valorLancamento, string tipoOperacao)
+        {
+            string connectionString = ConfigurationManager.ConnectionStrings["InovaclinicaConnectionString"].ConnectionString;
+
+            string query = "INSERT INTO Financeiro (DataVencimento, Descricao, Valor, Tipo, Categoria, DataInclusao) VALUES (@DataVencimento, @DescricaoLancamento, @ValorLancamento, @TipoOperacao, @CategoriaLancamento, @DataInclusao)";
+
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                // Cria o comando SQL para a inserção
+                SqlCommand command = new SqlCommand(query, connection);
+                // Define os parâmetros da query
+                command.Parameters.AddWithValue("@DescricaoLancamento", descricaoLancamento);
+                command.Parameters.AddWithValue("@CategoriaLancamento", categoriaLancamento);
+                command.Parameters.AddWithValue("@DataVencimento", dataVencimento);
+                command.Parameters.AddWithValue("@DataInclusao", DateTime.Now);
+                command.Parameters.AddWithValue("@TipoOperacao", tipoOperacao);
+                command.Parameters.AddWithValue("@ValorLancamento", valorLancamento);
+
+
+                try
+                {
+                    // Abre a conexão
+                    connection.Open();
+                    // Executa o comando
+                    int result = command.ExecuteNonQuery();
+
+                    // Verifica se o cliente foi inserido com sucesso
+                    if (result > 0)
+                    {
+                        MessageBox.Show($"Lançamento adicionado com sucesso!");
+                        // Limpa os campos de entrada
+                        textBoxCategoriaLancamento.Clear();
+                        textBoxDescricaoLancamento.Clear();
+                        maskDataVencimentoLancamento.Clear();
+                        _formFinanceiro.LoadData();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Ocorreu um erro ao adicionar o Produto.");
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Erro: {ex.Message}\n{ex.InnerException?.Message}");
+                }
+            }
         }
 
         private void btnCancelarLancamento_Click(object sender, EventArgs e)
