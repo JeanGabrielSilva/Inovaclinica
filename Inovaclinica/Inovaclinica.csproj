@@ -56,11 +56,23 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="barraPesquisaClientes.cs" />
+    <Compile Include="FormAgendamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAgendamento.Designer.cs">
+      <DependentUpon>FormAgendamento.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormFinanceiro.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormFinanceiro.Designer.cs">
       <DependentUpon>FormFinanceiro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormOrcamentos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormOrcamentos.Designer.cs">
+      <DependentUpon>FormOrcamentos.cs</DependentUpon>
     </Compile>
     <Compile Include="FormProdutos.cs">
       <SubType>Form</SubType>
@@ -97,6 +109,12 @@
     </Compile>
     <Compile Include="modalAdicionarProduto.Designer.cs">
       <DependentUpon>modalAdicionarProduto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="modalExcluirLancamentoFinanceiro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="modalExcluirLancamentoFinanceiro.Designer.cs">
+      <DependentUpon>modalExcluirLancamentoFinanceiro.cs</DependentUpon>
     </Compile>
     <Compile Include="modalFiltrarCliente.cs">
       <SubType>Form</SubType>
@@ -140,11 +158,17 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>_inovaclinica_serverDataSet.xsd</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="FormAgendamento.resx">
+      <DependentUpon>FormAgendamento.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormClientes.resx">
       <DependentUpon>FormClientes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormFinanceiro.resx">
       <DependentUpon>FormFinanceiro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormOrcamentos.resx">
+      <DependentUpon>FormOrcamentos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormProdutos.resx">
       <DependentUpon>FormProdutos.cs</DependentUpon>
@@ -160,6 +184,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="modalAdicionarProduto.resx">
       <DependentUpon>modalAdicionarProduto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="modalExcluirLancamentoFinanceiro.resx">
+      <DependentUpon>modalExcluirLancamentoFinanceiro.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="modalFiltrarCliente.resx">
       <DependentUpon>modalFiltrarCliente.cs</DependentUpon>
@@ -211,6 +238,10 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Img\verifique-o-circulo.png" />
+    <None Include="Resources\acordo-3.png" />
+    <None Include="Resources\calculadora.png" />
+    <None Include="Resources\relogio-calendario-fino.png" />
+    <None Include="Resources\relogio-calendario.png" />
     <None Include="Resources\seta-alt-circulo-para-cima %281%29.png" />
     <None Include="Resources\seta-alt-circulo-para-baixo %281%29.png" />
     <None Include="Resources\seta-alt-circulo-para-cima2.png" />

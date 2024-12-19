@@ -110,5 +110,9 @@ namespace Inovaclinica
         {
             this.Close();
         }
+
+        private void modalAdicionarLancamentoFinanceiro_Load(object sender, EventArgs e) {
+
+        }
     }
 }

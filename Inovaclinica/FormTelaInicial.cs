@@ -99,5 +99,19 @@ namespace Inovaclinica {
             formfinanceiro.WindowState = FormWindowState.Maximized;
             formfinanceiro.Show();  
         }
+
+        private void btnMenuAgendamento_Click(object sender, EventArgs e) {
+            FormAgendamento formagendamento = new FormAgendamento();
+            formagendamento.StartPosition = FormStartPosition.CenterScreen;
+            formagendamento.WindowState = FormWindowState.Maximized;
+            formagendamento.Show();
+        }
+
+        private void btnMenuOrcamento_Click(object sender, EventArgs e) {
+            FormOrcamentos formorcamento = new FormOrcamentos();
+            formorcamento.StartPosition = FormStartPosition.CenterScreen;
+            formorcamento.WindowState = FormWindowState.Maximized;
+            formorcamento.Show();
+        }
     }
 }

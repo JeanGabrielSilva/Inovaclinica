@@ -31,45 +31,45 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormFinanceiro));
             this.panelRodape = new System.Windows.Forms.Panel();
             this.tablePanelMenuClientes = new System.Windows.Forms.TableLayoutPanel();
-            this.btnAbrirModalFiltrarProdutos = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.atualizarGridProdutos = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.btnAbrirModalVisualizarLancamentoFinanceiro = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.btnAbrirModalAdicionarLancamentoFinanceiro = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.labelTotalSaidas = new System.Windows.Forms.Label();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label7 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.labelTotal = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.labelTotalEntradas = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label6 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.DataGridFinanceiro = new System.Windows.Forms.DataGridView();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.btnAbrirModalFiltrarProdutos = new System.Windows.Forms.PictureBox();
+            this.btnAbrirModalEliminarLancamentoFinanceiro = new System.Windows.Forms.PictureBox();
+            this.atualizarGridFinanceiro = new System.Windows.Forms.PictureBox();
+            this.btnAbrirModalVisualizarLancamentoFinanceiro = new System.Windows.Forms.PictureBox();
+            this.btnAbrirModalAdicionarLancamentoFinanceiro = new System.Windows.Forms.PictureBox();
             this.panelRodape.SuspendLayout();
             this.tablePanelMenuClientes.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnAbrirModalFiltrarProdutos)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.atualizarGridProdutos)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnAbrirModalVisualizarLancamentoFinanceiro)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnAbrirModalAdicionarLancamentoFinanceiro)).BeginInit();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridFinanceiro)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnAbrirModalFiltrarProdutos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnAbrirModalEliminarLancamentoFinanceiro)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.atualizarGridFinanceiro)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnAbrirModalVisualizarLancamentoFinanceiro)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnAbrirModalAdicionarLancamentoFinanceiro)).BeginInit();
             this.SuspendLayout();
             // 
             // panelRodape
@@ -94,8 +94,8 @@
             this.tablePanelMenuClientes.Controls.Add(this.btnAbrirModalFiltrarProdutos, 0, 0);
             this.tablePanelMenuClientes.Controls.Add(this.label1, 3, 1);
             this.tablePanelMenuClientes.Controls.Add(this.label3, 4, 1);
-            this.tablePanelMenuClientes.Controls.Add(this.pictureBox1, 3, 0);
-            this.tablePanelMenuClientes.Controls.Add(this.atualizarGridProdutos, 4, 0);
+            this.tablePanelMenuClientes.Controls.Add(this.btnAbrirModalEliminarLancamentoFinanceiro, 3, 0);
+            this.tablePanelMenuClientes.Controls.Add(this.atualizarGridFinanceiro, 4, 0);
             this.tablePanelMenuClientes.Controls.Add(this.label5, 2, 1);
             this.tablePanelMenuClientes.Controls.Add(this.btnAbrirModalVisualizarLancamentoFinanceiro, 2, 0);
             this.tablePanelMenuClientes.Controls.Add(this.label2, 1, 1);
@@ -109,19 +109,6 @@
             this.tablePanelMenuClientes.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tablePanelMenuClientes.Size = new System.Drawing.Size(431, 66);
             this.tablePanelMenuClientes.TabIndex = 10;
-            // 
-            // btnAbrirModalFiltrarProdutos
-            // 
-            this.btnAbrirModalFiltrarProdutos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(94)))), ((int)(((byte)(220)))));
-            this.btnAbrirModalFiltrarProdutos.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAbrirModalFiltrarProdutos.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnAbrirModalFiltrarProdutos.Image = ((System.Drawing.Image)(resources.GetObject("btnAbrirModalFiltrarProdutos.Image")));
-            this.btnAbrirModalFiltrarProdutos.Location = new System.Drawing.Point(3, 3);
-            this.btnAbrirModalFiltrarProdutos.Name = "btnAbrirModalFiltrarProdutos";
-            this.btnAbrirModalFiltrarProdutos.Size = new System.Drawing.Size(80, 46);
-            this.btnAbrirModalFiltrarProdutos.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.btnAbrirModalFiltrarProdutos.TabIndex = 6;
-            this.btnAbrirModalFiltrarProdutos.TabStop = false;
             // 
             // label1
             // 
@@ -149,32 +136,6 @@
             this.label3.Text = "Atualizar";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(94)))), ((int)(((byte)(220)))));
-            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(261, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(80, 46);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
-            // atualizarGridProdutos
-            // 
-            this.atualizarGridProdutos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(94)))), ((int)(((byte)(220)))));
-            this.atualizarGridProdutos.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.atualizarGridProdutos.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.atualizarGridProdutos.Image = ((System.Drawing.Image)(resources.GetObject("atualizarGridProdutos.Image")));
-            this.atualizarGridProdutos.Location = new System.Drawing.Point(347, 3);
-            this.atualizarGridProdutos.Name = "atualizarGridProdutos";
-            this.atualizarGridProdutos.Size = new System.Drawing.Size(81, 46);
-            this.atualizarGridProdutos.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.atualizarGridProdutos.TabIndex = 4;
-            this.atualizarGridProdutos.TabStop = false;
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -188,20 +149,6 @@
             this.label5.Text = "Visualizar";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // btnAbrirModalVisualizarLancamentoFinanceiro
-            // 
-            this.btnAbrirModalVisualizarLancamentoFinanceiro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(94)))), ((int)(((byte)(220)))));
-            this.btnAbrirModalVisualizarLancamentoFinanceiro.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAbrirModalVisualizarLancamentoFinanceiro.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnAbrirModalVisualizarLancamentoFinanceiro.Image = ((System.Drawing.Image)(resources.GetObject("btnAbrirModalVisualizarLancamentoFinanceiro.Image")));
-            this.btnAbrirModalVisualizarLancamentoFinanceiro.Location = new System.Drawing.Point(175, 3);
-            this.btnAbrirModalVisualizarLancamentoFinanceiro.Name = "btnAbrirModalVisualizarLancamentoFinanceiro";
-            this.btnAbrirModalVisualizarLancamentoFinanceiro.Size = new System.Drawing.Size(80, 46);
-            this.btnAbrirModalVisualizarLancamentoFinanceiro.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.btnAbrirModalVisualizarLancamentoFinanceiro.TabIndex = 8;
-            this.btnAbrirModalVisualizarLancamentoFinanceiro.TabStop = false;
-            this.btnAbrirModalVisualizarLancamentoFinanceiro.Click += new System.EventHandler(this.btnAbrirModalVisualizarLancamentoFinanceiro_Click);
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -214,20 +161,6 @@
             this.label2.TabIndex = 3;
             this.label2.Text = "Adicionar";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // btnAbrirModalAdicionarLancamentoFinanceiro
-            // 
-            this.btnAbrirModalAdicionarLancamentoFinanceiro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(94)))), ((int)(((byte)(220)))));
-            this.btnAbrirModalAdicionarLancamentoFinanceiro.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAbrirModalAdicionarLancamentoFinanceiro.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnAbrirModalAdicionarLancamentoFinanceiro.Image = ((System.Drawing.Image)(resources.GetObject("btnAbrirModalAdicionarLancamentoFinanceiro.Image")));
-            this.btnAbrirModalAdicionarLancamentoFinanceiro.Location = new System.Drawing.Point(89, 3);
-            this.btnAbrirModalAdicionarLancamentoFinanceiro.Name = "btnAbrirModalAdicionarLancamentoFinanceiro";
-            this.btnAbrirModalAdicionarLancamentoFinanceiro.Size = new System.Drawing.Size(80, 46);
-            this.btnAbrirModalAdicionarLancamentoFinanceiro.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.btnAbrirModalAdicionarLancamentoFinanceiro.TabIndex = 2;
-            this.btnAbrirModalAdicionarLancamentoFinanceiro.TabStop = false;
-            this.btnAbrirModalAdicionarLancamentoFinanceiro.Click += new System.EventHandler(this.btnAbrirModalAdicionarLancamentoFinanceiro_Click);
             // 
             // label4
             // 
@@ -266,16 +199,6 @@
             this.labelTotalSaidas.Text = "0,00";
             this.labelTotalSaidas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(163, 8);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(45, 44);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox3.TabIndex = 11;
-            this.pictureBox3.TabStop = false;
-            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -298,16 +221,6 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(215, 109);
             this.panel3.TabIndex = 8;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(162, 8);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(45, 44);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox4.TabIndex = 14;
-            this.pictureBox4.TabStop = false;
             // 
             // labelTotal
             // 
@@ -356,16 +269,6 @@
             this.labelTotalEntradas.Text = "0,00";
             this.labelTotalEntradas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(161, 8);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(45, 44);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox2.TabIndex = 10;
-            this.pictureBox2.TabStop = false;
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -402,6 +305,105 @@
             this.DataGridFinanceiro.Size = new System.Drawing.Size(943, 805);
             this.DataGridFinanceiro.TabIndex = 10;
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(161, 8);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(45, 44);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox2.TabIndex = 10;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
+            this.pictureBox4.Location = new System.Drawing.Point(162, 8);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(45, 44);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox4.TabIndex = 14;
+            this.pictureBox4.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(163, 8);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(45, 44);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox3.TabIndex = 11;
+            this.pictureBox3.TabStop = false;
+            // 
+            // btnAbrirModalFiltrarProdutos
+            // 
+            this.btnAbrirModalFiltrarProdutos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(94)))), ((int)(((byte)(220)))));
+            this.btnAbrirModalFiltrarProdutos.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAbrirModalFiltrarProdutos.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnAbrirModalFiltrarProdutos.Image = ((System.Drawing.Image)(resources.GetObject("btnAbrirModalFiltrarProdutos.Image")));
+            this.btnAbrirModalFiltrarProdutos.Location = new System.Drawing.Point(3, 3);
+            this.btnAbrirModalFiltrarProdutos.Name = "btnAbrirModalFiltrarProdutos";
+            this.btnAbrirModalFiltrarProdutos.Size = new System.Drawing.Size(80, 46);
+            this.btnAbrirModalFiltrarProdutos.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.btnAbrirModalFiltrarProdutos.TabIndex = 6;
+            this.btnAbrirModalFiltrarProdutos.TabStop = false;
+            // 
+            // btnAbrirModalEliminarLancamentoFinanceiro
+            // 
+            this.btnAbrirModalEliminarLancamentoFinanceiro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(94)))), ((int)(((byte)(220)))));
+            this.btnAbrirModalEliminarLancamentoFinanceiro.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAbrirModalEliminarLancamentoFinanceiro.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnAbrirModalEliminarLancamentoFinanceiro.Image = ((System.Drawing.Image)(resources.GetObject("btnAbrirModalEliminarLancamentoFinanceiro.Image")));
+            this.btnAbrirModalEliminarLancamentoFinanceiro.Location = new System.Drawing.Point(261, 3);
+            this.btnAbrirModalEliminarLancamentoFinanceiro.Name = "btnAbrirModalEliminarLancamentoFinanceiro";
+            this.btnAbrirModalEliminarLancamentoFinanceiro.Size = new System.Drawing.Size(80, 46);
+            this.btnAbrirModalEliminarLancamentoFinanceiro.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.btnAbrirModalEliminarLancamentoFinanceiro.TabIndex = 0;
+            this.btnAbrirModalEliminarLancamentoFinanceiro.TabStop = false;
+            this.btnAbrirModalEliminarLancamentoFinanceiro.Click += new System.EventHandler(this.btnAbrirModalEliminarLancamentoFinanceiro_Click);
+            // 
+            // atualizarGridFinanceiro
+            // 
+            this.atualizarGridFinanceiro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(94)))), ((int)(((byte)(220)))));
+            this.atualizarGridFinanceiro.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.atualizarGridFinanceiro.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.atualizarGridFinanceiro.Image = ((System.Drawing.Image)(resources.GetObject("atualizarGridFinanceiro.Image")));
+            this.atualizarGridFinanceiro.Location = new System.Drawing.Point(347, 3);
+            this.atualizarGridFinanceiro.Name = "atualizarGridFinanceiro";
+            this.atualizarGridFinanceiro.Size = new System.Drawing.Size(81, 46);
+            this.atualizarGridFinanceiro.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.atualizarGridFinanceiro.TabIndex = 4;
+            this.atualizarGridFinanceiro.TabStop = false;
+            this.atualizarGridFinanceiro.Click += new System.EventHandler(this.atualizarGridFinanceiro_Click);
+            // 
+            // btnAbrirModalVisualizarLancamentoFinanceiro
+            // 
+            this.btnAbrirModalVisualizarLancamentoFinanceiro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(94)))), ((int)(((byte)(220)))));
+            this.btnAbrirModalVisualizarLancamentoFinanceiro.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAbrirModalVisualizarLancamentoFinanceiro.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnAbrirModalVisualizarLancamentoFinanceiro.Image = ((System.Drawing.Image)(resources.GetObject("btnAbrirModalVisualizarLancamentoFinanceiro.Image")));
+            this.btnAbrirModalVisualizarLancamentoFinanceiro.Location = new System.Drawing.Point(175, 3);
+            this.btnAbrirModalVisualizarLancamentoFinanceiro.Name = "btnAbrirModalVisualizarLancamentoFinanceiro";
+            this.btnAbrirModalVisualizarLancamentoFinanceiro.Size = new System.Drawing.Size(80, 46);
+            this.btnAbrirModalVisualizarLancamentoFinanceiro.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.btnAbrirModalVisualizarLancamentoFinanceiro.TabIndex = 8;
+            this.btnAbrirModalVisualizarLancamentoFinanceiro.TabStop = false;
+            this.btnAbrirModalVisualizarLancamentoFinanceiro.Click += new System.EventHandler(this.btnAbrirModalVisualizarLancamentoFinanceiro_Click);
+            // 
+            // btnAbrirModalAdicionarLancamentoFinanceiro
+            // 
+            this.btnAbrirModalAdicionarLancamentoFinanceiro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(94)))), ((int)(((byte)(220)))));
+            this.btnAbrirModalAdicionarLancamentoFinanceiro.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAbrirModalAdicionarLancamentoFinanceiro.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnAbrirModalAdicionarLancamentoFinanceiro.Image = ((System.Drawing.Image)(resources.GetObject("btnAbrirModalAdicionarLancamentoFinanceiro.Image")));
+            this.btnAbrirModalAdicionarLancamentoFinanceiro.Location = new System.Drawing.Point(89, 3);
+            this.btnAbrirModalAdicionarLancamentoFinanceiro.Name = "btnAbrirModalAdicionarLancamentoFinanceiro";
+            this.btnAbrirModalAdicionarLancamentoFinanceiro.Size = new System.Drawing.Size(80, 46);
+            this.btnAbrirModalAdicionarLancamentoFinanceiro.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.btnAbrirModalAdicionarLancamentoFinanceiro.TabIndex = 2;
+            this.btnAbrirModalAdicionarLancamentoFinanceiro.TabStop = false;
+            this.btnAbrirModalAdicionarLancamentoFinanceiro.Click += new System.EventHandler(this.btnAbrirModalAdicionarLancamentoFinanceiro_Click);
+            // 
             // FormFinanceiro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -415,22 +417,22 @@
             this.panelRodape.ResumeLayout(false);
             this.tablePanelMenuClientes.ResumeLayout(false);
             this.tablePanelMenuClientes.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnAbrirModalFiltrarProdutos)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.atualizarGridProdutos)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnAbrirModalVisualizarLancamentoFinanceiro)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnAbrirModalAdicionarLancamentoFinanceiro)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.DataGridFinanceiro)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnAbrirModalFiltrarProdutos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnAbrirModalEliminarLancamentoFinanceiro)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.atualizarGridFinanceiro)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnAbrirModalVisualizarLancamentoFinanceiro)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnAbrirModalAdicionarLancamentoFinanceiro)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -442,8 +444,8 @@
         private System.Windows.Forms.PictureBox btnAbrirModalFiltrarProdutos;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox atualizarGridProdutos;
+        private System.Windows.Forms.PictureBox btnAbrirModalEliminarLancamentoFinanceiro;
+        private System.Windows.Forms.PictureBox atualizarGridFinanceiro;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.PictureBox btnAbrirModalVisualizarLancamentoFinanceiro;
         private System.Windows.Forms.Label label2;

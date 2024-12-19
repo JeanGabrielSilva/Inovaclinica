@@ -192,11 +192,11 @@ namespace Inovaclinica
                 string tipo = Convert.ToString(DataGridFinanceiro.Rows[e.RowIndex].Cells["Tipo"].Value);
                 if (tipo == "Entrada")
                 {
-                    e.Value = Image.FromFile(@"C:\dev\Inovaclinica\Inovaclinica\Resources\seta-para-cima-preenchida24.png");
+                    e.Value = Image.FromFile(@"C:\Users\jeang\Source\Repos\Inovaclinica\Inovaclinica\Resources\seta-para-cima-preenchida24.png");
                 }
                 else if (tipo == "Saída")
                 {
-                    e.Value = Image.FromFile(@"C:\dev\Inovaclinica\Inovaclinica\Resources\seta-para-baixo-preenchida24.png");
+                    e.Value = Image.FromFile(@"C:\Users\jeang\Source\Repos\Inovaclinica\Inovaclinica\Resources\seta-para-baixo-preenchida24.png");
                 }
             }
         }
@@ -240,6 +240,24 @@ namespace Inovaclinica
             {
                 MessageBox.Show("Selecione um cliente para visualizar.");
             }
+        }
+
+        private void btnAbrirModalEliminarLancamentoFinanceiro_Click(object sender, EventArgs e) {
+            if (DataGridFinanceiro.SelectedRows.Count > 0) 
+            {
+                var selectedRow = DataGridFinanceiro.SelectedRows[0];
+                string lancamentoID = selectedRow.Cells["Código"].Value.ToString();
+
+                modalExcluirLancamentoFinanceiro modalexcluirlancamentofinanceiro = new modalExcluirLancamentoFinanceiro(this, lancamentoID);
+                modalexcluirlancamentofinanceiro.StartPosition = FormStartPosition.CenterParent;
+                modalexcluirlancamentofinanceiro.ShowDialog();
+            } else {
+                MessageBox.Show("Selecione um cliente para visualizar.");
+            }
+        }
+
+        private void atualizarGridFinanceiro_Click(object sender, EventArgs e) {
+            this.LoadData();
         }
     }
 }

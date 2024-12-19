@@ -63,6 +63,16 @@ namespace Inovaclinica.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap acordo_3 {
+            get {
+                object obj = ResourceManager.GetObject("acordo-3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap adicionar_produto {
             get {
                 object obj = ResourceManager.GetObject("adicionar-produto", resourceCulture);
@@ -203,6 +213,16 @@ namespace Inovaclinica.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap calculadora {
+            get {
+                object obj = ResourceManager.GetObject("calculadora", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap circulo_usd {
             get {
                 object obj = ResourceManager.GetObject("circulo-usd", resourceCulture);
@@ -296,6 +316,26 @@ namespace Inovaclinica.Properties {
         internal static System.Drawing.Bitmap moedas {
             get {
                 object obj = ResourceManager.GetObject("moedas", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap relogio_calendario {
+            get {
+                object obj = ResourceManager.GetObject("relogio-calendario", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap relogio_calendario_fino {
+            get {
+                object obj = ResourceManager.GetObject("relogio-calendario-fino", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
