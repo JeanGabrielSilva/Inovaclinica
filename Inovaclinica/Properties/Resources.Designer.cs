@@ -343,6 +343,16 @@ namespace Inovaclinica.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap seringa__1_ {
+            get {
+                object obj = ResourceManager.GetObject("seringa (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap seta_alt_circulo_para_baixo {
             get {
                 object obj = ResourceManager.GetObject("seta-alt-circulo-para-baixo", resourceCulture);

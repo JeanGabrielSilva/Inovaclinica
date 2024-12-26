@@ -74,6 +74,12 @@
     <Compile Include="FormOrcamentos.Designer.cs">
       <DependentUpon>FormOrcamentos.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormProcedimentos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormProcedimentos.Designer.cs">
+      <DependentUpon>FormProcedimentos.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormProdutos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -170,6 +176,9 @@
     <EmbeddedResource Include="FormOrcamentos.resx">
       <DependentUpon>FormOrcamentos.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormProcedimentos.resx">
+      <DependentUpon>FormProcedimentos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormProdutos.resx">
       <DependentUpon>FormProdutos.cs</DependentUpon>
     </EmbeddedResource>
@@ -238,6 +247,7 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Img\verifique-o-circulo.png" />
+    <None Include="Resources\seringa %281%29.png" />
     <None Include="Resources\acordo-3.png" />
     <None Include="Resources\calculadora.png" />
     <None Include="Resources\relogio-calendario-fino.png" />

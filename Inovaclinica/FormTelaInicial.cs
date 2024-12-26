@@ -113,5 +113,12 @@ namespace Inovaclinica {
             formorcamento.WindowState = FormWindowState.Maximized;
             formorcamento.Show();
         }
+
+        private void btnMenuProcedimentos_Click(object sender, EventArgs e) {
+            FormProcedimentos formprocedimentos = new FormProcedimentos();
+            formprocedimentos.StartPosition = FormStartPosition.CenterScreen;
+            formprocedimentos.WindowState = FormWindowState.Maximized;
+            formprocedimentos.Show();
+        }
     }
 }

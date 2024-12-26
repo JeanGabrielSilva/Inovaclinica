@@ -39,7 +39,6 @@ namespace Inovaclinica {
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.btnMenuProcedimentos = new System.Windows.Forms.Button();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.button9 = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
@@ -51,6 +50,7 @@ namespace Inovaclinica {
             this.btnMenuConvenio = new System.Windows.Forms.Button();
             this.btnMenuCliente = new System.Windows.Forms.Button();
             this.btnMenuProduto = new System.Windows.Forms.Button();
+            this.btnMenuProcedimentos = new System.Windows.Forms.Button();
             this.LogoCabecalho = new System.Windows.Forms.PictureBox();
             this.panelRodape.SuspendLayout();
             this.panelCabecalho.SuspendLayout();
@@ -244,19 +244,6 @@ namespace Inovaclinica {
             this.tableLayoutPanel2.Size = new System.Drawing.Size(406, 420);
             this.tableLayoutPanel2.TabIndex = 9;
             // 
-            // btnMenuProcedimentos
-            // 
-            this.btnMenuProcedimentos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(161)))), ((int)(((byte)(86)))));
-            this.btnMenuProcedimentos.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnMenuProcedimentos.Font = new System.Drawing.Font("Arial Black", 12F, System.Drawing.FontStyle.Bold);
-            this.btnMenuProcedimentos.ForeColor = System.Drawing.Color.White;
-            this.btnMenuProcedimentos.Location = new System.Drawing.Point(206, 213);
-            this.btnMenuProcedimentos.Name = "btnMenuProcedimentos";
-            this.btnMenuProcedimentos.Size = new System.Drawing.Size(197, 204);
-            this.btnMenuProcedimentos.TabIndex = 3;
-            this.btnMenuProcedimentos.Text = "Procedimentos";
-            this.btnMenuProcedimentos.UseVisualStyleBackColor = false;
-            // 
             // tableLayoutPanel3
             // 
             this.tableLayoutPanel3.ColumnCount = 2;
@@ -427,6 +414,23 @@ namespace Inovaclinica {
             this.btnMenuProduto.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnMenuProduto.UseVisualStyleBackColor = false;
             this.btnMenuProduto.Click += new System.EventHandler(this.btnMenuProduto_Click);
+            // 
+            // btnMenuProcedimentos
+            // 
+            this.btnMenuProcedimentos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(161)))), ((int)(((byte)(86)))));
+            this.btnMenuProcedimentos.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnMenuProcedimentos.Font = new System.Drawing.Font("Arial Black", 12F, System.Drawing.FontStyle.Bold);
+            this.btnMenuProcedimentos.ForeColor = System.Drawing.Color.White;
+            this.btnMenuProcedimentos.Image = global::Inovaclinica.Properties.Resources.seringa__1_;
+            this.btnMenuProcedimentos.Location = new System.Drawing.Point(206, 213);
+            this.btnMenuProcedimentos.Name = "btnMenuProcedimentos";
+            this.btnMenuProcedimentos.Size = new System.Drawing.Size(197, 204);
+            this.btnMenuProcedimentos.TabIndex = 3;
+            this.btnMenuProcedimentos.Text = "Procedimentos";
+            this.btnMenuProcedimentos.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnMenuProcedimentos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnMenuProcedimentos.UseVisualStyleBackColor = false;
+            this.btnMenuProcedimentos.Click += new System.EventHandler(this.btnMenuProcedimentos_Click);
             // 
             // LogoCabecalho
             // 
