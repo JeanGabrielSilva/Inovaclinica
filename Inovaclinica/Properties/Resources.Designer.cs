@@ -343,9 +343,39 @@ namespace Inovaclinica.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap seringa {
+            get {
+                object obj = ResourceManager.GetObject("seringa", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap seringa__1_ {
             get {
                 object obj = ResourceManager.GetObject("seringa (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap seringa__1_1 {
+            get {
+                object obj = ResourceManager.GetObject("seringa (1)1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap seringa__1_2 {
+            get {
+                object obj = ResourceManager.GetObject("seringa (1)2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

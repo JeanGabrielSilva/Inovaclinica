@@ -159,8 +159,30 @@ namespace Inovaclinica {
             }
         }
 
-        private void dataGridProcedimentos_CellContentClick(object sender, DataGridViewCellEventArgs e) {
+        private void btnAbrirModalAdicionarProcedimentos_Click(object sender, EventArgs e)
+        {
+            modalAdicionarProcedimento modaladicionarprocedimento = new modalAdicionarProcedimento(this);
+            modaladicionarprocedimento.StartPosition = FormStartPosition.CenterParent;
+            modaladicionarprocedimento.ShowDialog();
+        }
 
+        private void btnAbrirModalVisualizarProcedimentos_Click(object sender, EventArgs e)
+        {
+            if (dataGridProcedimentos.SelectedRows.Count > 0)
+            {
+                var selectedRow = dataGridProcedimentos.SelectedRows[0];
+                string procedimentoID = selectedRow.Cells["Código"].Value.ToString();
+
+
+                modalVisualizarProcedimento modalvisualizarprocedimento = new modalVisualizarProcedimento(procedimentoID, this);
+                modalvisualizarprocedimento.Text = "Visualizar Procedimento";
+                modalvisualizarprocedimento.StartPosition = FormStartPosition.CenterParent;
+                modalvisualizarprocedimento.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Selecione um procedimento para visualizar.");
+            }
         }
     }
 }

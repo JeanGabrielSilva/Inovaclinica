@@ -110,6 +110,12 @@
     <Compile Include="modalAdicionarLancamentoFinanceiro.Designer.cs">
       <DependentUpon>modalAdicionarLancamentoFinanceiro.cs</DependentUpon>
     </Compile>
+    <Compile Include="modalAdicionarProcedimento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="modalAdicionarProcedimento.Designer.cs">
+      <DependentUpon>modalAdicionarProcedimento.cs</DependentUpon>
+    </Compile>
     <Compile Include="modalAdicionarProduto.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -128,6 +134,12 @@
     <Compile Include="modalFiltrarCliente.Designer.cs">
       <DependentUpon>modalFiltrarCliente.cs</DependentUpon>
     </Compile>
+    <Compile Include="modalFiltrarProcedimento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="modalFiltrarProcedimento.Designer.cs">
+      <DependentUpon>modalFiltrarProcedimento.cs</DependentUpon>
+    </Compile>
     <Compile Include="modalFiltrarProdutos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -145,6 +157,12 @@
     </Compile>
     <Compile Include="modalVisualizarLancamentoFinanceiro.Designer.cs">
       <DependentUpon>modalVisualizarLancamentoFinanceiro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="modalVisualizarProcedimento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="modalVisualizarProcedimento.Designer.cs">
+      <DependentUpon>modalVisualizarProcedimento.cs</DependentUpon>
     </Compile>
     <Compile Include="modalVisualizarProdutos.cs">
       <SubType>Form</SubType>
@@ -191,6 +209,9 @@
     <EmbeddedResource Include="modalAdicionarLancamentoFinanceiro.resx">
       <DependentUpon>modalAdicionarLancamentoFinanceiro.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="modalAdicionarProcedimento.resx">
+      <DependentUpon>modalAdicionarProcedimento.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="modalAdicionarProduto.resx">
       <DependentUpon>modalAdicionarProduto.cs</DependentUpon>
     </EmbeddedResource>
@@ -208,6 +229,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="modalVisualizarLancamentoFinanceiro.resx">
       <DependentUpon>modalVisualizarLancamentoFinanceiro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="modalVisualizarProcedimento.resx">
+      <DependentUpon>modalVisualizarProcedimento.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="modalVisualizarProdutos.resx">
       <DependentUpon>modalVisualizarProdutos.cs</DependentUpon>
@@ -247,6 +271,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Img\verifique-o-circulo.png" />
+    <None Include="Resources\seringa %281%292.png" />
+    <None Include="Resources\seringa %281%291.png" />
+    <None Include="Resources\seringa.png" />
     <None Include="Resources\seringa %281%29.png" />
     <None Include="Resources\acordo-3.png" />
     <None Include="Resources\calculadora.png" />

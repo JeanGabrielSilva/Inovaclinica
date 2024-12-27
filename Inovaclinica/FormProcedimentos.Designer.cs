@@ -26,16 +26,16 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormProcedimentos));
             this.panelRodape = new System.Windows.Forms.Panel();
             this.tablePanelMenuClientes = new System.Windows.Forms.TableLayoutPanel();
+            this.btnAbrirModalFiltrarProcedimentos = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.btnAbrirModalFiltrarProcedimentos = new System.Windows.Forms.PictureBox();
             this.btnAbrirModalExcluirProcedimentos = new System.Windows.Forms.PictureBox();
             this.atualizarGridProcedimentos = new System.Windows.Forms.PictureBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.btnAbrirModalVisualizarProcedimentos = new System.Windows.Forms.PictureBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.btnAbrirModalAdicionarProcedimentos = new System.Windows.Forms.PictureBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnBarraPesquisaProcedimentos = new System.Windows.Forms.PictureBox();
             this.barraPesquisaProcedimentos = new System.Windows.Forms.TextBox();
@@ -90,6 +90,19 @@
             this.tablePanelMenuClientes.Size = new System.Drawing.Size(431, 66);
             this.tablePanelMenuClientes.TabIndex = 10;
             // 
+            // btnAbrirModalFiltrarProcedimentos
+            // 
+            this.btnAbrirModalFiltrarProcedimentos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(94)))), ((int)(((byte)(220)))));
+            this.btnAbrirModalFiltrarProcedimentos.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAbrirModalFiltrarProcedimentos.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnAbrirModalFiltrarProcedimentos.Image = ((System.Drawing.Image)(resources.GetObject("btnAbrirModalFiltrarProcedimentos.Image")));
+            this.btnAbrirModalFiltrarProcedimentos.Location = new System.Drawing.Point(3, 3);
+            this.btnAbrirModalFiltrarProcedimentos.Name = "btnAbrirModalFiltrarProcedimentos";
+            this.btnAbrirModalFiltrarProcedimentos.Size = new System.Drawing.Size(80, 46);
+            this.btnAbrirModalFiltrarProcedimentos.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.btnAbrirModalFiltrarProcedimentos.TabIndex = 6;
+            this.btnAbrirModalFiltrarProcedimentos.TabStop = false;
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -115,58 +128,6 @@
             this.label3.TabIndex = 5;
             this.label3.Text = "Atualizar";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label5.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.SystemColors.Control;
-            this.label5.Location = new System.Drawing.Point(175, 52);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(80, 14);
-            this.label5.TabIndex = 9;
-            this.label5.Text = "Visualizar";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label2.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.Control;
-            this.label2.Location = new System.Drawing.Point(89, 52);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(80, 14);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Adicionar";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label4.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.SystemColors.Control;
-            this.label4.Location = new System.Drawing.Point(3, 52);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(80, 14);
-            this.label4.TabIndex = 7;
-            this.label4.Text = "Filtrar";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // btnAbrirModalFiltrarProcedimentos
-            // 
-            this.btnAbrirModalFiltrarProcedimentos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(94)))), ((int)(((byte)(220)))));
-            this.btnAbrirModalFiltrarProcedimentos.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAbrirModalFiltrarProcedimentos.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnAbrirModalFiltrarProcedimentos.Image = ((System.Drawing.Image)(resources.GetObject("btnAbrirModalFiltrarProcedimentos.Image")));
-            this.btnAbrirModalFiltrarProcedimentos.Location = new System.Drawing.Point(3, 3);
-            this.btnAbrirModalFiltrarProcedimentos.Name = "btnAbrirModalFiltrarProcedimentos";
-            this.btnAbrirModalFiltrarProcedimentos.Size = new System.Drawing.Size(80, 46);
-            this.btnAbrirModalFiltrarProcedimentos.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.btnAbrirModalFiltrarProcedimentos.TabIndex = 6;
-            this.btnAbrirModalFiltrarProcedimentos.TabStop = false;
             // 
             // btnAbrirModalExcluirProcedimentos
             // 
@@ -194,6 +155,19 @@
             this.atualizarGridProcedimentos.TabIndex = 4;
             this.atualizarGridProcedimentos.TabStop = false;
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label5.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.SystemColors.Control;
+            this.label5.Location = new System.Drawing.Point(175, 52);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(80, 14);
+            this.label5.TabIndex = 9;
+            this.label5.Text = "Visualizar";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // btnAbrirModalVisualizarProcedimentos
             // 
             this.btnAbrirModalVisualizarProcedimentos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(94)))), ((int)(((byte)(220)))));
@@ -206,6 +180,20 @@
             this.btnAbrirModalVisualizarProcedimentos.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.btnAbrirModalVisualizarProcedimentos.TabIndex = 8;
             this.btnAbrirModalVisualizarProcedimentos.TabStop = false;
+            this.btnAbrirModalVisualizarProcedimentos.Click += new System.EventHandler(this.btnAbrirModalVisualizarProcedimentos_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label2.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.Control;
+            this.label2.Location = new System.Drawing.Point(89, 52);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(80, 14);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "Adicionar";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnAbrirModalAdicionarProcedimentos
             // 
@@ -219,6 +207,20 @@
             this.btnAbrirModalAdicionarProcedimentos.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.btnAbrirModalAdicionarProcedimentos.TabIndex = 2;
             this.btnAbrirModalAdicionarProcedimentos.TabStop = false;
+            this.btnAbrirModalAdicionarProcedimentos.Click += new System.EventHandler(this.btnAbrirModalAdicionarProcedimentos_Click);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label4.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.SystemColors.Control;
+            this.label4.Location = new System.Drawing.Point(3, 52);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(80, 14);
+            this.label4.TabIndex = 7;
+            this.label4.Text = "Filtrar";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel1
             // 
@@ -264,7 +266,6 @@
             this.dataGridProcedimentos.Name = "dataGridProcedimentos";
             this.dataGridProcedimentos.Size = new System.Drawing.Size(1106, 467);
             this.dataGridProcedimentos.TabIndex = 5;
-            this.dataGridProcedimentos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridProcedimentos_CellContentClick);
             // 
             // FormProcedimentos
             // 
