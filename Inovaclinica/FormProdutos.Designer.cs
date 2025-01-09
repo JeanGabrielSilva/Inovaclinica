@@ -286,6 +286,7 @@
             this.Controls.Add(this.panelBarraPesquisa);
             this.Name = "FormProdutos";
             this.Text = "Produtos";
+            this.Load += new System.EventHandler(this.FormProdutos_Load_1);
             this.panelBarraPesquisa.ResumeLayout(false);
             this.panelBarraPesquisa.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnBarraPesquisaProdutos)).EndInit();

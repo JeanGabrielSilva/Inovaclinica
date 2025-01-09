@@ -99,5 +99,9 @@ namespace Inovaclinica
                 }
             }
         }
+
+        private void modalVisualizarProdutos_Load(object sender, EventArgs e) {
+
+        }
     }
 }

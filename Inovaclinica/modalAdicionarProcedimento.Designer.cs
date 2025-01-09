@@ -282,6 +282,7 @@
             this.Controls.Add(this.Dados);
             this.Name = "modalAdicionarProcedimento";
             this.Text = "modalAdicionarProcedimento";
+            this.Load += new System.EventHandler(this.modalAdicionarProcedimento_Load);
             this.Dados.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();

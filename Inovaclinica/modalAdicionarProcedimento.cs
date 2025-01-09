@@ -79,6 +79,10 @@ namespace Inovaclinica
         {
             this.Close();
         }
+
+        private void modalAdicionarProcedimento_Load(object sender, EventArgs e) {
+
+        }
     }
 
 

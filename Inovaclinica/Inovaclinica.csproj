@@ -158,6 +158,12 @@
     <Compile Include="modalVisualizarLancamentoFinanceiro.Designer.cs">
       <DependentUpon>modalVisualizarLancamentoFinanceiro.cs</DependentUpon>
     </Compile>
+    <Compile Include="modalVisualizarOrcamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="modalVisualizarOrcamento.Designer.cs">
+      <DependentUpon>modalVisualizarOrcamento.cs</DependentUpon>
+    </Compile>
     <Compile Include="modalVisualizarProcedimento.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -229,6 +235,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="modalVisualizarLancamentoFinanceiro.resx">
       <DependentUpon>modalVisualizarLancamentoFinanceiro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="modalVisualizarOrcamento.resx">
+      <DependentUpon>modalVisualizarOrcamento.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="modalVisualizarProcedimento.resx">
       <DependentUpon>modalVisualizarProcedimento.cs</DependentUpon>

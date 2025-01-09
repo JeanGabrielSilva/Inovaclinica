@@ -361,5 +361,9 @@ namespace Inovaclinica
                 }
             }
         }
+
+        private void FormProdutos_Load_1(object sender, EventArgs e) {
+
+        }
     }
 }
