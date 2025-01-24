@@ -110,6 +110,12 @@
     <Compile Include="modalAdicionarLancamentoFinanceiro.Designer.cs">
       <DependentUpon>modalAdicionarLancamentoFinanceiro.cs</DependentUpon>
     </Compile>
+    <Compile Include="modalAdicionarOrcamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="modalAdicionarOrcamento.Designer.cs">
+      <DependentUpon>modalAdicionarOrcamento.cs</DependentUpon>
+    </Compile>
     <Compile Include="modalAdicionarProcedimento.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -145,6 +151,12 @@
     </Compile>
     <Compile Include="modalFiltrarProdutos.Designer.cs">
       <DependentUpon>modalFiltrarProdutos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="modalListarClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="modalListarClientes.Designer.cs">
+      <DependentUpon>modalListarClientes.cs</DependentUpon>
     </Compile>
     <Compile Include="modalVisualizarClientes.cs">
       <SubType>Form</SubType>
@@ -215,6 +227,9 @@
     <EmbeddedResource Include="modalAdicionarLancamentoFinanceiro.resx">
       <DependentUpon>modalAdicionarLancamentoFinanceiro.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="modalAdicionarOrcamento.resx">
+      <DependentUpon>modalAdicionarOrcamento.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="modalAdicionarProcedimento.resx">
       <DependentUpon>modalAdicionarProcedimento.cs</DependentUpon>
     </EmbeddedResource>
@@ -229,6 +244,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="modalFiltrarProdutos.resx">
       <DependentUpon>modalFiltrarProdutos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="modalListarClientes.resx">
+      <DependentUpon>modalListarClientes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="modalVisualizarClientes.resx">
       <DependentUpon>modalVisualizarClientes.cs</DependentUpon>

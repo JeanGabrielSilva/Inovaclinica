@@ -26,39 +26,40 @@ namespace Inovaclinica {
         /// o conteúdo deste método com o editor de código.
         /// </summary>
         private void InitializeComponent() {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormTelaInicial));
             this.panelRodape = new System.Windows.Forms.Panel();
             this.footerLabel = new System.Windows.Forms.Label();
             this.footerLabel1 = new System.Windows.Forms.Label();
             this.panelCabecalho = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.LogoCabecalho = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanelTelaInicial = new System.Windows.Forms.TableLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.btnMenuAgendamento = new System.Windows.Forms.Button();
+            this.btnMenuOrcamento = new System.Windows.Forms.Button();
+            this.btnMenuFinanceiro = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.btnMenuConvenio = new System.Windows.Forms.Button();
+            this.btnMenuCliente = new System.Windows.Forms.Button();
+            this.btnMenuProduto = new System.Windows.Forms.Button();
+            this.btnMenuProcedimentos = new System.Windows.Forms.Button();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.button9 = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
             this.button11 = new System.Windows.Forms.Button();
             this.button12 = new System.Windows.Forms.Button();
-            this.btnMenuAgendamento = new System.Windows.Forms.Button();
-            this.btnMenuOrcamento = new System.Windows.Forms.Button();
-            this.btnMenuFinanceiro = new System.Windows.Forms.Button();
-            this.btnMenuConvenio = new System.Windows.Forms.Button();
-            this.btnMenuCliente = new System.Windows.Forms.Button();
-            this.btnMenuProduto = new System.Windows.Forms.Button();
-            this.btnMenuProcedimentos = new System.Windows.Forms.Button();
-            this.LogoCabecalho = new System.Windows.Forms.PictureBox();
             this.panelRodape.SuspendLayout();
             this.panelCabecalho.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.LogoCabecalho)).BeginInit();
             this.tableLayoutPanelTelaInicial.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.LogoCabecalho)).BeginInit();
             this.SuspendLayout();
             // 
             // panelRodape
@@ -131,6 +132,15 @@ namespace Inovaclinica {
             this.label4.TabIndex = 1;
             this.label4.Text = "INOVA";
             // 
+            // LogoCabecalho
+            // 
+            this.LogoCabecalho.Location = new System.Drawing.Point(16, 19);
+            this.LogoCabecalho.Name = "LogoCabecalho";
+            this.LogoCabecalho.Size = new System.Drawing.Size(60, 50);
+            this.LogoCabecalho.TabIndex = 0;
+            this.LogoCabecalho.TabStop = false;
+            this.LogoCabecalho.Click += new System.EventHandler(this.LogoCabecalho_Click);
+            // 
             // tableLayoutPanelTelaInicial
             // 
             this.tableLayoutPanelTelaInicial.AutoScroll = true;
@@ -185,6 +195,57 @@ namespace Inovaclinica {
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(406, 420);
             this.tableLayoutPanel1.TabIndex = 6;
+            // 
+            // btnMenuAgendamento
+            // 
+            this.btnMenuAgendamento.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnMenuAgendamento.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnMenuAgendamento.Font = new System.Drawing.Font("Arial Black", 12F, System.Drawing.FontStyle.Bold);
+            this.btnMenuAgendamento.ForeColor = System.Drawing.Color.White;
+            this.btnMenuAgendamento.Image = global::Inovaclinica.Properties.Resources.relogio_calendario_fino;
+            this.btnMenuAgendamento.Location = new System.Drawing.Point(3, 3);
+            this.btnMenuAgendamento.Name = "btnMenuAgendamento";
+            this.btnMenuAgendamento.Size = new System.Drawing.Size(197, 204);
+            this.btnMenuAgendamento.TabIndex = 0;
+            this.btnMenuAgendamento.Text = "Agendamento";
+            this.btnMenuAgendamento.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnMenuAgendamento.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnMenuAgendamento.UseVisualStyleBackColor = false;
+            this.btnMenuAgendamento.Click += new System.EventHandler(this.btnMenuAgendamento_Click);
+            // 
+            // btnMenuOrcamento
+            // 
+            this.btnMenuOrcamento.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnMenuOrcamento.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnMenuOrcamento.Font = new System.Drawing.Font("Arial Black", 12F, System.Drawing.FontStyle.Bold);
+            this.btnMenuOrcamento.ForeColor = System.Drawing.Color.White;
+            this.btnMenuOrcamento.Image = global::Inovaclinica.Properties.Resources.calculadora;
+            this.btnMenuOrcamento.Location = new System.Drawing.Point(206, 3);
+            this.btnMenuOrcamento.Name = "btnMenuOrcamento";
+            this.btnMenuOrcamento.Size = new System.Drawing.Size(197, 204);
+            this.btnMenuOrcamento.TabIndex = 1;
+            this.btnMenuOrcamento.Text = "Orçamento";
+            this.btnMenuOrcamento.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnMenuOrcamento.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnMenuOrcamento.UseVisualStyleBackColor = false;
+            this.btnMenuOrcamento.Click += new System.EventHandler(this.btnMenuOrcamento_Click);
+            // 
+            // btnMenuFinanceiro
+            // 
+            this.btnMenuFinanceiro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnMenuFinanceiro.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnMenuFinanceiro.Font = new System.Drawing.Font("Arial Black", 12F, System.Drawing.FontStyle.Bold);
+            this.btnMenuFinanceiro.ForeColor = System.Drawing.Color.White;
+            this.btnMenuFinanceiro.Image = global::Inovaclinica.Properties.Resources.circulo_usd__1_;
+            this.btnMenuFinanceiro.Location = new System.Drawing.Point(3, 213);
+            this.btnMenuFinanceiro.Name = "btnMenuFinanceiro";
+            this.btnMenuFinanceiro.Size = new System.Drawing.Size(197, 204);
+            this.btnMenuFinanceiro.TabIndex = 2;
+            this.btnMenuFinanceiro.Text = "Financeiro";
+            this.btnMenuFinanceiro.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnMenuFinanceiro.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnMenuFinanceiro.UseVisualStyleBackColor = false;
+            this.btnMenuFinanceiro.Click += new System.EventHandler(this.btnMenuFinanceiro_Click);
             // 
             // button6
             // 
@@ -243,6 +304,73 @@ namespace Inovaclinica {
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(406, 420);
             this.tableLayoutPanel2.TabIndex = 9;
+            // 
+            // btnMenuConvenio
+            // 
+            this.btnMenuConvenio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(161)))), ((int)(((byte)(86)))));
+            this.btnMenuConvenio.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnMenuConvenio.Font = new System.Drawing.Font("Arial Black", 12F, System.Drawing.FontStyle.Bold);
+            this.btnMenuConvenio.ForeColor = System.Drawing.Color.White;
+            this.btnMenuConvenio.Image = global::Inovaclinica.Properties.Resources.acordo_3;
+            this.btnMenuConvenio.Location = new System.Drawing.Point(3, 213);
+            this.btnMenuConvenio.Name = "btnMenuConvenio";
+            this.btnMenuConvenio.Size = new System.Drawing.Size(197, 204);
+            this.btnMenuConvenio.TabIndex = 3;
+            this.btnMenuConvenio.Text = "Convênios";
+            this.btnMenuConvenio.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnMenuConvenio.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnMenuConvenio.UseVisualStyleBackColor = false;
+            // 
+            // btnMenuCliente
+            // 
+            this.btnMenuCliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(161)))), ((int)(((byte)(86)))));
+            this.btnMenuCliente.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnMenuCliente.Font = new System.Drawing.Font("Arial Black", 12F, System.Drawing.FontStyle.Bold);
+            this.btnMenuCliente.ForeColor = System.Drawing.Color.White;
+            this.btnMenuCliente.Image = global::Inovaclinica.Properties.Resources.usuarios__1_;
+            this.btnMenuCliente.Location = new System.Drawing.Point(3, 3);
+            this.btnMenuCliente.Name = "btnMenuCliente";
+            this.btnMenuCliente.Size = new System.Drawing.Size(197, 204);
+            this.btnMenuCliente.TabIndex = 3;
+            this.btnMenuCliente.Text = "Clientes";
+            this.btnMenuCliente.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnMenuCliente.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnMenuCliente.UseVisualStyleBackColor = false;
+            this.btnMenuCliente.Click += new System.EventHandler(this.btnMenuCliente_Click);
+            // 
+            // btnMenuProduto
+            // 
+            this.btnMenuProduto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(161)))), ((int)(((byte)(86)))));
+            this.btnMenuProduto.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnMenuProduto.Font = new System.Drawing.Font("Arial Black", 12F, System.Drawing.FontStyle.Bold);
+            this.btnMenuProduto.ForeColor = System.Drawing.Color.White;
+            this.btnMenuProduto.Image = global::Inovaclinica.Properties.Resources.caixa_aberta__3_;
+            this.btnMenuProduto.Location = new System.Drawing.Point(206, 3);
+            this.btnMenuProduto.Name = "btnMenuProduto";
+            this.btnMenuProduto.Size = new System.Drawing.Size(197, 204);
+            this.btnMenuProduto.TabIndex = 3;
+            this.btnMenuProduto.Text = "Produtos";
+            this.btnMenuProduto.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnMenuProduto.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnMenuProduto.UseVisualStyleBackColor = false;
+            this.btnMenuProduto.Click += new System.EventHandler(this.btnMenuProduto_Click);
+            // 
+            // btnMenuProcedimentos
+            // 
+            this.btnMenuProcedimentos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(161)))), ((int)(((byte)(86)))));
+            this.btnMenuProcedimentos.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnMenuProcedimentos.Font = new System.Drawing.Font("Arial Black", 12F, System.Drawing.FontStyle.Bold);
+            this.btnMenuProcedimentos.ForeColor = System.Drawing.Color.White;
+            this.btnMenuProcedimentos.Image = global::Inovaclinica.Properties.Resources.seringa__1_;
+            this.btnMenuProcedimentos.Location = new System.Drawing.Point(206, 213);
+            this.btnMenuProcedimentos.Name = "btnMenuProcedimentos";
+            this.btnMenuProcedimentos.Size = new System.Drawing.Size(197, 204);
+            this.btnMenuProcedimentos.TabIndex = 3;
+            this.btnMenuProcedimentos.Text = "Procedimentos";
+            this.btnMenuProcedimentos.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnMenuProcedimentos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnMenuProcedimentos.UseVisualStyleBackColor = false;
+            this.btnMenuProcedimentos.Click += new System.EventHandler(this.btnMenuProcedimentos_Click);
             // 
             // tableLayoutPanel3
             // 
@@ -314,133 +442,6 @@ namespace Inovaclinica {
             this.button12.Text = "button6";
             this.button12.UseVisualStyleBackColor = false;
             // 
-            // btnMenuAgendamento
-            // 
-            this.btnMenuAgendamento.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btnMenuAgendamento.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnMenuAgendamento.Font = new System.Drawing.Font("Arial Black", 12F, System.Drawing.FontStyle.Bold);
-            this.btnMenuAgendamento.ForeColor = System.Drawing.Color.White;
-            this.btnMenuAgendamento.Image = global::Inovaclinica.Properties.Resources.relogio_calendario_fino;
-            this.btnMenuAgendamento.Location = new System.Drawing.Point(3, 3);
-            this.btnMenuAgendamento.Name = "btnMenuAgendamento";
-            this.btnMenuAgendamento.Size = new System.Drawing.Size(197, 204);
-            this.btnMenuAgendamento.TabIndex = 0;
-            this.btnMenuAgendamento.Text = "Agendamento";
-            this.btnMenuAgendamento.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnMenuAgendamento.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnMenuAgendamento.UseVisualStyleBackColor = false;
-            this.btnMenuAgendamento.Click += new System.EventHandler(this.btnMenuAgendamento_Click);
-            // 
-            // btnMenuOrcamento
-            // 
-            this.btnMenuOrcamento.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btnMenuOrcamento.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnMenuOrcamento.Font = new System.Drawing.Font("Arial Black", 12F, System.Drawing.FontStyle.Bold);
-            this.btnMenuOrcamento.ForeColor = System.Drawing.Color.White;
-            this.btnMenuOrcamento.Image = global::Inovaclinica.Properties.Resources.calculadora;
-            this.btnMenuOrcamento.Location = new System.Drawing.Point(206, 3);
-            this.btnMenuOrcamento.Name = "btnMenuOrcamento";
-            this.btnMenuOrcamento.Size = new System.Drawing.Size(197, 204);
-            this.btnMenuOrcamento.TabIndex = 1;
-            this.btnMenuOrcamento.Text = "Orçamento";
-            this.btnMenuOrcamento.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnMenuOrcamento.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnMenuOrcamento.UseVisualStyleBackColor = false;
-            this.btnMenuOrcamento.Click += new System.EventHandler(this.btnMenuOrcamento_Click);
-            // 
-            // btnMenuFinanceiro
-            // 
-            this.btnMenuFinanceiro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btnMenuFinanceiro.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnMenuFinanceiro.Font = new System.Drawing.Font("Arial Black", 12F, System.Drawing.FontStyle.Bold);
-            this.btnMenuFinanceiro.ForeColor = System.Drawing.Color.White;
-            this.btnMenuFinanceiro.Image = global::Inovaclinica.Properties.Resources.circulo_usd__1_;
-            this.btnMenuFinanceiro.Location = new System.Drawing.Point(3, 213);
-            this.btnMenuFinanceiro.Name = "btnMenuFinanceiro";
-            this.btnMenuFinanceiro.Size = new System.Drawing.Size(197, 204);
-            this.btnMenuFinanceiro.TabIndex = 2;
-            this.btnMenuFinanceiro.Text = "Financeiro";
-            this.btnMenuFinanceiro.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnMenuFinanceiro.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnMenuFinanceiro.UseVisualStyleBackColor = false;
-            this.btnMenuFinanceiro.Click += new System.EventHandler(this.btnMenuFinanceiro_Click);
-            // 
-            // btnMenuConvenio
-            // 
-            this.btnMenuConvenio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(161)))), ((int)(((byte)(86)))));
-            this.btnMenuConvenio.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnMenuConvenio.Font = new System.Drawing.Font("Arial Black", 12F, System.Drawing.FontStyle.Bold);
-            this.btnMenuConvenio.ForeColor = System.Drawing.Color.White;
-            this.btnMenuConvenio.Image = global::Inovaclinica.Properties.Resources.acordo_3;
-            this.btnMenuConvenio.Location = new System.Drawing.Point(3, 213);
-            this.btnMenuConvenio.Name = "btnMenuConvenio";
-            this.btnMenuConvenio.Size = new System.Drawing.Size(197, 204);
-            this.btnMenuConvenio.TabIndex = 3;
-            this.btnMenuConvenio.Text = "Convênios";
-            this.btnMenuConvenio.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnMenuConvenio.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnMenuConvenio.UseVisualStyleBackColor = false;
-            // 
-            // btnMenuCliente
-            // 
-            this.btnMenuCliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(161)))), ((int)(((byte)(86)))));
-            this.btnMenuCliente.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnMenuCliente.Font = new System.Drawing.Font("Arial Black", 12F, System.Drawing.FontStyle.Bold);
-            this.btnMenuCliente.ForeColor = System.Drawing.Color.White;
-            this.btnMenuCliente.Image = global::Inovaclinica.Properties.Resources.usuarios__1_;
-            this.btnMenuCliente.Location = new System.Drawing.Point(3, 3);
-            this.btnMenuCliente.Name = "btnMenuCliente";
-            this.btnMenuCliente.Size = new System.Drawing.Size(197, 204);
-            this.btnMenuCliente.TabIndex = 3;
-            this.btnMenuCliente.Text = "Clientes";
-            this.btnMenuCliente.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnMenuCliente.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnMenuCliente.UseVisualStyleBackColor = false;
-            this.btnMenuCliente.Click += new System.EventHandler(this.btnMenuCliente_Click);
-            // 
-            // btnMenuProduto
-            // 
-            this.btnMenuProduto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(161)))), ((int)(((byte)(86)))));
-            this.btnMenuProduto.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnMenuProduto.Font = new System.Drawing.Font("Arial Black", 12F, System.Drawing.FontStyle.Bold);
-            this.btnMenuProduto.ForeColor = System.Drawing.Color.White;
-            this.btnMenuProduto.Image = global::Inovaclinica.Properties.Resources.caixa_aberta__3_;
-            this.btnMenuProduto.Location = new System.Drawing.Point(206, 3);
-            this.btnMenuProduto.Name = "btnMenuProduto";
-            this.btnMenuProduto.Size = new System.Drawing.Size(197, 204);
-            this.btnMenuProduto.TabIndex = 3;
-            this.btnMenuProduto.Text = "Produtos";
-            this.btnMenuProduto.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnMenuProduto.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnMenuProduto.UseVisualStyleBackColor = false;
-            this.btnMenuProduto.Click += new System.EventHandler(this.btnMenuProduto_Click);
-            // 
-            // btnMenuProcedimentos
-            // 
-            this.btnMenuProcedimentos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(161)))), ((int)(((byte)(86)))));
-            this.btnMenuProcedimentos.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnMenuProcedimentos.Font = new System.Drawing.Font("Arial Black", 12F, System.Drawing.FontStyle.Bold);
-            this.btnMenuProcedimentos.ForeColor = System.Drawing.Color.White;
-            this.btnMenuProcedimentos.Image = global::Inovaclinica.Properties.Resources.seringa__1_;
-            this.btnMenuProcedimentos.Location = new System.Drawing.Point(206, 213);
-            this.btnMenuProcedimentos.Name = "btnMenuProcedimentos";
-            this.btnMenuProcedimentos.Size = new System.Drawing.Size(197, 204);
-            this.btnMenuProcedimentos.TabIndex = 3;
-            this.btnMenuProcedimentos.Text = "Procedimentos";
-            this.btnMenuProcedimentos.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnMenuProcedimentos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnMenuProcedimentos.UseVisualStyleBackColor = false;
-            this.btnMenuProcedimentos.Click += new System.EventHandler(this.btnMenuProcedimentos_Click);
-            // 
-            // LogoCabecalho
-            // 
-            this.LogoCabecalho.Location = new System.Drawing.Point(16, 19);
-            this.LogoCabecalho.Name = "LogoCabecalho";
-            this.LogoCabecalho.Size = new System.Drawing.Size(60, 50);
-            this.LogoCabecalho.TabIndex = 0;
-            this.LogoCabecalho.TabStop = false;
-            this.LogoCabecalho.Click += new System.EventHandler(this.LogoCabecalho_Click);
-            // 
             // FormTelaInicial
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -449,18 +450,19 @@ namespace Inovaclinica {
             this.Controls.Add(this.tableLayoutPanelTelaInicial);
             this.Controls.Add(this.panelCabecalho);
             this.Controls.Add(this.panelRodape);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormTelaInicial";
             this.Text = "Form1";
             this.panelRodape.ResumeLayout(false);
             this.panelRodape.PerformLayout();
             this.panelCabecalho.ResumeLayout(false);
             this.panelCabecalho.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.LogoCabecalho)).EndInit();
             this.tableLayoutPanelTelaInicial.ResumeLayout(false);
             this.tableLayoutPanelTelaInicial.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.LogoCabecalho)).EndInit();
             this.ResumeLayout(false);
 
         }

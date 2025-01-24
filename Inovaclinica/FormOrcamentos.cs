@@ -19,16 +19,52 @@ namespace Inovaclinica {
             txtValorTotalOrcamento.ReadOnly = true;
             txtValorTotalOrcamento.TabStop = false;
 
+            DataGridOrcamento.RowEnter += DataGridOrcamento_RowEnter;
             DataGridOrcamento.CellValueChanged += new DataGridViewCellEventHandler(DataGridOrcamento_CellValueChanged);
             DataGridOrcamento.CurrentCellDirtyStateChanged += new EventHandler(DataGridOrcamento_CurrentCellDirtyStateChanged);
         }
+
 
         private void FormOrcamento_Load(object sender, EventArgs e) {
             LoadData();
         }
 
-        private void DataGridOrcamento_CellContentClick(object sender, DataGridViewCellEventArgs e) {
+        private void DataGridOrcamento_RowEnter(object sender, DataGridViewCellEventArgs e)
+        {
+            // Verifica se a linha é válida (evita erro com linhas vazias ou cabeçalhos)
+            if (e.RowIndex >= 0)
+            {
+                // Obtém a linha clicada
+                var selectedRow = DataGridOrcamento.Rows[e.RowIndex];
 
+                // Exemplo: Obtém os valores das células pelo nome da coluna
+                string orcamentoID = selectedRow.Cells["Código"].Value?.ToString();
+                //string cliente = selectedRow.Cells["Nome"].Value?.ToString();
+                //string valor = selectedRow.Cells["Valor Total"].Value?.ToString();
+                //string status = selectedRow.Cells["Status"].Value?.ToString();
+                //if (selectedRow.Cells["Data de Criação"].Value != null &&
+                //    DateTime.TryParse(selectedRow.Cells["Data de Criação"].Value.ToString(), out DateTime dataCriacao))
+                //{
+                //    // Atualiza a label com a data formatada
+                //    lblDataCriacao.Text = dataCriacao.ToString("dd/MM/yyyy HH:mm");
+                //}
+                //else
+                //{
+                //   lblDataCriacao.Text = "Data inválida"; // Ou deixe vazio
+                //}
+
+                // Exemplo: Atualiza labels ou processa os dados
+                lblCodigo.Text = orcamentoID;
+                //lblNomeCliente.Text = cliente;
+                //lblValorTotal.Text = valor;
+                //lblStatus.Text = status;    
+                MostrarDadosOrcamento(orcamentoID);
+            }
+        }
+
+        public void MostrarDadosOrcamento(string orcamentoID)
+        {
+            //MessageBox.Show($"{orcamentoID}");
         }
 
         public void LoadData() {
@@ -188,6 +224,12 @@ namespace Inovaclinica {
             }
         }
 
-
+        private void btnAbrirModalAdicionarOrcamento_Click(object sender, EventArgs e)
+        {
+            modalAdicionarOrcamento modaladicionarorcamento = new modalAdicionarOrcamento();
+            modaladicionarorcamento.Text = "Adicionar Orçamento";
+            modaladicionarorcamento.StartPosition = FormStartPosition.CenterParent;
+            modaladicionarorcamento.ShowDialog();   
+        }
     }
 }

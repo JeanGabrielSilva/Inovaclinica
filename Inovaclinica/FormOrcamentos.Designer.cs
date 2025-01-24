@@ -34,7 +34,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.btnAbrirModalVisualizarOrcamento = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.btnAbrirModalAdicionarProduto = new System.Windows.Forms.PictureBox();
+            this.btnAbrirModalAdicionarOrcamento = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
             this.panelBarraPesquisa = new System.Windows.Forms.Panel();
             this.btnBarraPesquisaProdutos = new System.Windows.Forms.PictureBox();
@@ -47,16 +47,16 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label19 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
+            this.lblStatus = new System.Windows.Forms.Label();
+            this.lblDataCriacao = new System.Windows.Forms.Label();
+            this.lblNomeCliente = new System.Windows.Forms.Label();
+            this.lblCodigo = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.lblValorTotal = new System.Windows.Forms.NumericUpDown();
             this.lblStatusOrcamento = new System.Windows.Forms.Label();
             this.lblDataCriacaoOrcamento = new System.Windows.Forms.Label();
             this.lblClienteOrcamento = new System.Windows.Forms.Label();
@@ -73,7 +73,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.atualizarGridProdutos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnAbrirModalVisualizarOrcamento)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnAbrirModalAdicionarProduto)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnAbrirModalAdicionarOrcamento)).BeginInit();
             this.panelBarraPesquisa.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnBarraPesquisaProdutos)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
@@ -83,7 +83,7 @@
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lblValorTotal)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtValorTotalOrcamento)).BeginInit();
             this.SuspendLayout();
@@ -115,7 +115,7 @@
             this.tablePanelMenuClientes.Controls.Add(this.label5, 2, 1);
             this.tablePanelMenuClientes.Controls.Add(this.btnAbrirModalVisualizarOrcamento, 2, 0);
             this.tablePanelMenuClientes.Controls.Add(this.label2, 1, 1);
-            this.tablePanelMenuClientes.Controls.Add(this.btnAbrirModalAdicionarProduto, 1, 0);
+            this.tablePanelMenuClientes.Controls.Add(this.btnAbrirModalAdicionarOrcamento, 1, 0);
             this.tablePanelMenuClientes.Controls.Add(this.label4, 0, 1);
             this.tablePanelMenuClientes.GrowStyle = System.Windows.Forms.TableLayoutPanelGrowStyle.FixedSize;
             this.tablePanelMenuClientes.Location = new System.Drawing.Point(266, 0);
@@ -231,18 +231,19 @@
             this.label2.Text = "Adicionar";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // btnAbrirModalAdicionarProduto
+            // btnAbrirModalAdicionarOrcamento
             // 
-            this.btnAbrirModalAdicionarProduto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(94)))), ((int)(((byte)(220)))));
-            this.btnAbrirModalAdicionarProduto.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAbrirModalAdicionarProduto.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnAbrirModalAdicionarProduto.Image = ((System.Drawing.Image)(resources.GetObject("btnAbrirModalAdicionarProduto.Image")));
-            this.btnAbrirModalAdicionarProduto.Location = new System.Drawing.Point(89, 3);
-            this.btnAbrirModalAdicionarProduto.Name = "btnAbrirModalAdicionarProduto";
-            this.btnAbrirModalAdicionarProduto.Size = new System.Drawing.Size(80, 46);
-            this.btnAbrirModalAdicionarProduto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.btnAbrirModalAdicionarProduto.TabIndex = 2;
-            this.btnAbrirModalAdicionarProduto.TabStop = false;
+            this.btnAbrirModalAdicionarOrcamento.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(94)))), ((int)(((byte)(220)))));
+            this.btnAbrirModalAdicionarOrcamento.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAbrirModalAdicionarOrcamento.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnAbrirModalAdicionarOrcamento.Image = ((System.Drawing.Image)(resources.GetObject("btnAbrirModalAdicionarOrcamento.Image")));
+            this.btnAbrirModalAdicionarOrcamento.Location = new System.Drawing.Point(89, 3);
+            this.btnAbrirModalAdicionarOrcamento.Name = "btnAbrirModalAdicionarOrcamento";
+            this.btnAbrirModalAdicionarOrcamento.Size = new System.Drawing.Size(80, 46);
+            this.btnAbrirModalAdicionarOrcamento.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.btnAbrirModalAdicionarOrcamento.TabIndex = 2;
+            this.btnAbrirModalAdicionarOrcamento.TabStop = false;
+            this.btnAbrirModalAdicionarOrcamento.Click += new System.EventHandler(this.btnAbrirModalAdicionarOrcamento_Click);
             // 
             // label4
             // 
@@ -319,7 +320,6 @@
             this.DataGridOrcamento.ReadOnly = true;
             this.DataGridOrcamento.Size = new System.Drawing.Size(737, 428);
             this.DataGridOrcamento.TabIndex = 6;
-            this.DataGridOrcamento.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridOrcamento_CellContentClick);
             // 
             // tableLayoutPanel2
             // 
@@ -380,16 +380,16 @@
             // panel3
             // 
             this.panel3.Controls.Add(this.label19);
-            this.panel3.Controls.Add(this.label11);
-            this.panel3.Controls.Add(this.label12);
-            this.panel3.Controls.Add(this.label13);
-            this.panel3.Controls.Add(this.label14);
+            this.panel3.Controls.Add(this.lblStatus);
+            this.panel3.Controls.Add(this.lblDataCriacao);
+            this.panel3.Controls.Add(this.lblNomeCliente);
+            this.panel3.Controls.Add(this.lblCodigo);
             this.panel3.Controls.Add(this.label15);
             this.panel3.Controls.Add(this.label16);
             this.panel3.Controls.Add(this.label17);
             this.panel3.Controls.Add(this.label18);
             this.panel3.Controls.Add(this.pictureBox2);
-            this.panel3.Controls.Add(this.numericUpDown1);
+            this.panel3.Controls.Add(this.lblValorTotal);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
@@ -407,50 +407,50 @@
             this.label19.TabIndex = 61;
             this.label19.Text = "Valor Total:";
             // 
-            // label11
+            // lblStatus
             // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
-            this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(95)))), ((int)(((byte)(95)))));
-            this.label11.Location = new System.Drawing.Point(74, 148);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(57, 16);
-            this.label11.TabIndex = 60;
-            this.label11.Text = "label13";
+            this.lblStatus.AutoSize = true;
+            this.lblStatus.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
+            this.lblStatus.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(95)))), ((int)(((byte)(95)))));
+            this.lblStatus.Location = new System.Drawing.Point(74, 148);
+            this.lblStatus.Name = "lblStatus";
+            this.lblStatus.Size = new System.Drawing.Size(57, 16);
+            this.lblStatus.TabIndex = 60;
+            this.lblStatus.Text = "label13";
             // 
-            // label12
+            // lblDataCriacao
             // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
-            this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(95)))), ((int)(((byte)(95)))));
-            this.label12.Location = new System.Drawing.Point(114, 108);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(57, 16);
-            this.label12.TabIndex = 59;
-            this.label12.Text = "label14";
+            this.lblDataCriacao.AutoSize = true;
+            this.lblDataCriacao.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
+            this.lblDataCriacao.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(95)))), ((int)(((byte)(95)))));
+            this.lblDataCriacao.Location = new System.Drawing.Point(114, 108);
+            this.lblDataCriacao.Name = "lblDataCriacao";
+            this.lblDataCriacao.Size = new System.Drawing.Size(57, 16);
+            this.lblDataCriacao.TabIndex = 59;
+            this.lblDataCriacao.Text = "label14";
             // 
-            // label13
+            // lblNomeCliente
             // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
-            this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(95)))), ((int)(((byte)(95)))));
-            this.label13.Location = new System.Drawing.Point(138, 64);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(57, 16);
-            this.label13.TabIndex = 58;
-            this.label13.Text = "label15";
-            this.label13.Click += new System.EventHandler(this.label13_Click);
+            this.lblNomeCliente.AutoSize = true;
+            this.lblNomeCliente.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
+            this.lblNomeCliente.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(95)))), ((int)(((byte)(95)))));
+            this.lblNomeCliente.Location = new System.Drawing.Point(138, 64);
+            this.lblNomeCliente.Name = "lblNomeCliente";
+            this.lblNomeCliente.Size = new System.Drawing.Size(57, 16);
+            this.lblNomeCliente.TabIndex = 58;
+            this.lblNomeCliente.Text = "label15";
+            this.lblNomeCliente.Click += new System.EventHandler(this.label13_Click);
             // 
-            // label14
+            // lblCodigo
             // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
-            this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(95)))), ((int)(((byte)(95)))));
-            this.label14.Location = new System.Drawing.Point(77, 19);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(57, 16);
-            this.label14.TabIndex = 57;
-            this.label14.Text = "label16";
+            this.lblCodigo.AutoSize = true;
+            this.lblCodigo.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
+            this.lblCodigo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(95)))), ((int)(((byte)(95)))));
+            this.lblCodigo.Location = new System.Drawing.Point(77, 19);
+            this.lblCodigo.Name = "lblCodigo";
+            this.lblCodigo.Size = new System.Drawing.Size(57, 16);
+            this.lblCodigo.TabIndex = 57;
+            this.lblCodigo.Text = "label16";
             // 
             // label15
             // 
@@ -507,25 +507,25 @@
             this.pictureBox2.TabIndex = 51;
             this.pictureBox2.TabStop = false;
             // 
-            // numericUpDown1
+            // lblValorTotal
             // 
-            this.numericUpDown1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.numericUpDown1.DecimalPlaces = 2;
-            this.numericUpDown1.Font = new System.Drawing.Font("Arial Black", 11F, System.Drawing.FontStyle.Bold);
-            this.numericUpDown1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(95)))), ((int)(((byte)(95)))));
-            this.numericUpDown1.InterceptArrowKeys = false;
-            this.numericUpDown1.Location = new System.Drawing.Point(64, 247);
-            this.numericUpDown1.Maximum = new decimal(new int[] {
+            this.lblValorTotal.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.lblValorTotal.DecimalPlaces = 2;
+            this.lblValorTotal.Font = new System.Drawing.Font("Arial Black", 11F, System.Drawing.FontStyle.Bold);
+            this.lblValorTotal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(95)))), ((int)(((byte)(95)))));
+            this.lblValorTotal.InterceptArrowKeys = false;
+            this.lblValorTotal.Location = new System.Drawing.Point(64, 247);
+            this.lblValorTotal.Maximum = new decimal(new int[] {
             99999,
             0,
             0,
             0});
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(112, 24);
-            this.numericUpDown1.TabIndex = 50;
-            this.numericUpDown1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.numericUpDown1.ThousandsSeparator = true;
-            this.numericUpDown1.UpDownAlign = System.Windows.Forms.LeftRightAlignment.Left;
+            this.lblValorTotal.Name = "lblValorTotal";
+            this.lblValorTotal.Size = new System.Drawing.Size(112, 24);
+            this.lblValorTotal.TabIndex = 50;
+            this.lblValorTotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.lblValorTotal.ThousandsSeparator = true;
+            this.lblValorTotal.UpDownAlign = System.Windows.Forms.LeftRightAlignment.Left;
             // 
             // lblStatusOrcamento
             // 
@@ -647,7 +647,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.atualizarGridProdutos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnAbrirModalVisualizarOrcamento)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnAbrirModalAdicionarProduto)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnAbrirModalAdicionarOrcamento)).EndInit();
             this.panelBarraPesquisa.ResumeLayout(false);
             this.panelBarraPesquisa.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnBarraPesquisaProdutos)).EndInit();
@@ -661,7 +661,7 @@
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lblValorTotal)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtValorTotalOrcamento)).EndInit();
             this.ResumeLayout(false);
@@ -680,7 +680,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.PictureBox btnAbrirModalVisualizarOrcamento;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.PictureBox btnAbrirModalAdicionarProduto;
+        private System.Windows.Forms.PictureBox btnAbrirModalAdicionarOrcamento;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel panelBarraPesquisa;
         private System.Windows.Forms.PictureBox btnBarraPesquisaProdutos;
@@ -703,15 +703,15 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label lblStatus;
+        private System.Windows.Forms.Label lblDataCriacao;
+        private System.Windows.Forms.Label lblNomeCliente;
+        private System.Windows.Forms.Label lblCodigo;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.NumericUpDown lblValorTotal;
     }
 }
