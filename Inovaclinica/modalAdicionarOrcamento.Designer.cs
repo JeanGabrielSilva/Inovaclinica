@@ -29,62 +29,62 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(modalAdicionarOrcamento));
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.dataGridProcedimentoOrcamento = new System.Windows.Forms.DataGridView();
+            this.dataGridProdutosOrcamento = new System.Windows.Forms.DataGridView();
             this.panelRodape = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.label5 = new System.Windows.Forms.Label();
             this.labelCancelarVisualizarClientes = new System.Windows.Forms.Label();
             this.btnSalvarAlteracaoProduto = new System.Windows.Forms.PictureBox();
-            this.btnCancelarAlteracaoProduto = new System.Windows.Forms.PictureBox();
+            this.btnCancelarAdicaoOrcamento = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblNomeCliente = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.lblTotalProcedimentos = new System.Windows.Forms.NumericUpDown();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.estoqueProduto = new System.Windows.Forms.NumericUpDown();
+            this.lblTotalProdutos = new System.Windows.Forms.NumericUpDown();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.precoProduto = new System.Windows.Forms.NumericUpDown();
+            this.lblTotalOrcamento = new System.Windows.Forms.NumericUpDown();
             this.barraPesquisarClientes = new System.Windows.Forms.TextBox();
-            this.barraPesquisarProduto = new System.Windows.Forms.TextBox();
-            this.btnBuscarProduto = new System.Windows.Forms.PictureBox();
-            this.barraPesquisarProcedimento = new System.Windows.Forms.TextBox();
-            this.btnBuscarProcedimento = new System.Windows.Forms.PictureBox();
+            this.barraPesquisarProdutos = new System.Windows.Forms.TextBox();
+            this.barraPesquisarProcedimentos = new System.Windows.Forms.TextBox();
             this.btnBuscarCliente = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            this.btnBuscarProcedimento = new System.Windows.Forms.PictureBox();
+            this.btnBuscarProduto = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridProcedimentoOrcamento)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridProdutosOrcamento)).BeginInit();
             this.panelRodape.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnSalvarAlteracaoProduto)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnCancelarAlteracaoProduto)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnCancelarAdicaoOrcamento)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lblTotalProcedimentos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.estoqueProduto)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lblTotalProdutos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.precoProduto)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnBuscarProduto)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnBuscarProcedimento)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lblTotalOrcamento)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnBuscarCliente)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnBuscarProcedimento)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnBuscarProduto)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // dataGridProcedimentoOrcamento
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(15, 102);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(413, 322);
-            this.dataGridView1.TabIndex = 0;
+            this.dataGridProcedimentoOrcamento.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridProcedimentoOrcamento.Location = new System.Drawing.Point(15, 102);
+            this.dataGridProcedimentoOrcamento.Name = "dataGridProcedimentoOrcamento";
+            this.dataGridProcedimentoOrcamento.Size = new System.Drawing.Size(413, 322);
+            this.dataGridProcedimentoOrcamento.TabIndex = 0;
             // 
-            // dataGridView2
+            // dataGridProdutosOrcamento
             // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(447, 102);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(412, 322);
-            this.dataGridView2.TabIndex = 1;
+            this.dataGridProdutosOrcamento.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridProdutosOrcamento.Location = new System.Drawing.Point(447, 102);
+            this.dataGridProdutosOrcamento.Name = "dataGridProdutosOrcamento";
+            this.dataGridProdutosOrcamento.Size = new System.Drawing.Size(412, 322);
+            this.dataGridProdutosOrcamento.TabIndex = 1;
             // 
             // panelRodape
             // 
@@ -104,7 +104,7 @@
             this.tableLayoutPanel1.Controls.Add(this.label5, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.labelCancelarVisualizarClientes, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.btnSalvarAlteracaoProduto, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.btnCancelarAlteracaoProduto, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.btnCancelarAdicaoOrcamento, 1, 0);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(365, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
@@ -154,29 +154,30 @@
             this.btnSalvarAlteracaoProduto.TabIndex = 14;
             this.btnSalvarAlteracaoProduto.TabStop = false;
             // 
-            // btnCancelarAlteracaoProduto
+            // btnCancelarAdicaoOrcamento
             // 
-            this.btnCancelarAlteracaoProduto.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCancelarAlteracaoProduto.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnCancelarAlteracaoProduto.Image = global::Inovaclinica.Properties.Resources.circulo_x__1_;
-            this.btnCancelarAlteracaoProduto.Location = new System.Drawing.Point(79, 3);
-            this.btnCancelarAlteracaoProduto.Name = "btnCancelarAlteracaoProduto";
-            this.btnCancelarAlteracaoProduto.Size = new System.Drawing.Size(70, 38);
-            this.btnCancelarAlteracaoProduto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.btnCancelarAlteracaoProduto.TabIndex = 17;
-            this.btnCancelarAlteracaoProduto.TabStop = false;
+            this.btnCancelarAdicaoOrcamento.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCancelarAdicaoOrcamento.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnCancelarAdicaoOrcamento.Image = global::Inovaclinica.Properties.Resources.circulo_x__1_;
+            this.btnCancelarAdicaoOrcamento.Location = new System.Drawing.Point(79, 3);
+            this.btnCancelarAdicaoOrcamento.Name = "btnCancelarAdicaoOrcamento";
+            this.btnCancelarAdicaoOrcamento.Size = new System.Drawing.Size(70, 38);
+            this.btnCancelarAdicaoOrcamento.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.btnCancelarAdicaoOrcamento.TabIndex = 17;
+            this.btnCancelarAdicaoOrcamento.TabStop = false;
+            this.btnCancelarAdicaoOrcamento.Click += new System.EventHandler(this.btnCancelarAdicaoOrcamento_Click);
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.LightGray;
             this.panel1.Controls.Add(this.lblNomeCliente);
             this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Controls.Add(this.numericUpDown1);
+            this.panel1.Controls.Add(this.lblTotalProcedimentos);
             this.panel1.Controls.Add(this.pictureBox2);
-            this.panel1.Controls.Add(this.estoqueProduto);
+            this.panel1.Controls.Add(this.lblTotalProdutos);
             this.panel1.Controls.Add(this.pictureBox3);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.precoProduto);
+            this.panel1.Controls.Add(this.lblTotalOrcamento);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel1.Location = new System.Drawing.Point(0, 430);
             this.panel1.Name = "panel1";
@@ -204,24 +205,24 @@
             this.pictureBox1.TabIndex = 55;
             this.pictureBox1.TabStop = false;
             // 
-            // numericUpDown1
+            // lblTotalProcedimentos
             // 
-            this.numericUpDown1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.numericUpDown1.Font = new System.Drawing.Font("Arial Black", 16F, System.Drawing.FontStyle.Bold);
-            this.numericUpDown1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(95)))), ((int)(((byte)(95)))));
-            this.numericUpDown1.InterceptArrowKeys = false;
-            this.numericUpDown1.Location = new System.Drawing.Point(431, 7);
-            this.numericUpDown1.Maximum = new decimal(new int[] {
+            this.lblTotalProcedimentos.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblTotalProcedimentos.Font = new System.Drawing.Font("Arial Black", 16F, System.Drawing.FontStyle.Bold);
+            this.lblTotalProcedimentos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(95)))), ((int)(((byte)(95)))));
+            this.lblTotalProcedimentos.InterceptArrowKeys = false;
+            this.lblTotalProcedimentos.Location = new System.Drawing.Point(431, 7);
+            this.lblTotalProcedimentos.Maximum = new decimal(new int[] {
             99999,
             0,
             0,
             0});
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(112, 38);
-            this.numericUpDown1.TabIndex = 54;
-            this.numericUpDown1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.numericUpDown1.ThousandsSeparator = true;
-            this.numericUpDown1.UpDownAlign = System.Windows.Forms.LeftRightAlignment.Left;
+            this.lblTotalProcedimentos.Name = "lblTotalProcedimentos";
+            this.lblTotalProcedimentos.Size = new System.Drawing.Size(112, 38);
+            this.lblTotalProcedimentos.TabIndex = 54;
+            this.lblTotalProcedimentos.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.lblTotalProcedimentos.ThousandsSeparator = true;
+            this.lblTotalProcedimentos.UpDownAlign = System.Windows.Forms.LeftRightAlignment.Left;
             // 
             // pictureBox2
             // 
@@ -234,24 +235,24 @@
             this.pictureBox2.TabIndex = 53;
             this.pictureBox2.TabStop = false;
             // 
-            // estoqueProduto
+            // lblTotalProdutos
             // 
-            this.estoqueProduto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.estoqueProduto.Font = new System.Drawing.Font("Arial Black", 16F, System.Drawing.FontStyle.Bold);
-            this.estoqueProduto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(95)))), ((int)(((byte)(95)))));
-            this.estoqueProduto.InterceptArrowKeys = false;
-            this.estoqueProduto.Location = new System.Drawing.Point(588, 7);
-            this.estoqueProduto.Maximum = new decimal(new int[] {
+            this.lblTotalProdutos.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblTotalProdutos.Font = new System.Drawing.Font("Arial Black", 16F, System.Drawing.FontStyle.Bold);
+            this.lblTotalProdutos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(95)))), ((int)(((byte)(95)))));
+            this.lblTotalProdutos.InterceptArrowKeys = false;
+            this.lblTotalProdutos.Location = new System.Drawing.Point(588, 7);
+            this.lblTotalProdutos.Maximum = new decimal(new int[] {
             99999,
             0,
             0,
             0});
-            this.estoqueProduto.Name = "estoqueProduto";
-            this.estoqueProduto.Size = new System.Drawing.Size(112, 38);
-            this.estoqueProduto.TabIndex = 52;
-            this.estoqueProduto.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.estoqueProduto.ThousandsSeparator = true;
-            this.estoqueProduto.UpDownAlign = System.Windows.Forms.LeftRightAlignment.Left;
+            this.lblTotalProdutos.Name = "lblTotalProdutos";
+            this.lblTotalProdutos.Size = new System.Drawing.Size(112, 38);
+            this.lblTotalProdutos.TabIndex = 52;
+            this.lblTotalProdutos.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.lblTotalProdutos.ThousandsSeparator = true;
+            this.lblTotalProdutos.UpDownAlign = System.Windows.Forms.LeftRightAlignment.Left;
             // 
             // pictureBox3
             // 
@@ -275,25 +276,25 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Nome:";
             // 
-            // precoProduto
+            // lblTotalOrcamento
             // 
-            this.precoProduto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.precoProduto.DecimalPlaces = 2;
-            this.precoProduto.Font = new System.Drawing.Font("Arial Black", 16F, System.Drawing.FontStyle.Bold);
-            this.precoProduto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(95)))), ((int)(((byte)(95)))));
-            this.precoProduto.InterceptArrowKeys = false;
-            this.precoProduto.Location = new System.Drawing.Point(747, 7);
-            this.precoProduto.Maximum = new decimal(new int[] {
+            this.lblTotalOrcamento.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblTotalOrcamento.DecimalPlaces = 2;
+            this.lblTotalOrcamento.Font = new System.Drawing.Font("Arial Black", 16F, System.Drawing.FontStyle.Bold);
+            this.lblTotalOrcamento.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(95)))), ((int)(((byte)(95)))));
+            this.lblTotalOrcamento.InterceptArrowKeys = false;
+            this.lblTotalOrcamento.Location = new System.Drawing.Point(747, 7);
+            this.lblTotalOrcamento.Maximum = new decimal(new int[] {
             99999,
             0,
             0,
             0});
-            this.precoProduto.Name = "precoProduto";
-            this.precoProduto.Size = new System.Drawing.Size(112, 38);
-            this.precoProduto.TabIndex = 50;
-            this.precoProduto.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.precoProduto.ThousandsSeparator = true;
-            this.precoProduto.UpDownAlign = System.Windows.Forms.LeftRightAlignment.Left;
+            this.lblTotalOrcamento.Name = "lblTotalOrcamento";
+            this.lblTotalOrcamento.Size = new System.Drawing.Size(112, 38);
+            this.lblTotalOrcamento.TabIndex = 50;
+            this.lblTotalOrcamento.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.lblTotalOrcamento.ThousandsSeparator = true;
+            this.lblTotalOrcamento.UpDownAlign = System.Windows.Forms.LeftRightAlignment.Left;
             // 
             // barraPesquisarClientes
             // 
@@ -305,49 +306,25 @@
             this.barraPesquisarClientes.Size = new System.Drawing.Size(802, 38);
             this.barraPesquisarClientes.TabIndex = 28;
             // 
-            // barraPesquisarProduto
+            // barraPesquisarProdutos
             // 
-            this.barraPesquisarProduto.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.barraPesquisarProduto.CausesValidation = false;
-            this.barraPesquisarProduto.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
-            this.barraPesquisarProduto.Location = new System.Drawing.Point(488, 54);
-            this.barraPesquisarProduto.Name = "barraPesquisarProduto";
-            this.barraPesquisarProduto.Size = new System.Drawing.Size(371, 38);
-            this.barraPesquisarProduto.TabIndex = 30;
+            this.barraPesquisarProdutos.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.barraPesquisarProdutos.CausesValidation = false;
+            this.barraPesquisarProdutos.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
+            this.barraPesquisarProdutos.Location = new System.Drawing.Point(488, 54);
+            this.barraPesquisarProdutos.Name = "barraPesquisarProdutos";
+            this.barraPesquisarProdutos.Size = new System.Drawing.Size(371, 38);
+            this.barraPesquisarProdutos.TabIndex = 30;
             // 
-            // btnBuscarProduto
+            // barraPesquisarProcedimentos
             // 
-            this.btnBuscarProduto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(94)))), ((int)(((byte)(220)))));
-            this.btnBuscarProduto.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnBuscarProduto.Image = global::Inovaclinica.Properties.Resources.caixa_aberta__2_;
-            this.btnBuscarProduto.Location = new System.Drawing.Point(447, 54);
-            this.btnBuscarProduto.Name = "btnBuscarProduto";
-            this.btnBuscarProduto.Size = new System.Drawing.Size(43, 38);
-            this.btnBuscarProduto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.btnBuscarProduto.TabIndex = 54;
-            this.btnBuscarProduto.TabStop = false;
-            // 
-            // barraPesquisarProcedimento
-            // 
-            this.barraPesquisarProcedimento.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.barraPesquisarProcedimento.CausesValidation = false;
-            this.barraPesquisarProcedimento.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
-            this.barraPesquisarProcedimento.Location = new System.Drawing.Point(57, 54);
-            this.barraPesquisarProcedimento.Name = "barraPesquisarProcedimento";
-            this.barraPesquisarProcedimento.Size = new System.Drawing.Size(371, 38);
-            this.barraPesquisarProcedimento.TabIndex = 55;
-            // 
-            // btnBuscarProcedimento
-            // 
-            this.btnBuscarProcedimento.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(94)))), ((int)(((byte)(220)))));
-            this.btnBuscarProcedimento.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnBuscarProcedimento.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscarProcedimento.Image")));
-            this.btnBuscarProcedimento.Location = new System.Drawing.Point(15, 54);
-            this.btnBuscarProcedimento.Name = "btnBuscarProcedimento";
-            this.btnBuscarProcedimento.Size = new System.Drawing.Size(43, 38);
-            this.btnBuscarProcedimento.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.btnBuscarProcedimento.TabIndex = 56;
-            this.btnBuscarProcedimento.TabStop = false;
+            this.barraPesquisarProcedimentos.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.barraPesquisarProcedimentos.CausesValidation = false;
+            this.barraPesquisarProcedimentos.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
+            this.barraPesquisarProcedimentos.Location = new System.Drawing.Point(57, 54);
+            this.barraPesquisarProcedimentos.Name = "barraPesquisarProcedimentos";
+            this.barraPesquisarProcedimentos.Size = new System.Drawing.Size(371, 38);
+            this.barraPesquisarProcedimentos.TabIndex = 55;
             // 
             // btnBuscarCliente
             // 
@@ -361,6 +338,30 @@
             this.btnBuscarCliente.TabIndex = 57;
             this.btnBuscarCliente.TabStop = false;
             // 
+            // btnBuscarProcedimento
+            // 
+            this.btnBuscarProcedimento.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(94)))), ((int)(((byte)(220)))));
+            this.btnBuscarProcedimento.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnBuscarProcedimento.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscarProcedimento.Image")));
+            this.btnBuscarProcedimento.Location = new System.Drawing.Point(15, 54);
+            this.btnBuscarProcedimento.Name = "btnBuscarProcedimento";
+            this.btnBuscarProcedimento.Size = new System.Drawing.Size(43, 38);
+            this.btnBuscarProcedimento.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.btnBuscarProcedimento.TabIndex = 56;
+            this.btnBuscarProcedimento.TabStop = false;
+            // 
+            // btnBuscarProduto
+            // 
+            this.btnBuscarProduto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(94)))), ((int)(((byte)(220)))));
+            this.btnBuscarProduto.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnBuscarProduto.Image = global::Inovaclinica.Properties.Resources.caixa_aberta__2_;
+            this.btnBuscarProduto.Location = new System.Drawing.Point(447, 54);
+            this.btnBuscarProduto.Name = "btnBuscarProduto";
+            this.btnBuscarProduto.Size = new System.Drawing.Size(43, 38);
+            this.btnBuscarProduto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.btnBuscarProduto.TabIndex = 54;
+            this.btnBuscarProduto.TabStop = false;
+            // 
             // modalAdicionarOrcamento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -368,34 +369,34 @@
             this.ClientSize = new System.Drawing.Size(873, 550);
             this.Controls.Add(this.btnBuscarCliente);
             this.Controls.Add(this.btnBuscarProcedimento);
-            this.Controls.Add(this.barraPesquisarProcedimento);
+            this.Controls.Add(this.barraPesquisarProcedimentos);
             this.Controls.Add(this.btnBuscarProduto);
-            this.Controls.Add(this.barraPesquisarProduto);
+            this.Controls.Add(this.barraPesquisarProdutos);
             this.Controls.Add(this.barraPesquisarClientes);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panelRodape);
-            this.Controls.Add(this.dataGridView2);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dataGridProdutosOrcamento);
+            this.Controls.Add(this.dataGridProcedimentoOrcamento);
             this.Name = "modalAdicionarOrcamento";
             this.Text = "modalAdicionarOrcamento";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridProcedimentoOrcamento)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridProdutosOrcamento)).EndInit();
             this.panelRodape.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnSalvarAlteracaoProduto)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnCancelarAlteracaoProduto)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnCancelarAdicaoOrcamento)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lblTotalProcedimentos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.estoqueProduto)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lblTotalProdutos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.precoProduto)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnBuscarProduto)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnBuscarProcedimento)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lblTotalOrcamento)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnBuscarCliente)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnBuscarProcedimento)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnBuscarProduto)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -403,27 +404,27 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataGridView dataGridProcedimentoOrcamento;
+        private System.Windows.Forms.DataGridView dataGridProdutosOrcamento;
         private System.Windows.Forms.Panel panelRodape;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label labelCancelarVisualizarClientes;
         private System.Windows.Forms.PictureBox btnSalvarAlteracaoProduto;
-        private System.Windows.Forms.PictureBox btnCancelarAlteracaoProduto;
+        private System.Windows.Forms.PictureBox btnCancelarAdicaoOrcamento;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.NumericUpDown precoProduto;
-        private System.Windows.Forms.NumericUpDown estoqueProduto;
+        private System.Windows.Forms.NumericUpDown lblTotalOrcamento;
+        private System.Windows.Forms.NumericUpDown lblTotalProdutos;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.NumericUpDown lblTotalProcedimentos;
         private System.Windows.Forms.Label lblNomeCliente;
         private System.Windows.Forms.TextBox barraPesquisarClientes;
-        private System.Windows.Forms.TextBox barraPesquisarProduto;
+        private System.Windows.Forms.TextBox barraPesquisarProdutos;
         private System.Windows.Forms.PictureBox btnBuscarProduto;
-        private System.Windows.Forms.TextBox barraPesquisarProcedimento;
+        private System.Windows.Forms.TextBox barraPesquisarProcedimentos;
         private System.Windows.Forms.PictureBox btnBuscarProcedimento;
         private System.Windows.Forms.PictureBox btnBuscarCliente;
     }

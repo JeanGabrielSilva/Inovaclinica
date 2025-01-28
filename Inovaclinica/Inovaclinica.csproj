@@ -158,6 +158,18 @@
     <Compile Include="modalListarClientes.Designer.cs">
       <DependentUpon>modalListarClientes.cs</DependentUpon>
     </Compile>
+    <Compile Include="modalListarProcedimento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="modalListarProcedimento.Designer.cs">
+      <DependentUpon>modalListarProcedimento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="modalListarProduto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="modalListarProduto.Designer.cs">
+      <DependentUpon>modalListarProduto.cs</DependentUpon>
+    </Compile>
     <Compile Include="modalVisualizarClientes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -188,6 +200,8 @@
     <Compile Include="modalVisualizarProdutos.Designer.cs">
       <DependentUpon>modalVisualizarProdutos.cs</DependentUpon>
     </Compile>
+    <Compile Include="Procedimento.cs" />
+    <Compile Include="Produto.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
@@ -247,6 +261,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="modalListarClientes.resx">
       <DependentUpon>modalListarClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="modalListarProcedimento.resx">
+      <DependentUpon>modalListarProcedimento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="modalListarProduto.resx">
+      <DependentUpon>modalListarProduto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="modalVisualizarClientes.resx">
       <DependentUpon>modalVisualizarClientes.cs</DependentUpon>
