@@ -35,15 +35,10 @@
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.label5 = new System.Windows.Forms.Label();
             this.labelCancelarVisualizarClientes = new System.Windows.Forms.Label();
-            this.btnSalvarAlteracaoProduto = new System.Windows.Forms.PictureBox();
-            this.btnCancelarAdicaoOrcamento = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblNomeCliente = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblTotalProcedimentos = new System.Windows.Forms.NumericUpDown();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.lblTotalProdutos = new System.Windows.Forms.NumericUpDown();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.lblTotalOrcamento = new System.Windows.Forms.NumericUpDown();
             this.barraPesquisarClientes = new System.Windows.Forms.TextBox();
@@ -52,22 +47,27 @@
             this.btnBuscarCliente = new System.Windows.Forms.PictureBox();
             this.btnBuscarProcedimento = new System.Windows.Forms.PictureBox();
             this.btnBuscarProduto = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.btnGravarOrcamento = new System.Windows.Forms.PictureBox();
+            this.btnCancelarAdicaoOrcamento = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridProcedimentoOrcamento)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridProdutosOrcamento)).BeginInit();
             this.panelRodape.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnSalvarAlteracaoProduto)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnCancelarAdicaoOrcamento)).BeginInit();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lblTotalProcedimentos)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lblTotalProdutos)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lblTotalOrcamento)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnBuscarCliente)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnBuscarProcedimento)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnBuscarProduto)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnGravarOrcamento)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnCancelarAdicaoOrcamento)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridProcedimentoOrcamento
@@ -103,7 +103,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.Controls.Add(this.label5, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.labelCancelarVisualizarClientes, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.btnSalvarAlteracaoProduto, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.btnGravarOrcamento, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.btnCancelarAdicaoOrcamento, 1, 0);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(365, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -140,33 +140,6 @@
             this.labelCancelarVisualizarClientes.Text = "Cancelar";
             this.labelCancelarVisualizarClientes.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // btnSalvarAlteracaoProduto
-            // 
-            this.btnSalvarAlteracaoProduto.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSalvarAlteracaoProduto.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSalvarAlteracaoProduto.Image = ((System.Drawing.Image)(resources.GetObject("btnSalvarAlteracaoProduto.Image")));
-            this.btnSalvarAlteracaoProduto.Location = new System.Drawing.Point(3, 3);
-            this.btnSalvarAlteracaoProduto.Name = "btnSalvarAlteracaoProduto";
-            this.btnSalvarAlteracaoProduto.Size = new System.Drawing.Size(70, 38);
-            this.btnSalvarAlteracaoProduto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.btnSalvarAlteracaoProduto.TabIndex = 14;
-            this.btnSalvarAlteracaoProduto.TabStop = false;
-            // 
-            // btnCancelarAdicaoOrcamento
-            // 
-            this.btnCancelarAdicaoOrcamento.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCancelarAdicaoOrcamento.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnCancelarAdicaoOrcamento.Image = global::Inovaclinica.Properties.Resources.circulo_x__1_;
-            this.btnCancelarAdicaoOrcamento.Location = new System.Drawing.Point(79, 3);
-            this.btnCancelarAdicaoOrcamento.Name = "btnCancelarAdicaoOrcamento";
-            this.btnCancelarAdicaoOrcamento.Size = new System.Drawing.Size(70, 38);
-            this.btnCancelarAdicaoOrcamento.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.btnCancelarAdicaoOrcamento.TabIndex = 17;
-            this.btnCancelarAdicaoOrcamento.TabStop = false;
-            this.btnCancelarAdicaoOrcamento.Click += new System.EventHandler(this.btnCancelarAdicaoOrcamento_Click);
-            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.LightGray;
@@ -194,17 +167,6 @@
             this.lblNomeCliente.Size = new System.Drawing.Size(0, 31);
             this.lblNomeCliente.TabIndex = 56;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(94)))), ((int)(((byte)(220)))));
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(404, 8);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(43, 37);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox1.TabIndex = 55;
-            this.pictureBox1.TabStop = false;
-            // 
             // lblTotalProcedimentos
             // 
             this.lblTotalProcedimentos.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -224,17 +186,6 @@
             this.lblTotalProcedimentos.ThousandsSeparator = true;
             this.lblTotalProcedimentos.UpDownAlign = System.Windows.Forms.LeftRightAlignment.Left;
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(94)))), ((int)(((byte)(220)))));
-            this.pictureBox2.Image = global::Inovaclinica.Properties.Resources.caixa_aberta__2_;
-            this.pictureBox2.Location = new System.Drawing.Point(561, 8);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(43, 37);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox2.TabIndex = 53;
-            this.pictureBox2.TabStop = false;
-            // 
             // lblTotalProdutos
             // 
             this.lblTotalProdutos.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -253,17 +204,6 @@
             this.lblTotalProdutos.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.lblTotalProdutos.ThousandsSeparator = true;
             this.lblTotalProdutos.UpDownAlign = System.Windows.Forms.LeftRightAlignment.Left;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(94)))), ((int)(((byte)(220)))));
-            this.pictureBox3.Image = global::Inovaclinica.Properties.Resources.moedas;
-            this.pictureBox3.Location = new System.Drawing.Point(720, 8);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(43, 37);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox3.TabIndex = 51;
-            this.pictureBox3.TabStop = false;
             // 
             // label1
             // 
@@ -362,6 +302,67 @@
             this.btnBuscarProduto.TabIndex = 54;
             this.btnBuscarProduto.TabStop = false;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(94)))), ((int)(((byte)(220)))));
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(404, 8);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(43, 37);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox1.TabIndex = 55;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(94)))), ((int)(((byte)(220)))));
+            this.pictureBox2.Image = global::Inovaclinica.Properties.Resources.caixa_aberta__2_;
+            this.pictureBox2.Location = new System.Drawing.Point(561, 8);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(43, 37);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox2.TabIndex = 53;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(94)))), ((int)(((byte)(220)))));
+            this.pictureBox3.Image = global::Inovaclinica.Properties.Resources.moedas;
+            this.pictureBox3.Location = new System.Drawing.Point(720, 8);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(43, 37);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox3.TabIndex = 51;
+            this.pictureBox3.TabStop = false;
+            // 
+            // btnGravarOrcamento
+            // 
+            this.btnGravarOrcamento.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnGravarOrcamento.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnGravarOrcamento.Image = ((System.Drawing.Image)(resources.GetObject("btnGravarOrcamento.Image")));
+            this.btnGravarOrcamento.Location = new System.Drawing.Point(3, 3);
+            this.btnGravarOrcamento.Name = "btnGravarOrcamento";
+            this.btnGravarOrcamento.Size = new System.Drawing.Size(70, 38);
+            this.btnGravarOrcamento.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.btnGravarOrcamento.TabIndex = 14;
+            this.btnGravarOrcamento.TabStop = false;
+            this.btnGravarOrcamento.Click += new System.EventHandler(this.btnGravarOrcamento_Click);
+            // 
+            // btnCancelarAdicaoOrcamento
+            // 
+            this.btnCancelarAdicaoOrcamento.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCancelarAdicaoOrcamento.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnCancelarAdicaoOrcamento.Image = global::Inovaclinica.Properties.Resources.circulo_x__1_;
+            this.btnCancelarAdicaoOrcamento.Location = new System.Drawing.Point(79, 3);
+            this.btnCancelarAdicaoOrcamento.Name = "btnCancelarAdicaoOrcamento";
+            this.btnCancelarAdicaoOrcamento.Size = new System.Drawing.Size(70, 38);
+            this.btnCancelarAdicaoOrcamento.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.btnCancelarAdicaoOrcamento.TabIndex = 17;
+            this.btnCancelarAdicaoOrcamento.TabStop = false;
+            this.btnCancelarAdicaoOrcamento.Click += new System.EventHandler(this.btnCancelarAdicaoOrcamento_Click);
+            // 
             // modalAdicionarOrcamento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -384,19 +385,19 @@
             this.panelRodape.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnSalvarAlteracaoProduto)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnCancelarAdicaoOrcamento)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lblTotalProcedimentos)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lblTotalProdutos)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lblTotalOrcamento)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnBuscarCliente)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnBuscarProcedimento)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnBuscarProduto)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnGravarOrcamento)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnCancelarAdicaoOrcamento)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -410,7 +411,7 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label labelCancelarVisualizarClientes;
-        private System.Windows.Forms.PictureBox btnSalvarAlteracaoProduto;
+        private System.Windows.Forms.PictureBox btnGravarOrcamento;
         private System.Windows.Forms.PictureBox btnCancelarAdicaoOrcamento;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;

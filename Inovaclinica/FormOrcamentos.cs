@@ -16,8 +16,6 @@ namespace Inovaclinica {
             InitializeComponent();
             this.Load += new EventHandler(FormOrcamento_Load);
             CustomizeDataGridView();
-            txtValorTotalOrcamento.ReadOnly = true;
-            txtValorTotalOrcamento.TabStop = false;
 
             DataGridOrcamento.RowEnter += DataGridOrcamento_RowEnter;
             DataGridOrcamento.CellValueChanged += new DataGridViewCellEventHandler(DataGridOrcamento_CellValueChanged);
@@ -39,9 +37,9 @@ namespace Inovaclinica {
 
                 // Exemplo: Obtém os valores das células pelo nome da coluna
                 string orcamentoID = selectedRow.Cells["Código"].Value?.ToString();
-                //string cliente = selectedRow.Cells["Nome"].Value?.ToString();
-                //string valor = selectedRow.Cells["Valor Total"].Value?.ToString();
-                //string status = selectedRow.Cells["Status"].Value?.ToString();
+                string cliente = selectedRow.Cells["Nome"].Value?.ToString();
+                string valor = selectedRow.Cells["Valor Total"].Value?.ToString();
+                string status = selectedRow.Cells["Status"].Value?.ToString();
                 //if (selectedRow.Cells["Data de Criação"].Value != null &&
                 //    DateTime.TryParse(selectedRow.Cells["Data de Criação"].Value.ToString(), out DateTime dataCriacao))
                 //{
@@ -55,16 +53,32 @@ namespace Inovaclinica {
 
                 // Exemplo: Atualiza labels ou processa os dados
                 lblCodigo.Text = orcamentoID;
-                //lblNomeCliente.Text = cliente;
-                //lblValorTotal.Text = valor;
-                //lblStatus.Text = status;    
+                lblNomeCliente.Text = cliente;
+                lblTotalOrcamento.Text = valor;
+                lblStatus.Text = status;    
                 MostrarDadosOrcamento(orcamentoID);
             }
         }
 
         public void MostrarDadosOrcamento(string orcamentoID)
         {
-            //MessageBox.Show($"{orcamentoID}");
+            string connectionString = ConfigurationManager.ConnectionStrings["InovaclinicaConnectionString"].ConnectionString;
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                string query = $"Select O.OrcamentoID as [Código], C.Nome as [Nome], O.DataCriacao [Data de Criação], O.Status, O.ValorTotal as [Valor Total] from Orcamentos as O inner join Clientes as C on O.ClienteID = C.ClienteID WHERE OrcamentoID = @OrcamentoID";
+
+                SqlCommand command = new SqlCommand(query, connection);
+                command.Parameters.AddWithValue("@OrcamentoID", orcamentoID); // Utiliza parâmetros para evitar SQL Injection
+
+                connection.Open();
+                SqlDataReader reader = command.ExecuteReader();
+
+                if (reader.Read())
+                {
+                    //txtBoxNomeCliente.Text = reader["Nome"].ToString();
+                }
+            }
         }
 
         public void LoadData() {
@@ -226,10 +240,15 @@ namespace Inovaclinica {
 
         private void btnAbrirModalAdicionarOrcamento_Click(object sender, EventArgs e)
         {
-            modalAdicionarOrcamento modaladicionarorcamento = new modalAdicionarOrcamento();
+            modalAdicionarOrcamento modaladicionarorcamento = new modalAdicionarOrcamento(this);
             modaladicionarorcamento.Text = "Adicionar Orçamento";
             modaladicionarorcamento.StartPosition = FormStartPosition.CenterParent;
             modaladicionarorcamento.ShowDialog();   
+        }
+
+        private void tableLayoutPanel2_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
