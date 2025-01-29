@@ -26,66 +26,75 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormOrcamentos));
             this.panelRodape = new System.Windows.Forms.Panel();
             this.tablePanelMenuClientes = new System.Windows.Forms.TableLayoutPanel();
-            this.btnAbrirModalFiltrarProdutos = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.atualizarGridProdutos = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.btnAbrirModalVisualizarOrcamento = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.btnAbrirModalAdicionarOrcamento = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
             this.panelBarraPesquisa = new System.Windows.Forms.Panel();
-            this.btnBarraPesquisaProdutos = new System.Windows.Forms.PictureBox();
             this.barraPesquisaProdutos = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.DataGridOrcamento = new System.Windows.Forms.DataGridView();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label6 = new System.Windows.Forms.Label();
+            this.btnBarraPesquisaProdutos = new System.Windows.Forms.PictureBox();
+            this.btnAbrirModalFiltrarProdutos = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.atualizarGridProdutos = new System.Windows.Forms.PictureBox();
+            this.btnAbrirModalVisualizarOrcamento = new System.Windows.Forms.PictureBox();
+            this.btnAbrirModalAdicionarOrcamento = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label6 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.label19 = new System.Windows.Forms.Label();
-            this.lblStatus = new System.Windows.Forms.Label();
-            this.lblDataCriacao = new System.Windows.Forms.Label();
-            this.lblNomeCliente = new System.Windows.Forms.Label();
-            this.lblCodigo = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
+            this.panel5 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.lblValorTotal = new System.Windows.Forms.NumericUpDown();
-            this.lblStatusOrcamento = new System.Windows.Forms.Label();
-            this.lblDataCriacaoOrcamento = new System.Windows.Forms.Label();
-            this.lblClienteOrcamento = new System.Windows.Forms.Label();
-            this.lblCodigoOrcamento = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.lblTotalProcedimentos = new System.Windows.Forms.NumericUpDown();
+            this.lblTotalOrcamento = new System.Windows.Forms.NumericUpDown();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.lblTotalProdutos = new System.Windows.Forms.NumericUpDown();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.lblStatus = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.lblDataCriacao = new System.Windows.Forms.Label();
+            this.lblCodigo = new System.Windows.Forms.Label();
+            this.lblNomeCliente = new System.Windows.Forms.Label();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.dataGridProdecimentosOrcamento = new System.Windows.Forms.DataGridView();
             this.label7 = new System.Windows.Forms.Label();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.txtValorTotalOrcamento = new System.Windows.Forms.NumericUpDown();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.dataGridProdutosOrcamento = new System.Windows.Forms.DataGridView();
+            this.label8 = new System.Windows.Forms.Label();
             this.panelRodape.SuspendLayout();
             this.tablePanelMenuClientes.SuspendLayout();
+            this.panelBarraPesquisa.SuspendLayout();
+            this.tableLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DataGridOrcamento)).BeginInit();
+            this.tableLayoutPanel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnBarraPesquisaProdutos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnAbrirModalFiltrarProdutos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.atualizarGridProdutos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnAbrirModalVisualizarOrcamento)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnAbrirModalAdicionarOrcamento)).BeginInit();
-            this.panelBarraPesquisa.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnBarraPesquisaProdutos)).BeginInit();
-            this.tableLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DataGridOrcamento)).BeginInit();
-            this.tableLayoutPanel2.SuspendLayout();
-            this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
+            this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lblValorTotal)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtValorTotalOrcamento)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lblTotalProcedimentos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lblTotalOrcamento)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lblTotalProdutos)).BeginInit();
+            this.panel4.SuspendLayout();
+            this.panel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridProdecimentosOrcamento)).BeginInit();
+            this.panel7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridProdutosOrcamento)).BeginInit();
             this.SuspendLayout();
             // 
             // panelRodape
@@ -126,19 +135,6 @@
             this.tablePanelMenuClientes.Size = new System.Drawing.Size(431, 66);
             this.tablePanelMenuClientes.TabIndex = 10;
             // 
-            // btnAbrirModalFiltrarProdutos
-            // 
-            this.btnAbrirModalFiltrarProdutos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(94)))), ((int)(((byte)(220)))));
-            this.btnAbrirModalFiltrarProdutos.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAbrirModalFiltrarProdutos.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnAbrirModalFiltrarProdutos.Image = ((System.Drawing.Image)(resources.GetObject("btnAbrirModalFiltrarProdutos.Image")));
-            this.btnAbrirModalFiltrarProdutos.Location = new System.Drawing.Point(3, 3);
-            this.btnAbrirModalFiltrarProdutos.Name = "btnAbrirModalFiltrarProdutos";
-            this.btnAbrirModalFiltrarProdutos.Size = new System.Drawing.Size(80, 46);
-            this.btnAbrirModalFiltrarProdutos.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.btnAbrirModalFiltrarProdutos.TabIndex = 6;
-            this.btnAbrirModalFiltrarProdutos.TabStop = false;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -165,32 +161,6 @@
             this.label3.Text = "Atualizar";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(94)))), ((int)(((byte)(220)))));
-            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(261, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(80, 46);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
-            // atualizarGridProdutos
-            // 
-            this.atualizarGridProdutos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(94)))), ((int)(((byte)(220)))));
-            this.atualizarGridProdutos.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.atualizarGridProdutos.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.atualizarGridProdutos.Image = ((System.Drawing.Image)(resources.GetObject("atualizarGridProdutos.Image")));
-            this.atualizarGridProdutos.Location = new System.Drawing.Point(347, 3);
-            this.atualizarGridProdutos.Name = "atualizarGridProdutos";
-            this.atualizarGridProdutos.Size = new System.Drawing.Size(81, 46);
-            this.atualizarGridProdutos.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.atualizarGridProdutos.TabIndex = 4;
-            this.atualizarGridProdutos.TabStop = false;
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -204,20 +174,6 @@
             this.label5.Text = "Visualizar";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // btnAbrirModalVisualizarOrcamento
-            // 
-            this.btnAbrirModalVisualizarOrcamento.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(94)))), ((int)(((byte)(220)))));
-            this.btnAbrirModalVisualizarOrcamento.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAbrirModalVisualizarOrcamento.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnAbrirModalVisualizarOrcamento.Image = ((System.Drawing.Image)(resources.GetObject("btnAbrirModalVisualizarOrcamento.Image")));
-            this.btnAbrirModalVisualizarOrcamento.Location = new System.Drawing.Point(175, 3);
-            this.btnAbrirModalVisualizarOrcamento.Name = "btnAbrirModalVisualizarOrcamento";
-            this.btnAbrirModalVisualizarOrcamento.Size = new System.Drawing.Size(80, 46);
-            this.btnAbrirModalVisualizarOrcamento.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.btnAbrirModalVisualizarOrcamento.TabIndex = 8;
-            this.btnAbrirModalVisualizarOrcamento.TabStop = false;
-            this.btnAbrirModalVisualizarOrcamento.Click += new System.EventHandler(this.btnAbrirModalVisualizarOrcamento_Click);
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -230,20 +186,6 @@
             this.label2.TabIndex = 3;
             this.label2.Text = "Adicionar";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // btnAbrirModalAdicionarOrcamento
-            // 
-            this.btnAbrirModalAdicionarOrcamento.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(94)))), ((int)(((byte)(220)))));
-            this.btnAbrirModalAdicionarOrcamento.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAbrirModalAdicionarOrcamento.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnAbrirModalAdicionarOrcamento.Image = ((System.Drawing.Image)(resources.GetObject("btnAbrirModalAdicionarOrcamento.Image")));
-            this.btnAbrirModalAdicionarOrcamento.Location = new System.Drawing.Point(89, 3);
-            this.btnAbrirModalAdicionarOrcamento.Name = "btnAbrirModalAdicionarOrcamento";
-            this.btnAbrirModalAdicionarOrcamento.Size = new System.Drawing.Size(80, 46);
-            this.btnAbrirModalAdicionarOrcamento.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.btnAbrirModalAdicionarOrcamento.TabIndex = 2;
-            this.btnAbrirModalAdicionarOrcamento.TabStop = false;
-            this.btnAbrirModalAdicionarOrcamento.Click += new System.EventHandler(this.btnAbrirModalAdicionarOrcamento_Click);
             // 
             // label4
             // 
@@ -268,20 +210,6 @@
             this.panelBarraPesquisa.Size = new System.Drawing.Size(991, 78);
             this.panelBarraPesquisa.TabIndex = 6;
             // 
-            // btnBarraPesquisaProdutos
-            // 
-            this.btnBarraPesquisaProdutos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(94)))), ((int)(((byte)(220)))));
-            this.btnBarraPesquisaProdutos.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.btnBarraPesquisaProdutos.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnBarraPesquisaProdutos.Image = ((System.Drawing.Image)(resources.GetObject("btnBarraPesquisaProdutos.Image")));
-            this.btnBarraPesquisaProdutos.InitialImage = ((System.Drawing.Image)(resources.GetObject("btnBarraPesquisaProdutos.InitialImage")));
-            this.btnBarraPesquisaProdutos.Location = new System.Drawing.Point(13, 16);
-            this.btnBarraPesquisaProdutos.Name = "btnBarraPesquisaProdutos";
-            this.btnBarraPesquisaProdutos.Size = new System.Drawing.Size(48, 47);
-            this.btnBarraPesquisaProdutos.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.btnBarraPesquisaProdutos.TabIndex = 1;
-            this.btnBarraPesquisaProdutos.TabStop = false;
-            // 
             // barraPesquisaProdutos
             // 
             this.barraPesquisaProdutos.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
@@ -304,7 +232,7 @@
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 434F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(991, 434);
             this.tableLayoutPanel1.TabIndex = 7;
             // 
@@ -333,18 +261,105 @@
             this.tableLayoutPanel2.RowCount = 2;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(242, 428);
             this.tableLayoutPanel2.TabIndex = 7;
+            this.tableLayoutPanel2.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel2_Paint);
             // 
-            // panel1
+            // btnBarraPesquisaProdutos
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(94)))), ((int)(((byte)(220)))));
-            this.panel1.Controls.Add(this.label6);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(3, 3);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(236, 44);
-            this.panel1.TabIndex = 8;
+            this.btnBarraPesquisaProdutos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(94)))), ((int)(((byte)(220)))));
+            this.btnBarraPesquisaProdutos.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.btnBarraPesquisaProdutos.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnBarraPesquisaProdutos.Image = ((System.Drawing.Image)(resources.GetObject("btnBarraPesquisaProdutos.Image")));
+            this.btnBarraPesquisaProdutos.InitialImage = ((System.Drawing.Image)(resources.GetObject("btnBarraPesquisaProdutos.InitialImage")));
+            this.btnBarraPesquisaProdutos.Location = new System.Drawing.Point(13, 16);
+            this.btnBarraPesquisaProdutos.Name = "btnBarraPesquisaProdutos";
+            this.btnBarraPesquisaProdutos.Size = new System.Drawing.Size(48, 47);
+            this.btnBarraPesquisaProdutos.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.btnBarraPesquisaProdutos.TabIndex = 1;
+            this.btnBarraPesquisaProdutos.TabStop = false;
+            // 
+            // btnAbrirModalFiltrarProdutos
+            // 
+            this.btnAbrirModalFiltrarProdutos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(94)))), ((int)(((byte)(220)))));
+            this.btnAbrirModalFiltrarProdutos.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAbrirModalFiltrarProdutos.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnAbrirModalFiltrarProdutos.Image = ((System.Drawing.Image)(resources.GetObject("btnAbrirModalFiltrarProdutos.Image")));
+            this.btnAbrirModalFiltrarProdutos.Location = new System.Drawing.Point(3, 3);
+            this.btnAbrirModalFiltrarProdutos.Name = "btnAbrirModalFiltrarProdutos";
+            this.btnAbrirModalFiltrarProdutos.Size = new System.Drawing.Size(80, 46);
+            this.btnAbrirModalFiltrarProdutos.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.btnAbrirModalFiltrarProdutos.TabIndex = 6;
+            this.btnAbrirModalFiltrarProdutos.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(94)))), ((int)(((byte)(220)))));
+            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(261, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(80, 46);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
+            // atualizarGridProdutos
+            // 
+            this.atualizarGridProdutos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(94)))), ((int)(((byte)(220)))));
+            this.atualizarGridProdutos.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.atualizarGridProdutos.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.atualizarGridProdutos.Image = ((System.Drawing.Image)(resources.GetObject("atualizarGridProdutos.Image")));
+            this.atualizarGridProdutos.Location = new System.Drawing.Point(347, 3);
+            this.atualizarGridProdutos.Name = "atualizarGridProdutos";
+            this.atualizarGridProdutos.Size = new System.Drawing.Size(81, 46);
+            this.atualizarGridProdutos.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.atualizarGridProdutos.TabIndex = 4;
+            this.atualizarGridProdutos.TabStop = false;
+            // 
+            // btnAbrirModalVisualizarOrcamento
+            // 
+            this.btnAbrirModalVisualizarOrcamento.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(94)))), ((int)(((byte)(220)))));
+            this.btnAbrirModalVisualizarOrcamento.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAbrirModalVisualizarOrcamento.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnAbrirModalVisualizarOrcamento.Image = ((System.Drawing.Image)(resources.GetObject("btnAbrirModalVisualizarOrcamento.Image")));
+            this.btnAbrirModalVisualizarOrcamento.Location = new System.Drawing.Point(175, 3);
+            this.btnAbrirModalVisualizarOrcamento.Name = "btnAbrirModalVisualizarOrcamento";
+            this.btnAbrirModalVisualizarOrcamento.Size = new System.Drawing.Size(80, 46);
+            this.btnAbrirModalVisualizarOrcamento.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.btnAbrirModalVisualizarOrcamento.TabIndex = 8;
+            this.btnAbrirModalVisualizarOrcamento.TabStop = false;
+            this.btnAbrirModalVisualizarOrcamento.Click += new System.EventHandler(this.btnAbrirModalVisualizarOrcamento_Click);
+            // 
+            // btnAbrirModalAdicionarOrcamento
+            // 
+            this.btnAbrirModalAdicionarOrcamento.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(94)))), ((int)(((byte)(220)))));
+            this.btnAbrirModalAdicionarOrcamento.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAbrirModalAdicionarOrcamento.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnAbrirModalAdicionarOrcamento.Image = ((System.Drawing.Image)(resources.GetObject("btnAbrirModalAdicionarOrcamento.Image")));
+            this.btnAbrirModalAdicionarOrcamento.Location = new System.Drawing.Point(89, 3);
+            this.btnAbrirModalAdicionarOrcamento.Name = "btnAbrirModalAdicionarOrcamento";
+            this.btnAbrirModalAdicionarOrcamento.Size = new System.Drawing.Size(80, 46);
+            this.btnAbrirModalAdicionarOrcamento.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.btnAbrirModalAdicionarOrcamento.TabIndex = 2;
+            this.btnAbrirModalAdicionarOrcamento.TabStop = false;
+            this.btnAbrirModalAdicionarOrcamento.Click += new System.EventHandler(this.btnAbrirModalAdicionarOrcamento_Click);
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.panel4);
+            this.panel2.Controls.Add(this.panel6);
+            this.panel2.Controls.Add(this.panel7);
+            this.panel2.Controls.Add(this.panel3);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(3, 53);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(236, 372);
+            this.panel2.TabIndex = 9;
             // 
             // label6
             // 
@@ -358,277 +373,291 @@
             this.label6.Text = "Detalhes do Orçamento";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // panel2
+            // panel1
             // 
-            this.panel2.Controls.Add(this.panel3);
-            this.panel2.Controls.Add(this.lblStatusOrcamento);
-            this.panel2.Controls.Add(this.lblDataCriacaoOrcamento);
-            this.panel2.Controls.Add(this.lblClienteOrcamento);
-            this.panel2.Controls.Add(this.lblCodigoOrcamento);
-            this.panel2.Controls.Add(this.label10);
-            this.panel2.Controls.Add(this.label9);
-            this.panel2.Controls.Add(this.label8);
-            this.panel2.Controls.Add(this.label7);
-            this.panel2.Controls.Add(this.pictureBox3);
-            this.panel2.Controls.Add(this.txtValorTotalOrcamento);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(3, 53);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(236, 372);
-            this.panel2.TabIndex = 9;
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(94)))), ((int)(((byte)(220)))));
+            this.panel1.Controls.Add(this.label6);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(3, 3);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(236, 44);
+            this.panel1.TabIndex = 8;
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.label19);
-            this.panel3.Controls.Add(this.lblStatus);
-            this.panel3.Controls.Add(this.lblDataCriacao);
-            this.panel3.Controls.Add(this.lblNomeCliente);
-            this.panel3.Controls.Add(this.lblCodigo);
-            this.panel3.Controls.Add(this.label15);
-            this.panel3.Controls.Add(this.label16);
-            this.panel3.Controls.Add(this.label17);
-            this.panel3.Controls.Add(this.label18);
-            this.panel3.Controls.Add(this.pictureBox2);
-            this.panel3.Controls.Add(this.lblValorTotal);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Controls.Add(this.panel5);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel3.Location = new System.Drawing.Point(0, 308);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(236, 372);
-            this.panel3.TabIndex = 61;
+            this.panel3.Size = new System.Drawing.Size(236, 64);
+            this.panel3.TabIndex = 0;
             // 
-            // label19
+            // panel5
             // 
-            this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
-            this.label19.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(95)))), ((int)(((byte)(95)))));
-            this.label19.Location = new System.Drawing.Point(15, 226);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(83, 16);
-            this.label19.TabIndex = 61;
-            this.label19.Text = "Valor Total:";
+            this.panel5.Controls.Add(this.pictureBox2);
+            this.panel5.Controls.Add(this.pictureBox4);
+            this.panel5.Controls.Add(this.lblTotalProcedimentos);
+            this.panel5.Controls.Add(this.lblTotalOrcamento);
+            this.panel5.Controls.Add(this.pictureBox5);
+            this.panel5.Controls.Add(this.lblTotalProdutos);
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel5.Location = new System.Drawing.Point(0, 0);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(236, 64);
+            this.panel5.TabIndex = 70;
             // 
-            // lblStatus
+            // pictureBox2
             // 
-            this.lblStatus.AutoSize = true;
-            this.lblStatus.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
-            this.lblStatus.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(95)))), ((int)(((byte)(95)))));
-            this.lblStatus.Location = new System.Drawing.Point(74, 148);
-            this.lblStatus.Name = "lblStatus";
-            this.lblStatus.Size = new System.Drawing.Size(57, 16);
-            this.lblStatus.TabIndex = 60;
-            this.lblStatus.Text = "label13";
+            this.pictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(94)))), ((int)(((byte)(220)))));
+            this.pictureBox2.Image = global::Inovaclinica.Properties.Resources.moedas;
+            this.pictureBox2.Location = new System.Drawing.Point(323, 17);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(43, 37);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox2.TabIndex = 69;
+            this.pictureBox2.TabStop = false;
             // 
-            // lblDataCriacao
+            // pictureBox4
             // 
-            this.lblDataCriacao.AutoSize = true;
-            this.lblDataCriacao.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
-            this.lblDataCriacao.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(95)))), ((int)(((byte)(95)))));
-            this.lblDataCriacao.Location = new System.Drawing.Point(114, 108);
-            this.lblDataCriacao.Name = "lblDataCriacao";
-            this.lblDataCriacao.Size = new System.Drawing.Size(57, 16);
-            this.lblDataCriacao.TabIndex = 59;
-            this.lblDataCriacao.Text = "label14";
+            this.pictureBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(94)))), ((int)(((byte)(220)))));
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
+            this.pictureBox4.Location = new System.Drawing.Point(7, 17);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(43, 37);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox4.TabIndex = 73;
+            this.pictureBox4.TabStop = false;
             // 
-            // lblNomeCliente
+            // lblTotalProcedimentos
             // 
-            this.lblNomeCliente.AutoSize = true;
-            this.lblNomeCliente.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
-            this.lblNomeCliente.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(95)))), ((int)(((byte)(95)))));
-            this.lblNomeCliente.Location = new System.Drawing.Point(138, 64);
-            this.lblNomeCliente.Name = "lblNomeCliente";
-            this.lblNomeCliente.Size = new System.Drawing.Size(57, 16);
-            this.lblNomeCliente.TabIndex = 58;
-            this.lblNomeCliente.Text = "label15";
-            this.lblNomeCliente.Click += new System.EventHandler(this.label13_Click);
+            this.lblTotalProcedimentos.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblTotalProcedimentos.Font = new System.Drawing.Font("Arial Black", 16F, System.Drawing.FontStyle.Bold);
+            this.lblTotalProcedimentos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(95)))), ((int)(((byte)(95)))));
+            this.lblTotalProcedimentos.InterceptArrowKeys = false;
+            this.lblTotalProcedimentos.Location = new System.Drawing.Point(34, 16);
+            this.lblTotalProcedimentos.Maximum = new decimal(new int[] {
+            99999,
+            0,
+            0,
+            0});
+            this.lblTotalProcedimentos.Name = "lblTotalProcedimentos";
+            this.lblTotalProcedimentos.Size = new System.Drawing.Size(112, 38);
+            this.lblTotalProcedimentos.TabIndex = 72;
+            this.lblTotalProcedimentos.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.lblTotalProcedimentos.ThousandsSeparator = true;
+            this.lblTotalProcedimentos.UpDownAlign = System.Windows.Forms.LeftRightAlignment.Left;
             // 
-            // lblCodigo
+            // lblTotalOrcamento
             // 
-            this.lblCodigo.AutoSize = true;
-            this.lblCodigo.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
-            this.lblCodigo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(95)))), ((int)(((byte)(95)))));
-            this.lblCodigo.Location = new System.Drawing.Point(77, 19);
-            this.lblCodigo.Name = "lblCodigo";
-            this.lblCodigo.Size = new System.Drawing.Size(57, 16);
-            this.lblCodigo.TabIndex = 57;
-            this.lblCodigo.Text = "label16";
+            this.lblTotalOrcamento.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblTotalOrcamento.DecimalPlaces = 2;
+            this.lblTotalOrcamento.Font = new System.Drawing.Font("Arial Black", 16F, System.Drawing.FontStyle.Bold);
+            this.lblTotalOrcamento.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(95)))), ((int)(((byte)(95)))));
+            this.lblTotalOrcamento.InterceptArrowKeys = false;
+            this.lblTotalOrcamento.Location = new System.Drawing.Point(350, 16);
+            this.lblTotalOrcamento.Maximum = new decimal(new int[] {
+            99999,
+            0,
+            0,
+            0});
+            this.lblTotalOrcamento.Name = "lblTotalOrcamento";
+            this.lblTotalOrcamento.Size = new System.Drawing.Size(112, 38);
+            this.lblTotalOrcamento.TabIndex = 68;
+            this.lblTotalOrcamento.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.lblTotalOrcamento.ThousandsSeparator = true;
+            this.lblTotalOrcamento.UpDownAlign = System.Windows.Forms.LeftRightAlignment.Left;
             // 
-            // label15
+            // pictureBox5
             // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
-            this.label15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(95)))), ((int)(((byte)(95)))));
-            this.label15.Location = new System.Drawing.Point(18, 148);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(55, 16);
-            this.label15.TabIndex = 55;
-            this.label15.Text = "Status:";
+            this.pictureBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(94)))), ((int)(((byte)(220)))));
+            this.pictureBox5.Image = global::Inovaclinica.Properties.Resources.caixa_aberta__2_;
+            this.pictureBox5.Location = new System.Drawing.Point(164, 17);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(43, 37);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox5.TabIndex = 71;
+            this.pictureBox5.TabStop = false;
             // 
-            // label16
+            // lblTotalProdutos
             // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
-            this.label16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(95)))), ((int)(((byte)(95)))));
-            this.label16.Location = new System.Drawing.Point(15, 109);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(99, 16);
-            this.label16.TabIndex = 54;
-            this.label16.Text = "Data Criação:";
+            this.lblTotalProdutos.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblTotalProdutos.Font = new System.Drawing.Font("Arial Black", 16F, System.Drawing.FontStyle.Bold);
+            this.lblTotalProdutos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(95)))), ((int)(((byte)(95)))));
+            this.lblTotalProdutos.InterceptArrowKeys = false;
+            this.lblTotalProdutos.Location = new System.Drawing.Point(191, 16);
+            this.lblTotalProdutos.Maximum = new decimal(new int[] {
+            99999,
+            0,
+            0,
+            0});
+            this.lblTotalProdutos.Name = "lblTotalProdutos";
+            this.lblTotalProdutos.Size = new System.Drawing.Size(112, 38);
+            this.lblTotalProdutos.TabIndex = 70;
+            this.lblTotalProdutos.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.lblTotalProdutos.ThousandsSeparator = true;
+            this.lblTotalProdutos.UpDownAlign = System.Windows.Forms.LeftRightAlignment.Left;
             // 
-            // label17
+            // panel4
             // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
-            this.label17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(95)))), ((int)(((byte)(95)))));
-            this.label17.Location = new System.Drawing.Point(15, 64);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(127, 16);
-            this.label17.TabIndex = 53;
-            this.label17.Text = "Nome do Cliente:";
+            this.panel4.Controls.Add(this.label18);
+            this.panel4.Controls.Add(this.label17);
+            this.panel4.Controls.Add(this.label16);
+            this.panel4.Controls.Add(this.lblStatus);
+            this.panel4.Controls.Add(this.label15);
+            this.panel4.Controls.Add(this.lblDataCriacao);
+            this.panel4.Controls.Add(this.lblCodigo);
+            this.panel4.Controls.Add(this.lblNomeCliente);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel4.Location = new System.Drawing.Point(0, 0);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(236, 121);
+            this.panel4.TabIndex = 74;
             // 
             // label18
             // 
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
             this.label18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(95)))), ((int)(((byte)(95)))));
-            this.label18.Location = new System.Drawing.Point(15, 20);
+            this.label18.Location = new System.Drawing.Point(36, 25);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(61, 16);
-            this.label18.TabIndex = 52;
+            this.label18.TabIndex = 61;
             this.label18.Text = "Código:";
             // 
-            // pictureBox2
+            // label17
             // 
-            this.pictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(94)))), ((int)(((byte)(220)))));
-            this.pictureBox2.Image = global::Inovaclinica.Properties.Resources.moedas;
-            this.pictureBox2.Location = new System.Drawing.Point(51, 247);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(29, 25);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox2.TabIndex = 51;
-            this.pictureBox2.TabStop = false;
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
+            this.label17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(95)))), ((int)(((byte)(95)))));
+            this.label17.Location = new System.Drawing.Point(36, 56);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(127, 16);
+            this.label17.TabIndex = 62;
+            this.label17.Text = "Nome do Cliente:";
             // 
-            // lblValorTotal
+            // label16
             // 
-            this.lblValorTotal.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.lblValorTotal.DecimalPlaces = 2;
-            this.lblValorTotal.Font = new System.Drawing.Font("Arial Black", 11F, System.Drawing.FontStyle.Bold);
-            this.lblValorTotal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(95)))), ((int)(((byte)(95)))));
-            this.lblValorTotal.InterceptArrowKeys = false;
-            this.lblValorTotal.Location = new System.Drawing.Point(64, 247);
-            this.lblValorTotal.Maximum = new decimal(new int[] {
-            99999,
-            0,
-            0,
-            0});
-            this.lblValorTotal.Name = "lblValorTotal";
-            this.lblValorTotal.Size = new System.Drawing.Size(112, 24);
-            this.lblValorTotal.TabIndex = 50;
-            this.lblValorTotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.lblValorTotal.ThousandsSeparator = true;
-            this.lblValorTotal.UpDownAlign = System.Windows.Forms.LeftRightAlignment.Left;
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
+            this.label16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(95)))), ((int)(((byte)(95)))));
+            this.label16.Location = new System.Drawing.Point(207, 83);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(99, 16);
+            this.label16.TabIndex = 63;
+            this.label16.Text = "Data Criação:";
             // 
-            // lblStatusOrcamento
+            // lblStatus
             // 
-            this.lblStatusOrcamento.AutoSize = true;
-            this.lblStatusOrcamento.Location = new System.Drawing.Point(90, 109);
-            this.lblStatusOrcamento.Name = "lblStatusOrcamento";
-            this.lblStatusOrcamento.Size = new System.Drawing.Size(41, 13);
-            this.lblStatusOrcamento.TabIndex = 60;
-            this.lblStatusOrcamento.Text = "label13";
+            this.lblStatus.AutoSize = true;
+            this.lblStatus.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
+            this.lblStatus.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(95)))), ((int)(((byte)(95)))));
+            this.lblStatus.Location = new System.Drawing.Point(91, 83);
+            this.lblStatus.Name = "lblStatus";
+            this.lblStatus.Size = new System.Drawing.Size(75, 16);
+            this.lblStatus.TabIndex = 68;
+            this.lblStatus.Text = "Pendente";
             // 
-            // lblDataCriacaoOrcamento
+            // label15
             // 
-            this.lblDataCriacaoOrcamento.AutoSize = true;
-            this.lblDataCriacaoOrcamento.Location = new System.Drawing.Point(90, 80);
-            this.lblDataCriacaoOrcamento.Name = "lblDataCriacaoOrcamento";
-            this.lblDataCriacaoOrcamento.Size = new System.Drawing.Size(41, 13);
-            this.lblDataCriacaoOrcamento.TabIndex = 59;
-            this.lblDataCriacaoOrcamento.Text = "label14";
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
+            this.label15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(95)))), ((int)(((byte)(95)))));
+            this.label15.Location = new System.Drawing.Point(36, 83);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(55, 16);
+            this.label15.TabIndex = 64;
+            this.label15.Text = "Status:";
             // 
-            // lblClienteOrcamento
+            // lblDataCriacao
             // 
-            this.lblClienteOrcamento.AutoSize = true;
-            this.lblClienteOrcamento.Location = new System.Drawing.Point(90, 48);
-            this.lblClienteOrcamento.Name = "lblClienteOrcamento";
-            this.lblClienteOrcamento.Size = new System.Drawing.Size(41, 13);
-            this.lblClienteOrcamento.TabIndex = 58;
-            this.lblClienteOrcamento.Text = "label15";
+            this.lblDataCriacao.AutoSize = true;
+            this.lblDataCriacao.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
+            this.lblDataCriacao.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(95)))), ((int)(((byte)(95)))));
+            this.lblDataCriacao.Location = new System.Drawing.Point(306, 82);
+            this.lblDataCriacao.Name = "lblDataCriacao";
+            this.lblDataCriacao.Size = new System.Drawing.Size(57, 16);
+            this.lblDataCriacao.TabIndex = 67;
+            this.lblDataCriacao.Text = "label14";
             // 
-            // lblCodigoOrcamento
+            // lblCodigo
             // 
-            this.lblCodigoOrcamento.AutoSize = true;
-            this.lblCodigoOrcamento.Location = new System.Drawing.Point(90, 20);
-            this.lblCodigoOrcamento.Name = "lblCodigoOrcamento";
-            this.lblCodigoOrcamento.Size = new System.Drawing.Size(41, 13);
-            this.lblCodigoOrcamento.TabIndex = 57;
-            this.lblCodigoOrcamento.Text = "label16";
+            this.lblCodigo.AutoSize = true;
+            this.lblCodigo.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
+            this.lblCodigo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(95)))), ((int)(((byte)(95)))));
+            this.lblCodigo.Location = new System.Drawing.Point(101, 25);
+            this.lblCodigo.Name = "lblCodigo";
+            this.lblCodigo.Size = new System.Drawing.Size(57, 16);
+            this.lblCodigo.TabIndex = 65;
+            this.lblCodigo.Text = "label16";
             // 
-            // label10
+            // lblNomeCliente
             // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(15, 109);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(37, 13);
-            this.label10.TabIndex = 55;
-            this.label10.Text = "Status";
+            this.lblNomeCliente.AutoSize = true;
+            this.lblNomeCliente.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
+            this.lblNomeCliente.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(95)))), ((int)(((byte)(95)))));
+            this.lblNomeCliente.Location = new System.Drawing.Point(165, 56);
+            this.lblNomeCliente.Name = "lblNomeCliente";
+            this.lblNomeCliente.Size = new System.Drawing.Size(57, 16);
+            this.lblNomeCliente.TabIndex = 66;
+            this.lblNomeCliente.Text = "label15";
             // 
-            // label9
+            // panel6
             // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(15, 80);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(69, 13);
-            this.label9.TabIndex = 54;
-            this.label9.Text = "Data Criação";
+            this.panel6.Controls.Add(this.dataGridProdecimentosOrcamento);
+            this.panel6.Controls.Add(this.label7);
+            this.panel6.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel6.Location = new System.Drawing.Point(0, -324);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(236, 306);
+            this.panel6.TabIndex = 73;
             // 
-            // label8
+            // dataGridProdecimentosOrcamento
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(15, 48);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(39, 13);
-            this.label8.TabIndex = 53;
-            this.label8.Text = "Cliente";
+            this.dataGridProdecimentosOrcamento.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridProdecimentosOrcamento.Location = new System.Drawing.Point(25, 48);
+            this.dataGridProdecimentosOrcamento.Name = "dataGridProdecimentosOrcamento";
+            this.dataGridProdecimentosOrcamento.Size = new System.Drawing.Size(413, 226);
+            this.dataGridProdecimentosOrcamento.TabIndex = 1;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(15, 20);
+            this.label7.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
+            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(95)))), ((int)(((byte)(95)))));
+            this.label7.Location = new System.Drawing.Point(21, 13);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(40, 13);
-            this.label7.TabIndex = 52;
-            this.label7.Text = "Código";
+            this.label7.Size = new System.Drawing.Size(125, 19);
+            this.label7.TabIndex = 0;
+            this.label7.Text = "Procedimentos";
             // 
-            // pictureBox3
+            // panel7
             // 
-            this.pictureBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(94)))), ((int)(((byte)(220)))));
-            this.pictureBox3.Image = global::Inovaclinica.Properties.Resources.moedas;
-            this.pictureBox3.Location = new System.Drawing.Point(51, 267);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(29, 25);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox3.TabIndex = 51;
-            this.pictureBox3.TabStop = false;
+            this.panel7.Controls.Add(this.dataGridProdutosOrcamento);
+            this.panel7.Controls.Add(this.label8);
+            this.panel7.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel7.Location = new System.Drawing.Point(0, -18);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(236, 326);
+            this.panel7.TabIndex = 72;
             // 
-            // txtValorTotalOrcamento
+            // dataGridProdutosOrcamento
             // 
-            this.txtValorTotalOrcamento.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtValorTotalOrcamento.DecimalPlaces = 2;
-            this.txtValorTotalOrcamento.Font = new System.Drawing.Font("Arial Black", 11F, System.Drawing.FontStyle.Bold);
-            this.txtValorTotalOrcamento.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(95)))), ((int)(((byte)(95)))));
-            this.txtValorTotalOrcamento.InterceptArrowKeys = false;
-            this.txtValorTotalOrcamento.Location = new System.Drawing.Point(64, 267);
-            this.txtValorTotalOrcamento.Maximum = new decimal(new int[] {
-            99999,
-            0,
-            0,
-            0});
-            this.txtValorTotalOrcamento.Name = "txtValorTotalOrcamento";
-            this.txtValorTotalOrcamento.Size = new System.Drawing.Size(112, 24);
-            this.txtValorTotalOrcamento.TabIndex = 50;
-            this.txtValorTotalOrcamento.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.txtValorTotalOrcamento.ThousandsSeparator = true;
-            this.txtValorTotalOrcamento.UpDownAlign = System.Windows.Forms.LeftRightAlignment.Left;
+            this.dataGridProdutosOrcamento.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridProdutosOrcamento.Location = new System.Drawing.Point(25, 47);
+            this.dataGridProdutosOrcamento.Name = "dataGridProdutosOrcamento";
+            this.dataGridProdutosOrcamento.Size = new System.Drawing.Size(413, 226);
+            this.dataGridProdutosOrcamento.TabIndex = 2;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
+            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(95)))), ((int)(((byte)(95)))));
+            this.label8.Location = new System.Drawing.Point(21, 16);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(80, 19);
+            this.label8.TabIndex = 1;
+            this.label8.Text = "Produtos";
             // 
             // FormOrcamentos
             // 
@@ -643,27 +672,36 @@
             this.panelRodape.ResumeLayout(false);
             this.tablePanelMenuClientes.ResumeLayout(false);
             this.tablePanelMenuClientes.PerformLayout();
+            this.panelBarraPesquisa.ResumeLayout(false);
+            this.panelBarraPesquisa.PerformLayout();
+            this.tableLayoutPanel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.DataGridOrcamento)).EndInit();
+            this.tableLayoutPanel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.btnBarraPesquisaProdutos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnAbrirModalFiltrarProdutos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.atualizarGridProdutos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnAbrirModalVisualizarOrcamento)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnAbrirModalAdicionarOrcamento)).EndInit();
-            this.panelBarraPesquisa.ResumeLayout(false);
-            this.panelBarraPesquisa.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnBarraPesquisaProdutos)).EndInit();
-            this.tableLayoutPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.DataGridOrcamento)).EndInit();
-            this.tableLayoutPanel2.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
+            this.panel5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lblValorTotal)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtValorTotalOrcamento)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lblTotalProcedimentos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lblTotalOrcamento)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lblTotalProdutos)).EndInit();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
+            this.panel6.ResumeLayout(false);
+            this.panel6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridProdecimentosOrcamento)).EndInit();
+            this.panel7.ResumeLayout(false);
+            this.panel7.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridProdutosOrcamento)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -691,27 +729,28 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.NumericUpDown txtValorTotalOrcamento;
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.Label lblStatusOrcamento;
-        private System.Windows.Forms.Label lblDataCriacaoOrcamento;
-        private System.Windows.Forms.Label lblClienteOrcamento;
-        private System.Windows.Forms.Label lblCodigoOrcamento;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.Label lblStatus;
-        private System.Windows.Forms.Label lblDataCriacao;
-        private System.Windows.Forms.Label lblNomeCliente;
-        private System.Windows.Forms.Label lblCodigo;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.NumericUpDown lblValorTotal;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.NumericUpDown lblTotalProcedimentos;
+        private System.Windows.Forms.NumericUpDown lblTotalOrcamento;
+        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.NumericUpDown lblTotalProdutos;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label lblStatus;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label lblDataCriacao;
+        private System.Windows.Forms.Label lblCodigo;
+        private System.Windows.Forms.Label lblNomeCliente;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.DataGridView dataGridProdecimentosOrcamento;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.DataGridView dataGridProdutosOrcamento;
+        private System.Windows.Forms.Label label8;
     }
 }

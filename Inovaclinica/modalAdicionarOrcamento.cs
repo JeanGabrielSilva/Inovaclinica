@@ -14,17 +14,19 @@ namespace Inovaclinica
 {
     public partial class modalAdicionarOrcamento : Form
     {
+        private FormOrcamentos _formOrcamentos;
         private string clienteSelecionadoCodigo;
         private List<Procedimento> listaProcedimentos = new List<Procedimento>();
         private List<Produto> listaProdutos = new List<Produto>();
 
-        public modalAdicionarOrcamento()
+        public modalAdicionarOrcamento(FormOrcamentos formOrcamentos)
         {
             InitializeComponent();
             barraPesquisarClientes.KeyDown += new KeyEventHandler(barraPesquisarClientes_KeyDown);
             barraPesquisarProcedimentos.KeyDown += new KeyEventHandler(barraPesquisarProcedimentos_KeyDown);
             barraPesquisarProdutos.KeyDown += new KeyEventHandler(barraPesquisarProdutos_KeyDown);
             CustomizeDataGridView();
+            _formOrcamentos = formOrcamentos;
         }
 
 
@@ -74,11 +76,8 @@ namespace Inovaclinica
                         {
                             // Preenche o nome do cliente e o ID
                             lblNomeCliente.Text = dataTable.Rows[0]["Nome"].ToString();
-                            int clienteId = Convert.ToInt32(dataTable.Rows[0]["Código"]); // Certifique-se que "Código" está correto
-                            MessageBox.Show($"Cliente encontrado:\nID: {clienteId}\nNome: {dataTable.Rows[0]["Nome"]}");
-
-                            // Armazena o ID do cliente para uso futuro
-                            var ClienteId = clienteId; // Variável de instância ou propriedade
+                            int clienteSelecionadoCodigo = Convert.ToInt32(dataTable.Rows[0]["Código"]); // Certifique-se que "Código" está correto
+                            MessageBox.Show($"Cliente encontrado:\nID: {clienteSelecionadoCodigo}\nNome: {dataTable.Rows[0]["Nome"]}");
                         }
                         else if (dataTable.Rows.Count > 1)
                         {
@@ -346,9 +345,7 @@ namespace Inovaclinica
         {
             dataGridProdutosOrcamento.DataSource = null; // Limpa o grid
             dataGridProdutosOrcamento.DataSource = listaProdutos; // Define os dados
-            //dataGridProdutosOrcamento.Columns["Quantidade"].ReadOnly = false;
-            //dataGridProdutosOrcamento.ReadOnly = true;
-            
+
             lblTotalProdutos.Value = listaProdutos.Count;
             AtualizarValorTotalOrcamento();
         }
@@ -394,7 +391,8 @@ namespace Inovaclinica
             dataGridProcedimentoOrcamento.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             //dataGridClientes.Dock = DockStyle.Fill; // Ocupa todo o espaço disponível
             dataGridProcedimentoOrcamento.RowHeadersVisible = false;
-            dataGridProcedimentoOrcamento.ReadOnly = true;
+            dataGridProdutosOrcamento.ReadOnly = false; // Permitir edição global
+
             dataGridProcedimentoOrcamento.EnableHeadersVisualStyles = false;
             dataGridProcedimentoOrcamento.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
             dataGridProcedimentoOrcamento.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
@@ -454,6 +452,114 @@ namespace Inovaclinica
 
         private void btnCancelarAdicaoOrcamento_Click(object sender, EventArgs e)
         {
+            this.Close();
+        }
+
+        private int InserirOrcamento(string clienteId, decimal valorTotal)
+        {
+            int novoOrcamentoId = 0;
+            string connectionString = ConfigurationManager.ConnectionStrings["InovaclinicaConnectionString"].ConnectionString;
+
+            string query = @"INSERT INTO Orcamentos (ClienteID, DataCriacao, Status, ValorTotal) 
+                     OUTPUT INSERTED.OrcamentoID 
+                     VALUES (@ClienteID, GETDATE(), 'Pendente', @ValorTotal)";
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                try
+                {
+                    connection.Open();
+                    using (SqlCommand command = new SqlCommand(query, connection))
+                    {
+                        command.Parameters.AddWithValue("@ClienteID", clienteId);
+                        command.Parameters.AddWithValue("@ValorTotal", valorTotal);
+
+                        // Obtém o ID gerado automaticamente
+                        novoOrcamentoId = (int)command.ExecuteScalar();
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Erro ao inserir orçamento: {ex.Message}");
+                }
+            }
+            return novoOrcamentoId;
+        }
+
+        private void InserirItensOrcamento(int orcamentoId, List<Procedimento> procedimentos, List<Produto> produtos)
+        {
+            
+            string connectionString = ConfigurationManager.ConnectionStrings["InovaclinicaConnectionString"].ConnectionString;
+            string query = @"INSERT INTO Orcamento_Itens (OrcamentoID, Tipo, IDReferencia, Quantidade, Preco) 
+                     VALUES (@OrcamentoID, @Tipo, @IDReferencia, @Quantidade, @Preco)";
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                try
+                {
+                    connection.Open();
+
+                    foreach (var procedimento in procedimentos)
+                    {
+                        using (SqlCommand command = new SqlCommand(query, connection))
+                        {
+                            command.Parameters.AddWithValue("@OrcamentoID", orcamentoId);
+                            command.Parameters.AddWithValue("@Tipo", "Procedimento");
+                            command.Parameters.AddWithValue("@IDReferencia", procedimento.Codigo);
+                            command.Parameters.AddWithValue("@Quantidade", 1); // Procedimento geralmente é único
+                            command.Parameters.AddWithValue("@Preco", procedimento.Valor);
+
+                            command.ExecuteNonQuery();
+                        }
+                    }
+
+                    foreach (var produto in produtos)
+                    {
+                        using (SqlCommand command = new SqlCommand(query, connection))
+                        {
+                            command.Parameters.AddWithValue("@OrcamentoID", orcamentoId);
+                            command.Parameters.AddWithValue("@Tipo", "Produto");
+                            command.Parameters.AddWithValue("@IDReferencia", produto.Codigo);
+                            command.Parameters.AddWithValue("@Quantidade", produto.Quantidade);
+                            command.Parameters.AddWithValue("@Preco", produto.ValorUnitario);
+
+                            command.ExecuteNonQuery();
+                        }
+                    }
+
+                    MessageBox.Show("Orçamento inserido com sucesso!");
+                    
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Erro ao inserir itens do orçamento: {ex.Message}");
+                }
+            }
+        }
+
+
+
+        private void btnGravarOrcamento_Click(object sender, EventArgs e)
+        {
+            if (listaProcedimentos.Count == 0 && listaProdutos.Count == 0)
+            {
+                MessageBox.Show("Adicione ao menos um procedimento ou produto!");
+                return;
+            }
+
+            // Pegamos os dados do cliente e o valor total do orçamento
+            string clienteId = clienteSelecionadoCodigo;
+            decimal valorTotal = listaProcedimentos.Sum(p => p.Valor) + listaProdutos.Sum(p => p.ValorUnitario * p.Quantidade);
+
+            // Insere o orçamento e obtém o ID gerado
+            int orcamentoId = InserirOrcamento(clienteId, valorTotal);
+
+            if (orcamentoId > 0)
+            {
+                // Insere os itens do orçamento
+                InserirItensOrcamento(orcamentoId, listaProcedimentos, listaProdutos);
+            }
+            _formOrcamentos.LoadData();
             this.Close();   
         }
     }
