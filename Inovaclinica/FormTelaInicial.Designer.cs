@@ -253,11 +253,14 @@ namespace Inovaclinica {
             this.button6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.button6.Font = new System.Drawing.Font("Arial Black", 12F, System.Drawing.FontStyle.Bold);
             this.button6.ForeColor = System.Drawing.Color.White;
+            this.button6.Image = ((System.Drawing.Image)(resources.GetObject("button6.Image")));
             this.button6.Location = new System.Drawing.Point(206, 213);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(197, 204);
             this.button6.TabIndex = 3;
-            this.button6.Text = "button6";
+            this.button6.Text = "Venda";
+            this.button6.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button6.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.button6.UseVisualStyleBackColor = false;
             // 
             // label2
