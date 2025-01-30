@@ -40,46 +40,126 @@ namespace Inovaclinica {
                 string cliente = selectedRow.Cells["Nome"].Value?.ToString();
                 string valor = selectedRow.Cells["Valor Total"].Value?.ToString();
                 string status = selectedRow.Cells["Status"].Value?.ToString();
-                //if (selectedRow.Cells["Data de Criação"].Value != null &&
-                //    DateTime.TryParse(selectedRow.Cells["Data de Criação"].Value.ToString(), out DateTime dataCriacao))
-                //{
-                //    // Atualiza a label com a data formatada
-                //    lblDataCriacao.Text = dataCriacao.ToString("dd/MM/yyyy HH:mm");
-                //}
-                //else
-                //{
-                //   lblDataCriacao.Text = "Data inválida"; // Ou deixe vazio
-                //}
+                string dataCriacaoFormatada = "N/A"; // Valor padrão caso a conversão falhe
 
-                // Exemplo: Atualiza labels ou processa os dados
+                if (selectedRow.Cells["Data de Criação"].Value != null)
+                {
+                    if (DateTime.TryParse(selectedRow.Cells["Data de Criação"].Value.ToString(), out DateTime dataCriacao))
+                    {
+                        dataCriacaoFormatada = dataCriacao.ToString("dd/MM/yyyy HH:mm");
+                    }
+                }
+
+
                 lblCodigo.Text = orcamentoID;
                 lblNomeCliente.Text = cliente;
                 lblTotalOrcamento.Text = valor;
-                lblStatus.Text = status;    
+                lblStatus.Text = status;
+                lblDataCriacao.Text = dataCriacaoFormatada;
                 MostrarDadosOrcamento(orcamentoID);
             }
         }
 
         public void MostrarDadosOrcamento(string orcamentoID)
         {
+            ObterProcedimentosPorOrcamento(orcamentoID);
+            ObterProdutosPorOrcamento(orcamentoID);
+        }
+
+        public void ObterProcedimentosPorOrcamento(string orcamentoID)
+        {
             string connectionString = ConfigurationManager.ConnectionStrings["InovaclinicaConnectionString"].ConnectionString;
 
+            // Query SQL para buscar os dados da tabela 'Produtos'
+            string query = "SELECT ORI.IDReferencia as Código, P.Nome, P.Preco as [Preço] " +
+                           "FROM Orcamento_Itens AS ORI " +
+                           "INNER JOIN Procedimentos AS P ON ORI.IDReferencia = P.ProcedimentoID " +
+                           "WHERE ORI.OrcamentoID = @orcamentoID";
+
+            // Usa SqlConnection e SqlDataAdapter para preencher o DataGridView
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
-                string query = $"Select O.OrcamentoID as [Código], C.Nome as [Nome], O.DataCriacao [Data de Criação], O.Status, O.ValorTotal as [Valor Total] from Orcamentos as O inner join Clientes as C on O.ClienteID = C.ClienteID WHERE OrcamentoID = @OrcamentoID";
-
-                SqlCommand command = new SqlCommand(query, connection);
-                command.Parameters.AddWithValue("@OrcamentoID", orcamentoID); // Utiliza parâmetros para evitar SQL Injection
-
-                connection.Open();
-                SqlDataReader reader = command.ExecuteReader();
-
-                if (reader.Read())
+                try
                 {
-                    //txtBoxNomeCliente.Text = reader["Nome"].ToString();
+                    // Abre a conexão
+                    connection.Open();
+
+                    // Criar SqlCommand para a consulta
+                    using (SqlCommand command = new SqlCommand(query, connection))
+                    {
+                        // Adicionar parâmetros à consulta
+                        command.Parameters.AddWithValue("@orcamentoID", orcamentoID);
+
+                        // Criar SqlDataAdapter e associá-lo ao SqlCommand
+                        using (SqlDataAdapter dataAdapter = new SqlDataAdapter(command))
+                        {
+                            // Criar DataTable para armazenar os dados
+                            DataTable dataTable = new DataTable();
+
+                            // Preencher o DataTable com os dados retornados da consulta
+                            dataAdapter.Fill(dataTable);
+
+                            // Definir a fonte de dados do DataGridView
+                            dataGridProdecimentosOrcamento.DataSource = dataTable;
+
+                            ApplyRowColors();
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    // Exibir mensagem de erro caso ocorra uma exceção
+                    MessageBox.Show($"Erro ao carregar dados: {ex.Message}");
                 }
             }
         }
+
+        public void ObterProdutosPorOrcamento(string orcamentoID)
+        {
+            string connectionString = ConfigurationManager.ConnectionStrings["InovaclinicaConnectionString"].ConnectionString;
+
+            // Query SQL para buscar os dados da tabela 'Produtos'
+            string query = "select ORI.IDReferencia as Código, P.Nome, ORI.Quantidade ,P.Preco as [Preço] FROM Orcamento_Itens As ORI inner join Produtos as P on ORI.IDReferencia = P.ProdutoID where ORI.OrcamentoID = @orcamentoID";
+
+            // Usa SqlConnection e SqlDataAdapter para preencher o DataGridView
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                try
+                {
+                    // Abre a conexão
+                    connection.Open();
+
+                    // Criar SqlCommand para a consulta
+                    using (SqlCommand command = new SqlCommand(query, connection))
+                    {
+                        // Adicionar parâmetros à consulta
+                        command.Parameters.AddWithValue("@orcamentoID", orcamentoID);
+
+                        // Criar SqlDataAdapter e associá-lo ao SqlCommand
+                        using (SqlDataAdapter dataAdapter = new SqlDataAdapter(command))
+                        {
+                            // Criar DataTable para armazenar os dados
+                            DataTable dataTable = new DataTable();
+
+                            // Preencher o DataTable com os dados retornados da consulta
+                            dataAdapter.Fill(dataTable);
+
+                            // Definir a fonte de dados do DataGridView
+                            dataGridProdutosOrcamento.DataSource = dataTable;
+
+                            ApplyRowColors();
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    // Exibir mensagem de erro caso ocorra uma exceção
+                    MessageBox.Show($"Erro ao carregar dados: {ex.Message}");
+                }
+            }
+        }
+
+
 
         public void LoadData() {
             // Obtém a string de conexão a partir do App.config
@@ -124,7 +204,8 @@ namespace Inovaclinica {
             }
         }
 
-        private void CustomizeDataGridView() {
+        private void CustomizeDataGridView()
+        {
             // Cores
             Color headerColor = Color.FromArgb(45, 45, 45);
             Color rowColor1 = Color.White;
@@ -173,6 +254,73 @@ namespace Inovaclinica {
             // Ação necessário para conseguir selecionar a linha para visualização dos clientes
             DataGridOrcamento.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
 
+            /// DATA GRID PROCEDIMENTOS
+
+            // Aplicando as cores
+            dataGridProdecimentosOrcamento.ColumnHeadersDefaultCellStyle.BackColor = headerColor;
+            dataGridProdecimentosOrcamento.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+            dataGridProdecimentosOrcamento.RowTemplate.DefaultCellStyle.BackColor = rowColor1; // Cor padrão para todas as linhas
+            dataGridProdecimentosOrcamento.AlternatingRowsDefaultCellStyle.BackColor = rowColor2; // Cor alternada para linhas pares
+            dataGridProdecimentosOrcamento.DefaultCellStyle.SelectionBackColor = Color.White;
+            dataGridProdecimentosOrcamento.DefaultCellStyle.SelectionForeColor = Color.Black;
+            dataGridProdecimentosOrcamento.GridColor = gridColor;
+
+            // Fontes
+            dataGridProdecimentosOrcamento.Font = new Font("Arial", 9.5F); // Aumentei o tamanho da fonte para melhor legibilidade
+            dataGridProdecimentosOrcamento.ColumnHeadersDefaultCellStyle.Font = new Font("Arial", 9.5F, FontStyle.Bold);
+
+            // Layout
+            dataGridProdecimentosOrcamento.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridProdecimentosOrcamento.RowHeadersVisible = false;
+            dataGridProdecimentosOrcamento.ReadOnly = true;
+            dataGridProdecimentosOrcamento.EnableHeadersVisualStyles = false;
+            dataGridProdecimentosOrcamento.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            dataGridProdecimentosOrcamento.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
+            dataGridProdecimentosOrcamento.BackgroundColor = SystemColors.Control;
+            dataGridProdecimentosOrcamento.RowTemplate.Height = 40;
+
+            // Impede a alteração no layout do datagrid
+
+            dataGridProdecimentosOrcamento.AllowUserToAddRows = false;
+            dataGridProdecimentosOrcamento.AllowUserToDeleteRows = false;
+            dataGridProdecimentosOrcamento.AllowUserToOrderColumns = false;
+            dataGridProdecimentosOrcamento.AllowUserToResizeRows = false;
+            dataGridProdecimentosOrcamento.AllowUserToResizeColumns = false;
+
+
+            /// DATA GRID PRODUTOS
+
+            // Aplicando as cores
+            dataGridProdutosOrcamento.ColumnHeadersDefaultCellStyle.BackColor = headerColor;
+            dataGridProdutosOrcamento.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+            dataGridProdutosOrcamento.RowTemplate.DefaultCellStyle.BackColor = rowColor1; // Cor padrão para todas as linhas
+            dataGridProdutosOrcamento.AlternatingRowsDefaultCellStyle.BackColor = rowColor2; // Cor alternada para linhas pares
+            dataGridProdutosOrcamento.DefaultCellStyle.SelectionBackColor = Color.White;
+            dataGridProdutosOrcamento.DefaultCellStyle.SelectionForeColor = Color.Black;
+            dataGridProdutosOrcamento.GridColor = gridColor;
+                        
+            // Fontes   
+            dataGridProdutosOrcamento.Font = new Font("Arial", 9.5F); // Aumentei o tamanho da fonte para melhor legibilidade
+            dataGridProdutosOrcamento.ColumnHeadersDefaultCellStyle.Font = new Font("Arial", 9.5F, FontStyle.Bold);
+                        
+            // Layout   
+            dataGridProdutosOrcamento.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridProdutosOrcamento.RowHeadersVisible = false;
+            dataGridProdutosOrcamento.EnableHeadersVisualStyles = false;
+            dataGridProdutosOrcamento.ReadOnly = true;
+            dataGridProdutosOrcamento.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            dataGridProdutosOrcamento.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
+            dataGridProdutosOrcamento.BackgroundColor = SystemColors.Control;
+            dataGridProdutosOrcamento.RowTemplate.Height = 40;
+
+            // Impede a alteração no layout do datagrid
+
+            dataGridProdutosOrcamento.AllowUserToAddRows = false;
+            dataGridProdutosOrcamento.AllowUserToDeleteRows = false;
+            dataGridProdutosOrcamento.AllowUserToOrderColumns = false;
+            dataGridProdutosOrcamento.AllowUserToResizeRows = false;
+            dataGridProdutosOrcamento.AllowUserToResizeColumns = false;
+
         }
 
         private void ApplyRowColors() {
@@ -183,6 +331,30 @@ namespace Inovaclinica {
                 } else // Se for uma linha ímpar
                   {
                     DataGridOrcamento.Rows[i].DefaultCellStyle.BackColor = Color.FromArgb(230, 230, 255);
+                }
+            }
+
+            for (int i = 0; i < dataGridProdecimentosOrcamento.Rows.Count; i++)
+            {
+                if (i % 2 == 0) // Se for uma linha par
+                {
+                    dataGridProdecimentosOrcamento.Rows[i].DefaultCellStyle.BackColor = Color.White;
+                }
+                else // Se for uma linha ímpar
+                {
+                    dataGridProdecimentosOrcamento.Rows[i].DefaultCellStyle.BackColor = Color.FromArgb(230, 230, 255);
+                }
+            }
+
+            for (int i = 0; i < dataGridProdutosOrcamento.Rows.Count; i++)
+            {
+                if (i % 2 == 0) // Se for uma linha par
+                {
+                    dataGridProdutosOrcamento.Rows[i].DefaultCellStyle.BackColor = Color.White;
+                }
+                else // Se for uma linha ímpar
+                {
+                    dataGridProdutosOrcamento.Rows[i].DefaultCellStyle.BackColor = Color.FromArgb(230, 230, 255);
                 }
             }
         }
