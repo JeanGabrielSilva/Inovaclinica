@@ -422,5 +422,13 @@ namespace Inovaclinica {
         {
 
         }
+
+        private void btnAbrirModalAgendarOrcamento_Click(object sender, EventArgs e)
+        {
+            modalAgendarOrcamento modalagendarorcamento = new modalAgendarOrcamento();
+            modalagendarorcamento.Text = "Adicionar Orçamento";
+            modalagendarorcamento.StartPosition = FormStartPosition.CenterParent;
+            modalagendarorcamento.ShowDialog();
+        }
     }
 }

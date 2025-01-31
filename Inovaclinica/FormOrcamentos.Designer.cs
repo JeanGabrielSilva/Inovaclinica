@@ -26,15 +26,12 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormOrcamentos));
             this.panelRodape = new System.Windows.Forms.Panel();
             this.tablePanelMenuClientes = new System.Windows.Forms.TableLayoutPanel();
-            this.btnAbrirModalFiltrarProdutos = new System.Windows.Forms.PictureBox();
+            this.label9 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.btnAbrirModalVisualizarOrcamento = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.btnAbrirModalAdicionarOrcamento = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
             this.panelBarraPesquisa = new System.Windows.Forms.Panel();
-            this.btnBarraPesquisaProdutos = new System.Windows.Forms.PictureBox();
             this.barraPesquisaProdutos = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.DataGridOrcamento = new System.Windows.Forms.DataGridView();
@@ -59,22 +56,21 @@
             this.label8 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.lblTotalProcedimentos = new System.Windows.Forms.NumericUpDown();
             this.lblTotalOrcamento = new System.Windows.Forms.NumericUpDown();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.lblTotalProdutos = new System.Windows.Forms.NumericUpDown();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.label9 = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.btnBarraPesquisaProdutos = new System.Windows.Forms.PictureBox();
             this.btnAbrirModalAgendarOrcamento = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.btnAbrirModalFiltrarProdutos = new System.Windows.Forms.PictureBox();
+            this.btnAbrirModalVisualizarOrcamento = new System.Windows.Forms.PictureBox();
+            this.btnAbrirModalAdicionarOrcamento = new System.Windows.Forms.PictureBox();
             this.panelRodape.SuspendLayout();
             this.tablePanelMenuClientes.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnAbrirModalFiltrarProdutos)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnAbrirModalVisualizarOrcamento)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnAbrirModalAdicionarOrcamento)).BeginInit();
             this.panelBarraPesquisa.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnBarraPesquisaProdutos)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridOrcamento)).BeginInit();
             this.tableLayoutPanel2.SuspendLayout();
@@ -87,14 +83,18 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridProdutosOrcamento)).BeginInit();
             this.panel3.SuspendLayout();
             this.panel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lblTotalProcedimentos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lblTotalOrcamento)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lblTotalProdutos)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnBarraPesquisaProdutos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnAbrirModalAgendarOrcamento)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnAbrirModalFiltrarProdutos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnAbrirModalVisualizarOrcamento)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnAbrirModalAdicionarOrcamento)).BeginInit();
             this.SuspendLayout();
             // 
             // panelRodape
@@ -135,18 +135,18 @@
             this.tablePanelMenuClientes.Size = new System.Drawing.Size(431, 66);
             this.tablePanelMenuClientes.TabIndex = 10;
             // 
-            // btnAbrirModalFiltrarProdutos
+            // label9
             // 
-            this.btnAbrirModalFiltrarProdutos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(94)))), ((int)(((byte)(220)))));
-            this.btnAbrirModalFiltrarProdutos.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAbrirModalFiltrarProdutos.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnAbrirModalFiltrarProdutos.Image = ((System.Drawing.Image)(resources.GetObject("btnAbrirModalFiltrarProdutos.Image")));
-            this.btnAbrirModalFiltrarProdutos.Location = new System.Drawing.Point(3, 3);
-            this.btnAbrirModalFiltrarProdutos.Name = "btnAbrirModalFiltrarProdutos";
-            this.btnAbrirModalFiltrarProdutos.Size = new System.Drawing.Size(80, 46);
-            this.btnAbrirModalFiltrarProdutos.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.btnAbrirModalFiltrarProdutos.TabIndex = 6;
-            this.btnAbrirModalFiltrarProdutos.TabStop = false;
+            this.label9.AutoSize = true;
+            this.label9.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label9.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.SystemColors.Control;
+            this.label9.Location = new System.Drawing.Point(261, 52);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(80, 14);
+            this.label9.TabIndex = 12;
+            this.label9.Text = "Agendar";
+            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label3
             // 
@@ -174,20 +174,6 @@
             this.label5.Text = "Visualizar";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // btnAbrirModalVisualizarOrcamento
-            // 
-            this.btnAbrirModalVisualizarOrcamento.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(94)))), ((int)(((byte)(220)))));
-            this.btnAbrirModalVisualizarOrcamento.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAbrirModalVisualizarOrcamento.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnAbrirModalVisualizarOrcamento.Image = ((System.Drawing.Image)(resources.GetObject("btnAbrirModalVisualizarOrcamento.Image")));
-            this.btnAbrirModalVisualizarOrcamento.Location = new System.Drawing.Point(175, 3);
-            this.btnAbrirModalVisualizarOrcamento.Name = "btnAbrirModalVisualizarOrcamento";
-            this.btnAbrirModalVisualizarOrcamento.Size = new System.Drawing.Size(80, 46);
-            this.btnAbrirModalVisualizarOrcamento.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.btnAbrirModalVisualizarOrcamento.TabIndex = 8;
-            this.btnAbrirModalVisualizarOrcamento.TabStop = false;
-            this.btnAbrirModalVisualizarOrcamento.Click += new System.EventHandler(this.btnAbrirModalVisualizarOrcamento_Click);
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -200,20 +186,6 @@
             this.label2.TabIndex = 3;
             this.label2.Text = "Adicionar";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // btnAbrirModalAdicionarOrcamento
-            // 
-            this.btnAbrirModalAdicionarOrcamento.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(94)))), ((int)(((byte)(220)))));
-            this.btnAbrirModalAdicionarOrcamento.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAbrirModalAdicionarOrcamento.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnAbrirModalAdicionarOrcamento.Image = ((System.Drawing.Image)(resources.GetObject("btnAbrirModalAdicionarOrcamento.Image")));
-            this.btnAbrirModalAdicionarOrcamento.Location = new System.Drawing.Point(89, 3);
-            this.btnAbrirModalAdicionarOrcamento.Name = "btnAbrirModalAdicionarOrcamento";
-            this.btnAbrirModalAdicionarOrcamento.Size = new System.Drawing.Size(80, 46);
-            this.btnAbrirModalAdicionarOrcamento.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.btnAbrirModalAdicionarOrcamento.TabIndex = 2;
-            this.btnAbrirModalAdicionarOrcamento.TabStop = false;
-            this.btnAbrirModalAdicionarOrcamento.Click += new System.EventHandler(this.btnAbrirModalAdicionarOrcamento_Click);
             // 
             // label4
             // 
@@ -237,20 +209,6 @@
             this.panelBarraPesquisa.Name = "panelBarraPesquisa";
             this.panelBarraPesquisa.Size = new System.Drawing.Size(991, 78);
             this.panelBarraPesquisa.TabIndex = 6;
-            // 
-            // btnBarraPesquisaProdutos
-            // 
-            this.btnBarraPesquisaProdutos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(94)))), ((int)(((byte)(220)))));
-            this.btnBarraPesquisaProdutos.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.btnBarraPesquisaProdutos.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnBarraPesquisaProdutos.Image = ((System.Drawing.Image)(resources.GetObject("btnBarraPesquisaProdutos.Image")));
-            this.btnBarraPesquisaProdutos.InitialImage = ((System.Drawing.Image)(resources.GetObject("btnBarraPesquisaProdutos.InitialImage")));
-            this.btnBarraPesquisaProdutos.Location = new System.Drawing.Point(13, 16);
-            this.btnBarraPesquisaProdutos.Name = "btnBarraPesquisaProdutos";
-            this.btnBarraPesquisaProdutos.Size = new System.Drawing.Size(48, 47);
-            this.btnBarraPesquisaProdutos.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.btnBarraPesquisaProdutos.TabIndex = 1;
-            this.btnBarraPesquisaProdutos.TabStop = false;
             // 
             // barraPesquisaProdutos
             // 
@@ -529,28 +487,6 @@
             this.panel5.Size = new System.Drawing.Size(236, 64);
             this.panel5.TabIndex = 70;
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(94)))), ((int)(((byte)(220)))));
-            this.pictureBox2.Image = global::Inovaclinica.Properties.Resources.moedas;
-            this.pictureBox2.Location = new System.Drawing.Point(323, 17);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(43, 37);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox2.TabIndex = 69;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(94)))), ((int)(((byte)(220)))));
-            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(7, 17);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(43, 37);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox4.TabIndex = 73;
-            this.pictureBox4.TabStop = false;
-            // 
             // lblTotalProcedimentos
             // 
             this.lblTotalProcedimentos.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -590,17 +526,6 @@
             this.lblTotalOrcamento.ThousandsSeparator = true;
             this.lblTotalOrcamento.UpDownAlign = System.Windows.Forms.LeftRightAlignment.Left;
             // 
-            // pictureBox5
-            // 
-            this.pictureBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(94)))), ((int)(((byte)(220)))));
-            this.pictureBox5.Image = global::Inovaclinica.Properties.Resources.caixa_aberta__2_;
-            this.pictureBox5.Location = new System.Drawing.Point(164, 17);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(43, 37);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox5.TabIndex = 71;
-            this.pictureBox5.TabStop = false;
-            // 
             // lblTotalProdutos
             // 
             this.lblTotalProdutos.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -620,31 +545,52 @@
             this.lblTotalProdutos.ThousandsSeparator = true;
             this.lblTotalProdutos.UpDownAlign = System.Windows.Forms.LeftRightAlignment.Left;
             // 
-            // pictureBox3
+            // pictureBox2
             // 
-            this.pictureBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(94)))), ((int)(((byte)(220)))));
-            this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(347, 3);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(81, 46);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox3.TabIndex = 10;
-            this.pictureBox3.TabStop = false;
+            this.pictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(94)))), ((int)(((byte)(220)))));
+            this.pictureBox2.Image = global::Inovaclinica.Properties.Resources.moedas;
+            this.pictureBox2.Location = new System.Drawing.Point(323, 17);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(43, 37);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox2.TabIndex = 69;
+            this.pictureBox2.TabStop = false;
             // 
-            // label9
+            // pictureBox4
             // 
-            this.label9.AutoSize = true;
-            this.label9.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label9.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.SystemColors.Control;
-            this.label9.Location = new System.Drawing.Point(261, 52);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(80, 14);
-            this.label9.TabIndex = 12;
-            this.label9.Text = "Agendar";
-            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.pictureBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(94)))), ((int)(((byte)(220)))));
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
+            this.pictureBox4.Location = new System.Drawing.Point(7, 17);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(43, 37);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox4.TabIndex = 73;
+            this.pictureBox4.TabStop = false;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(94)))), ((int)(((byte)(220)))));
+            this.pictureBox5.Image = global::Inovaclinica.Properties.Resources.caixa_aberta__2_;
+            this.pictureBox5.Location = new System.Drawing.Point(164, 17);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(43, 37);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox5.TabIndex = 71;
+            this.pictureBox5.TabStop = false;
+            // 
+            // btnBarraPesquisaProdutos
+            // 
+            this.btnBarraPesquisaProdutos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(94)))), ((int)(((byte)(220)))));
+            this.btnBarraPesquisaProdutos.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.btnBarraPesquisaProdutos.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnBarraPesquisaProdutos.Image = ((System.Drawing.Image)(resources.GetObject("btnBarraPesquisaProdutos.Image")));
+            this.btnBarraPesquisaProdutos.InitialImage = ((System.Drawing.Image)(resources.GetObject("btnBarraPesquisaProdutos.InitialImage")));
+            this.btnBarraPesquisaProdutos.Location = new System.Drawing.Point(13, 16);
+            this.btnBarraPesquisaProdutos.Name = "btnBarraPesquisaProdutos";
+            this.btnBarraPesquisaProdutos.Size = new System.Drawing.Size(48, 47);
+            this.btnBarraPesquisaProdutos.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.btnBarraPesquisaProdutos.TabIndex = 1;
+            this.btnBarraPesquisaProdutos.TabStop = false;
             // 
             // btnAbrirModalAgendarOrcamento
             // 
@@ -658,6 +604,61 @@
             this.btnAbrirModalAgendarOrcamento.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.btnAbrirModalAgendarOrcamento.TabIndex = 13;
             this.btnAbrirModalAgendarOrcamento.TabStop = false;
+            this.btnAbrirModalAgendarOrcamento.Click += new System.EventHandler(this.btnAbrirModalAgendarOrcamento_Click);
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(94)))), ((int)(((byte)(220)))));
+            this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(347, 3);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(81, 46);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox3.TabIndex = 10;
+            this.pictureBox3.TabStop = false;
+            // 
+            // btnAbrirModalFiltrarProdutos
+            // 
+            this.btnAbrirModalFiltrarProdutos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(94)))), ((int)(((byte)(220)))));
+            this.btnAbrirModalFiltrarProdutos.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAbrirModalFiltrarProdutos.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnAbrirModalFiltrarProdutos.Image = ((System.Drawing.Image)(resources.GetObject("btnAbrirModalFiltrarProdutos.Image")));
+            this.btnAbrirModalFiltrarProdutos.Location = new System.Drawing.Point(3, 3);
+            this.btnAbrirModalFiltrarProdutos.Name = "btnAbrirModalFiltrarProdutos";
+            this.btnAbrirModalFiltrarProdutos.Size = new System.Drawing.Size(80, 46);
+            this.btnAbrirModalFiltrarProdutos.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.btnAbrirModalFiltrarProdutos.TabIndex = 6;
+            this.btnAbrirModalFiltrarProdutos.TabStop = false;
+            // 
+            // btnAbrirModalVisualizarOrcamento
+            // 
+            this.btnAbrirModalVisualizarOrcamento.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(94)))), ((int)(((byte)(220)))));
+            this.btnAbrirModalVisualizarOrcamento.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAbrirModalVisualizarOrcamento.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnAbrirModalVisualizarOrcamento.Image = ((System.Drawing.Image)(resources.GetObject("btnAbrirModalVisualizarOrcamento.Image")));
+            this.btnAbrirModalVisualizarOrcamento.Location = new System.Drawing.Point(175, 3);
+            this.btnAbrirModalVisualizarOrcamento.Name = "btnAbrirModalVisualizarOrcamento";
+            this.btnAbrirModalVisualizarOrcamento.Size = new System.Drawing.Size(80, 46);
+            this.btnAbrirModalVisualizarOrcamento.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.btnAbrirModalVisualizarOrcamento.TabIndex = 8;
+            this.btnAbrirModalVisualizarOrcamento.TabStop = false;
+            this.btnAbrirModalVisualizarOrcamento.Click += new System.EventHandler(this.btnAbrirModalVisualizarOrcamento_Click);
+            // 
+            // btnAbrirModalAdicionarOrcamento
+            // 
+            this.btnAbrirModalAdicionarOrcamento.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(94)))), ((int)(((byte)(220)))));
+            this.btnAbrirModalAdicionarOrcamento.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAbrirModalAdicionarOrcamento.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnAbrirModalAdicionarOrcamento.Image = ((System.Drawing.Image)(resources.GetObject("btnAbrirModalAdicionarOrcamento.Image")));
+            this.btnAbrirModalAdicionarOrcamento.Location = new System.Drawing.Point(89, 3);
+            this.btnAbrirModalAdicionarOrcamento.Name = "btnAbrirModalAdicionarOrcamento";
+            this.btnAbrirModalAdicionarOrcamento.Size = new System.Drawing.Size(80, 46);
+            this.btnAbrirModalAdicionarOrcamento.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.btnAbrirModalAdicionarOrcamento.TabIndex = 2;
+            this.btnAbrirModalAdicionarOrcamento.TabStop = false;
+            this.btnAbrirModalAdicionarOrcamento.Click += new System.EventHandler(this.btnAbrirModalAdicionarOrcamento_Click);
             // 
             // FormOrcamentos
             // 
@@ -672,12 +673,8 @@
             this.panelRodape.ResumeLayout(false);
             this.tablePanelMenuClientes.ResumeLayout(false);
             this.tablePanelMenuClientes.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnAbrirModalFiltrarProdutos)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnAbrirModalVisualizarOrcamento)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnAbrirModalAdicionarOrcamento)).EndInit();
             this.panelBarraPesquisa.ResumeLayout(false);
             this.panelBarraPesquisa.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnBarraPesquisaProdutos)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.DataGridOrcamento)).EndInit();
             this.tableLayoutPanel2.ResumeLayout(false);
@@ -694,14 +691,18 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridProdutosOrcamento)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lblTotalProcedimentos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lblTotalOrcamento)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lblTotalProdutos)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnBarraPesquisaProdutos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnAbrirModalAgendarOrcamento)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnAbrirModalFiltrarProdutos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnAbrirModalVisualizarOrcamento)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnAbrirModalAdicionarOrcamento)).EndInit();
             this.ResumeLayout(false);
 
         }

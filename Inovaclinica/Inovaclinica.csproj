@@ -128,6 +128,12 @@
     <Compile Include="modalAdicionarProduto.Designer.cs">
       <DependentUpon>modalAdicionarProduto.cs</DependentUpon>
     </Compile>
+    <Compile Include="modalAgendarOrcamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="modalAgendarOrcamento.Designer.cs">
+      <DependentUpon>modalAgendarOrcamento.cs</DependentUpon>
+    </Compile>
     <Compile Include="modalExcluirLancamentoFinanceiro.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -255,6 +261,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="modalAdicionarProduto.resx">
       <DependentUpon>modalAdicionarProduto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="modalAgendarOrcamento.resx">
+      <DependentUpon>modalAgendarOrcamento.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="modalExcluirLancamentoFinanceiro.resx">
       <DependentUpon>modalExcluirLancamentoFinanceiro.cs</DependentUpon>

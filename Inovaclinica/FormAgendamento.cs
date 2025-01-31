@@ -1,5 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
+using System.Data.SqlClient;
+using System.Data;
 using System.Drawing;
 using System.Globalization;
 using System.Windows.Forms;
@@ -10,19 +13,35 @@ namespace Inovaclinica {
         private int mesAtual = DateTime.Now.Month;
         private readonly HashSet<(int, int, int)> diasMarcados = new HashSet<(int, int, int)>();
 
+
         public FormAgendamento() {
             InitializeComponent();
             this.Load += new System.EventHandler(this.FormAgendamento_Load);
             dataGridViewCalendarioProcedimento.CellClick += DataGridViewCalendarioProcedimento_CellClick; // Adicionar o evento de clique
+            string dataAtual = DateTime.Now.ToString("yyyy-MM-dd");
+            LoadData(dataAtual);
+            CustomizeDataGridView();
         }
 
         private void DataGridViewCalendarioProcedimento_CellClick(object sender, DataGridViewCellEventArgs e) {
             // Verifica se a célula clicada contém um valor numérico (dia)
-            if (e.RowIndex >= 0 && e.ColumnIndex >= 0) {
+            if (e.RowIndex >= 0 && e.ColumnIndex >= 0)
+            {
                 var celulaSelecionada = dataGridViewCalendarioProcedimento.Rows[e.RowIndex].Cells[e.ColumnIndex];
-                if (celulaSelecionada.Value != null && int.TryParse(celulaSelecionada.Value.ToString(), out int diaSelecionado)) {
-                    // Atualiza o texto da label com o dia selecionado
-                    lblDiaSelecionado.Text = $"Dia Selecionado: {diaSelecionado}";
+
+                if (celulaSelecionada.Value != null && int.TryParse(celulaSelecionada.Value.ToString(), out int diaSelecionado))
+                {
+                    // Formatar a data no formato correto para o banco de dados
+                    DateTime dataSelecionada = new DateTime(anoAtual, mesAtual, diaSelecionado);
+                    // Formatos de data
+                    string dataParaBanco = dataSelecionada.ToString("yyyy-MM-dd"); // Formato SQL
+                    string dataParaExibir = dataSelecionada.ToString("dd-MM-yyyy"); // Formato usuário
+
+                    // Exibir no label de seleção
+                    lblDetalhesDiaSelecionado.Text = $"Agendamentos do dia: {dataParaExibir}";
+
+                    // Chamar a função LoadData com a data selecionada
+                    LoadData(dataParaBanco);
                 }
             }
         }
@@ -186,6 +205,117 @@ namespace Inovaclinica {
             } else {
                 MessageBox.Show("Por favor, selecione um dia válido.");
             }
+        }
+
+        public void LoadData(string data)
+        {
+            // Obtém a string de conexão a partir do App.config
+            string connectionString = ConfigurationManager.ConnectionStrings["InovaclinicaConnectionString"].ConnectionString;
+
+            // Define as datas inicial e final com base no parâmetro recebido
+            string dataInicial = $"{data} 00:00:00";
+            string dataFinal = $"{data} 23:59:59";
+
+            // Query SQL para buscar os dados da tabela 'Agendamentos' com filtro de data e ordenação
+            string query = @"
+        SELECT 
+            a.AgendamentoID AS [Código], 
+            c.Nome AS [Nome], 
+            c.Telefone AS [Telefone], 
+            a.DataHora AS [Data e Hora], 
+            a.Status AS [Status], 
+            ISNULL((SELECT SUM(ai.Quantidade) FROM dbo.Agendamento_Itens ai WHERE ai.AgendamentoID = a.AgendamentoID AND ai.Tipo = 'Servico'), 0) AS [Quantidade de Procedimentos], 
+            ISNULL((SELECT SUM(ai.Quantidade) FROM dbo.Agendamento_Itens ai WHERE ai.AgendamentoID = a.AgendamentoID AND ai.Tipo = 'Produto'), 0) AS [Quantidade de Produtos], 
+            o.ValorTotal AS [Valor Total] 
+        FROM 
+            dbo.Agendamentos a 
+        JOIN 
+            dbo.Clientes c ON a.ClienteID = c.ClienteID 
+        LEFT JOIN 
+            dbo.Orcamentos o ON a.OrcamentoID = o.OrcamentoID 
+        WHERE 
+            a.DataHora BETWEEN @DataInicial AND @DataFinal 
+        ORDER BY 
+            a.DataHora ASC";
+
+            // Usa SqlConnection e SqlDataAdapter para preencher o DataGridView
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                try
+                {
+                    // Abre a conexão
+                    connection.Open();
+
+                    // SqlCommand para executar a consulta com parâmetros
+                    SqlCommand command = new SqlCommand(query, connection);
+                    command.Parameters.AddWithValue("@DataInicial", dataInicial);
+                    command.Parameters.AddWithValue("@DataFinal", dataFinal);
+
+                    // SqlDataAdapter para preencher os dados
+                    SqlDataAdapter dataAdapter = new SqlDataAdapter(command);
+
+                    // Cria um DataTable para armazenar os dados
+                    DataTable dataTable = new DataTable();
+
+                    // Preenche o DataTable com os dados retornados da consulta
+                    dataAdapter.Fill(dataTable);
+
+                    // Define a fonte de dados do DataGridView como o DataTable
+                    dataGridViewAgendamentos.DataSource = dataTable;
+
+                    //ApplyRowColors();
+                }
+                catch (Exception ex)
+                {
+                    // Exibe uma mensagem de erro caso ocorra uma exceção
+                    MessageBox.Show($"Erro ao carregar dados: {ex.Message}");
+                }
+            }
+        }
+
+        private void CustomizeDataGridView()
+        {
+            // Cores
+            Color headerColor = Color.FromArgb(45, 45, 45);
+            Color rowColor1 = Color.White;
+            Color rowColor2 = Color.FromArgb(211, 211, 211);
+            Color selectionBackColor = Color.FromArgb(153, 102, 255);
+            Color selectionForeColor = Color.White;
+            Color gridColor = Color.LightGray;
+
+            // Aplicando as cores
+            dataGridViewAgendamentos.ColumnHeadersDefaultCellStyle.BackColor = headerColor;
+            dataGridViewAgendamentos.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+            dataGridViewAgendamentos.RowTemplate.DefaultCellStyle.BackColor = rowColor1; // Cor padrão para todas as linhas
+            dataGridViewAgendamentos.AlternatingRowsDefaultCellStyle.BackColor = rowColor2; // Cor alternada para linhas pares
+            dataGridViewAgendamentos.DefaultCellStyle.SelectionBackColor = selectionBackColor;
+            dataGridViewAgendamentos.DefaultCellStyle.SelectionForeColor = selectionForeColor;
+            dataGridViewAgendamentos.GridColor = gridColor;
+
+            // Fontes
+            dataGridViewAgendamentos.Font = new Font("Arial", 10F); // Aumentei o tamanho da fonte para melhor legibilidade
+            dataGridViewAgendamentos.ColumnHeadersDefaultCellStyle.Font = new Font("Arial", 10F, FontStyle.Bold);
+
+            // Layout
+            dataGridViewAgendamentos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridViewAgendamentos.Dock = DockStyle.Fill; // Ocupa todo o espaço disponível
+            dataGridViewAgendamentos.RowHeadersVisible = false;
+            dataGridViewAgendamentos.EnableHeadersVisualStyles = false;
+            dataGridViewAgendamentos.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            dataGridViewAgendamentos.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
+            dataGridViewAgendamentos.BackgroundColor = SystemColors.Control;
+            dataGridViewAgendamentos.RowTemplate.Height = 40;
+
+            // Impede a alteração no layout do datagrid
+
+            dataGridViewAgendamentos.AllowUserToAddRows = false;
+            dataGridViewAgendamentos.AllowUserToDeleteRows = false;
+            dataGridViewAgendamentos.AllowUserToOrderColumns = false;
+            dataGridViewAgendamentos.AllowUserToResizeRows = false;
+            dataGridViewAgendamentos.AllowUserToResizeColumns = false;
+
+            // Ação necessário para conseguir selecionar a linha para visualização dos clientes
+            dataGridViewAgendamentos.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
         }
     }
 }
