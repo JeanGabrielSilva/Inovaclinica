@@ -327,6 +327,10 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Img\verifique-o-circulo.png" />
+    <None Include="Resources\arrow-circle-right %283%29.png" />
+    <None Include="Resources\arrow-circle-right %282%29.png" />
+    <None Include="Resources\arrow-circle-right %285%29.png" />
+    <None Include="Resources\arrow-circle-right %281%29.png" />
     <None Include="Resources\seringa %281%292.png" />
     <None Include="Resources\seringa %281%291.png" />
     <None Include="Resources\seringa.png" />
