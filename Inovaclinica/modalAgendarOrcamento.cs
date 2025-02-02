@@ -17,16 +17,11 @@ namespace Inovaclinica
         public modalAgendarOrcamento()
         {
             InitializeComponent();
+            
         }
-
-        private void modalAgendarOrcamento_Load(object sender, EventArgs e)
-        {
-            // Carrega os horários disponíveis ao abrir o formulário
-            CarregarHorariosDisponiveis();
-        }
-
         private void CarregarHorariosDisponiveis()
         {
+
             try
             {
                 // Limpa os botões existentes no FlowLayoutPanel
@@ -64,11 +59,11 @@ namespace Inovaclinica
                         Tag = horario, // Armazenar o horário no Tag do botão
                         Enabled = !horarioOcupado, // Desabilitar se o horário estiver ocupado
                         Width = 100, // Largura do botão
-                        Height = 40 // Altura do botão
+                        Height = 40, // Altura do botão
                     };
 
                     // Depuração: Exibe o horário disponível e se está ocupado
-                    Console.WriteLine($"Horário disponível: {horario}, Ocupado: {horarioOcupado}");
+                    //MessageBox.Show($"Horário disponível: {horario}, Ocupado: {horarioOcupado}");
 
                     // Associar evento de clique
                     btnHorario.Click += BtnHorario_Click;
@@ -158,6 +153,12 @@ namespace Inovaclinica
             // Lógica para criar o agendamento no banco de dados
             // Exemplo fictício:
             MessageBox.Show($"Agendamento criado para {horario}");
+        }
+
+        private void btnCarregarHorariosDisponiveis_Click(object sender, EventArgs e)
+        {
+            panelDetalhes.Visible = false;
+            CarregarHorariosDisponiveis();
         }
     }
 }

@@ -33,15 +33,19 @@
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.label5 = new System.Windows.Forms.Label();
             this.labelCancelarVisualizarClientes = new System.Windows.Forms.Label();
+            this.btnAdicionarProduto = new System.Windows.Forms.PictureBox();
+            this.btnCancelarAlteracaoProduto = new System.Windows.Forms.PictureBox();
             this.Dados = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label6 = new System.Windows.Forms.Label();
             this.estoqueProduto = new System.Windows.Forms.NumericUpDown();
             this.label13 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.precoProduto = new System.Windows.Forms.NumericUpDown();
             this.label3 = new System.Windows.Forms.Label();
             this.dataValidadeProduto = new System.Windows.Forms.MaskedTextBox();
@@ -51,25 +55,21 @@
             this.lblNome = new System.Windows.Forms.Label();
             this.descricaoProduto = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.btnAdicionarProduto = new System.Windows.Forms.PictureBox();
-            this.btnCancelarAlteracaoProduto = new System.Windows.Forms.PictureBox();
             this.panelRodape.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnAdicionarProduto)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnCancelarAlteracaoProduto)).BeginInit();
             this.Dados.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.estoqueProduto)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.precoProduto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnAdicionarProduto)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnCancelarAlteracaoProduto)).BeginInit();
             this.SuspendLayout();
             // 
             // panelRodape
@@ -126,6 +126,34 @@
             this.labelCancelarVisualizarClientes.Text = "Cancelar";
             this.labelCancelarVisualizarClientes.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
+            // btnAdicionarProduto
+            // 
+            this.btnAdicionarProduto.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAdicionarProduto.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAdicionarProduto.Image = ((System.Drawing.Image)(resources.GetObject("btnAdicionarProduto.Image")));
+            this.btnAdicionarProduto.Location = new System.Drawing.Point(3, 3);
+            this.btnAdicionarProduto.Name = "btnAdicionarProduto";
+            this.btnAdicionarProduto.Size = new System.Drawing.Size(70, 38);
+            this.btnAdicionarProduto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.btnAdicionarProduto.TabIndex = 14;
+            this.btnAdicionarProduto.TabStop = false;
+            this.btnAdicionarProduto.Click += new System.EventHandler(this.btnAdicionarProduto_Click);
+            // 
+            // btnCancelarAlteracaoProduto
+            // 
+            this.btnCancelarAlteracaoProduto.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCancelarAlteracaoProduto.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnCancelarAlteracaoProduto.Image = global::Inovaclinica.Properties.Resources.circulo_x__1_;
+            this.btnCancelarAlteracaoProduto.Location = new System.Drawing.Point(79, 3);
+            this.btnCancelarAlteracaoProduto.Name = "btnCancelarAlteracaoProduto";
+            this.btnCancelarAlteracaoProduto.Size = new System.Drawing.Size(70, 38);
+            this.btnCancelarAlteracaoProduto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.btnCancelarAlteracaoProduto.TabIndex = 17;
+            this.btnCancelarAlteracaoProduto.TabStop = false;
+            this.btnCancelarAlteracaoProduto.Click += new System.EventHandler(this.btnCancelarAlteracaoProduto_Click);
+            // 
             // Dados
             // 
             this.Dados.Controls.Add(this.tabPage1);
@@ -173,6 +201,16 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(29, 33);
             this.panel4.TabIndex = 50;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::Inovaclinica.Properties.Resources.caixa_aberta__2_;
+            this.pictureBox2.Location = new System.Drawing.Point(0, -1);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(29, 25);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox2.TabIndex = 48;
+            this.pictureBox2.TabStop = false;
             // 
             // label6
             // 
@@ -232,6 +270,16 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(29, 33);
             this.panel3.TabIndex = 49;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::Inovaclinica.Properties.Resources.moedas;
+            this.pictureBox3.Location = new System.Drawing.Point(0, -1);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(29, 25);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox3.TabIndex = 49;
+            this.pictureBox3.TabStop = false;
             // 
             // precoProduto
             // 
@@ -332,54 +380,6 @@
             this.pictureBox1.TabIndex = 23;
             this.pictureBox1.TabStop = false;
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::Inovaclinica.Properties.Resources.caixa_aberta__2_;
-            this.pictureBox2.Location = new System.Drawing.Point(0, -1);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(29, 25);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox2.TabIndex = 48;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::Inovaclinica.Properties.Resources.moedas;
-            this.pictureBox3.Location = new System.Drawing.Point(0, -1);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(29, 25);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox3.TabIndex = 49;
-            this.pictureBox3.TabStop = false;
-            // 
-            // btnAdicionarProduto
-            // 
-            this.btnAdicionarProduto.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAdicionarProduto.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAdicionarProduto.Image = ((System.Drawing.Image)(resources.GetObject("btnAdicionarProduto.Image")));
-            this.btnAdicionarProduto.Location = new System.Drawing.Point(3, 3);
-            this.btnAdicionarProduto.Name = "btnAdicionarProduto";
-            this.btnAdicionarProduto.Size = new System.Drawing.Size(70, 38);
-            this.btnAdicionarProduto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.btnAdicionarProduto.TabIndex = 14;
-            this.btnAdicionarProduto.TabStop = false;
-            this.btnAdicionarProduto.Click += new System.EventHandler(this.btnAdicionarProduto_Click);
-            // 
-            // btnCancelarAlteracaoProduto
-            // 
-            this.btnCancelarAlteracaoProduto.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCancelarAlteracaoProduto.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnCancelarAlteracaoProduto.Image = global::Inovaclinica.Properties.Resources.circulo_x__1_;
-            this.btnCancelarAlteracaoProduto.Location = new System.Drawing.Point(79, 3);
-            this.btnCancelarAlteracaoProduto.Name = "btnCancelarAlteracaoProduto";
-            this.btnCancelarAlteracaoProduto.Size = new System.Drawing.Size(70, 38);
-            this.btnCancelarAlteracaoProduto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.btnCancelarAlteracaoProduto.TabIndex = 17;
-            this.btnCancelarAlteracaoProduto.TabStop = false;
-            this.btnCancelarAlteracaoProduto.Click += new System.EventHandler(this.btnCancelarAlteracaoProduto_Click);
-            // 
             // modalAdicionarProduto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -393,6 +393,8 @@
             this.panelRodape.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnAdicionarProduto)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnCancelarAlteracaoProduto)).EndInit();
             this.Dados.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
@@ -400,16 +402,14 @@
             this.panel2.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.estoqueProduto)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.precoProduto)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnAdicionarProduto)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnCancelarAlteracaoProduto)).EndInit();
             this.ResumeLayout(false);
 
         }
