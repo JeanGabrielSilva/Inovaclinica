@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Inovaclinica
 {
@@ -50,7 +51,7 @@ namespace Inovaclinica
             DataGridFinanceiro.ColumnHeadersDefaultCellStyle.Font = new Font("Arial", 10F, FontStyle.Bold);
 
             // Layout
-            DataGridFinanceiro.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            DataGridFinanceiro.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells; // Ajuste automático de todas as colunas com base no conteúdo das células
             DataGridFinanceiro.Dock = DockStyle.Fill; // Ocupa todo o espaço disponível
             DataGridFinanceiro.RowHeadersVisible = false;
             DataGridFinanceiro.EnableHeadersVisualStyles = false;
@@ -66,7 +67,6 @@ namespace Inovaclinica
             DataGridFinanceiro.Columns.Insert(0, checkBoxColumn);
 
             // Impede a alteração no layout do datagrid
-
             DataGridFinanceiro.AllowUserToAddRows = false;
             DataGridFinanceiro.AllowUserToDeleteRows = false;
             DataGridFinanceiro.AllowUserToOrderColumns = false;
@@ -76,8 +76,27 @@ namespace Inovaclinica
             // Ação necessário para conseguir selecionar a linha para visualização dos clientes
             DataGridFinanceiro.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
 
-
+            // Evento para ajustes de layout após o carregamento de dados
+            DataGridFinanceiro.DataBindingComplete += DataGridFinanceiro_DataBindingComplete;
         }
+
+        private void DataGridFinanceiro_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
+        {
+            // Ajusta a largura de todas as colunas com base no conteúdo
+            foreach (DataGridViewColumn column in DataGridFinanceiro.Columns)
+            {
+                if (column.Name != "checkBoxColumn" && column.Name != "Descrição")
+                {
+                    column.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells; // Ajusta todas as colunas automaticamente
+                }
+            }
+
+            // A coluna "Descrição" vai preencher o restante do espaço
+            DataGridFinanceiro.Columns["Descrição"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+        }
+
+
+
 
         public void LoadData()
         {
@@ -85,7 +104,7 @@ namespace Inovaclinica
             string connectionString = ConfigurationManager.ConnectionStrings["InovaclinicaConnectionString"].ConnectionString;
 
             // Query SQL para buscar os dados da tabela 'Produtos'
-            string query = "SELECT Id as Código, Descricao as [Descrição], DataVencimento as [Data de Vencimento], Valor, Tipo, Categoria, DataInclusao as [Data de Lançamento] From Financeiro";
+            string query = "SELECT Id as Código, Descricao as [Descrição], DataVencimento as [Data de Vencimento], Valor, Tipo, Status, Categoria, DataPagamento as [Data de Pagamento], DataInclusao as [Data de Lançamento] From Financeiro";
 
             // Usa SqlConnection e SqlDataAdapter para preencher o DataGridView
             using (SqlConnection connection = new SqlConnection(connectionString))
@@ -121,11 +140,16 @@ namespace Inovaclinica
                     // Chama as funções para calcular os totais após preencher o DataGridView
                     decimal totalEntradas = CalcularTotalEntradas();
                     decimal totalSaidas = CalcularTotalSaidas();
+                    decimal totalAReceber = CalcularTotalReceber();
+                    decimal TotalAPagar = CalcularTotalPagar();
+
                     decimal total = totalEntradas - totalSaidas;
 
                     // Atualiza os rótulos ou botões com os valores calculados
                     labelTotalEntradas.Text = $"{totalEntradas}";
                     labelTotalSaidas.Text = $"-{totalSaidas}";
+                    labelTotalReceber.Text = $"{totalAReceber}";
+                    labelTotalPagar.Text = $"{TotalAPagar}";
                     labelTotal.Text = $"{total}";
 
 
@@ -160,7 +184,9 @@ namespace Inovaclinica
                 if (row.Cells["Valor"].Value != DBNull.Value)
                 {
                     decimal valor = Convert.ToDecimal(row.Cells["Valor"].Value);
-                    if (valor >= 0 && Convert.ToString(row.Cells["Tipo"].Value) == "Entrada") // Validate type and value
+                    string status = Convert.ToString(row.Cells["Status"].Value);
+                    string tipo = Convert.ToString(row.Cells["Tipo"].Value);
+                    if (valor >= 0 && status == "Pago" && tipo == "Entrada") // Validate type and value
                     {
                         total += valor;
                     }
@@ -168,6 +194,26 @@ namespace Inovaclinica
             }
             return total;
         }
+
+        private decimal CalcularTotalReceber()
+        {
+            decimal total = 0;
+            foreach (DataGridViewRow row in DataGridFinanceiro.Rows)
+            {
+                if (row.Cells["Valor"].Value != DBNull.Value)
+                {
+                    decimal valor = Convert.ToDecimal(row.Cells["Valor"].Value);
+                    string status = Convert.ToString(row.Cells["Status"].Value);
+                    string tipo = Convert.ToString(row.Cells["Tipo"].Value);
+                    if (valor > 0 && status == "Pendente" && tipo == "Entrada") // Apenas valores positivos e status Pendente
+                    {
+                        total += valor;
+                    }
+                }
+            }
+            return total;
+        }
+
 
         private decimal CalcularTotalSaidas()
         {
@@ -177,7 +223,9 @@ namespace Inovaclinica
                 if (row.Cells["Valor"].Value != DBNull.Value)
                 {
                     decimal valor = Convert.ToDecimal(row.Cells["Valor"].Value);
-                    if (valor >= 0 && Convert.ToString(row.Cells["Tipo"].Value) == "Saída") // Validate type and value
+                    string status = Convert.ToString(row.Cells["Status"].Value);
+                    string tipo = Convert.ToString(row.Cells["Tipo"].Value);
+                    if (valor >= 0 && status == "Pago" && tipo == "Saída") // Validate type and value
                     {
                         total += valor;
                     }
@@ -185,6 +233,26 @@ namespace Inovaclinica
             }
             return total;
         }
+
+        private decimal CalcularTotalPagar()
+        {
+            decimal total = 0;
+            foreach (DataGridViewRow row in DataGridFinanceiro.Rows)
+            {
+                if (row.Cells["Valor"].Value != DBNull.Value)
+                {
+                    decimal valor = Convert.ToDecimal(row.Cells["Valor"].Value);
+                    string status = Convert.ToString(row.Cells["Status"].Value);
+                    string tipo = Convert.ToString(row.Cells["Tipo"].Value);
+                    if (valor >= 0 && status == "Pendente" && tipo == "Saída") // Apenas valores negativos e status Pendente
+                    {
+                        total += valor;
+                    }
+                }
+            }
+            return total;
+        }
+
         private void DataGridFinanceiro_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
             if (e.ColumnIndex == DataGridFinanceiro.Columns["colunaIcones"].Index)

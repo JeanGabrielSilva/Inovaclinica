@@ -38,14 +38,18 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
             this.textBoxVisualizaValorLancamento = new System.Windows.Forms.NumericUpDown();
-            this.btnVisualizarSaida = new System.Windows.Forms.Button();
-            this.btnVisualizarEntrada = new System.Windows.Forms.Button();
             this.panelRodape = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.label5 = new System.Windows.Forms.Label();
             this.labelCancelarVisualizarClientes = new System.Windows.Forms.Label();
             this.btnSalvarAlteracaoLancamento = new System.Windows.Forms.PictureBox();
             this.btnCancelarAlteracaoLancamento = new System.Windows.Forms.PictureBox();
+            this.btnVisualizarSaida = new System.Windows.Forms.Button();
+            this.btnVisualizarEntrada = new System.Windows.Forms.Button();
+            this.checkBoxPagamento = new System.Windows.Forms.CheckBox();
+            this.maskDataPagamentoLancamento = new System.Windows.Forms.MaskedTextBox();
+            this.lblDataPagamento = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textBoxVisualizaValorLancamento)).BeginInit();
             this.panelRodape.SuspendLayout();
@@ -155,40 +159,12 @@
             this.textBoxVisualizaValorLancamento.ThousandsSeparator = true;
             this.textBoxVisualizaValorLancamento.UpDownAlign = System.Windows.Forms.LeftRightAlignment.Left;
             // 
-            // btnVisualizarSaida
-            // 
-            this.btnVisualizarSaida.Font = new System.Drawing.Font("Arial Black", 9F, System.Drawing.FontStyle.Bold);
-            this.btnVisualizarSaida.ForeColor = System.Drawing.Color.White;
-            this.btnVisualizarSaida.Image = global::Inovaclinica.Properties.Resources.seta_alt_circulo_para_baixo__1_;
-            this.btnVisualizarSaida.Location = new System.Drawing.Point(187, 256);
-            this.btnVisualizarSaida.Name = "btnVisualizarSaida";
-            this.btnVisualizarSaida.Size = new System.Drawing.Size(119, 61);
-            this.btnVisualizarSaida.TabIndex = 65;
-            this.btnVisualizarSaida.Text = "Saída";
-            this.btnVisualizarSaida.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.btnVisualizarSaida.UseVisualStyleBackColor = true;
-            this.btnVisualizarSaida.Click += new System.EventHandler(this.btnVisualizarSaida_Click);
-            // 
-            // btnVisualizarEntrada
-            // 
-            this.btnVisualizarEntrada.Font = new System.Drawing.Font("Arial Black", 9F, System.Drawing.FontStyle.Bold);
-            this.btnVisualizarEntrada.ForeColor = System.Drawing.Color.White;
-            this.btnVisualizarEntrada.Image = global::Inovaclinica.Properties.Resources.seta_alt_circulo_para_cima__1_;
-            this.btnVisualizarEntrada.Location = new System.Drawing.Point(22, 256);
-            this.btnVisualizarEntrada.Name = "btnVisualizarEntrada";
-            this.btnVisualizarEntrada.Size = new System.Drawing.Size(119, 61);
-            this.btnVisualizarEntrada.TabIndex = 64;
-            this.btnVisualizarEntrada.Text = "Entrada";
-            this.btnVisualizarEntrada.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.btnVisualizarEntrada.UseVisualStyleBackColor = true;
-            this.btnVisualizarEntrada.Click += new System.EventHandler(this.btnVisualizarEntrada_Click);
-            // 
             // panelRodape
             // 
             this.panelRodape.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(94)))), ((int)(((byte)(220)))));
             this.panelRodape.Controls.Add(this.tableLayoutPanel1);
             this.panelRodape.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelRodape.Location = new System.Drawing.Point(0, 341);
+            this.panelRodape.Location = new System.Drawing.Point(0, 416);
             this.panelRodape.Name = "panelRodape";
             this.panelRodape.Size = new System.Drawing.Size(329, 69);
             this.panelRodape.TabIndex = 75;
@@ -265,11 +241,87 @@
             this.btnCancelarAlteracaoLancamento.TabStop = false;
             this.btnCancelarAlteracaoLancamento.Click += new System.EventHandler(this.btnCancelarAlteracaoLancamento_Click);
             // 
+            // btnVisualizarSaida
+            // 
+            this.btnVisualizarSaida.Font = new System.Drawing.Font("Arial Black", 9F, System.Drawing.FontStyle.Bold);
+            this.btnVisualizarSaida.ForeColor = System.Drawing.Color.White;
+            this.btnVisualizarSaida.Image = global::Inovaclinica.Properties.Resources.seta_alt_circulo_para_baixo__1_;
+            this.btnVisualizarSaida.Location = new System.Drawing.Point(187, 340);
+            this.btnVisualizarSaida.Name = "btnVisualizarSaida";
+            this.btnVisualizarSaida.Size = new System.Drawing.Size(119, 61);
+            this.btnVisualizarSaida.TabIndex = 65;
+            this.btnVisualizarSaida.Text = "Saída";
+            this.btnVisualizarSaida.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btnVisualizarSaida.UseVisualStyleBackColor = true;
+            this.btnVisualizarSaida.Click += new System.EventHandler(this.btnVisualizarSaida_Click);
+            // 
+            // btnVisualizarEntrada
+            // 
+            this.btnVisualizarEntrada.Font = new System.Drawing.Font("Arial Black", 9F, System.Drawing.FontStyle.Bold);
+            this.btnVisualizarEntrada.ForeColor = System.Drawing.Color.White;
+            this.btnVisualizarEntrada.Image = global::Inovaclinica.Properties.Resources.seta_alt_circulo_para_cima__1_;
+            this.btnVisualizarEntrada.Location = new System.Drawing.Point(22, 340);
+            this.btnVisualizarEntrada.Name = "btnVisualizarEntrada";
+            this.btnVisualizarEntrada.Size = new System.Drawing.Size(119, 61);
+            this.btnVisualizarEntrada.TabIndex = 64;
+            this.btnVisualizarEntrada.Text = "Entrada";
+            this.btnVisualizarEntrada.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btnVisualizarEntrada.UseVisualStyleBackColor = true;
+            this.btnVisualizarEntrada.Click += new System.EventHandler(this.btnVisualizarEntrada_Click);
+            // 
+            // checkBoxPagamento
+            // 
+            this.checkBoxPagamento.AutoSize = true;
+            this.checkBoxPagamento.Location = new System.Drawing.Point(270, 258);
+            this.checkBoxPagamento.Name = "checkBoxPagamento";
+            this.checkBoxPagamento.Size = new System.Drawing.Size(15, 14);
+            this.checkBoxPagamento.TabIndex = 79;
+            this.checkBoxPagamento.UseVisualStyleBackColor = true;
+            this.checkBoxPagamento.CheckedChanged += new System.EventHandler(this.checkBoxPagamento_CheckedChanged);
+            // 
+            // maskDataPagamentoLancamento
+            // 
+            this.maskDataPagamentoLancamento.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.maskDataPagamentoLancamento.Location = new System.Drawing.Point(229, 293);
+            this.maskDataPagamentoLancamento.Mask = "00/00/0000";
+            this.maskDataPagamentoLancamento.Name = "maskDataPagamentoLancamento";
+            this.maskDataPagamentoLancamento.Size = new System.Drawing.Size(77, 24);
+            this.maskDataPagamentoLancamento.TabIndex = 78;
+            this.maskDataPagamentoLancamento.ValidatingType = typeof(System.DateTime);
+            this.maskDataPagamentoLancamento.Visible = false;
+            // 
+            // lblDataPagamento
+            // 
+            this.lblDataPagamento.AutoSize = true;
+            this.lblDataPagamento.Font = new System.Drawing.Font("Arial Black", 11.25F, System.Drawing.FontStyle.Bold);
+            this.lblDataPagamento.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.lblDataPagamento.Location = new System.Drawing.Point(18, 295);
+            this.lblDataPagamento.Name = "lblDataPagamento";
+            this.lblDataPagamento.Size = new System.Drawing.Size(172, 22);
+            this.lblDataPagamento.TabIndex = 77;
+            this.lblDataPagamento.Text = "Data de Pagamento";
+            this.lblDataPagamento.Visible = false;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Arial Black", 11.25F, System.Drawing.FontStyle.Bold);
+            this.label2.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label2.Location = new System.Drawing.Point(18, 253);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(235, 22);
+            this.label2.TabIndex = 76;
+            this.label2.Text = "Foi realizado o pagamento?";
+            // 
             // modalVisualizarLancamentoFinanceiro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(329, 410);
+            this.ClientSize = new System.Drawing.Size(329, 485);
+            this.Controls.Add(this.checkBoxPagamento);
+            this.Controls.Add(this.maskDataPagamentoLancamento);
+            this.Controls.Add(this.lblDataPagamento);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.panelRodape);
             this.Controls.Add(this.maskVisualizaDataVencimentoLancamento);
             this.Controls.Add(this.lblFiltrarDataNascimentoCliente);
@@ -308,13 +360,17 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.NumericUpDown textBoxVisualizaValorLancamento;
-        private System.Windows.Forms.Button btnVisualizarSaida;
-        private System.Windows.Forms.Button btnVisualizarEntrada;
         private System.Windows.Forms.Panel panelRodape;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label labelCancelarVisualizarClientes;
         private System.Windows.Forms.PictureBox btnSalvarAlteracaoLancamento;
         private System.Windows.Forms.PictureBox btnCancelarAlteracaoLancamento;
+        private System.Windows.Forms.Button btnVisualizarSaida;
+        private System.Windows.Forms.Button btnVisualizarEntrada;
+        private System.Windows.Forms.CheckBox checkBoxPagamento;
+        private System.Windows.Forms.MaskedTextBox maskDataPagamentoLancamento;
+        private System.Windows.Forms.Label lblDataPagamento;
+        private System.Windows.Forms.Label label2;
     }
 }

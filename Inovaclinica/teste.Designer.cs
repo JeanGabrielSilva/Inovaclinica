@@ -29,230 +29,329 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(teste));
-            this.panelRodape = new System.Windows.Forms.Panel();
-            this.tablePanelMenuClientes = new System.Windows.Forms.TableLayoutPanel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnAbrirModalVisualizarProdutos = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.btnSalvarAlteracaoLancamento = new System.Windows.Forms.PictureBox();
-            this.atualizarGridProdutos = new System.Windows.Forms.PictureBox();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.labelTotalSaidas = new System.Windows.Forms.Label();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.labelTotalEntradas = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.panelRodape.SuspendLayout();
-            this.tablePanelMenuClientes.SuspendLayout();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.labelTotal = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label32 = new System.Windows.Forms.Label();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.panel4.SuspendLayout();
+            this.panel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnAbrirModalVisualizarProdutos)).BeginInit();
+            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnSalvarAlteracaoLancamento)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.atualizarGridProdutos)).BeginInit();
+            this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
-            // panelRodape
+            // panel4
             // 
-            this.panelRodape.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(94)))), ((int)(((byte)(220)))));
-            this.panelRodape.Controls.Add(this.tablePanelMenuClientes);
-            this.panelRodape.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelRodape.Location = new System.Drawing.Point(0, 775);
-            this.panelRodape.Name = "panelRodape";
-            this.panelRodape.Size = new System.Drawing.Size(1238, 69);
-            this.panelRodape.TabIndex = 6;
+            this.panel4.BackColor = System.Drawing.SystemColors.Control;
+            this.panel4.Controls.Add(this.panel6);
+            this.panel4.Controls.Add(this.panel5);
+            this.panel4.Controls.Add(this.panel1);
+            this.panel4.Controls.Add(this.panel3);
+            this.panel4.Controls.Add(this.panel2);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel4.Location = new System.Drawing.Point(0, 0);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(1833, 187);
+            this.panel4.TabIndex = 10;
             // 
-            // tablePanelMenuClientes
+            // panel6
             // 
-            this.tablePanelMenuClientes.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.tablePanelMenuClientes.ColumnCount = 5;
-            this.tablePanelMenuClientes.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tablePanelMenuClientes.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tablePanelMenuClientes.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tablePanelMenuClientes.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tablePanelMenuClientes.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tablePanelMenuClientes.Controls.Add(this.btnSalvarAlteracaoLancamento, 0, 0);
-            this.tablePanelMenuClientes.Controls.Add(this.pictureBox2, 1, 0);
-            this.tablePanelMenuClientes.Controls.Add(this.label1, 3, 1);
-            this.tablePanelMenuClientes.Controls.Add(this.label3, 4, 1);
-            this.tablePanelMenuClientes.Controls.Add(this.pictureBox1, 3, 0);
-            this.tablePanelMenuClientes.Controls.Add(this.atualizarGridProdutos, 4, 0);
-            this.tablePanelMenuClientes.Controls.Add(this.label5, 2, 1);
-            this.tablePanelMenuClientes.Controls.Add(this.btnAbrirModalVisualizarProdutos, 2, 0);
-            this.tablePanelMenuClientes.Controls.Add(this.label2, 1, 1);
-            this.tablePanelMenuClientes.Controls.Add(this.label4, 0, 1);
-            this.tablePanelMenuClientes.Font = new System.Drawing.Font("Arial", 9.5F, System.Drawing.FontStyle.Bold);
-            this.tablePanelMenuClientes.GrowStyle = System.Windows.Forms.TableLayoutPanelGrowStyle.FixedSize;
-            this.tablePanelMenuClientes.Location = new System.Drawing.Point(390, 0);
-            this.tablePanelMenuClientes.Name = "tablePanelMenuClientes";
-            this.tablePanelMenuClientes.RowCount = 2;
-            this.tablePanelMenuClientes.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 80F));
-            this.tablePanelMenuClientes.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tablePanelMenuClientes.Size = new System.Drawing.Size(431, 66);
-            this.tablePanelMenuClientes.TabIndex = 10;
+            this.panel6.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.panel6.Controls.Add(this.labelTotalSaidas);
+            this.panel6.Controls.Add(this.pictureBox5);
+            this.panel6.Controls.Add(this.label4);
+            this.panel6.Location = new System.Drawing.Point(573, 40);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(215, 109);
+            this.panel6.TabIndex = 10;
             // 
-            // pictureBox1
+            // labelTotalSaidas
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(94)))), ((int)(((byte)(220)))));
-            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(261, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(80, 46);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.labelTotalSaidas.AutoSize = true;
+            this.labelTotalSaidas.Font = new System.Drawing.Font("Arial Black", 20F, System.Drawing.FontStyle.Bold);
+            this.labelTotalSaidas.ForeColor = System.Drawing.Color.White;
+            this.labelTotalSaidas.Location = new System.Drawing.Point(12, 58);
+            this.labelTotalSaidas.Name = "labelTotalSaidas";
+            this.labelTotalSaidas.Size = new System.Drawing.Size(80, 38);
+            this.labelTotalSaidas.TabIndex = 12;
+            this.labelTotalSaidas.Text = "0,00";
+            this.labelTotalSaidas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // btnAbrirModalVisualizarProdutos
+            // pictureBox5
             // 
-            this.btnAbrirModalVisualizarProdutos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(94)))), ((int)(((byte)(220)))));
-            this.btnAbrirModalVisualizarProdutos.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAbrirModalVisualizarProdutos.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnAbrirModalVisualizarProdutos.Image = ((System.Drawing.Image)(resources.GetObject("btnAbrirModalVisualizarProdutos.Image")));
-            this.btnAbrirModalVisualizarProdutos.Location = new System.Drawing.Point(175, 3);
-            this.btnAbrirModalVisualizarProdutos.Name = "btnAbrirModalVisualizarProdutos";
-            this.btnAbrirModalVisualizarProdutos.Size = new System.Drawing.Size(80, 46);
-            this.btnAbrirModalVisualizarProdutos.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.btnAbrirModalVisualizarProdutos.TabIndex = 8;
-            this.btnAbrirModalVisualizarProdutos.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(94)))), ((int)(((byte)(220)))));
-            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(89, 3);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(80, 46);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox2.TabIndex = 10;
-            this.pictureBox2.TabStop = false;
-            // 
-            // btnSalvarAlteracaoLancamento
-            // 
-            this.btnSalvarAlteracaoLancamento.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSalvarAlteracaoLancamento.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSalvarAlteracaoLancamento.Image = ((System.Drawing.Image)(resources.GetObject("btnSalvarAlteracaoLancamento.Image")));
-            this.btnSalvarAlteracaoLancamento.Location = new System.Drawing.Point(3, 3);
-            this.btnSalvarAlteracaoLancamento.Name = "btnSalvarAlteracaoLancamento";
-            this.btnSalvarAlteracaoLancamento.Size = new System.Drawing.Size(80, 46);
-            this.btnSalvarAlteracaoLancamento.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.btnSalvarAlteracaoLancamento.TabIndex = 15;
-            this.btnSalvarAlteracaoLancamento.TabStop = false;
-            // 
-            // atualizarGridProdutos
-            // 
-            this.atualizarGridProdutos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(94)))), ((int)(((byte)(220)))));
-            this.atualizarGridProdutos.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.atualizarGridProdutos.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.atualizarGridProdutos.Image = ((System.Drawing.Image)(resources.GetObject("atualizarGridProdutos.Image")));
-            this.atualizarGridProdutos.Location = new System.Drawing.Point(347, 3);
-            this.atualizarGridProdutos.Name = "atualizarGridProdutos";
-            this.atualizarGridProdutos.Size = new System.Drawing.Size(81, 46);
-            this.atualizarGridProdutos.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.atualizarGridProdutos.TabIndex = 4;
-            this.atualizarGridProdutos.TabStop = false;
+            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
+            this.pictureBox5.Location = new System.Drawing.Point(163, 8);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(45, 44);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox5.TabIndex = 11;
+            this.pictureBox5.TabStop = false;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label4.Font = new System.Drawing.Font("Arial", 9.5F, System.Drawing.FontStyle.Bold);
-            this.label4.ForeColor = System.Drawing.SystemColors.Control;
-            this.label4.Location = new System.Drawing.Point(3, 52);
+            this.label4.Font = new System.Drawing.Font("Arial Black", 12F, System.Drawing.FontStyle.Bold);
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(20, 15);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(80, 14);
-            this.label4.TabIndex = 7;
-            this.label4.Text = "Confirmar";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label4.Size = new System.Drawing.Size(121, 23);
+            this.label4.TabIndex = 10;
+            this.label4.Text = "Pagamentos";
+            // 
+            // panel5
+            // 
+            this.panel5.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(150)))), ((int)(((byte)(100)))));
+            this.panel5.Controls.Add(this.labelTotalEntradas);
+            this.panel5.Controls.Add(this.pictureBox1);
+            this.panel5.Controls.Add(this.label2);
+            this.panel5.Location = new System.Drawing.Point(324, 40);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(215, 109);
+            this.panel5.TabIndex = 9;
+            // 
+            // labelTotalEntradas
+            // 
+            this.labelTotalEntradas.AutoSize = true;
+            this.labelTotalEntradas.Font = new System.Drawing.Font("Arial Black", 20F, System.Drawing.FontStyle.Bold);
+            this.labelTotalEntradas.ForeColor = System.Drawing.Color.White;
+            this.labelTotalEntradas.Location = new System.Drawing.Point(10, 58);
+            this.labelTotalEntradas.Name = "labelTotalEntradas";
+            this.labelTotalEntradas.Size = new System.Drawing.Size(80, 38);
+            this.labelTotalEntradas.TabIndex = 9;
+            this.labelTotalEntradas.Text = "0,00";
+            this.labelTotalEntradas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(161, 8);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(45, 44);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox1.TabIndex = 10;
+            this.pictureBox1.TabStop = false;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label2.Font = new System.Drawing.Font("Arial", 9.25F, System.Drawing.FontStyle.Bold);
-            this.label2.ForeColor = System.Drawing.SystemColors.Control;
-            this.label2.Location = new System.Drawing.Point(89, 52);
+            this.label2.Font = new System.Drawing.Font("Arial Black", 12F, System.Drawing.FontStyle.Bold);
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(14, 14);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(80, 14);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Visualizar";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label2.Size = new System.Drawing.Size(137, 23);
+            this.label2.TabIndex = 9;
+            this.label2.Text = "Recebimentos";
             // 
-            // label5
+            // panel1
             // 
-            this.label5.AutoSize = true;
-            this.label5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label5.Font = new System.Drawing.Font("Arial", 9.5F, System.Drawing.FontStyle.Bold);
-            this.label5.ForeColor = System.Drawing.SystemColors.Control;
-            this.label5.Location = new System.Drawing.Point(175, 52);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(80, 14);
-            this.label5.TabIndex = 9;
-            this.label5.Text = "Reagendar";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(158)))), ((int)(((byte)(235)))));
+            this.panel1.Controls.Add(this.label);
+            this.panel1.Controls.Add(this.pictureBox2);
+            this.panel1.Controls.Add(this.label6);
+            this.panel1.Location = new System.Drawing.Point(820, 40);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(215, 109);
+            this.panel1.TabIndex = 6;
             // 
-            // label3
+            // label
             // 
-            this.label3.AutoSize = true;
-            this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label3.Font = new System.Drawing.Font("Arial", 9.5F, System.Drawing.FontStyle.Bold);
-            this.label3.ForeColor = System.Drawing.SystemColors.Control;
-            this.label3.Location = new System.Drawing.Point(347, 52);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(81, 14);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "Atualizar";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label.AutoSize = true;
+            this.label.Font = new System.Drawing.Font("Arial Black", 20F, System.Drawing.FontStyle.Bold);
+            this.label.ForeColor = System.Drawing.Color.White;
+            this.label.Location = new System.Drawing.Point(10, 58);
+            this.label.Name = "label";
+            this.label.Size = new System.Drawing.Size(80, 38);
+            this.label.TabIndex = 9;
+            this.label.Text = "0,00";
+            this.label.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // label1
+            // pictureBox2
             // 
-            this.label1.AutoSize = true;
-            this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label1.Font = new System.Drawing.Font("Arial", 9.5F, System.Drawing.FontStyle.Bold);
-            this.label1.ForeColor = System.Drawing.SystemColors.Control;
-            this.label1.Location = new System.Drawing.Point(261, 52);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(80, 14);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Excluir";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(161, 8);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(45, 44);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox2.TabIndex = 10;
+            this.pictureBox2.TabStop = false;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Arial Black", 12F, System.Drawing.FontStyle.Bold);
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(14, 14);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(101, 23);
+            this.label6.TabIndex = 9;
+            this.label6.Text = "A Receber";
+            // 
+            // panel3
+            // 
+            this.panel3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(100)))), ((int)(((byte)(150)))));
+            this.panel3.Controls.Add(this.pictureBox4);
+            this.panel3.Controls.Add(this.labelTotal);
+            this.panel3.Controls.Add(this.label8);
+            this.panel3.Location = new System.Drawing.Point(1313, 40);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(215, 109);
+            this.panel3.TabIndex = 8;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
+            this.pictureBox4.Location = new System.Drawing.Point(162, 8);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(45, 44);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox4.TabIndex = 14;
+            this.pictureBox4.TabStop = false;
+            // 
+            // labelTotal
+            // 
+            this.labelTotal.AutoSize = true;
+            this.labelTotal.Font = new System.Drawing.Font("Arial Black", 20F, System.Drawing.FontStyle.Bold);
+            this.labelTotal.ForeColor = System.Drawing.Color.White;
+            this.labelTotal.Location = new System.Drawing.Point(16, 58);
+            this.labelTotal.Name = "labelTotal";
+            this.labelTotal.Size = new System.Drawing.Size(80, 38);
+            this.labelTotal.TabIndex = 13;
+            this.labelTotal.Text = "0,00";
+            this.labelTotal.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Arial Black", 12F, System.Drawing.FontStyle.Bold);
+            this.label8.ForeColor = System.Drawing.Color.White;
+            this.label8.Location = new System.Drawing.Point(17, 14);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(111, 23);
+            this.label8.TabIndex = 10;
+            this.label8.Text = "Saldo Atual";
+            // 
+            // panel2
+            // 
+            this.panel2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(149)))), ((int)(((byte)(117)))), ((int)(((byte)(205)))));
+            this.panel2.Controls.Add(this.label32);
+            this.panel2.Controls.Add(this.pictureBox3);
+            this.panel2.Controls.Add(this.label7);
+            this.panel2.Location = new System.Drawing.Point(1066, 40);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(215, 109);
+            this.panel2.TabIndex = 7;
+            // 
+            // label32
+            // 
+            this.label32.AutoSize = true;
+            this.label32.Font = new System.Drawing.Font("Arial Black", 20F, System.Drawing.FontStyle.Bold);
+            this.label32.ForeColor = System.Drawing.Color.White;
+            this.label32.Location = new System.Drawing.Point(12, 58);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(80, 38);
+            this.label32.TabIndex = 12;
+            this.label32.Text = "0,00";
+            this.label32.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(163, 8);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(45, 44);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox3.TabIndex = 11;
+            this.pictureBox3.TabStop = false;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Arial Black", 12F, System.Drawing.FontStyle.Bold);
+            this.label7.ForeColor = System.Drawing.Color.White;
+            this.label7.Location = new System.Drawing.Point(20, 15);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(79, 23);
+            this.label7.TabIndex = 10;
+            this.label7.Text = "A Pagar";
             // 
             // teste
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1238, 844);
-            this.Controls.Add(this.panelRodape);
+            this.ClientSize = new System.Drawing.Size(1833, 844);
+            this.Controls.Add(this.panel4);
             this.Name = "teste";
             this.Text = "teste";
-            this.panelRodape.ResumeLayout(false);
-            this.tablePanelMenuClientes.ResumeLayout(false);
-            this.tablePanelMenuClientes.PerformLayout();
+            this.panel4.ResumeLayout(false);
+            this.panel6.ResumeLayout(false);
+            this.panel6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnAbrirModalVisualizarProdutos)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnSalvarAlteracaoLancamento)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.atualizarGridProdutos)).EndInit();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Panel panelRodape;
-        private System.Windows.Forms.TableLayoutPanel tablePanelMenuClientes;
-        private System.Windows.Forms.PictureBox btnSalvarAlteracaoLancamento;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox atualizarGridProdutos;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.PictureBox btnAbrirModalVisualizarProdutos;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Label labelTotalSaidas;
+        private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Label labelTotalEntradas;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.Label labelTotal;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label label32;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.Label label7;
     }
 }

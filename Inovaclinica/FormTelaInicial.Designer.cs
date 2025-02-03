@@ -113,30 +113,33 @@ namespace Inovaclinica {
             // 
             this.label5.AutoSize = true;
             this.label5.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.label5.Font = new System.Drawing.Font("Arial Black", 30F, System.Drawing.FontStyle.Bold);
+            this.label5.Font = new System.Drawing.Font("Arial Black", 36F, System.Drawing.FontStyle.Bold);
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(94)))), ((int)(((byte)(220)))));
-            this.label5.Location = new System.Drawing.Point(254, 14);
+            this.label5.Location = new System.Drawing.Point(264, 6);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(209, 56);
+            this.label5.Size = new System.Drawing.Size(250, 68);
             this.label5.TabIndex = 2;
             this.label5.Text = "CLINICA";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Arial Black", 30F, System.Drawing.FontStyle.Bold);
+            this.label4.Font = new System.Drawing.Font("Arial Black", 36F, System.Drawing.FontStyle.Bold);
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(89)))), ((int)(((byte)(91)))));
-            this.label4.Location = new System.Drawing.Point(104, 14);
+            this.label4.Location = new System.Drawing.Point(83, 6);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(164, 56);
+            this.label4.Size = new System.Drawing.Size(197, 68);
             this.label4.TabIndex = 1;
             this.label4.Text = "INOVA";
             // 
             // LogoCabecalho
             // 
-            this.LogoCabecalho.Location = new System.Drawing.Point(16, 19);
+            this.LogoCabecalho.Image = ((System.Drawing.Image)(resources.GetObject("LogoCabecalho.Image")));
+            this.LogoCabecalho.Location = new System.Drawing.Point(13, 3);
             this.LogoCabecalho.Name = "LogoCabecalho";
-            this.LogoCabecalho.Size = new System.Drawing.Size(60, 50);
+            this.LogoCabecalho.Size = new System.Drawing.Size(72, 74);
+            this.LogoCabecalho.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.LogoCabecalho.TabIndex = 0;
             this.LogoCabecalho.TabStop = false;
             this.LogoCabecalho.Click += new System.EventHandler(this.LogoCabecalho_Click);

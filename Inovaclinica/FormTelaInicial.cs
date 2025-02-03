@@ -51,15 +51,15 @@ namespace Inovaclinica {
             panelCabecalho.Dock = DockStyle.Top;
             panelCabecalho.Height = 80;
 
-            string imagePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Img", "LogoTemporario.png");
-            LogoCabecalho.Image = Image.FromFile(imagePath);
+            //string imagePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Img", "LogoTemporario.png");
+            //LogoCabecalho.Image = Image.FromFile(imagePath);
 
-            LogoCabecalho.SizeMode = PictureBoxSizeMode.Zoom;
-            LogoCabecalho.Width = 120;  // Ajuste a largura conforme necessário
-            LogoCabecalho.Height = 60;  // Ajuste a altura conforme necessário
+            //LogoCabecalho.SizeMode = PictureBoxSizeMode.Zoom;
+            //LogoCabecalho.Width = 120;  // Ajuste a largura conforme necessário
+            //LogoCabecalho.Height = 60;  // Ajuste a altura conforme necessário
 
             // Definir a posição do PictureBox
-            LogoCabecalho.Location = new Point(10, (panelCabecalho.Height - LogoCabecalho.Height) / 2);
+            //LogoCabecalho.Location = new Point(10, (panelCabecalho.Height - LogoCabecalho.Height) / 2);
 
             // Adicionar o PictureBox ao painel
             panelCabecalho.Controls.Add(LogoCabecalho);
@@ -119,6 +119,11 @@ namespace Inovaclinica {
             formprocedimentos.StartPosition = FormStartPosition.CenterScreen;
             formprocedimentos.WindowState = FormWindowState.Maximized;
             formprocedimentos.Show();
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

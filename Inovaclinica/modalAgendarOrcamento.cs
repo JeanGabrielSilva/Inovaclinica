@@ -239,6 +239,22 @@ namespace Inovaclinica
                             updateCommand.ExecuteNonQuery();
                         }
 
+                        // 7. Insere o Lançamento no financeiro
+                        string queryFinanceiro = @"
+                    INSERT INTO Financeiro (DataVencimento, Descricao, Valor, Tipo, Categoria, AgendamentoID)
+                    VALUES (@DataVencimento, @Descricao, @Valor, @Tipo, @Categoria, @AgendamentoID)";
+
+                        using (SqlCommand cmd = new SqlCommand(queryFinanceiro, connection, transaction))
+                        {
+                            cmd.Parameters.AddWithValue("@DataVencimento", dataHoraAgendamento.AddMonths(1));  // Exemplo: vencimento para 30 dias depois
+                            cmd.Parameters.AddWithValue("@Descricao", $"Agendamento do cliente: {nomeCliente} - Orçamento: {orcamentoID}");
+                            cmd.Parameters.AddWithValue("@Valor", Convert.ToDecimal(valorTotal)); // O valor total do orçamento
+                            cmd.Parameters.AddWithValue("@Tipo", "Entrada");  // Supondo que seja uma entrada
+                            cmd.Parameters.AddWithValue("@Categoria", "Agendamento");  // Categoria para este lançamento
+                            cmd.Parameters.AddWithValue("@AgendamentoID", novoAgendamentoID);
+                            cmd.ExecuteNonQuery();
+                        }
+
                         // Commit da transação
                         transaction.Commit();
                         MessageBox.Show($"Agendamento criado com sucesso!");

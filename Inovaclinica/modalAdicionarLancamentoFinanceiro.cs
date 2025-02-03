@@ -51,23 +51,39 @@ namespace Inovaclinica
             DateTime data = DateTime.ParseExact(dataComBarras, "dd/MM/yyyy", null);
             string dataVencimento = data.ToString("yyyy-MM-dd");
             decimal valorLancamento = textBoxValorLancamento.Value;
-            
 
-            AdicionarLancamento(descricaoLancamento, categoriaLancamento, dataVencimento, valorLancamento, tipoOperacao);
+            // Recupera o status do pagamento (Pago ou Pendente)
+            string statusPagamento = checkBoxPagamento.Checked ? "Pago" : "Pendente";
 
+            // Se o pagamento estiver marcado, obter a data de pagamento; se não, será null
+            string dataPagamentoFormatada = null;
+            if (checkBoxPagamento.Checked)
+            {
+                string dataComBarrasPagamento = maskDataPagamentoLancamento.Text;
+                if (!string.IsNullOrEmpty(dataComBarrasPagamento))
+                {
+                    DateTime dataPagamento = DateTime.ParseExact(dataComBarrasPagamento, "dd/MM/yyyy", null);
+                    dataPagamentoFormatada = dataPagamento.ToString("yyyy-MM-dd");
+                }
+            }
+
+            // Passa os valores para a função AdicionarLancamento
+            AdicionarLancamento(descricaoLancamento, categoriaLancamento, dataVencimento, valorLancamento, tipoOperacao, statusPagamento, dataPagamentoFormatada);
         }
 
-        private void AdicionarLancamento(string descricaoLancamento, string categoriaLancamento, string dataVencimento, decimal valorLancamento, string tipoOperacao)
+
+        private void AdicionarLancamento(string descricaoLancamento, string categoriaLancamento, string dataVencimento, decimal valorLancamento, string tipoOperacao, string statusPagamento, string dataPagamento)
         {
             string connectionString = ConfigurationManager.ConnectionStrings["InovaclinicaConnectionString"].ConnectionString;
 
-            string query = "INSERT INTO Financeiro (DataVencimento, Descricao, Valor, Tipo, Categoria, DataInclusao) VALUES (@DataVencimento, @DescricaoLancamento, @ValorLancamento, @TipoOperacao, @CategoriaLancamento, @DataInclusao)";
-
+            string query = "INSERT INTO Financeiro (DataVencimento, Descricao, Valor, Tipo, Categoria, DataInclusao, Status, DataPagamento) " +
+                           "VALUES (@DataVencimento, @DescricaoLancamento, @ValorLancamento, @TipoOperacao, @CategoriaLancamento, @DataInclusao, @StatusPagamento, @DataPagamento)";
 
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 // Cria o comando SQL para a inserção
                 SqlCommand command = new SqlCommand(query, connection);
+
                 // Define os parâmetros da query
                 command.Parameters.AddWithValue("@DescricaoLancamento", descricaoLancamento);
                 command.Parameters.AddWithValue("@CategoriaLancamento", categoriaLancamento);
@@ -75,12 +91,23 @@ namespace Inovaclinica
                 command.Parameters.AddWithValue("@DataInclusao", DateTime.Now);
                 command.Parameters.AddWithValue("@TipoOperacao", tipoOperacao);
                 command.Parameters.AddWithValue("@ValorLancamento", valorLancamento);
+                command.Parameters.AddWithValue("@StatusPagamento", statusPagamento);
 
+                // Se a data de pagamento for informada, passa ela; caso contrário, insere NULL
+                if (string.IsNullOrEmpty(dataPagamento))
+                {
+                    command.Parameters.AddWithValue("@DataPagamento", DBNull.Value);
+                }
+                else
+                {
+                    command.Parameters.AddWithValue("@DataPagamento", dataPagamento);
+                }
 
                 try
                 {
                     // Abre a conexão
                     connection.Open();
+
                     // Executa o comando
                     int result = command.ExecuteNonQuery();
 
@@ -89,10 +116,8 @@ namespace Inovaclinica
                     {
                         MessageBox.Show($"Lançamento adicionado com sucesso!");
                         // Limpa os campos de entrada
-                        textBoxCategoriaLancamento.Clear();
-                        textBoxDescricaoLancamento.Clear();
-                        maskDataVencimentoLancamento.Clear();
                         _formFinanceiro.LoadData();
+                        this.Close();
                     }
                     else
                     {
@@ -106,6 +131,7 @@ namespace Inovaclinica
             }
         }
 
+
         private void btnCancelarLancamento_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -114,5 +140,20 @@ namespace Inovaclinica
         private void modalAdicionarLancamentoFinanceiro_Load(object sender, EventArgs e) {
 
         }
+
+        private void checkBoxPagamento_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBoxPagamento.Checked)
+            {
+                lblDataPagamento.Visible = true;
+                maskDataPagamentoLancamento.Visible = true;
+            }
+            else
+            {
+                lblDataPagamento.Visible = false;
+                maskDataPagamentoLancamento.Visible = false;
+            }
+        }
+
     }
 }

@@ -46,6 +46,10 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.btnSaida = new System.Windows.Forms.Button();
             this.btnEntrada = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.lblDataPagamento = new System.Windows.Forms.Label();
+            this.maskDataPagamentoLancamento = new System.Windows.Forms.MaskedTextBox();
+            this.checkBoxPagamento = new System.Windows.Forms.CheckBox();
             this.panelRodape.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnAdicionarLancamento)).BeginInit();
@@ -59,7 +63,7 @@
             this.panelRodape.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(94)))), ((int)(((byte)(220)))));
             this.panelRodape.Controls.Add(this.tableLayoutPanel1);
             this.panelRodape.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelRodape.Location = new System.Drawing.Point(0, 341);
+            this.panelRodape.Location = new System.Drawing.Point(0, 416);
             this.panelRodape.Name = "panelRodape";
             this.panelRodape.Size = new System.Drawing.Size(329, 69);
             this.panelRodape.TabIndex = 24;
@@ -242,7 +246,7 @@
             this.btnSaida.Font = new System.Drawing.Font("Arial Black", 9F, System.Drawing.FontStyle.Bold);
             this.btnSaida.ForeColor = System.Drawing.Color.White;
             this.btnSaida.Image = global::Inovaclinica.Properties.Resources.seta_alt_circulo_para_baixo__1_;
-            this.btnSaida.Location = new System.Drawing.Point(189, 262);
+            this.btnSaida.Location = new System.Drawing.Point(189, 337);
             this.btnSaida.Name = "btnSaida";
             this.btnSaida.Size = new System.Drawing.Size(119, 61);
             this.btnSaida.TabIndex = 26;
@@ -256,7 +260,7 @@
             this.btnEntrada.Font = new System.Drawing.Font("Arial Black", 9F, System.Drawing.FontStyle.Bold);
             this.btnEntrada.ForeColor = System.Drawing.Color.White;
             this.btnEntrada.Image = global::Inovaclinica.Properties.Resources.seta_alt_circulo_para_cima__1_;
-            this.btnEntrada.Location = new System.Drawing.Point(24, 262);
+            this.btnEntrada.Location = new System.Drawing.Point(24, 337);
             this.btnEntrada.Name = "btnEntrada";
             this.btnEntrada.Size = new System.Drawing.Size(119, 61);
             this.btnEntrada.TabIndex = 25;
@@ -265,11 +269,59 @@
             this.btnEntrada.UseVisualStyleBackColor = true;
             this.btnEntrada.Click += new System.EventHandler(this.btnEntrada_Click);
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Arial Black", 11.25F, System.Drawing.FontStyle.Bold);
+            this.label2.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label2.Location = new System.Drawing.Point(20, 258);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(235, 22);
+            this.label2.TabIndex = 64;
+            this.label2.Text = "Foi realizado o pagamento?";
+            // 
+            // lblDataPagamento
+            // 
+            this.lblDataPagamento.AutoSize = true;
+            this.lblDataPagamento.Font = new System.Drawing.Font("Arial Black", 11.25F, System.Drawing.FontStyle.Bold);
+            this.lblDataPagamento.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.lblDataPagamento.Location = new System.Drawing.Point(20, 300);
+            this.lblDataPagamento.Name = "lblDataPagamento";
+            this.lblDataPagamento.Size = new System.Drawing.Size(172, 22);
+            this.lblDataPagamento.TabIndex = 65;
+            this.lblDataPagamento.Text = "Data de Pagamento";
+            this.lblDataPagamento.Visible = false;
+            // 
+            // maskDataPagamentoLancamento
+            // 
+            this.maskDataPagamentoLancamento.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.maskDataPagamentoLancamento.Location = new System.Drawing.Point(231, 298);
+            this.maskDataPagamentoLancamento.Mask = "00/00/0000";
+            this.maskDataPagamentoLancamento.Name = "maskDataPagamentoLancamento";
+            this.maskDataPagamentoLancamento.Size = new System.Drawing.Size(77, 24);
+            this.maskDataPagamentoLancamento.TabIndex = 66;
+            this.maskDataPagamentoLancamento.ValidatingType = typeof(System.DateTime);
+            this.maskDataPagamentoLancamento.Visible = false;
+            // 
+            // checkBoxPagamento
+            // 
+            this.checkBoxPagamento.AutoSize = true;
+            this.checkBoxPagamento.Location = new System.Drawing.Point(272, 263);
+            this.checkBoxPagamento.Name = "checkBoxPagamento";
+            this.checkBoxPagamento.Size = new System.Drawing.Size(15, 14);
+            this.checkBoxPagamento.TabIndex = 67;
+            this.checkBoxPagamento.UseVisualStyleBackColor = true;
+            this.checkBoxPagamento.CheckedChanged += new System.EventHandler(this.checkBoxPagamento_CheckedChanged);
+            // 
             // modalAdicionarLancamentoFinanceiro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(329, 410);
+            this.ClientSize = new System.Drawing.Size(329, 485);
+            this.Controls.Add(this.checkBoxPagamento);
+            this.Controls.Add(this.maskDataPagamentoLancamento);
+            this.Controls.Add(this.lblDataPagamento);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.maskDataVencimentoLancamento);
             this.Controls.Add(this.lblFiltrarDataNascimentoCliente);
             this.Controls.Add(this.label1);
@@ -317,5 +369,9 @@
         private System.Windows.Forms.TextBox textBoxCategoriaLancamento;
         private System.Windows.Forms.Label lblFiltrarDataNascimentoCliente;
         private System.Windows.Forms.MaskedTextBox maskDataVencimentoLancamento;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblDataPagamento;
+        private System.Windows.Forms.MaskedTextBox maskDataPagamentoLancamento;
+        private System.Windows.Forms.CheckBox checkBoxPagamento;
     }
 }

@@ -9,6 +9,7 @@ using System.Linq;
 using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Controls;
 using System.Windows.Forms;
 using System.Windows.Forms.VisualStyles;
 using System.Windows.Markup;
@@ -33,8 +34,10 @@ namespace Inovaclinica
             tabPage1.Text = "Informações";
             tabPage2.Text = "Orçamentos";
             tabPage3.Text = "Agendamentos";
+            tabPage4.Text = "Ficha Financeira";
             CarregarAgendamentosCliente(clientID);
             CarregarOrcamentosCliente(clientID);
+            CarregarFinanceiroCliente(clientID);
             CustomizeDataGridView();
         }
 
@@ -208,6 +211,65 @@ namespace Inovaclinica
             }
         }
 
+        private void CarregarFinanceiroCliente(string clienteID)
+        {
+            // Obtém a string de conexão a partir do App.config
+            string connectionString = ConfigurationManager.ConnectionStrings["InovaclinicaConnectionString"].ConnectionString;
+
+            // Query SQL para buscar os dados da tabela 'Produtos'
+            string query = @"
+            select 
+                F.Id as [Código],
+                F.Valor as [Valor Total],
+                AG.[Status] as [Status do Agendamento],
+                F.[Status] as [Status de Pagamento],
+                F.DataPagamento as [Data de Pagamento],
+                F.DataVencimento as [Data de Vencimento],
+                AG.DataHora as [Data da Consulta]
+            from 
+                Financeiro as F 
+            inner join Agendamentos as AG on F.AgendamentoID = AG.AgendamentoID 
+            inner join Clientes as C on C.ClienteID = AG.ClienteID 
+            where 
+                C.ClienteID = @ClienteID
+            order by
+                F.DataVencimento asc";
+
+
+            // Usa SqlConnection e SqlDataAdapter para preencher o DataGridView
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                try
+                {
+                    // Abre a conexão
+                    connection.Open();
+
+                    // SqlCommand para executar a consulta com parâmetros
+                    SqlCommand command = new SqlCommand(query, connection);
+                    command.Parameters.AddWithValue("@ClienteID", clienteID);  // Agora, o comando usa o parâmetro corretamente
+
+                    // SqlDataAdapter para preencher os dados
+                    SqlDataAdapter dataAdapter = new SqlDataAdapter(command); // Usando o command aqui para garantir que os parâmetros sejam passados
+
+                    // Cria um DataTable para armazenar os dados
+                    DataTable dataTable = new DataTable();
+
+                    // Preenche o DataTable com os dados retornados da consulta
+                    dataAdapter.Fill(dataTable);
+
+                    // Define a fonte de dados do DataGridView como o DataTable
+                    dataGridFinanceiroCliente.DataSource = dataTable;
+
+                    //ApplyRowColors();
+                }
+                catch (Exception ex)
+                {
+                    // Exibe uma mensagem de erro caso ocorra uma exceção
+                    MessageBox.Show($"Erro ao carregar dados: {ex.Message}");
+                }
+            }
+        }
+
         private void CustomizeDataGridView()
         {
             // Cores
@@ -287,6 +349,42 @@ namespace Inovaclinica
 
             // Ação necessário para conseguir selecionar a linha para visualização dos clientes
             dataGridOrcamentosCliente.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+
+            /// DATA GRID Financeiro
+
+            // Aplicando as cores
+            dataGridFinanceiroCliente.ColumnHeadersDefaultCellStyle.BackColor = headerColor;
+            dataGridFinanceiroCliente.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+            dataGridFinanceiroCliente.RowTemplate.DefaultCellStyle.BackColor = rowColor1; // Cor padrão para todas as linhas
+            dataGridFinanceiroCliente.AlternatingRowsDefaultCellStyle.BackColor = rowColor2; // Cor alternada para linhas pares
+            dataGridFinanceiroCliente.DefaultCellStyle.SelectionBackColor = selectionBackColor;
+            dataGridFinanceiroCliente.DefaultCellStyle.SelectionForeColor = selectionForeColor;
+            dataGridFinanceiroCliente.GridColor = gridColor;
+
+            // Fontes
+            dataGridFinanceiroCliente.Font = new Font("Arial", 10F); // Aumentei o tamanho da fonte para melhor legibilidade
+            dataGridFinanceiroCliente.ColumnHeadersDefaultCellStyle.Font = new Font("Arial", 10F, FontStyle.Bold);
+
+            // Layout
+            dataGridFinanceiroCliente.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridFinanceiroCliente.Dock = DockStyle.Fill; // Ocupa todo o espaço disponível
+            dataGridFinanceiroCliente.RowHeadersVisible = false;
+            dataGridFinanceiroCliente.EnableHeadersVisualStyles = false;
+            dataGridFinanceiroCliente.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            dataGridFinanceiroCliente.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
+            dataGridFinanceiroCliente.BackgroundColor = SystemColors.Control;
+            dataGridFinanceiroCliente.RowTemplate.Height = 40;
+
+            // Impede a alteração no layout do datagrid
+
+            dataGridFinanceiroCliente.AllowUserToAddRows = false;
+            dataGridFinanceiroCliente.AllowUserToDeleteRows = false;
+            dataGridFinanceiroCliente.AllowUserToOrderColumns = false;
+            dataGridFinanceiroCliente.AllowUserToResizeRows = false;
+            dataGridFinanceiroCliente.AllowUserToResizeColumns = false;
+
+            // Ação necessário para conseguir selecionar a linha para visualização dos clientes
+            dataGridFinanceiroCliente.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
 
         }
 
