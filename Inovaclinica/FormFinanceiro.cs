@@ -192,11 +192,11 @@ namespace Inovaclinica
                 string tipo = Convert.ToString(DataGridFinanceiro.Rows[e.RowIndex].Cells["Tipo"].Value);
                 if (tipo == "Entrada")
                 {
-                    e.Value = Image.FromFile(@"C:\Users\jeang\Source\Repos\Inovaclinica\Inovaclinica\Resources\seta-para-cima-preenchida24.png");
+                    //e.Value = Image.FromFile(@"C:\Users\jeang\Source\Repos\Inovaclinica\Inovaclinica\Resources\seta-para-cima-preenchida24.png");
                 }
                 else if (tipo == "Saída")
                 {
-                    e.Value = Image.FromFile(@"C:\Users\jeang\Source\Repos\Inovaclinica\Inovaclinica\Resources\seta-para-baixo-preenchida24.png");
+                   // e.Value = Image.FromFile(@"C:\Users\jeang\Source\Repos\Inovaclinica\Inovaclinica\Resources\seta-para-baixo-preenchida24.png");
                 }
             }
         }

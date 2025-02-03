@@ -19,6 +19,9 @@ namespace Inovaclinica {
             this.Load += new System.EventHandler(this.FormAgendamento_Load);
             dataGridViewCalendarioProcedimento.CellClick += DataGridViewCalendarioProcedimento_CellClick; // Adicionar o evento de clique
             string dataAtual = DateTime.Now.ToString("yyyy-MM-dd");
+            string dataParaExibir = DateTime.Now.ToString("dd-MM-yyyy"); // Formato usuário
+            // Exibir no label de seleção
+            lblDetalhesDiaSelecionado.Text = $"Agendamentos do dia: {dataParaExibir}";
             LoadData(dataAtual);
             CustomizeDataGridView();
         }
@@ -224,7 +227,7 @@ namespace Inovaclinica {
             c.Telefone AS [Telefone], 
             a.DataHora AS [Data e Hora], 
             a.Status AS [Status], 
-            ISNULL((SELECT SUM(ai.Quantidade) FROM dbo.Agendamento_Itens ai WHERE ai.AgendamentoID = a.AgendamentoID AND ai.Tipo = 'Servico'), 0) AS [Quantidade de Procedimentos], 
+            ISNULL((SELECT SUM(ai.Quantidade) FROM dbo.Agendamento_Itens ai WHERE ai.AgendamentoID = a.AgendamentoID AND ai.Tipo = 'Procedimento'), 0) AS [Quantidade de Procedimentos], 
             ISNULL((SELECT SUM(ai.Quantidade) FROM dbo.Agendamento_Itens ai WHERE ai.AgendamentoID = a.AgendamentoID AND ai.Tipo = 'Produto'), 0) AS [Quantidade de Produtos], 
             o.ValorTotal AS [Valor Total] 
         FROM 

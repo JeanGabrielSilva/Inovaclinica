@@ -33,10 +33,6 @@
             this.btnProximoMes = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.dataGridViewAgendamentos = new System.Windows.Forms.DataGridView();
-            this.panelTitulo = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.lblDetalhesDiaSelecionado = new System.Windows.Forms.Label();
             this.panelRodape = new System.Windows.Forms.Panel();
             this.tablePanelMenuClientes = new System.Windows.Forms.TableLayoutPanel();
             this.btnSalvarAlteracaoLancamento = new System.Windows.Forms.PictureBox();
@@ -49,15 +45,16 @@
             this.btnAbrirModalVisualizarProdutos = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.panelTitulo = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.lblDetalhesDiaSelecionado = new System.Windows.Forms.Label();
+            this.dataGridViewAgendamentos = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCalendarioProcedimento)).BeginInit();
             this.tableLayoutPanel2.SuspendLayout();
             this.panel2.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAgendamentos)).BeginInit();
-            this.panelTitulo.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panelRodape.SuspendLayout();
             this.tablePanelMenuClientes.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnSalvarAlteracaoLancamento)).BeginInit();
@@ -65,6 +62,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.atualizarGridProdutos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnAbrirModalVisualizarProdutos)).BeginInit();
+            this.panelTitulo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAgendamentos)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridViewCalendarioProcedimento
@@ -73,7 +73,7 @@
             this.dataGridViewCalendarioProcedimento.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridViewCalendarioProcedimento.Location = new System.Drawing.Point(0, 0);
             this.dataGridViewCalendarioProcedimento.Name = "dataGridViewCalendarioProcedimento";
-            this.dataGridViewCalendarioProcedimento.Size = new System.Drawing.Size(670, 569);
+            this.dataGridViewCalendarioProcedimento.Size = new System.Drawing.Size(670, 693);
             this.dataGridViewCalendarioProcedimento.TabIndex = 0;
             // 
             // tableLayoutPanel2
@@ -167,7 +167,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(3, 63);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(670, 569);
+            this.panel1.Size = new System.Drawing.Size(670, 693);
             this.panel1.TabIndex = 0;
             // 
             // tableLayoutPanel3
@@ -186,48 +186,6 @@
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 75F));
             this.tableLayoutPanel3.Size = new System.Drawing.Size(878, 759);
             this.tableLayoutPanel3.TabIndex = 27;
-            // 
-            // dataGridViewAgendamentos
-            // 
-            this.dataGridViewAgendamentos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewAgendamentos.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridViewAgendamentos.Location = new System.Drawing.Point(3, 63);
-            this.dataGridViewAgendamentos.Name = "dataGridViewAgendamentos";
-            this.dataGridViewAgendamentos.Size = new System.Drawing.Size(872, 618);
-            this.dataGridViewAgendamentos.TabIndex = 0;
-            // 
-            // panelTitulo
-            // 
-            this.panelTitulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(94)))), ((int)(((byte)(220)))));
-            this.panelTitulo.Controls.Add(this.pictureBox1);
-            this.panelTitulo.Controls.Add(this.lblDetalhesDiaSelecionado);
-            this.panelTitulo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelTitulo.Location = new System.Drawing.Point(3, 3);
-            this.panelTitulo.Name = "panelTitulo";
-            this.panelTitulo.Size = new System.Drawing.Size(872, 54);
-            this.panelTitulo.TabIndex = 71;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(756, 5);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(48, 42);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
-            // 
-            // lblDetalhesDiaSelecionado
-            // 
-            this.lblDetalhesDiaSelecionado.AutoSize = true;
-            this.lblDetalhesDiaSelecionado.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
-            this.lblDetalhesDiaSelecionado.ForeColor = System.Drawing.Color.White;
-            this.lblDetalhesDiaSelecionado.Location = new System.Drawing.Point(491, 19);
-            this.lblDetalhesDiaSelecionado.Name = "lblDetalhesDiaSelecionado";
-            this.lblDetalhesDiaSelecionado.Size = new System.Drawing.Size(266, 19);
-            this.lblDetalhesDiaSelecionado.TabIndex = 0;
-            this.lblDetalhesDiaSelecionado.Text = "Agendamentos do dia: 31/01/2025";
-            this.lblDetalhesDiaSelecionado.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panelRodape
             // 
@@ -399,6 +357,49 @@
             this.label4.Text = "Confirmar";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // panelTitulo
+            // 
+            this.panelTitulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(94)))), ((int)(((byte)(220)))));
+            this.panelTitulo.Controls.Add(this.pictureBox1);
+            this.panelTitulo.Controls.Add(this.lblDetalhesDiaSelecionado);
+            this.panelTitulo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelTitulo.Location = new System.Drawing.Point(3, 3);
+            this.panelTitulo.Name = "panelTitulo";
+            this.panelTitulo.Size = new System.Drawing.Size(872, 54);
+            this.panelTitulo.TabIndex = 71;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(756, 5);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(48, 42);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
+            // 
+            // lblDetalhesDiaSelecionado
+            // 
+            this.lblDetalhesDiaSelecionado.AutoSize = true;
+            this.lblDetalhesDiaSelecionado.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
+            this.lblDetalhesDiaSelecionado.ForeColor = System.Drawing.Color.White;
+            this.lblDetalhesDiaSelecionado.Location = new System.Drawing.Point(491, 19);
+            this.lblDetalhesDiaSelecionado.Name = "lblDetalhesDiaSelecionado";
+            this.lblDetalhesDiaSelecionado.Size = new System.Drawing.Size(186, 19);
+            this.lblDetalhesDiaSelecionado.TabIndex = 0;
+            this.lblDetalhesDiaSelecionado.Text = "Agendamentos do dia: ";
+            this.lblDetalhesDiaSelecionado.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // dataGridViewAgendamentos
+            // 
+            this.dataGridViewAgendamentos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewAgendamentos.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridViewAgendamentos.Location = new System.Drawing.Point(3, 63);
+            this.dataGridViewAgendamentos.Name = "dataGridViewAgendamentos";
+            this.dataGridViewAgendamentos.ReadOnly = true;
+            this.dataGridViewAgendamentos.Size = new System.Drawing.Size(872, 618);
+            this.dataGridViewAgendamentos.TabIndex = 0;
+            // 
             // FormAgendamento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -415,10 +416,6 @@
             this.tableLayoutPanel1.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.tableLayoutPanel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAgendamentos)).EndInit();
-            this.panelTitulo.ResumeLayout(false);
-            this.panelTitulo.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panelRodape.ResumeLayout(false);
             this.tablePanelMenuClientes.ResumeLayout(false);
             this.tablePanelMenuClientes.PerformLayout();
@@ -427,6 +424,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.atualizarGridProdutos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnAbrirModalVisualizarProdutos)).EndInit();
+            this.panelTitulo.ResumeLayout(false);
+            this.panelTitulo.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAgendamentos)).EndInit();
             this.ResumeLayout(false);
 
         }

@@ -20,6 +20,7 @@ namespace Inovaclinica {
             DataGridOrcamento.RowEnter += DataGridOrcamento_RowEnter;
             DataGridOrcamento.CellValueChanged += new DataGridViewCellEventHandler(DataGridOrcamento_CellValueChanged);
             DataGridOrcamento.CurrentCellDirtyStateChanged += new EventHandler(DataGridOrcamento_CurrentCellDirtyStateChanged);
+
         }
 
 
@@ -166,7 +167,7 @@ namespace Inovaclinica {
             string connectionString = ConfigurationManager.ConnectionStrings["InovaclinicaConnectionString"].ConnectionString;
 
             // Query SQL para buscar os dados da tabela 'Produtos'
-            string query = "Select O.OrcamentoID as [Código], C.Nome as [Nome], O.DataCriacao [Data de Criação], O.Status, O.ValorTotal as [Valor Total] from Orcamentos as O inner join Clientes as C on O.ClienteID = C.ClienteID";
+            string query = "Select O.OrcamentoID as [Código], C.Nome as [Nome], O.DataCriacao [Data de Criação], O.Status, O.ValorTotal as [Valor Total] from Orcamentos as O inner join Clientes as C on O.ClienteID = C.ClienteID where O.Status = 'Pendente'";
 
             // Usa SqlConnection e SqlDataAdapter para preencher o DataGridView
             using (SqlConnection connection = new SqlConnection(connectionString)) {
@@ -425,10 +426,24 @@ namespace Inovaclinica {
 
         private void btnAbrirModalAgendarOrcamento_Click(object sender, EventArgs e)
         {
-            modalAgendarOrcamento modalagendarorcamento = new modalAgendarOrcamento();
-            modalagendarorcamento.Text = "Adicionar Orçamento";
-            modalagendarorcamento.StartPosition = FormStartPosition.CenterParent;
-            modalagendarorcamento.ShowDialog();
+            if (DataGridOrcamento.SelectedRows.Count > 0)
+            {
+                var selectedRow = DataGridOrcamento.SelectedRows[0];
+                string orcamentoID = selectedRow.Cells["Código"].Value.ToString();
+                string nomeCliente = selectedRow.Cells["Nome"].Value.ToString();
+                string valorTotal = selectedRow.Cells["Valor Total"].Value.ToString();
+
+
+                modalAgendarOrcamento modalagendarorcamento = new modalAgendarOrcamento(this, orcamentoID, nomeCliente, valorTotal);
+                modalagendarorcamento.Text = "Adicionar Orçamento";
+                modalagendarorcamento.StartPosition = FormStartPosition.CenterParent;
+                modalagendarorcamento.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Selecione um cliente para visualizar.");
+            }
+            
         }
     }
 }

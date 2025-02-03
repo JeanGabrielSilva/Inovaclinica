@@ -31,21 +31,22 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(modalAgendarOrcamento));
             this.label1 = new System.Windows.Forms.Label();
             this.flowLayoutPanelHorarios = new System.Windows.Forms.FlowLayoutPanel();
+            this.panelDetalhes = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.dataValidadeProduto = new System.Windows.Forms.MaskedTextBox();
-            this.precoProduto = new System.Windows.Forms.NumericUpDown();
+            this.dataAgendamento = new System.Windows.Forms.MaskedTextBox();
+            this.lblValorTotal = new System.Windows.Forms.NumericUpDown();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
             this.btnCarregarHorariosDisponiveis = new System.Windows.Forms.Button();
-            this.panelDetalhes = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label5 = new System.Windows.Forms.Label();
+            this.lblNomeCliente = new System.Windows.Forms.Label();
             this.flowLayoutPanelHorarios.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.precoProduto)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panelDetalhes.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lblValorTotal)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -67,6 +68,37 @@
             this.flowLayoutPanelHorarios.Name = "flowLayoutPanelHorarios";
             this.flowLayoutPanelHorarios.Size = new System.Drawing.Size(533, 154);
             this.flowLayoutPanelHorarios.TabIndex = 1;
+            // 
+            // panelDetalhes
+            // 
+            this.panelDetalhes.Controls.Add(this.label5);
+            this.panelDetalhes.Controls.Add(this.pictureBox1);
+            this.panelDetalhes.Location = new System.Drawing.Point(3, 3);
+            this.panelDetalhes.Name = "panelDetalhes";
+            this.panelDetalhes.Size = new System.Drawing.Size(525, 147);
+            this.panelDetalhes.TabIndex = 0;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Arial Black", 9F, System.Drawing.FontStyle.Bold);
+            this.label5.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.label5.Location = new System.Drawing.Point(106, 114);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(365, 17);
+            this.label5.TabIndex = 1;
+            this.label5.Text = "Selecione uma data para exibir os horários disponíveis";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(235, 25);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(92, 76);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // label2
             // 
@@ -90,35 +122,36 @@
             this.label3.TabIndex = 3;
             this.label3.Text = "Data do Agendamento:";
             // 
-            // dataValidadeProduto
+            // dataAgendamento
             // 
-            this.dataValidadeProduto.BackColor = System.Drawing.SystemColors.Window;
-            this.dataValidadeProduto.Font = new System.Drawing.Font("Arial Black", 9.5F, System.Drawing.FontStyle.Bold);
-            this.dataValidadeProduto.Location = new System.Drawing.Point(199, 57);
-            this.dataValidadeProduto.Mask = "00/00/0000";
-            this.dataValidadeProduto.Name = "dataValidadeProduto";
-            this.dataValidadeProduto.Size = new System.Drawing.Size(86, 25);
-            this.dataValidadeProduto.TabIndex = 46;
+            this.dataAgendamento.BackColor = System.Drawing.SystemColors.Window;
+            this.dataAgendamento.Font = new System.Drawing.Font("Arial Black", 9.5F, System.Drawing.FontStyle.Bold);
+            this.dataAgendamento.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.dataAgendamento.Location = new System.Drawing.Point(199, 57);
+            this.dataAgendamento.Mask = "00/00/0000";
+            this.dataAgendamento.Name = "dataAgendamento";
+            this.dataAgendamento.Size = new System.Drawing.Size(86, 25);
+            this.dataAgendamento.TabIndex = 46;
             // 
-            // precoProduto
+            // lblValorTotal
             // 
-            this.precoProduto.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.precoProduto.DecimalPlaces = 2;
-            this.precoProduto.Font = new System.Drawing.Font("Arial Black", 11F, System.Drawing.FontStyle.Bold);
-            this.precoProduto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(95)))), ((int)(((byte)(95)))));
-            this.precoProduto.InterceptArrowKeys = false;
-            this.precoProduto.Location = new System.Drawing.Point(438, 58);
-            this.precoProduto.Maximum = new decimal(new int[] {
+            this.lblValorTotal.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.lblValorTotal.DecimalPlaces = 2;
+            this.lblValorTotal.Font = new System.Drawing.Font("Arial Black", 11F, System.Drawing.FontStyle.Bold);
+            this.lblValorTotal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(95)))), ((int)(((byte)(95)))));
+            this.lblValorTotal.InterceptArrowKeys = false;
+            this.lblValorTotal.Location = new System.Drawing.Point(438, 58);
+            this.lblValorTotal.Maximum = new decimal(new int[] {
             99999,
             0,
             0,
             0});
-            this.precoProduto.Name = "precoProduto";
-            this.precoProduto.Size = new System.Drawing.Size(112, 24);
-            this.precoProduto.TabIndex = 50;
-            this.precoProduto.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.precoProduto.ThousandsSeparator = true;
-            this.precoProduto.UpDownAlign = System.Windows.Forms.LeftRightAlignment.Left;
+            this.lblValorTotal.Name = "lblValorTotal";
+            this.lblValorTotal.Size = new System.Drawing.Size(112, 24);
+            this.lblValorTotal.TabIndex = 50;
+            this.lblValorTotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.lblValorTotal.ThousandsSeparator = true;
+            this.lblValorTotal.UpDownAlign = System.Windows.Forms.LeftRightAlignment.Left;
             // 
             // pictureBox3
             // 
@@ -161,47 +194,28 @@
             this.btnCarregarHorariosDisponiveis.UseVisualStyleBackColor = false;
             this.btnCarregarHorariosDisponiveis.Click += new System.EventHandler(this.btnCarregarHorariosDisponiveis_Click);
             // 
-            // panelDetalhes
+            // lblNomeCliente
             // 
-            this.panelDetalhes.Controls.Add(this.label5);
-            this.panelDetalhes.Controls.Add(this.pictureBox1);
-            this.panelDetalhes.Location = new System.Drawing.Point(3, 3);
-            this.panelDetalhes.Name = "panelDetalhes";
-            this.panelDetalhes.Size = new System.Drawing.Size(525, 147);
-            this.panelDetalhes.TabIndex = 0;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(235, 25);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(92, 76);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Arial Black", 9F, System.Drawing.FontStyle.Bold);
-            this.label5.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.label5.Location = new System.Drawing.Point(106, 114);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(365, 17);
-            this.label5.TabIndex = 1;
-            this.label5.Text = "Selecione uma data para exibir os horários disponíveis";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblNomeCliente.AutoSize = true;
+            this.lblNomeCliente.Font = new System.Drawing.Font("Arial Black", 10F, System.Drawing.FontStyle.Bold);
+            this.lblNomeCliente.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.lblNomeCliente.Location = new System.Drawing.Point(159, 18);
+            this.lblNomeCliente.Name = "lblNomeCliente";
+            this.lblNomeCliente.Size = new System.Drawing.Size(53, 19);
+            this.lblNomeCliente.TabIndex = 54;
+            this.lblNomeCliente.Text = "Nome";
             // 
             // modalAgendarOrcamento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(571, 369);
+            this.Controls.Add(this.lblNomeCliente);
             this.Controls.Add(this.btnCarregarHorariosDisponiveis);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.pictureBox3);
-            this.Controls.Add(this.precoProduto);
-            this.Controls.Add(this.dataValidadeProduto);
+            this.Controls.Add(this.lblValorTotal);
+            this.Controls.Add(this.dataAgendamento);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -209,11 +223,11 @@
             this.Name = "modalAgendarOrcamento";
             this.Text = "modalAgendarOrcamento";
             this.flowLayoutPanelHorarios.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.precoProduto)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.panelDetalhes.ResumeLayout(false);
             this.panelDetalhes.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lblValorTotal)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -225,13 +239,14 @@
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanelHorarios;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.MaskedTextBox dataValidadeProduto;
-        private System.Windows.Forms.NumericUpDown precoProduto;
+        private System.Windows.Forms.MaskedTextBox dataAgendamento;
+        private System.Windows.Forms.NumericUpDown lblValorTotal;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btnCarregarHorariosDisponiveis;
         private System.Windows.Forms.Panel panelDetalhes;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label lblNomeCliente;
     }
 }
