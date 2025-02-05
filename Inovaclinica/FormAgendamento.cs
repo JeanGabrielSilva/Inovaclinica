@@ -320,5 +320,26 @@ namespace Inovaclinica {
             // Ação necessário para conseguir selecionar a linha para visualização dos clientes
             dataGridViewAgendamentos.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
         }
+
+        private void btnSalvarAlteracaoLancamento_Click(object sender, EventArgs e) {
+
+            if (dataGridViewAgendamentos.SelectedRows.Count > 0) {
+                var selectedRow = dataGridViewAgendamentos.SelectedRows[0];
+                string AgendamentoID = selectedRow.Cells["Código"].Value.ToString();
+
+
+                modalConfirmarAgendamento modalconfirmaragendamento = new modalConfirmarAgendamento(this, AgendamentoID);
+                modalconfirmaragendamento.Text = "Visualizar Agendamento";
+                modalconfirmaragendamento.StartPosition = FormStartPosition.CenterParent;
+                modalconfirmaragendamento.ShowDialog();
+            } else {
+                MessageBox.Show("Selecione um agendamento para visualizar.");
+            }
+
+        }
+
+        private void atualizarGridAgendamentos_Click(object sender, EventArgs e) {
+            
+        }
     }
 }

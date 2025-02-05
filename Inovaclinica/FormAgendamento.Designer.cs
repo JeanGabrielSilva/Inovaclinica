@@ -40,7 +40,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.atualizarGridProdutos = new System.Windows.Forms.PictureBox();
+            this.atualizarGridAgendamentos = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
             this.btnAbrirModalVisualizarProdutos = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -60,7 +60,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnSalvarAlteracaoLancamento)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.atualizarGridProdutos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.atualizarGridAgendamentos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnAbrirModalVisualizarProdutos)).BeginInit();
             this.panelTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -211,7 +211,7 @@
             this.tablePanelMenuClientes.Controls.Add(this.label1, 3, 1);
             this.tablePanelMenuClientes.Controls.Add(this.label3, 4, 1);
             this.tablePanelMenuClientes.Controls.Add(this.pictureBox3, 3, 0);
-            this.tablePanelMenuClientes.Controls.Add(this.atualizarGridProdutos, 4, 0);
+            this.tablePanelMenuClientes.Controls.Add(this.atualizarGridAgendamentos, 4, 0);
             this.tablePanelMenuClientes.Controls.Add(this.label5, 2, 1);
             this.tablePanelMenuClientes.Controls.Add(this.btnAbrirModalVisualizarProdutos, 2, 0);
             this.tablePanelMenuClientes.Controls.Add(this.label2, 1, 1);
@@ -239,6 +239,7 @@
             this.btnSalvarAlteracaoLancamento.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.btnSalvarAlteracaoLancamento.TabIndex = 15;
             this.btnSalvarAlteracaoLancamento.TabStop = false;
+            this.btnSalvarAlteracaoLancamento.Click += new System.EventHandler(this.btnSalvarAlteracaoLancamento_Click);
             // 
             // pictureBox2
             // 
@@ -292,18 +293,19 @@
             this.pictureBox3.TabIndex = 0;
             this.pictureBox3.TabStop = false;
             // 
-            // atualizarGridProdutos
+            // atualizarGridAgendamentos
             // 
-            this.atualizarGridProdutos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(94)))), ((int)(((byte)(220)))));
-            this.atualizarGridProdutos.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.atualizarGridProdutos.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.atualizarGridProdutos.Image = ((System.Drawing.Image)(resources.GetObject("atualizarGridProdutos.Image")));
-            this.atualizarGridProdutos.Location = new System.Drawing.Point(347, 3);
-            this.atualizarGridProdutos.Name = "atualizarGridProdutos";
-            this.atualizarGridProdutos.Size = new System.Drawing.Size(81, 46);
-            this.atualizarGridProdutos.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.atualizarGridProdutos.TabIndex = 4;
-            this.atualizarGridProdutos.TabStop = false;
+            this.atualizarGridAgendamentos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(94)))), ((int)(((byte)(220)))));
+            this.atualizarGridAgendamentos.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.atualizarGridAgendamentos.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.atualizarGridAgendamentos.Image = ((System.Drawing.Image)(resources.GetObject("atualizarGridAgendamentos.Image")));
+            this.atualizarGridAgendamentos.Location = new System.Drawing.Point(347, 3);
+            this.atualizarGridAgendamentos.Name = "atualizarGridAgendamentos";
+            this.atualizarGridAgendamentos.Size = new System.Drawing.Size(81, 46);
+            this.atualizarGridAgendamentos.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.atualizarGridAgendamentos.TabIndex = 4;
+            this.atualizarGridAgendamentos.TabStop = false;
+            this.atualizarGridAgendamentos.Click += new System.EventHandler(this.atualizarGridAgendamentos_Click);
             // 
             // label5
             // 
@@ -422,7 +424,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnSalvarAlteracaoLancamento)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.atualizarGridProdutos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.atualizarGridAgendamentos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnAbrirModalVisualizarProdutos)).EndInit();
             this.panelTitulo.ResumeLayout(false);
             this.panelTitulo.PerformLayout();
@@ -454,7 +456,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.PictureBox atualizarGridProdutos;
+        private System.Windows.Forms.PictureBox atualizarGridAgendamentos;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.PictureBox btnAbrirModalVisualizarProdutos;
         private System.Windows.Forms.Label label2;

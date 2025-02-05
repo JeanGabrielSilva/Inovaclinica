@@ -68,9 +68,6 @@ namespace Inovaclinica {
                 SqlDataReader reader = command.ExecuteReader();
                 _formFinanceiro.LoadData();
                 this.Close();
-                
-
-
             }
             
 
