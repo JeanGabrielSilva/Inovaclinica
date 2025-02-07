@@ -107,7 +107,7 @@
             this.btnFecharModalConfirmarAgendamento.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(94)))), ((int)(((byte)(220)))));
             this.btnFecharModalConfirmarAgendamento.Font = new System.Drawing.Font("Arial Black", 9F, System.Drawing.FontStyle.Bold);
             this.btnFecharModalConfirmarAgendamento.ForeColor = System.Drawing.Color.White;
-            this.btnFecharModalConfirmarAgendamento.Location = new System.Drawing.Point(273, 288);
+            this.btnFecharModalConfirmarAgendamento.Location = new System.Drawing.Point(273, 232);
             this.btnFecharModalConfirmarAgendamento.Name = "btnFecharModalConfirmarAgendamento";
             this.btnFecharModalConfirmarAgendamento.Size = new System.Drawing.Size(122, 33);
             this.btnFecharModalConfirmarAgendamento.TabIndex = 63;
@@ -120,7 +120,7 @@
             this.btnAceitarConfirmarAgendamento.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(94)))), ((int)(((byte)(220)))));
             this.btnAceitarConfirmarAgendamento.Font = new System.Drawing.Font("Arial Black", 9F, System.Drawing.FontStyle.Bold);
             this.btnAceitarConfirmarAgendamento.ForeColor = System.Drawing.Color.White;
-            this.btnAceitarConfirmarAgendamento.Location = new System.Drawing.Point(128, 288);
+            this.btnAceitarConfirmarAgendamento.Location = new System.Drawing.Point(128, 232);
             this.btnAceitarConfirmarAgendamento.Name = "btnAceitarConfirmarAgendamento";
             this.btnAceitarConfirmarAgendamento.Size = new System.Drawing.Size(119, 33);
             this.btnAceitarConfirmarAgendamento.TabIndex = 62;
@@ -165,7 +165,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(511, 345);
+            this.ClientSize = new System.Drawing.Size(511, 290);
             this.Controls.Add(this.lblTelefoneCliente);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.lblValorAgendamento);

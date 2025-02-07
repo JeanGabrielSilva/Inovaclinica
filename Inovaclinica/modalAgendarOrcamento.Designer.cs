@@ -59,6 +59,7 @@
             this.label1.Size = new System.Drawing.Size(215, 26);
             this.label1.TabIndex = 0;
             this.label1.Text = "Horários Disponíveis";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // flowLayoutPanelHorarios
             // 
@@ -68,6 +69,7 @@
             this.flowLayoutPanelHorarios.Name = "flowLayoutPanelHorarios";
             this.flowLayoutPanelHorarios.Size = new System.Drawing.Size(533, 154);
             this.flowLayoutPanelHorarios.TabIndex = 1;
+            this.flowLayoutPanelHorarios.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanelHorarios_Paint);
             // 
             // panelDetalhes
             // 
@@ -110,6 +112,7 @@
             this.label2.Size = new System.Drawing.Size(140, 19);
             this.label2.TabIndex = 2;
             this.label2.Text = "Nome do Cliente:";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label3
             // 
@@ -121,6 +124,7 @@
             this.label3.Size = new System.Drawing.Size(180, 19);
             this.label3.TabIndex = 3;
             this.label3.Text = "Data do Agendamento:";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // dataAgendamento
             // 
@@ -132,6 +136,7 @@
             this.dataAgendamento.Name = "dataAgendamento";
             this.dataAgendamento.Size = new System.Drawing.Size(86, 25);
             this.dataAgendamento.TabIndex = 46;
+            this.dataAgendamento.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.dataAgendamento_MaskInputRejected);
             // 
             // lblValorTotal
             // 
@@ -152,6 +157,7 @@
             this.lblValorTotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.lblValorTotal.ThousandsSeparator = true;
             this.lblValorTotal.UpDownAlign = System.Windows.Forms.LeftRightAlignment.Left;
+            this.lblValorTotal.ValueChanged += new System.EventHandler(this.lblValorTotal_ValueChanged);
             // 
             // pictureBox3
             // 
@@ -163,6 +169,7 @@
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox3.TabIndex = 51;
             this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
             // label4
             // 
@@ -174,6 +181,7 @@
             this.label4.Size = new System.Drawing.Size(96, 19);
             this.label4.TabIndex = 52;
             this.label4.Text = "Valor Total:";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // btnCarregarHorariosDisponiveis
             // 
@@ -204,6 +212,7 @@
             this.lblNomeCliente.Size = new System.Drawing.Size(53, 19);
             this.lblNomeCliente.TabIndex = 54;
             this.lblNomeCliente.Text = "Nome";
+            this.lblNomeCliente.Click += new System.EventHandler(this.lblNomeCliente_Click);
             // 
             // modalAgendarOrcamento
             // 
@@ -222,6 +231,7 @@
             this.Controls.Add(this.flowLayoutPanelHorarios);
             this.Name = "modalAgendarOrcamento";
             this.Text = "modalAgendarOrcamento";
+            this.Load += new System.EventHandler(this.modalAgendarOrcamento_Load);
             this.flowLayoutPanelHorarios.ResumeLayout(false);
             this.panelDetalhes.ResumeLayout(false);
             this.panelDetalhes.PerformLayout();

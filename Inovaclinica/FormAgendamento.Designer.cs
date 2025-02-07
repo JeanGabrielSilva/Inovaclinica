@@ -39,10 +39,10 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.btnCancelarAgendamento = new System.Windows.Forms.PictureBox();
             this.atualizarGridAgendamentos = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.btnAbrirModalVisualizarProdutos = new System.Windows.Forms.PictureBox();
+            this.btnAbrirModalReagendarAgendamento = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.panelTitulo = new System.Windows.Forms.Panel();
@@ -59,9 +59,9 @@
             this.tablePanelMenuClientes.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnSalvarAlteracaoLancamento)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnCancelarAgendamento)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.atualizarGridAgendamentos)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnAbrirModalVisualizarProdutos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnAbrirModalReagendarAgendamento)).BeginInit();
             this.panelTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAgendamentos)).BeginInit();
@@ -210,10 +210,10 @@
             this.tablePanelMenuClientes.Controls.Add(this.pictureBox2, 1, 0);
             this.tablePanelMenuClientes.Controls.Add(this.label1, 3, 1);
             this.tablePanelMenuClientes.Controls.Add(this.label3, 4, 1);
-            this.tablePanelMenuClientes.Controls.Add(this.pictureBox3, 3, 0);
+            this.tablePanelMenuClientes.Controls.Add(this.btnCancelarAgendamento, 3, 0);
             this.tablePanelMenuClientes.Controls.Add(this.atualizarGridAgendamentos, 4, 0);
             this.tablePanelMenuClientes.Controls.Add(this.label5, 2, 1);
-            this.tablePanelMenuClientes.Controls.Add(this.btnAbrirModalVisualizarProdutos, 2, 0);
+            this.tablePanelMenuClientes.Controls.Add(this.btnAbrirModalReagendarAgendamento, 2, 0);
             this.tablePanelMenuClientes.Controls.Add(this.label2, 1, 1);
             this.tablePanelMenuClientes.Controls.Add(this.label4, 0, 1);
             this.tablePanelMenuClientes.Font = new System.Drawing.Font("Arial", 9.5F, System.Drawing.FontStyle.Bold);
@@ -280,18 +280,19 @@
             this.label3.Text = "Atualizar";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // pictureBox3
+            // btnCancelarAgendamento
             // 
-            this.pictureBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(94)))), ((int)(((byte)(220)))));
-            this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(261, 3);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(80, 46);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox3.TabIndex = 0;
-            this.pictureBox3.TabStop = false;
+            this.btnCancelarAgendamento.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(94)))), ((int)(((byte)(220)))));
+            this.btnCancelarAgendamento.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCancelarAgendamento.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnCancelarAgendamento.Image = ((System.Drawing.Image)(resources.GetObject("btnCancelarAgendamento.Image")));
+            this.btnCancelarAgendamento.Location = new System.Drawing.Point(261, 3);
+            this.btnCancelarAgendamento.Name = "btnCancelarAgendamento";
+            this.btnCancelarAgendamento.Size = new System.Drawing.Size(80, 46);
+            this.btnCancelarAgendamento.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.btnCancelarAgendamento.TabIndex = 0;
+            this.btnCancelarAgendamento.TabStop = false;
+            this.btnCancelarAgendamento.Click += new System.EventHandler(this.btnCancelarAgendamento_Click);
             // 
             // atualizarGridAgendamentos
             // 
@@ -320,18 +321,19 @@
             this.label5.Text = "Reagendar";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // btnAbrirModalVisualizarProdutos
+            // btnAbrirModalReagendarAgendamento
             // 
-            this.btnAbrirModalVisualizarProdutos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(94)))), ((int)(((byte)(220)))));
-            this.btnAbrirModalVisualizarProdutos.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAbrirModalVisualizarProdutos.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnAbrirModalVisualizarProdutos.Image = ((System.Drawing.Image)(resources.GetObject("btnAbrirModalVisualizarProdutos.Image")));
-            this.btnAbrirModalVisualizarProdutos.Location = new System.Drawing.Point(175, 3);
-            this.btnAbrirModalVisualizarProdutos.Name = "btnAbrirModalVisualizarProdutos";
-            this.btnAbrirModalVisualizarProdutos.Size = new System.Drawing.Size(80, 46);
-            this.btnAbrirModalVisualizarProdutos.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.btnAbrirModalVisualizarProdutos.TabIndex = 8;
-            this.btnAbrirModalVisualizarProdutos.TabStop = false;
+            this.btnAbrirModalReagendarAgendamento.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(94)))), ((int)(((byte)(220)))));
+            this.btnAbrirModalReagendarAgendamento.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAbrirModalReagendarAgendamento.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnAbrirModalReagendarAgendamento.Image = ((System.Drawing.Image)(resources.GetObject("btnAbrirModalReagendarAgendamento.Image")));
+            this.btnAbrirModalReagendarAgendamento.Location = new System.Drawing.Point(175, 3);
+            this.btnAbrirModalReagendarAgendamento.Name = "btnAbrirModalReagendarAgendamento";
+            this.btnAbrirModalReagendarAgendamento.Size = new System.Drawing.Size(80, 46);
+            this.btnAbrirModalReagendarAgendamento.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.btnAbrirModalReagendarAgendamento.TabIndex = 8;
+            this.btnAbrirModalReagendarAgendamento.TabStop = false;
+            this.btnAbrirModalReagendarAgendamento.Click += new System.EventHandler(this.btnAbrirModalReagendarAgendamento_Click);
             // 
             // label2
             // 
@@ -423,9 +425,9 @@
             this.tablePanelMenuClientes.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnSalvarAlteracaoLancamento)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnCancelarAgendamento)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.atualizarGridAgendamentos)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnAbrirModalVisualizarProdutos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnAbrirModalReagendarAgendamento)).EndInit();
             this.panelTitulo.ResumeLayout(false);
             this.panelTitulo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -455,10 +457,10 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox btnCancelarAgendamento;
         private System.Windows.Forms.PictureBox atualizarGridAgendamentos;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.PictureBox btnAbrirModalVisualizarProdutos;
+        private System.Windows.Forms.PictureBox btnAbrirModalReagendarAgendamento;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label4;
     }

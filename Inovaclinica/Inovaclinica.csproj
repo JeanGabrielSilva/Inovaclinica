@@ -133,6 +133,12 @@
     <Compile Include="modalAgendarOrcamento.Designer.cs">
       <DependentUpon>modalAgendarOrcamento.cs</DependentUpon>
     </Compile>
+    <Compile Include="modalCancelarAgendamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="modalCancelarAgendamento.Designer.cs">
+      <DependentUpon>modalCancelarAgendamento.cs</DependentUpon>
+    </Compile>
     <Compile Include="modalConfirmarAgendamento.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -180,6 +186,12 @@
     </Compile>
     <Compile Include="modalListarProduto.Designer.cs">
       <DependentUpon>modalListarProduto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="modalReagendarAgendamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="modalReagendarAgendamento.Designer.cs">
+      <DependentUpon>modalReagendarAgendamento.cs</DependentUpon>
     </Compile>
     <Compile Include="modalVisualizarClientes.cs">
       <SubType>Form</SubType>
@@ -270,6 +282,9 @@
     <EmbeddedResource Include="modalAgendarOrcamento.resx">
       <DependentUpon>modalAgendarOrcamento.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="modalCancelarAgendamento.resx">
+      <DependentUpon>modalCancelarAgendamento.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="modalConfirmarAgendamento.resx">
       <DependentUpon>modalConfirmarAgendamento.cs</DependentUpon>
     </EmbeddedResource>
@@ -290,6 +305,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="modalListarProduto.resx">
       <DependentUpon>modalListarProduto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="modalReagendarAgendamento.resx">
+      <DependentUpon>modalReagendarAgendamento.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="modalVisualizarClientes.resx">
       <DependentUpon>modalVisualizarClientes.cs</DependentUpon>

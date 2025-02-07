@@ -341,5 +341,43 @@ namespace Inovaclinica {
         private void atualizarGridAgendamentos_Click(object sender, EventArgs e) {
             
         }
+
+        private void btnCancelarAgendamento_Click(object sender, EventArgs e)
+        {
+            if (dataGridViewAgendamentos.SelectedRows.Count > 0)
+            {
+                var selectedRow = dataGridViewAgendamentos.SelectedRows[0];
+                string AgendamentoID = selectedRow.Cells["Código"].Value.ToString();
+
+
+                modalCancelarAgendamento modalcancelaragendamento = new modalCancelarAgendamento(this, AgendamentoID);
+                modalcancelaragendamento.Text = "Cancelar Agendamento";
+                modalcancelaragendamento.StartPosition = FormStartPosition.CenterParent;
+                modalcancelaragendamento.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Selecione um agendamento para cancelar.");
+            }
+        }
+
+        private void btnAbrirModalReagendarAgendamento_Click(object sender, EventArgs e)
+        {
+            if (dataGridViewAgendamentos.SelectedRows.Count > 0)
+            {
+                var selectedRow = dataGridViewAgendamentos.SelectedRows[0];
+                string AgendamentoID = selectedRow.Cells["Código"].Value.ToString();
+
+
+                modalReagendarAgendamento modalreagendaragendamento = new modalReagendarAgendamento(this, AgendamentoID);
+                modalreagendaragendamento.Text = "Cancelar Agendamento";
+                modalreagendaragendamento.StartPosition = FormStartPosition.CenterParent;
+                modalreagendaragendamento.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Selecione um agendamento para cancelar.");
+            }
+        }
     }
 }

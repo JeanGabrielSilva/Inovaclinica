@@ -271,6 +271,7 @@
             this.dataValidadeProduto.Location = new System.Drawing.Point(24, 202);
             this.dataValidadeProduto.Mask = "00/00/0000";
             this.dataValidadeProduto.Name = "dataValidadeProduto";
+            this.dataValidadeProduto.ReadOnly = true;
             this.dataValidadeProduto.Size = new System.Drawing.Size(79, 24);
             this.dataValidadeProduto.TabIndex = 45;
             // 

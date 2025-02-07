@@ -301,5 +301,55 @@ namespace Inovaclinica
                 MessageBox.Show("Formato de data inválido! Use o formato correto: dd/MM/yyyy", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void modalAgendarOrcamento_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblNomeCliente_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblValorTotal_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataAgendamento_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void flowLayoutPanelHorarios_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
