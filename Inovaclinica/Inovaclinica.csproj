@@ -193,6 +193,12 @@
     <Compile Include="modalReagendarAgendamento.Designer.cs">
       <DependentUpon>modalReagendarAgendamento.cs</DependentUpon>
     </Compile>
+    <Compile Include="modalVisualizarAgendamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="modalVisualizarAgendamento.Designer.cs">
+      <DependentUpon>modalVisualizarAgendamento.cs</DependentUpon>
+    </Compile>
     <Compile Include="modalVisualizarClientes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -308,6 +314,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="modalReagendarAgendamento.resx">
       <DependentUpon>modalReagendarAgendamento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="modalVisualizarAgendamento.resx">
+      <DependentUpon>modalVisualizarAgendamento.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="modalVisualizarClientes.resx">
       <DependentUpon>modalVisualizarClientes.cs</DependentUpon>

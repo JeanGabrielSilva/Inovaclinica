@@ -36,7 +36,7 @@
             this.panelRodape = new System.Windows.Forms.Panel();
             this.tablePanelMenuClientes = new System.Windows.Forms.TableLayoutPanel();
             this.btnSalvarAlteracaoLancamento = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.btnVisualizarAgendamento = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.btnCancelarAgendamento = new System.Windows.Forms.PictureBox();
@@ -58,7 +58,7 @@
             this.panelRodape.SuspendLayout();
             this.tablePanelMenuClientes.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnSalvarAlteracaoLancamento)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnVisualizarAgendamento)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCancelarAgendamento)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.atualizarGridAgendamentos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnAbrirModalReagendarAgendamento)).BeginInit();
@@ -207,7 +207,7 @@
             this.tablePanelMenuClientes.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tablePanelMenuClientes.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tablePanelMenuClientes.Controls.Add(this.btnSalvarAlteracaoLancamento, 0, 0);
-            this.tablePanelMenuClientes.Controls.Add(this.pictureBox2, 1, 0);
+            this.tablePanelMenuClientes.Controls.Add(this.btnVisualizarAgendamento, 1, 0);
             this.tablePanelMenuClientes.Controls.Add(this.label1, 3, 1);
             this.tablePanelMenuClientes.Controls.Add(this.label3, 4, 1);
             this.tablePanelMenuClientes.Controls.Add(this.btnCancelarAgendamento, 3, 0);
@@ -241,18 +241,19 @@
             this.btnSalvarAlteracaoLancamento.TabStop = false;
             this.btnSalvarAlteracaoLancamento.Click += new System.EventHandler(this.btnSalvarAlteracaoLancamento_Click);
             // 
-            // pictureBox2
+            // btnVisualizarAgendamento
             // 
-            this.pictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(94)))), ((int)(((byte)(220)))));
-            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(89, 3);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(80, 46);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox2.TabIndex = 10;
-            this.pictureBox2.TabStop = false;
+            this.btnVisualizarAgendamento.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(94)))), ((int)(((byte)(220)))));
+            this.btnVisualizarAgendamento.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnVisualizarAgendamento.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnVisualizarAgendamento.Image = ((System.Drawing.Image)(resources.GetObject("btnVisualizarAgendamento.Image")));
+            this.btnVisualizarAgendamento.Location = new System.Drawing.Point(89, 3);
+            this.btnVisualizarAgendamento.Name = "btnVisualizarAgendamento";
+            this.btnVisualizarAgendamento.Size = new System.Drawing.Size(80, 46);
+            this.btnVisualizarAgendamento.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.btnVisualizarAgendamento.TabIndex = 10;
+            this.btnVisualizarAgendamento.TabStop = false;
+            this.btnVisualizarAgendamento.Click += new System.EventHandler(this.btnVisualizarAgendamento_Click);
             // 
             // label1
             // 
@@ -424,7 +425,7 @@
             this.tablePanelMenuClientes.ResumeLayout(false);
             this.tablePanelMenuClientes.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnSalvarAlteracaoLancamento)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnVisualizarAgendamento)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCancelarAgendamento)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.atualizarGridAgendamentos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnAbrirModalReagendarAgendamento)).EndInit();
@@ -454,7 +455,7 @@
         private System.Windows.Forms.Panel panelRodape;
         private System.Windows.Forms.TableLayoutPanel tablePanelMenuClientes;
         private System.Windows.Forms.PictureBox btnSalvarAlteracaoLancamento;
-        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox btnVisualizarAgendamento;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox btnCancelarAgendamento;

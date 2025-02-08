@@ -276,7 +276,7 @@ namespace Inovaclinica {
             }
         }
 
-        private void CustomizeDataGridView()
+        public void CustomizeDataGridView()
         {
             // Cores
             Color headerColor = Color.FromArgb(45, 45, 45);
@@ -377,6 +377,22 @@ namespace Inovaclinica {
             else
             {
                 MessageBox.Show("Selecione um agendamento para cancelar.");
+            }
+        }
+
+        private void btnVisualizarAgendamento_Click(object sender, EventArgs e) {
+
+            if (dataGridViewAgendamentos.SelectedRows.Count > 0) {
+                var selectedRow = dataGridViewAgendamentos.SelectedRows[0];
+                string AgendamentoID = selectedRow.Cells["Código"].Value.ToString();
+
+
+                modalVisualizarAgendamento modalvisualizaragendamento = new modalVisualizarAgendamento(this, AgendamentoID);
+                modalvisualizaragendamento.Text = "Visualizar Agendamento";
+                modalvisualizaragendamento.StartPosition = FormStartPosition.CenterParent;
+                modalvisualizaragendamento.ShowDialog();
+            } else {
+                MessageBox.Show("Selecione um agendamento para visualizar.");
             }
         }
     }
