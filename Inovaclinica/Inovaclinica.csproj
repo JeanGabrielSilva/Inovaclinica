@@ -55,182 +55,183 @@
     <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FormAgendamento.cs">
+    <Compile Include="Domain\Repositories\IProdutoRepository.cs" />
+    <Compile Include="Presentation\Forms\Agendamento\FormAgendamento.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormAgendamento.Designer.cs">
+    <Compile Include="Presentation\Forms\Agendamento\FormAgendamento.Designer.cs">
       <DependentUpon>FormAgendamento.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormFinanceiro.cs">
+    <Compile Include="Presentation\Forms\Financeiro\FormFinanceiro.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormFinanceiro.Designer.cs">
+    <Compile Include="Presentation\Forms\Financeiro\FormFinanceiro.Designer.cs">
       <DependentUpon>FormFinanceiro.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormOrcamentos.cs">
+    <Compile Include="Presentation\Forms\Orcamento\FormOrcamentos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormOrcamentos.Designer.cs">
+    <Compile Include="Presentation\Forms\Orcamento\FormOrcamentos.Designer.cs">
       <DependentUpon>FormOrcamentos.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormProcedimentos.cs">
+    <Compile Include="Presentation\Forms\Procedimento\FormProcedimentos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormProcedimentos.Designer.cs">
+    <Compile Include="Presentation\Forms\Procedimento\FormProcedimentos.Designer.cs">
       <DependentUpon>FormProcedimentos.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormProdutos.cs">
+    <Compile Include="Presentation\Forms\Produtos\FormProdutos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormProdutos.Designer.cs">
+    <Compile Include="Presentation\Forms\Produtos\FormProdutos.Designer.cs">
       <DependentUpon>FormProdutos.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormClientes.cs">
+    <Compile Include="Presentation\Forms\Clientes\FormClientes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormClientes.Designer.cs">
+    <Compile Include="Presentation\Forms\Clientes\FormClientes.Designer.cs">
       <DependentUpon>FormClientes.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormTelaInicial.cs">
+    <Compile Include="Presentation\Forms\Tela Inicial\FormTelaInicial.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormTelaInicial.Designer.cs">
+    <Compile Include="Presentation\Forms\Tela Inicial\FormTelaInicial.Designer.cs">
       <DependentUpon>FormTelaInicial.cs</DependentUpon>
     </Compile>
-    <Compile Include="modalAdicionarCliente.cs">
+    <Compile Include="Presentation\Forms\Clientes\modalAdicionarCliente.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="modalAdicionarCliente.Designer.cs">
+    <Compile Include="Presentation\Forms\Clientes\modalAdicionarCliente.Designer.cs">
       <DependentUpon>modalAdicionarCliente.cs</DependentUpon>
     </Compile>
-    <Compile Include="modalAdicionarLancamentoFinanceiro.cs">
+    <Compile Include="Presentation\Forms\Financeiro\modalAdicionarLancamentoFinanceiro.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="modalAdicionarLancamentoFinanceiro.Designer.cs">
+    <Compile Include="Presentation\Forms\Financeiro\modalAdicionarLancamentoFinanceiro.Designer.cs">
       <DependentUpon>modalAdicionarLancamentoFinanceiro.cs</DependentUpon>
     </Compile>
-    <Compile Include="modalAdicionarOrcamento.cs">
+    <Compile Include="Presentation\Forms\Orcamento\modalAdicionarOrcamento.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="modalAdicionarOrcamento.Designer.cs">
+    <Compile Include="Presentation\Forms\Orcamento\modalAdicionarOrcamento.Designer.cs">
       <DependentUpon>modalAdicionarOrcamento.cs</DependentUpon>
     </Compile>
-    <Compile Include="modalAdicionarProcedimento.cs">
+    <Compile Include="Presentation\Forms\Procedimento\modalAdicionarProcedimento.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="modalAdicionarProcedimento.Designer.cs">
+    <Compile Include="Presentation\Forms\Procedimento\modalAdicionarProcedimento.Designer.cs">
       <DependentUpon>modalAdicionarProcedimento.cs</DependentUpon>
     </Compile>
-    <Compile Include="modalAdicionarProduto.cs">
+    <Compile Include="Presentation\Forms\Produtos\modalAdicionarProduto.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="modalAdicionarProduto.Designer.cs">
+    <Compile Include="Presentation\Forms\Produtos\modalAdicionarProduto.Designer.cs">
       <DependentUpon>modalAdicionarProduto.cs</DependentUpon>
     </Compile>
-    <Compile Include="modalAgendarOrcamento.cs">
+    <Compile Include="Presentation\Forms\Orcamento\modalAgendarOrcamento.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="modalAgendarOrcamento.Designer.cs">
+    <Compile Include="Presentation\Forms\Orcamento\modalAgendarOrcamento.Designer.cs">
       <DependentUpon>modalAgendarOrcamento.cs</DependentUpon>
     </Compile>
-    <Compile Include="modalCancelarAgendamento.cs">
+    <Compile Include="Presentation\Forms\Agendamento\modalCancelarAgendamento.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="modalCancelarAgendamento.Designer.cs">
+    <Compile Include="Presentation\Forms\Agendamento\modalCancelarAgendamento.Designer.cs">
       <DependentUpon>modalCancelarAgendamento.cs</DependentUpon>
     </Compile>
-    <Compile Include="modalConfirmarAgendamento.cs">
+    <Compile Include="Presentation\Forms\Agendamento\modalConfirmarAgendamento.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="modalConfirmarAgendamento.Designer.cs">
+    <Compile Include="Presentation\Forms\Agendamento\modalConfirmarAgendamento.Designer.cs">
       <DependentUpon>modalConfirmarAgendamento.cs</DependentUpon>
     </Compile>
-    <Compile Include="modalExcluirLancamentoFinanceiro.cs">
+    <Compile Include="Presentation\Forms\Financeiro\modalExcluirLancamentoFinanceiro.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="modalExcluirLancamentoFinanceiro.Designer.cs">
+    <Compile Include="Presentation\Forms\Financeiro\modalExcluirLancamentoFinanceiro.Designer.cs">
       <DependentUpon>modalExcluirLancamentoFinanceiro.cs</DependentUpon>
     </Compile>
-    <Compile Include="modalFiltrarCliente.cs">
+    <Compile Include="Presentation\Forms\Clientes\modalFiltrarCliente.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="modalFiltrarCliente.Designer.cs">
+    <Compile Include="Presentation\Forms\Clientes\modalFiltrarCliente.Designer.cs">
       <DependentUpon>modalFiltrarCliente.cs</DependentUpon>
     </Compile>
-    <Compile Include="modalFiltrarProcedimento.cs">
+    <Compile Include="Presentation\Forms\Procedimento\modalFiltrarProcedimento.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="modalFiltrarProcedimento.Designer.cs">
+    <Compile Include="Presentation\Forms\Procedimento\modalFiltrarProcedimento.Designer.cs">
       <DependentUpon>modalFiltrarProcedimento.cs</DependentUpon>
     </Compile>
-    <Compile Include="modalFiltrarProdutos.cs">
+    <Compile Include="Presentation\Forms\Produtos\modalFiltrarProdutos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="modalFiltrarProdutos.Designer.cs">
+    <Compile Include="Presentation\Forms\Produtos\modalFiltrarProdutos.Designer.cs">
       <DependentUpon>modalFiltrarProdutos.cs</DependentUpon>
     </Compile>
-    <Compile Include="modalListarClientes.cs">
+    <Compile Include="Presentation\Forms\Clientes\modalListarClientes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="modalListarClientes.Designer.cs">
+    <Compile Include="Presentation\Forms\Clientes\modalListarClientes.Designer.cs">
       <DependentUpon>modalListarClientes.cs</DependentUpon>
     </Compile>
-    <Compile Include="modalListarProcedimento.cs">
+    <Compile Include="Presentation\Forms\Procedimento\modalListarProcedimento.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="modalListarProcedimento.Designer.cs">
+    <Compile Include="Presentation\Forms\Procedimento\modalListarProcedimento.Designer.cs">
       <DependentUpon>modalListarProcedimento.cs</DependentUpon>
     </Compile>
-    <Compile Include="modalListarProduto.cs">
+    <Compile Include="Presentation\Forms\Produtos\modalListarProduto.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="modalListarProduto.Designer.cs">
+    <Compile Include="Presentation\Forms\Produtos\modalListarProduto.Designer.cs">
       <DependentUpon>modalListarProduto.cs</DependentUpon>
     </Compile>
-    <Compile Include="modalReagendarAgendamento.cs">
+    <Compile Include="Presentation\Forms\Agendamento\modalReagendarAgendamento.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="modalReagendarAgendamento.Designer.cs">
+    <Compile Include="Presentation\Forms\Agendamento\modalReagendarAgendamento.Designer.cs">
       <DependentUpon>modalReagendarAgendamento.cs</DependentUpon>
     </Compile>
-    <Compile Include="modalVisualizarAgendamento.cs">
+    <Compile Include="Presentation\Forms\Agendamento\modalVisualizarAgendamento.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="modalVisualizarAgendamento.Designer.cs">
+    <Compile Include="Presentation\Forms\Agendamento\modalVisualizarAgendamento.Designer.cs">
       <DependentUpon>modalVisualizarAgendamento.cs</DependentUpon>
     </Compile>
-    <Compile Include="modalVisualizarClientes.cs">
+    <Compile Include="Presentation\Forms\Clientes\modalVisualizarClientes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="modalVisualizarClientes.Designer.cs">
+    <Compile Include="Presentation\Forms\Clientes\modalVisualizarClientes.Designer.cs">
       <DependentUpon>modalVisualizarClientes.cs</DependentUpon>
     </Compile>
-    <Compile Include="modalVisualizarLancamentoFinanceiro.cs">
+    <Compile Include="Presentation\Forms\Financeiro\modalVisualizarLancamentoFinanceiro.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="modalVisualizarLancamentoFinanceiro.Designer.cs">
+    <Compile Include="Presentation\Forms\Financeiro\modalVisualizarLancamentoFinanceiro.Designer.cs">
       <DependentUpon>modalVisualizarLancamentoFinanceiro.cs</DependentUpon>
     </Compile>
-    <Compile Include="modalVisualizarOrcamento.cs">
+    <Compile Include="Presentation\Forms\Orcamento\modalVisualizarOrcamento.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="modalVisualizarOrcamento.Designer.cs">
+    <Compile Include="Presentation\Forms\Orcamento\modalVisualizarOrcamento.Designer.cs">
       <DependentUpon>modalVisualizarOrcamento.cs</DependentUpon>
     </Compile>
-    <Compile Include="modalVisualizarProcedimento.cs">
+    <Compile Include="Presentation\Forms\Procedimento\modalVisualizarProcedimento.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="modalVisualizarProcedimento.Designer.cs">
+    <Compile Include="Presentation\Forms\Procedimento\modalVisualizarProcedimento.Designer.cs">
       <DependentUpon>modalVisualizarProcedimento.cs</DependentUpon>
     </Compile>
-    <Compile Include="modalVisualizarProdutos.cs">
+    <Compile Include="Presentation\Forms\Produtos\modalVisualizarProdutos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="modalVisualizarProdutos.Designer.cs">
+    <Compile Include="Presentation\Forms\Produtos\modalVisualizarProdutos.Designer.cs">
       <DependentUpon>modalVisualizarProdutos.cs</DependentUpon>
     </Compile>
-    <Compile Include="Procedimento.cs" />
-    <Compile Include="Produto.cs" />
+    <Compile Include="Domain\Entities\Procedimento.cs" />
+    <Compile Include="Domain\Entities\Produto.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
@@ -238,108 +239,99 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="teste.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="teste.Designer.cs">
-      <DependentUpon>teste.cs</DependentUpon>
-    </Compile>
     <Compile Include="_inovaclinica_serverDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>_inovaclinica_serverDataSet.xsd</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="FormAgendamento.resx">
+    <EmbeddedResource Include="Presentation\Forms\Agendamento\FormAgendamento.resx">
       <DependentUpon>FormAgendamento.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormClientes.resx">
+    <EmbeddedResource Include="Presentation\Forms\Clientes\FormClientes.resx">
       <DependentUpon>FormClientes.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormFinanceiro.resx">
+    <EmbeddedResource Include="Presentation\Forms\Financeiro\FormFinanceiro.resx">
       <DependentUpon>FormFinanceiro.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormOrcamentos.resx">
+    <EmbeddedResource Include="Presentation\Forms\Orcamento\FormOrcamentos.resx">
       <DependentUpon>FormOrcamentos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormProcedimentos.resx">
+    <EmbeddedResource Include="Presentation\Forms\Procedimento\FormProcedimentos.resx">
       <DependentUpon>FormProcedimentos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormProdutos.resx">
+    <EmbeddedResource Include="Presentation\Forms\Produtos\FormProdutos.resx">
       <DependentUpon>FormProdutos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormTelaInicial.resx">
+    <EmbeddedResource Include="Presentation\Forms\Tela Inicial\FormTelaInicial.resx">
       <DependentUpon>FormTelaInicial.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="modalAdicionarCliente.resx">
+    <EmbeddedResource Include="Presentation\Forms\Clientes\modalAdicionarCliente.resx">
       <DependentUpon>modalAdicionarCliente.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="modalAdicionarLancamentoFinanceiro.resx">
+    <EmbeddedResource Include="Presentation\Forms\Financeiro\modalAdicionarLancamentoFinanceiro.resx">
       <DependentUpon>modalAdicionarLancamentoFinanceiro.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="modalAdicionarOrcamento.resx">
+    <EmbeddedResource Include="Presentation\Forms\Orcamento\modalAdicionarOrcamento.resx">
       <DependentUpon>modalAdicionarOrcamento.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="modalAdicionarProcedimento.resx">
+    <EmbeddedResource Include="Presentation\Forms\Procedimento\modalAdicionarProcedimento.resx">
       <DependentUpon>modalAdicionarProcedimento.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="modalAdicionarProduto.resx">
+    <EmbeddedResource Include="Presentation\Forms\Produtos\modalAdicionarProduto.resx">
       <DependentUpon>modalAdicionarProduto.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="modalAgendarOrcamento.resx">
+    <EmbeddedResource Include="Presentation\Forms\Orcamento\modalAgendarOrcamento.resx">
       <DependentUpon>modalAgendarOrcamento.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="modalCancelarAgendamento.resx">
+    <EmbeddedResource Include="Presentation\Forms\Agendamento\modalCancelarAgendamento.resx">
       <DependentUpon>modalCancelarAgendamento.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="modalConfirmarAgendamento.resx">
+    <EmbeddedResource Include="Presentation\Forms\Agendamento\modalConfirmarAgendamento.resx">
       <DependentUpon>modalConfirmarAgendamento.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="modalExcluirLancamentoFinanceiro.resx">
+    <EmbeddedResource Include="Presentation\Forms\Financeiro\modalExcluirLancamentoFinanceiro.resx">
       <DependentUpon>modalExcluirLancamentoFinanceiro.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="modalFiltrarCliente.resx">
+    <EmbeddedResource Include="Presentation\Forms\Clientes\modalFiltrarCliente.resx">
       <DependentUpon>modalFiltrarCliente.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="modalFiltrarProdutos.resx">
+    <EmbeddedResource Include="Presentation\Forms\Produtos\modalFiltrarProdutos.resx">
       <DependentUpon>modalFiltrarProdutos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="modalListarClientes.resx">
+    <EmbeddedResource Include="Presentation\Forms\Clientes\modalListarClientes.resx">
       <DependentUpon>modalListarClientes.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="modalListarProcedimento.resx">
+    <EmbeddedResource Include="Presentation\Forms\Procedimento\modalListarProcedimento.resx">
       <DependentUpon>modalListarProcedimento.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="modalListarProduto.resx">
+    <EmbeddedResource Include="Presentation\Forms\Produtos\modalListarProduto.resx">
       <DependentUpon>modalListarProduto.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="modalReagendarAgendamento.resx">
+    <EmbeddedResource Include="Presentation\Forms\Agendamento\modalReagendarAgendamento.resx">
       <DependentUpon>modalReagendarAgendamento.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="modalVisualizarAgendamento.resx">
+    <EmbeddedResource Include="Presentation\Forms\Agendamento\modalVisualizarAgendamento.resx">
       <DependentUpon>modalVisualizarAgendamento.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="modalVisualizarClientes.resx">
+    <EmbeddedResource Include="Presentation\Forms\Clientes\modalVisualizarClientes.resx">
       <DependentUpon>modalVisualizarClientes.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="modalVisualizarLancamentoFinanceiro.resx">
+    <EmbeddedResource Include="Presentation\Forms\Financeiro\modalVisualizarLancamentoFinanceiro.resx">
       <DependentUpon>modalVisualizarLancamentoFinanceiro.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="modalVisualizarOrcamento.resx">
+    <EmbeddedResource Include="Presentation\Forms\Orcamento\modalVisualizarOrcamento.resx">
       <DependentUpon>modalVisualizarOrcamento.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="modalVisualizarProcedimento.resx">
+    <EmbeddedResource Include="Presentation\Forms\Procedimento\modalVisualizarProcedimento.resx">
       <DependentUpon>modalVisualizarProcedimento.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="modalVisualizarProdutos.resx">
+    <EmbeddedResource Include="Presentation\Forms\Produtos\modalVisualizarProdutos.resx">
       <DependentUpon>modalVisualizarProdutos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="teste.resx">
-      <DependentUpon>teste.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -371,56 +363,62 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Img\verifique-o-circulo.png" />
-    <None Include="Resources\arrow-circle-right %283%29.png" />
-    <None Include="Resources\arrow-circle-right %282%29.png" />
-    <None Include="Resources\arrow-circle-right %285%29.png" />
-    <None Include="Resources\arrow-circle-right %281%29.png" />
-    <None Include="Resources\seringa %281%292.png" />
-    <None Include="Resources\seringa %281%291.png" />
-    <None Include="Resources\seringa.png" />
-    <None Include="Resources\seringa %281%29.png" />
-    <None Include="Resources\acordo-3.png" />
-    <None Include="Resources\calculadora.png" />
-    <None Include="Resources\relogio-calendario-fino.png" />
-    <None Include="Resources\relogio-calendario.png" />
-    <None Include="Resources\seta-alt-circulo-para-cima %281%29.png" />
-    <None Include="Resources\seta-alt-circulo-para-baixo %281%29.png" />
-    <None Include="Resources\seta-alt-circulo-para-cima2.png" />
-    <None Include="Resources\seta-alt-circulo-para-cima1.png" />
-    <None Include="Resources\seta-para-baixo-preenchida1.png" />
-    <None Include="Resources\seta-para-cima-preenchida1.png" />
-    <None Include="Resources\seta-para-baixo16.png" />
-    <None Include="Resources\seta-para-cima16.png" />
-    <None Include="Resources\seta-para-cima32.png" />
-    <None Include="Resources\seta-para-baixo32.png" />
-    <None Include="Resources\circulo-usd %283%29.png" />
-    <None Include="Resources\circulo-usd %282%29.png" />
-    <None Include="Resources\seta-alt-circulo-para-baixo.png" />
-    <None Include="Resources\seta-alt-circulo-para-cima.png" />
-    <None Include="Resources\circulo-usd %281%29.png" />
-    <None Include="Resources\circulo-usd.png" />
-    <None Include="Resources\usuarios %281%29.png" />
-    <None Include="Resources\usuarios.png" />
-    <None Include="Resources\caixa-aberta %283%29.png" />
-    <None Include="Resources\caixa-aberta %284%29.png" />
-    <None Include="Resources\moedas.png" />
-    <None Include="Resources\caixa-aberta %282%29.png" />
-    <None Include="Resources\do-utilizador %281%29.png" />
-    <None Include="Resources\caixa-aberta %281%29.png" />
-    <None Include="Resources\caixa-aberta.png" />
-    <None Include="Resources\caixas %281%29.png" />
-    <None Include="Resources\caixas.png" />
-    <None Include="Resources\botao-adicionar1.png" />
-    <None Include="Resources\lixeira-xmark.png" />
-    <None Include="Resources\botao-adicionar %281%291.png" />
-    <None Include="Resources\botao-adicionar.png" />
-    <None Include="Resources\botao-adicionar %281%29.png" />
-    <None Include="Resources\adicionar-produto %281%29.png" />
-    <None Include="Resources\adicionar-produto.png" />
-    <None Include="Resources\circulo-x %281%29.png" />
-    <None Include="Resources\circulo-x.png" />
-    <None Include="Resources\verifique-o-circulo.png" />
-    <None Include="Resources\adicionar-usuario.png" />
+    <None Include="Presentation\Resources\arrow-circle-right %283%29.png" />
+    <None Include="Presentation\Resources\arrow-circle-right %282%29.png" />
+    <None Include="Presentation\Resources\arrow-circle-right %285%29.png" />
+    <None Include="Presentation\Resources\arrow-circle-right %281%29.png" />
+    <None Include="Presentation\Resources\seringa %281%292.png" />
+    <None Include="Presentation\Resources\seringa %281%291.png" />
+    <None Include="Presentation\Resources\seringa.png" />
+    <None Include="Presentation\Resources\seringa %281%29.png" />
+    <None Include="Presentation\Resources\acordo-3.png" />
+    <None Include="Presentation\Resources\calculadora.png" />
+    <None Include="Presentation\Resources\relogio-calendario-fino.png" />
+    <None Include="Presentation\Resources\relogio-calendario.png" />
+    <None Include="Presentation\Resources\seta-alt-circulo-para-cima %281%29.png" />
+    <None Include="Presentation\Resources\seta-alt-circulo-para-baixo %281%29.png" />
+    <None Include="Presentation\Resources\seta-alt-circulo-para-cima2.png" />
+    <None Include="Presentation\Resources\seta-alt-circulo-para-cima1.png" />
+    <None Include="Presentation\Resources\seta-para-baixo-preenchida1.png" />
+    <None Include="Presentation\Resources\seta-para-cima-preenchida1.png" />
+    <None Include="Presentation\Resources\seta-para-baixo16.png" />
+    <None Include="Presentation\Resources\seta-para-cima16.png" />
+    <None Include="Presentation\Resources\seta-para-cima32.png" />
+    <None Include="Presentation\Resources\seta-para-baixo32.png" />
+    <None Include="Presentation\Resources\circulo-usd %283%29.png" />
+    <None Include="Presentation\Resources\circulo-usd %282%29.png" />
+    <None Include="Presentation\Resources\seta-alt-circulo-para-baixo.png" />
+    <None Include="Presentation\Resources\seta-alt-circulo-para-cima.png" />
+    <None Include="Presentation\Resources\circulo-usd %281%29.png" />
+    <None Include="Presentation\Resources\circulo-usd.png" />
+    <None Include="Presentation\Resources\usuarios %281%29.png" />
+    <None Include="Presentation\Resources\usuarios.png" />
+    <None Include="Presentation\Resources\caixa-aberta %283%29.png" />
+    <None Include="Presentation\Resources\caixa-aberta %284%29.png" />
+    <None Include="Presentation\Resources\moedas.png" />
+    <None Include="Presentation\Resources\caixa-aberta %282%29.png" />
+    <None Include="Presentation\Resources\do-utilizador %281%29.png" />
+    <None Include="Presentation\Resources\caixa-aberta %281%29.png" />
+    <None Include="Presentation\Resources\caixa-aberta.png" />
+    <None Include="Presentation\Resources\caixas %281%29.png" />
+    <None Include="Presentation\Resources\caixas.png" />
+    <None Include="Presentation\Resources\botao-adicionar1.png" />
+    <None Include="Presentation\Resources\lixeira-xmark.png" />
+    <None Include="Presentation\Resources\botao-adicionar %281%291.png" />
+    <None Include="Presentation\Resources\botao-adicionar.png" />
+    <None Include="Presentation\Resources\botao-adicionar %281%29.png" />
+    <None Include="Presentation\Resources\adicionar-produto %281%29.png" />
+    <None Include="Presentation\Resources\adicionar-produto.png" />
+    <None Include="Presentation\Resources\circulo-x %281%29.png" />
+    <None Include="Presentation\Resources\circulo-x.png" />
+    <None Include="Presentation\Resources\verifique-o-circulo.png" />
+    <None Include="Presentation\Resources\adicionar-usuario.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Application\Services\" />
+    <Folder Include="Infrastruture\Persistence\Repositories\" />
+    <Folder Include="NewFolder1\" />
+    <Folder Include="Presentation\ViewModels\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
