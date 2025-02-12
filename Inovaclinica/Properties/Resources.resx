@@ -119,156 +119,156 @@
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="seta-alt-circulo-para-cima" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\seta-alt-circulo-para-cima.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>..\Presentation\Resources\seta-alt-circulo-para-cima.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="circulo-usd" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\circulo-usd.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>..\Presentation\Resources\circulo-usd.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="seta-alt-circulo-para-cima2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\seta-alt-circulo-para-cima2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>..\Presentation\Resources\seta-alt-circulo-para-cima2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="usuarios" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\usuarios.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>..\Presentation\Resources\usuarios.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="caixa-aberta (4)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\caixa-aberta (4).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>..\Presentation\Resources\caixa-aberta (4).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="arrow-circle-right (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\arrow-circle-right (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>..\Presentation\Resources\arrow-circle-right (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="circulo-usd (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\circulo-usd (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>..\Presentation\Resources\circulo-usd (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="seta-para-baixo16" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\seta-para-baixo16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>..\Presentation\Resources\seta-para-baixo16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="seta-para-cima-preenchida" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\seta-para-cima-preenchida1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>..\Presentation\Resources\seta-para-cima-preenchida1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="adicionar-produto" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\adicionar-produto.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>..\Presentation\Resources\adicionar-produto.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="adicionar-produto (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\adicionar-produto (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>..\Presentation\Resources\adicionar-produto (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="circulo-usd (3)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\circulo-usd (3).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>..\Presentation\Resources\circulo-usd (3).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="LogoTemporario" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Img\LogoTemporario.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="relogio-calendario-fino" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\relogio-calendario-fino.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>..\Presentation\Resources\relogio-calendario-fino.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="caixas" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\caixas.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>..\Presentation\Resources\caixas.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="calculadora" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\calculadora.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>..\Presentation\Resources\calculadora.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="seta-para-baixo-preenchida" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\seta-para-baixo-preenchida1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>..\Presentation\Resources\seta-para-baixo-preenchida1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="seta-para-baixo32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\seta-para-baixo32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>..\Presentation\Resources\seta-para-baixo32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="botao-adicionar" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\botao-adicionar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>..\Presentation\Resources\botao-adicionar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="circulo-x" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\circulo-x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>..\Presentation\Resources\circulo-x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="moedas" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\moedas.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>..\Presentation\Resources\moedas.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="verifique-o-circulo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\verifique-o-circulo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>..\Presentation\Resources\verifique-o-circulo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="caixa-aberta (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\caixa-aberta (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>..\Presentation\Resources\caixa-aberta (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="botao-adicionar (1)1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\botao-adicionar (1)1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>..\Presentation\Resources\botao-adicionar (1)1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="botao-adicionar (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\botao-adicionar (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>..\Presentation\Resources\botao-adicionar (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="seta-para-cima32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\seta-para-cima32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>..\Presentation\Resources\seta-para-cima32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="seta-alt-circulo-para-baixo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\seta-alt-circulo-para-baixo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>..\Presentation\Resources\seta-alt-circulo-para-baixo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="caixas (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\caixas (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>..\Presentation\Resources\caixas (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="relogio-calendario" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\relogio-calendario.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>..\Presentation\Resources\relogio-calendario.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="acordo-3" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\acordo-3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>..\Presentation\Resources\acordo-3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="botao-adicionar1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\botao-adicionar1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>..\Presentation\Resources\botao-adicionar1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="seta-para-cima16" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\seta-para-cima16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>..\Presentation\Resources\seta-para-cima16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="circulo-x (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\circulo-x (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>..\Presentation\Resources\circulo-x (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="circulo-usd (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\circulo-usd (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>..\Presentation\Resources\circulo-usd (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="seringa (1)2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\seringa (1)2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>..\Presentation\Resources\seringa (1)2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="adicionar-usuario" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\adicionar-usuario.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>..\Presentation\Resources\adicionar-usuario.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="seringa (1)1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\seringa (1)1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>..\Presentation\Resources\seringa (1)1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="lixeira-xmark" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\lixeira-xmark.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>..\Presentation\Resources\lixeira-xmark.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="seringa" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\seringa.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>..\Presentation\Resources\seringa.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="seta-alt-circulo-para-cima1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\seta-alt-circulo-para-cima1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>..\Presentation\Resources\seta-alt-circulo-para-cima1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="arrow-circle-right (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\arrow-circle-right (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>..\Presentation\Resources\arrow-circle-right (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="seta-alt-circulo-para-baixo (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\seta-alt-circulo-para-baixo (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>..\Presentation\Resources\seta-alt-circulo-para-baixo (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="arrow-circle-right (5)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\arrow-circle-right (5).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>..\Presentation\Resources\arrow-circle-right (5).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="caixa-aberta" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\caixa-aberta.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>..\Presentation\Resources\caixa-aberta.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="seta-alt-circulo-para-cima (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\seta-alt-circulo-para-cima (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>..\Presentation\Resources\seta-alt-circulo-para-cima (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="usuarios (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\usuarios (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>..\Presentation\Resources\usuarios (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="caixa-aberta (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\caixa-aberta (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>..\Presentation\Resources\caixa-aberta (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="caixa-aberta (3)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\caixa-aberta (3).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>..\Presentation\Resources\caixa-aberta (3).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="seringa (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\seringa (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>..\Presentation\Resources\seringa (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="do-utilizador (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\do-utilizador (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>..\Presentation\Resources\do-utilizador (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="arrow-circle-right (3)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\arrow-circle-right (3).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>..\Presentation\Resources\arrow-circle-right (3).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
