@@ -33,6 +33,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Dapper, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Dapper.2.1.66\lib\net461\Dapper.dll</HintPath>
+    </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
     <Reference Include="System" />
@@ -55,7 +58,9 @@
     <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Application\Services\ProdutoService.cs" />
     <Compile Include="Domain\Repositories\IProdutoRepository.cs" />
+    <Compile Include="Infrastruture\Persistence\Repositories\ProdutoRepository.cs" />
     <Compile Include="Presentation\Forms\Agendamento\FormAgendamento.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -333,6 +338,7 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -415,9 +421,6 @@
     <None Include="Presentation\Resources\adicionar-usuario.png" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Application\Services\" />
-    <Folder Include="Infrastruture\Persistence\Repositories\" />
-    <Folder Include="NewFolder1\" />
     <Folder Include="Presentation\ViewModels\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Inovaclinica.Domain.Repositories {
-    internal interface IProdutoRepository {
+    public interface IProdutoRepository {
 
         IEnumerable<Produto> ListarProdutos();
         IEnumerable<Produto> BuscarProdutos(string consulta);
