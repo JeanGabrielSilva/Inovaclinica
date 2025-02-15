@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Dapper;
+using Inovaclinica.Application.DTOs.Produtos;
 
 namespace Inovaclinica.Infrastruture.Persistence.Repositories {
     public class ProdutoRepository : IProdutoRepository {
@@ -18,18 +19,18 @@ namespace Inovaclinica.Infrastruture.Persistence.Repositories {
             _connectionString = ConfigurationManager.ConnectionStrings["InovaclinicaConnectionString"].ConnectionString;
         }
 
-        public IEnumerable<Produto> ListarProdutos() {
+        public IEnumerable<ProdutoListagemDTO> ListarProdutos() {
             using (var connection = new SqlConnection(_connectionString)) {
-                connection.Open();
-                string query = "SELECT ProdutoID as Código, Nome as [Nome do Produto], Descricao as [Descrição do Produto], Preco as [Preço], Estoque, DataValidade as [Data de Validade] From Produtos WHERE Ativo = 1";
+                connection.Open();  
+                string query = "SELECT ProdutoID, Nome, Descricao, Preco, Estoque, DataValidade From Produtos WHERE Ativo = 1";
 
-                return connection.Query<Produto>(query);
+                return connection.Query<ProdutoListagemDTO>(query);
             }
         }
 
         public IEnumerable<Produto> BuscarProdutos(string consulta) {
             using (var connection = new SqlConnection(_connectionString)) {
-                string query = $"SELECT ProdutoID as Código, Nome as [Nome do Produto], Descricao as [Descrição do Produto], Preco as [Preço], Estoque, DataValidade as [Data de Validade] From Produtos WHERE Ativo = 1 AND Nome like '%{consulta}%'";
+                string query = $"SELECT ProdutoID, Nome, Descricao, Preco, Estoque, DataValidade From Produtos WHERE Ativo = 1 AND Nome like '%{consulta}%'";
                 return connection.Query<Produto>(query);
             }
         }
@@ -38,7 +39,7 @@ namespace Inovaclinica.Infrastruture.Persistence.Repositories {
             using (var connection = new SqlConnection(_connectionString)) {
                 connection.Open();
 
-                string query = "SELECT ProdutoID as Código, Nome as [Nome do Produto], Descricao as [Descrição do Produto], Preco as [Preço], Estoque, DataValidade as [Data de Validade] From Produtos WHERE Ativo = 1";
+                string query = "SELECT ProdutoID, Nome, Descricao, Preco, Estoque, DataValidade From Produtos WHERE Ativo = 1";
 
                 if (!string.IsNullOrEmpty(nome)) {
                     query += "AND Nome Like @Nome";

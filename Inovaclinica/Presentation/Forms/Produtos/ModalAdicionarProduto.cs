@@ -74,7 +74,7 @@ namespace Inovaclinica
                         nomeProduto.Clear();
                         descricaoProduto.Clear();
                         dataValidadeProduto.Clear();
-                        _formProdutos.LoadData();
+                        //_formProdutos.LoadData();
                     }
                     else
                     {

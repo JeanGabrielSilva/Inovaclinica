@@ -1,4 +1,5 @@
-﻿using Inovaclinica.Domain.Repositories;
+﻿using Inovaclinica.Application.DTOs.Produtos;
+using Inovaclinica.Domain.Repositories;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,7 +16,7 @@ namespace Inovaclinica.Application.Services {
         }
 
 
-        public IEnumerable<Produto> ListarProdutos() {
+        public IEnumerable<ProdutoListagemDTO> ListarProdutos() {
             return _produtoRepository.ListarProdutos();
         }
 

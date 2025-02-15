@@ -328,7 +328,7 @@ namespace Inovaclinica
             // Criando um objeto para armazenar os dados temporariamente
             var produto = new Produto
             {
-                Codigo = codigo,
+                ProdutoID = codigo,
                 Nome = nome,
                 Quantidade = quantidade,
                 ValorUnitario = valorUnitario,
@@ -519,7 +519,7 @@ namespace Inovaclinica
                         {
                             command.Parameters.AddWithValue("@OrcamentoID", orcamentoId);
                             command.Parameters.AddWithValue("@Tipo", "Produto");
-                            command.Parameters.AddWithValue("@IDReferencia", produto.Codigo);
+                            command.Parameters.AddWithValue("@IDReferencia", produto.ProdutoID);
                             command.Parameters.AddWithValue("@Quantidade", produto.Quantidade);
                             command.Parameters.AddWithValue("@Preco", produto.ValorUnitario);
 

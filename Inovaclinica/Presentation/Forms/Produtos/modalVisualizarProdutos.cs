@@ -91,7 +91,7 @@ namespace Inovaclinica
                 if (rowsAffected > 0)
                 {
                     MessageBox.Show("Produto atualizado com sucesso!");
-                    _formProdutos.LoadData();
+                    //_formProdutos.LoadData();
                 }
                 else
                 {

@@ -1,25 +1,33 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Configuration;
-using System.Data;
-using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using Inovaclinica.Application.Services;
+using Inovaclinica.Domain.Repositories;
+using Inovaclinica.Helpers;
+using Inovaclinica.Infrastruture.Persistence.Repositories;
+using System;
+    using System.Collections.Generic;
+    using System.ComponentModel;
+    using System.Configuration;
+    using System.Data;
+    using System.Data.SqlClient;
+    using System.Drawing;
+    using System.Linq;
+    using System.Text;
+    using System.Threading.Tasks;
+    using System.Windows.Forms;
 
 namespace Inovaclinica
 {
     public partial class FormProdutos : Form
     {
         private modalFiltrarProdutos _modalFiltrarProdutos;
+        private readonly ProdutoService _produtoService;
         public FormProdutos()
         {
             InitializeComponent();
+
+            DataGridViewHelper.CustomizeDataGridView(DataGridProdutos);
+            IProdutoRepository produtoRepository = new ProdutoRepository();
+            _produtoService = new ProdutoService(produtoRepository);
             this.Load += new EventHandler(FormProdutos_Load);
-            CustomizeDataGridView();
 
             // Associa eventos para detectar mudança no checkbox - Adicionado para mudança de cor ao marcar a checkbox
             DataGridProdutos.CellValueChanged += new DataGridViewCellEventHandler(DataGridProdutos_CellValueChanged);
@@ -30,7 +38,24 @@ namespace Inovaclinica
 
         private void FormProdutos_Load(object sender, EventArgs e)
         {
-            LoadData();
+            var produtos = _produtoService.ListarProdutos();
+            DataGridProdutos.DataSource = produtos.ToList();
+            
+            ConfigurarDataGridView();   
+        }
+
+        private void ConfigurarDataGridView()
+        {
+            // Define os cabeçalhos das colunas
+            DataGridProdutos.Columns["ProdutoID"].HeaderText = "Código";
+            DataGridProdutos.Columns["Nome"].HeaderText = "Nome";
+            DataGridProdutos.Columns["Descricao"].HeaderText = "Descrição";
+            DataGridProdutos.Columns["Preco"].HeaderText = "Preço";
+            DataGridProdutos.Columns["Estoque"].HeaderText = "Estoque";
+            DataGridProdutos.Columns["DataValidade"].HeaderText = "Data de Validade";
+
+            // Aplica a formatação das cores
+            DataGridViewHelper.ApplyRowColors(DataGridProdutos);
         }
 
         private void btnAbrirModalAdicionarProduto_Click(object sender, EventArgs e)
@@ -40,123 +65,8 @@ namespace Inovaclinica
             modaladicionarproduto.ShowDialog();
         }
 
-        public void LoadData()
-        {
-            // Obtém a string de conexão a partir do App.config
-            string connectionString = ConfigurationManager.ConnectionStrings["InovaclinicaConnectionString"].ConnectionString;
-
-            // Query SQL para buscar os dados da tabela 'Produtos'
-            string query = "SELECT ProdutoID as Código, Nome as [Nome do Produto], Descricao as [Descrição do Produto], Preco as [Preço], Estoque, DataValidade as [Data de Validade] From Produtos WHERE Ativo = 1";
-
-            // Usa SqlConnection e SqlDataAdapter para preencher o DataGridView
-            using (SqlConnection connection = new SqlConnection(connectionString))
-            {
-                try
-                {
-                    // Abre a conexão
-                    connection.Open();
-
-                    // SqlDataAdapter para executar a consulta e preencher os dados
-                    SqlDataAdapter dataAdapter = new SqlDataAdapter(query, connection);
-
-                    // Cria um DataTable para armazenar os dados
-                    DataTable dataTable = new DataTable();
-
-                    // Preenche o DataTable com os dados retornados da consulta
-                    dataAdapter.Fill(dataTable);
-
-                    // Formatar o CPF antes de exibir
-
-                    // Define a fonte de dados do DataGridView como o DataTable
-                    DataGridProdutos.DataSource = dataTable;
-
-                    ApplyRowColors();
-
-                    foreach (DataGridViewColumn column in DataGridProdutos.Columns)
-                    {
-                        if (column.Name != "checkBoxColumn")
-                        {
-                            column.ReadOnly = true;
-                        }
-                    }
-
-
-                }
-                catch (Exception ex)
-                {
-                    // Exibe uma mensagem de erro caso ocorra uma exceção
-                    MessageBox.Show($"Erro ao carregar dados: {ex.Message}");
-                }
-            }
-        }
-
-        private void CustomizeDataGridView()
-        {
-            // Cores
-            Color headerColor = Color.FromArgb(45, 45, 45);
-            Color rowColor1 = Color.White;
-            Color rowColor2 = Color.FromArgb(211, 211, 211);
-            Color selectionBackColor = Color.FromArgb(153, 102, 255);
-            Color selectionForeColor = Color.White;
-            Color gridColor = Color.LightGray;
-
-            // Aplicando as cores
-            DataGridProdutos.ColumnHeadersDefaultCellStyle.BackColor = headerColor;
-            DataGridProdutos.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
-            DataGridProdutos.RowTemplate.DefaultCellStyle.BackColor = rowColor1; // Cor padrão para todas as linhas
-            DataGridProdutos.AlternatingRowsDefaultCellStyle.BackColor = rowColor2; // Cor alternada para linhas pares
-            DataGridProdutos.DefaultCellStyle.SelectionBackColor = selectionBackColor;
-            DataGridProdutos.DefaultCellStyle.SelectionForeColor = selectionForeColor;
-            DataGridProdutos.GridColor = gridColor;
-
-            // Fontes
-            DataGridProdutos.Font = new Font("Arial", 10F); // Aumentei o tamanho da fonte para melhor legibilidade
-            DataGridProdutos.ColumnHeadersDefaultCellStyle.Font = new Font("Arial", 10F, FontStyle.Bold);
-
-            // Layout
-            DataGridProdutos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            DataGridProdutos.Dock = DockStyle.Fill; // Ocupa todo o espaço disponível
-            DataGridProdutos.RowHeadersVisible = false;
-            DataGridProdutos.EnableHeadersVisualStyles = false;
-            DataGridProdutos.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
-            DataGridProdutos.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
-            DataGridProdutos.BackgroundColor = SystemColors.Control;
-            DataGridProdutos.RowTemplate.Height = 40;
-
-            // Adicionando uma coluna de seleção (opcional)
-            DataGridViewCheckBoxColumn checkBoxColumn = new DataGridViewCheckBoxColumn();
-            checkBoxColumn.HeaderText = "Selecionar";
-            checkBoxColumn.Name = "checkBoxColumn";
-            DataGridProdutos.Columns.Insert(0, checkBoxColumn);
-
-            // Impede a alteração no layout do datagrid
-
-            DataGridProdutos.AllowUserToAddRows = false;
-            DataGridProdutos.AllowUserToDeleteRows = false;
-            DataGridProdutos.AllowUserToOrderColumns = false;
-            DataGridProdutos.AllowUserToResizeRows = false;
-            DataGridProdutos.AllowUserToResizeColumns = false;
-
-            // Ação necessário para conseguir selecionar a linha para visualização dos clientes
-            DataGridProdutos.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-
-        }
-
         // Metodo criado para que o datagrid fique com cores alternadas
-        private void ApplyRowColors()
-        {
-            for (int i = 0; i < DataGridProdutos.Rows.Count; i++)
-            {
-                if (i % 2 == 0) // Se for uma linha par
-                {
-                    DataGridProdutos.Rows[i].DefaultCellStyle.BackColor = Color.White;
-                }
-                else // Se for uma linha ímpar
-                {
-                    DataGridProdutos.Rows[i].DefaultCellStyle.BackColor = Color.FromArgb(230, 230, 255);
-                }
-            }
-        }
+      
 
         //
         private void DataGridProdutos_CellValueChanged(object sender, DataGridViewCellEventArgs e)
@@ -201,7 +111,7 @@ namespace Inovaclinica
 
         private void atualizarGridProdutos_Click(object sender, EventArgs e)
         {
-            LoadData();
+            _produtoService.ListarProdutos();
             barraPesquisaProdutos.Clear();
         }
 
@@ -239,7 +149,7 @@ namespace Inovaclinica
                     DataGridProdutos.DataSource = dataTable;
 
                     // Aplica as cores das linhas
-                    ApplyRowColors();
+                    //ApplyRowColors();
                 }
                 catch (Exception ex)
                 {
@@ -264,7 +174,7 @@ namespace Inovaclinica
             if (DataGridProdutos.SelectedRows.Count > 0)
             {
                 var selectedRow = DataGridProdutos.SelectedRows[0];
-                string produtoID = selectedRow.Cells["Código"].Value.ToString();
+                string produtoID = selectedRow.Cells["ProdutoID"].Value.ToString();
 
 
                 modalVisualizarProdutos modalvisualizarprodutos = new modalVisualizarProdutos(produtoID, this);
@@ -348,7 +258,7 @@ namespace Inovaclinica
                         // Preenche o DataGridView e aplica as cores
                         DataGridProdutos.DataSource = dataTable;
                         DataGridProdutos.Refresh();
-                        ApplyRowColors();
+                        //ApplyRowColors();
                     }
                     else
                     {
@@ -360,9 +270,6 @@ namespace Inovaclinica
                     MessageBox.Show("Erro ao filtrar os dados: " + ex.Message);
                 }
             }
-        }
-
-        private void FormProdutos_Load_1(object sender, EventArgs e) {
 
         }
     }
