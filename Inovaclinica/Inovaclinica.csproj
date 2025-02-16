@@ -58,6 +58,7 @@
     <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Application\DTOs\Produtos\ProdutoFiltroDTO.cs" />
     <Compile Include="Application\DTOs\Produtos\ProdutoListagemDTO.cs" />
     <Compile Include="Application\DTOs\Produtos\ProdutoOrcamentoDTO.cs" />
     <Compile Include="Application\Services\ProdutoService.cs" />

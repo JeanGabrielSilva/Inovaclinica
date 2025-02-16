@@ -20,12 +20,12 @@ namespace Inovaclinica.Application.Services {
             return _produtoRepository.ListarProdutos();
         }
 
-        public IEnumerable<Produto> BuscarProdutos(string consulta) {
+        public IEnumerable<ProdutoListagemDTO> BuscarProdutos(string consulta) {
             return _produtoRepository.BuscarProdutos(consulta);
         }
 
-        public IEnumerable<Produto> FiltrosProdutos(string nome, string estoque, string preco) {
-            return _produtoRepository.FiltrarProdutos(nome, estoque, preco);
+        public IEnumerable<ProdutoListagemDTO> FiltrosProdutos(ProdutoFiltroDTO filtro) {
+            return _produtoRepository.FiltrarProdutos(filtro);
         }
 
     }

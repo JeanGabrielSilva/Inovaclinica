@@ -9,8 +9,8 @@ namespace Inovaclinica.Domain.Repositories {
     public interface IProdutoRepository {
 
         IEnumerable<ProdutoListagemDTO> ListarProdutos();
-        IEnumerable<Produto> BuscarProdutos(string consulta);
-        IEnumerable<Produto> FiltrarProdutos(string nome, string estoque, string preco);
+        IEnumerable<ProdutoListagemDTO> BuscarProdutos(string consulta);
+        IEnumerable<ProdutoListagemDTO> FiltrarProdutos(ProdutoFiltroDTO filtro);
 
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿  using Inovaclinica.Application.DTOs.Produtos;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,29 +13,43 @@ namespace Inovaclinica
 {
     public partial class modalFiltrarProdutos : Form
     {
-        public string filtroNomeProduto { get; set; }
-        public string filtroEstoque { get; set; }
-        public string filtroPreco { get; set; }
-        public string filtroDataValidade { get; set; }
+        
+        public ProdutoFiltroDTO Filtros {  get; private set; }
 
-        private FormProdutos _formProdutos;
-        public modalFiltrarProdutos(FormProdutos formProdutos)
-        {
+        public modalFiltrarProdutos() {
             InitializeComponent();
-            _formProdutos = formProdutos;
         }
 
-        private void btnCancelarFiltroProduto_Click(object sender, EventArgs e)
-        {
+        private void btnFiltrarProdutos_Click(object sender, EventArgs e) {
+
+            string DataInicial = ConverterParaFormatoBanco(maskFiltrarProdutosDataInicio.Text);
+            string DataFinal = ConverterParaFormatoBanco(maskFiltrarProdutosDataFinal.Text);
+
+            Filtros = new ProdutoFiltroDTO {
+                NomeProduto = textBoxFiltrarProdutosNome.Text,
+                Estoque = filtrarEstoqueProduto.Text,
+                Preco = filtrarPrecoProduto.Text,
+                DataInicial = DataInicial,
+                DataFinal = DataFinal,
+            };
+
+            this.DialogResult = DialogResult.OK;
+        }
+
+        private string ConverterParaFormatoBanco(string dataComBarras) {
+            if (DateTime.TryParseExact(dataComBarras, "dd/MM/yyyy", null,
+                                       System.Globalization.DateTimeStyles.None, out DateTime data)) {
+                return data.ToString("yyyy-MM-dd");
+            }
+            return null; // Retorna null caso a conversão falhe
+        }
+
+
+
+        private void btnCancelarFiltroProduto_Click(object sender, EventArgs e) {
             this.Close();
         }
 
-        private void btnFiltrarProdutos_Click(object sender, EventArgs e)
-        {
-            filtroNomeProduto = textBoxFiltrarProdutosNome.Text;
-            filtroEstoque = filtrarEstoqueProduto.Text;
-            filtroPreco = filtrarPrecoProduto.Text;
-            this.Close();
-        }
+
     }
 }

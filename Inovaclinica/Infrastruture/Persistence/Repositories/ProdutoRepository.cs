@@ -28,35 +28,57 @@ namespace Inovaclinica.Infrastruture.Persistence.Repositories {
             }
         }
 
-        public IEnumerable<Produto> BuscarProdutos(string consulta) {
+        public IEnumerable<ProdutoListagemDTO> BuscarProdutos(string consulta) {
             using (var connection = new SqlConnection(_connectionString)) {
                 string query = $"SELECT ProdutoID, Nome, Descricao, Preco, Estoque, DataValidade From Produtos WHERE Ativo = 1 AND Nome like '%{consulta}%'";
-                return connection.Query<Produto>(query);
+                return connection.Query<ProdutoListagemDTO>(query);
             }
         }
 
-        public IEnumerable<Produto> FiltrarProdutos(string nome , string estoque, string preco) {
+        public IEnumerable<ProdutoListagemDTO> FiltrarProdutos(ProdutoFiltroDTO filtro) {
             using (var connection = new SqlConnection(_connectionString)) {
-                connection.Open();
+                // Construindo a consulta base
+                string query = "SELECT ProdutoID, Nome, Descricao, Preco, Estoque, DataValidade FROM Produtos WHERE 1 = 1";
 
-                string query = "SELECT ProdutoID, Nome, Descricao, Preco, Estoque, DataValidade From Produtos WHERE Ativo = 1";
-
-                if (!string.IsNullOrEmpty(nome)) {
-                    query += "AND Nome Like @Nome";
+                // Adicionando filtros dinamicamente
+                if (!string.IsNullOrEmpty(filtro.NomeProduto)) {
+                    query += " AND Nome LIKE @Nome";
                 }
 
-                if (!string.IsNullOrEmpty(estoque)) {
-                    query += "AND Estoque LIKE @Estoque";
+                if (!string.IsNullOrEmpty(filtro.Estoque)) {
+                    query += " AND Estoque = @Estoque";
                 }
 
-                if (!string.IsNullOrEmpty(preco)) {
-                    query += "AND Preco Like @Preco";
+                if (!string.IsNullOrEmpty(filtro.Preco)) {
+                    query += " AND Preco = @Preco";
                 }
 
-                return connection.Query<Produto>(query);
+                if (!string.IsNullOrEmpty(filtro.DataInicial) && !string.IsNullOrEmpty(filtro.DataFinal)) {
+                    query += " AND DataValidade BETWEEN @DataInicial AND @DataFinal";
+                } else {
+                    if (!string.IsNullOrEmpty(filtro.DataInicial)) {
+                        query += " AND DataValidade >= @DataInicial";
+                    }
 
+                    if (!string.IsNullOrEmpty(filtro.DataFinal)) {
+                        query += " AND DataValidade <= @DataFinal";
+                    }
+                }
+
+                // Parâmetros para a consulta
+                var parameters = new {
+                    Nome = $"%{filtro.NomeProduto}%",
+                    Estoque = int.TryParse(filtro.Estoque, out int estoque) ? estoque : (int?)null, // Parâmetro numérico para Estoque
+                    Preco = decimal.TryParse(filtro.Preco, out decimal preco) ? preco : (decimal?)null, // Parâmetro numérico para Preço
+                    DataInicial = filtro.DataInicial,
+                    DataFinal = filtro.DataFinal
+                };
+
+                // Executando a consulta com Dapper
+                return connection.Query<ProdutoListagemDTO>(query, parameters);
             }
-
         }
+
+
     }
 }
