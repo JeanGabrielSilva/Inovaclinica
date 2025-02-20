@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Inovaclinica.Application.DTOs.Produtos;
+using Inovaclinica.Application.Services;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Configuration;
@@ -17,6 +19,7 @@ namespace Inovaclinica
     public partial class modalAdicionarProduto : Form
     {
         private FormProdutos _formProdutos;
+        public Produto ProdutoAdicionar { get; private set; }
         public modalAdicionarProduto(FormProdutos formProdutos)
         {
             InitializeComponent();
@@ -26,17 +29,26 @@ namespace Inovaclinica
 
         private void btnAdicionarProduto_Click(object sender, EventArgs e)
         {
-            string NomeProduto = nomeProduto.Text;
-            string DescricaoDetalhadaProduto = descricaoProduto.Text;
-            string EstoqueProduto = estoqueProduto.Text;
-            int Estoque = int.Parse(EstoqueProduto);
-            string dataComBarras = dataValidadeProduto.Text;
-            DateTime data = DateTime.ParseExact(dataComBarras, "dd/MM/yyyy", null);
-            string DataValidade = data.ToString("yyyy-MM-dd"); 
-            decimal PrecoProduto = precoProduto.Value;
+            // Se o campo estiver vazio, a data será null
+            DateTime? dataValidade = string.IsNullOrWhiteSpace(dataValidadeProduto.Text)
+        ? (DateTime?)null
+        : DateTime.ParseExact(dataValidadeProduto.Text, "dd/MM/yyyy", null);
 
+            // Criando o objeto corretamente
+            ProdutoAdicionar = new Produto
+            {
+                Nome = nomeProduto.Text,
+                Descricao = descricaoProduto.Text,
+                Preco = precoProduto.Value,
+                DataCadastro = DateTime.Now,
+                DataValidade = dataValidade,  // Aqui fica armazenado como DateTime?
+                Estoque = int.Parse(estoqueProduto.Text),
+            };
 
-            AdicionarProduto(NomeProduto, DescricaoDetalhadaProduto, Estoque, DataValidade, PrecoProduto);
+            // Exibindo a data formatada no formato correto
+            MessageBox.Show($"Data formatada: {ProdutoAdicionar.DataValidade}");
+
+            //AdicionarProduto(NomeProduto, DescricaoDetalhadaProduto, Estoque, DataValidade, PrecoProduto);
         }
 
         private void AdicionarProduto(string NomeProduto, string DescricaoDetalhadaProduto, int Estoque, string DataValidade, decimal PrecoProduto)

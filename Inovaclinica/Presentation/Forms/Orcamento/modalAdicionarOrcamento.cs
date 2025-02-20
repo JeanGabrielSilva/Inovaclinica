@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Inovaclinica.Application.DTOs.Produtos;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Configuration;
@@ -17,7 +18,7 @@ namespace Inovaclinica
         private FormOrcamentos _formOrcamentos;
         private string clienteSelecionadoCodigo;
         private List<Procedimento> listaProcedimentos = new List<Procedimento>();
-        private List<Produto> listaProdutos = new List<Produto>();
+        private List<ProdutoOrcamentoDTO> listaProdutos = new List<ProdutoOrcamentoDTO>();
 
         public modalAdicionarOrcamento(FormOrcamentos formOrcamentos)
         {
@@ -326,7 +327,7 @@ namespace Inovaclinica
         private void AdicionarProdutoAoGrid(int codigo, string nome, int quantidade, decimal valorUnitario)
         {
             // Criando um objeto para armazenar os dados temporariamente
-            var produto = new Produto
+            var produto = new ProdutoOrcamentoDTO
             {
                 ProdutoID = codigo,
                 Nome = nome,
@@ -486,7 +487,7 @@ namespace Inovaclinica
             return novoOrcamentoId;
         }
 
-        private void InserirItensOrcamento(int orcamentoId, List<Procedimento> procedimentos, List<Produto> produtos)
+        private void InserirItensOrcamento(int orcamentoId, List<Procedimento> procedimentos, List<ProdutoOrcamentoDTO> produtos)
         {
             
             string connectionString = ConfigurationManager.ConnectionStrings["InovaclinicaConnectionString"].ConnectionString;

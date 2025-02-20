@@ -16,10 +16,5 @@ namespace Inovaclinica
         public DateTime? DataValidade { get; set; }
         public DateTime? DataCadastro { get; set; }
         public bool Ativo { get; set; }
-
-
-        public int Quantidade { get; set; }
-        public decimal ValorUnitario { get; set; }
-        public decimal ValorTotal => Quantidade * ValorUnitario;
     }
 }
