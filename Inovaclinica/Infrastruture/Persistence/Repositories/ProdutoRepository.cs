@@ -80,5 +80,20 @@ namespace Inovaclinica.Infrastruture.Persistence.Repositories {
         }
 
 
+        public void AdicionarProduto(ProdutoAdicionarDTO produto) {
+            using(var connection = new SqlConnection(_connectionString)) {
+                string query = "INSERT INTO Produtos (Nome, Descricao, Preco, DataCadastro, DataValidade, Estoque) VALUES (@Nome, @Descricao, @Preco, @DataCadastro, @DataValidade, @Estoque)";
+                connection.Execute(query, new {
+
+                    Nome = produto.Nome,
+                    Descricao = produto.Descricao,
+                    Preco = produto.Preco,
+                    DataCadastro = produto.DataCadastro,
+                    DataValidade = produto.DataValidade?.ToString("yyyy-MM-dd"),
+                    Estoque = produto.Estoque,
+                });
+
+            }
+        }
     }
 }

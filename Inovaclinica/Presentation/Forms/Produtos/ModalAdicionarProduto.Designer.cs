@@ -319,9 +319,7 @@
             this.dataValidadeProduto.Mask = "00/00/0000";
             this.dataValidadeProduto.Name = "dataValidadeProduto";
             this.dataValidadeProduto.Size = new System.Drawing.Size(79, 24);
-            this.dataValidadeProduto.TabIndex = 45;
-            this.dataValidadeProduto.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.maskedTextBox2_MaskInputRejected);
-            // 
+            this.dataValidadeProduto.TabIndex = 45;            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -343,7 +341,6 @@
             this.label1.Size = new System.Drawing.Size(153, 22);
             this.label1.TabIndex = 38;
             this.label1.Text = "Nome do Produto";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // nomeProduto
             // 
@@ -351,7 +348,6 @@
             this.nomeProduto.Name = "nomeProduto";
             this.nomeProduto.Size = new System.Drawing.Size(348, 24);
             this.nomeProduto.TabIndex = 37;
-            this.nomeProduto.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // lblNome
             // 

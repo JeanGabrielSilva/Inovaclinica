@@ -56,15 +56,19 @@ namespace Inovaclinica
 
         private void btnAbrirModalAdicionarProduto_Click(object sender, EventArgs e)
         {
-            modalAdicionarProduto modaladicionarproduto = new modalAdicionarProduto(this);
+            modalAdicionarProduto modaladicionarproduto = new modalAdicionarProduto(this, _produtoService);
             modaladicionarproduto.StartPosition = FormStartPosition.CenterParent;
             modaladicionarproduto.ShowDialog();
+
+            DataGridProdutos.DataSource = _produtoService.ListarProdutos().ToList();
+            ConfigurarDataGridView();
         }
       
 
         private void atualizarGridProdutos_Click(object sender, EventArgs e)
         {
-            _produtoService.ListarProdutos();
+            DataGridProdutos.DataSource = _produtoService.ListarProdutos().ToList();
+            ConfigurarDataGridView();
             barraPesquisaProdutos.Clear();
         }
 

@@ -28,5 +28,9 @@ namespace Inovaclinica.Application.Services {
             return _produtoRepository.FiltrarProdutos(filtro);
         }
 
+        public void AdicionarProduto(ProdutoAdicionarDTO produto) { 
+            _produtoRepository.AdicionarProduto(produto);
+        }
+
     }
 }
