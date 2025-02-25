@@ -48,6 +48,7 @@ namespace Inovaclinica
                     Descricao = descricaoProduto.Text,
                     Preco = precoProduto.Value,
                     DataValidade = dataValidade,
+                    DataCadastro = DateTime.Now,
                     Estoque = int.Parse(estoqueProduto.Text)
                 };
 

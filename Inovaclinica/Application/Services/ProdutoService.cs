@@ -32,5 +32,13 @@ namespace Inovaclinica.Application.Services {
             _produtoRepository.AdicionarProduto(produto);
         }
 
+        public ProdutoDetalhadoDTO ObterProdutoPorId(int produtoId) {
+            return _produtoRepository.ObterPorId(produtoId);
+        }
+
+        public void AtualizarProduto(ProdutoAtualizarDTO produto) {
+            _produtoRepository.AtualizarProduto(produto);
+        }
+
     }
 }

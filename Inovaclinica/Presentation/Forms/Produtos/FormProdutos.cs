@@ -106,14 +106,14 @@ namespace Inovaclinica
         {
             if (DataGridProdutos.SelectedRows.Count > 0)
             {
-                var selectedRow = DataGridProdutos.SelectedRows[0];
-                string produtoID = selectedRow.Cells["ProdutoID"].Value.ToString();
-
-
-                modalVisualizarProdutos modalvisualizarprodutos = new modalVisualizarProdutos(produtoID, this);
-                modalvisualizarprodutos.Text = "Visualizar Cliente";
-                modalvisualizarprodutos.StartPosition = FormStartPosition.CenterParent;
-                modalvisualizarprodutos.ShowDialog();
+                int produtoId = Convert.ToInt32(DataGridProdutos.SelectedRows[0].Cells["ProdutoID"].Value);
+                var produtoService = new ProdutoService(new ProdutoRepository()); // Injeção de dependência pode ser melhorada
+                var modal = new modalVisualizarProdutos(this, produtoId, produtoService);
+                modal.Text = "Visualizar Produtos";
+                modal.StartPosition = FormStartPosition.CenterParent;
+                modal.ShowDialog();
+                DataGridProdutos.DataSource = _produtoService.ListarProdutos().ToList();
+                ConfigurarDataGridView();
             }
             else
             {

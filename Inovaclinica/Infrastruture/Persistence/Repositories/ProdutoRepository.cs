@@ -95,5 +95,23 @@ namespace Inovaclinica.Infrastruture.Persistence.Repositories {
 
             }
         }
+
+        public ProdutoDetalhadoDTO ObterPorId(int produtoId) {
+            using (var connection = new SqlConnection(_connectionString)) {
+                string query = "SELECT ProdutoID, Nome, Descricao, Preco, DataCadastro, DataValidade, Estoque, Ativo FROM Produtos WHERE ProdutoID = @ProdutoID";
+
+                return connection.QueryFirstOrDefault<ProdutoDetalhadoDTO>(query, new { ProdutoID = produtoId });
+            }
+        }
+
+
+        public void AtualizarProduto(ProdutoAtualizarDTO produto) {
+            using (var connection = new SqlConnection(_connectionString)) {
+                string query = "UPDATE Produtos SET Nome = @Nome, Descricao = @Descricao, Preco = @Preco, DataCadastro = @DataCadastro, DataValidade = @DataValidade, Estoque = @Estoque, Ativo = @Ativo WHERE ProdutoID = @ProdutoID";
+                connection.Execute(query, produto);
+            }
+        }
+
+
     }
 }

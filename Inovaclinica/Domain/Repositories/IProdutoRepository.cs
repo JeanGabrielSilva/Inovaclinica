@@ -12,5 +12,9 @@ namespace Inovaclinica.Domain.Repositories {
         IEnumerable<ProdutoListagemDTO> BuscarProdutos(string consulta);
         IEnumerable<ProdutoListagemDTO> FiltrarProdutos(ProdutoFiltroDTO filtro);
         void AdicionarProduto(ProdutoAdicionarDTO produto);
+        ProdutoDetalhadoDTO ObterPorId(int produtoId);
+        void AtualizarProduto(ProdutoAtualizarDTO produto);
+
+
     }
 }
