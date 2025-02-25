@@ -60,6 +60,7 @@
   <ItemGroup>
     <Compile Include="Application\DTOs\Produtos\ProdutoAdicionarDTO.cs" />
     <Compile Include="Application\DTOs\Produtos\ProdutoDetalhadoDTO.cs" />
+    <Compile Include="Application\DTOs\Produtos\ProdutoAtualizarDTO.cs" />
     <Compile Include="Application\DTOs\Produtos\ProdutoFiltroDTO.cs" />
     <Compile Include="Application\DTOs\Produtos\ProdutoListagemDTO.cs" />
     <Compile Include="Application\DTOs\Produtos\ProdutoOrcamentoDTO.cs" />

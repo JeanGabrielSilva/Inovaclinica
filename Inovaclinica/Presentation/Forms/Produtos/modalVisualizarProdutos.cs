@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Inovaclinica.Application.DTOs.Produtos;
+using Inovaclinica.Application.Services;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Configuration;
@@ -16,47 +18,38 @@ namespace Inovaclinica
     public partial class modalVisualizarProdutos : Form
     {
         private FormProdutos _formProdutos;
-        public modalVisualizarProdutos(string produtoID, FormProdutos formProdutos)
+        private readonly ProdutoService _produtoService;
+        private readonly int _produtoId;
+
+        public modalVisualizarProdutos(FormProdutos formProdutos, int produtoId, ProdutoService produtoService)
         {
             InitializeComponent();
-            BuscarProdutoPeloID(produtoID);
             tabPage1.Text = "Informações";
             tabPage2.Text = "Histórico";
-            _formProdutos = formProdutos;    
+            _formProdutos = formProdutos;
+            _produtoService = produtoService;
+            _produtoId = produtoId;
+            CarregarDadosProduto();
         }
 
-
-
-        private void BuscarProdutoPeloID(string produtoID)
-        {
-            string connectionString = ConfigurationManager.ConnectionStrings["InovaclinicaConnectionString"].ConnectionString;
-
-            using (SqlConnection connection = new SqlConnection(connectionString))
-            {
-                string query = $"SELECT ProdutoID, Nome, Descricao, DataValidade, Ativo, DataCadastro, Preco, Estoque From Produtos WHERE ProdutoID = @ProdutoID";
-
-                SqlCommand command = new SqlCommand(query, connection);
-                command.Parameters.AddWithValue("@ProdutoID", produtoID); // Utiliza parâmetros para evitar SQL Injection
-
-                connection.Open();
-                SqlDataReader reader = command.ExecuteReader();
-
-                if (reader.Read())
-                {
-                    labelProdutoID.Text = reader["ProdutoID"].ToString();
-                    lblNomeProduto.Text = reader["Nome"].ToString();
-                    nomeProduto.Text = reader["Nome"].ToString();
-                    descricaoProduto.Text = reader["Descricao"].ToString();
-                    DateTime dataValidade = Convert.ToDateTime(reader["DataValidade"]);
-                    dataValidadeProduto.Text = dataValidade.ToString("dd/MM/yyyy");
-                    checkBoxAtivoProduto.Checked = reader.GetBoolean(reader.GetOrdinal("Ativo"));
-                    DateTime dataCadastro = Convert.ToDateTime(reader["DataCadastro"]);
-                    labelDataCadastro.Text = dataCadastro.ToString("dd/MM/yyyy HH:mm");
-                    precoProduto.Text = reader["Preco"].ToString();
-                    estoqueProduto.Text = reader["Estoque"].ToString();
-                }
+        private void CarregarDadosProduto() {
+            var produto = _produtoService.ObterProdutoPorId(_produtoId);
+            if (produto != null) {
+                nomeProduto.Text = produto.Nome;
+                lblNomeProduto.Text = produto.Nome;
+                descricaoProduto.Text = produto.Descricao;
+                precoProduto.Text = produto.Preco.ToString(); // Formato de moeda
+                estoqueProduto.Text = produto.Estoque.ToString();
+                dataValidadeProduto.Text = produto.DataValidade?.ToString("dd/MM/yyyy");
+                checkBoxAtivoProduto.Checked = produto.Ativo;
+                labelDataCadastro.Text = produto.DataCadastro.ToString("dd/MM/yyyy HH:mm");
+                labelProdutoID.Text = produto.ProdutoID.ToString();
+            } else {
+                MessageBox.Show("Produto não encontrado!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                this.Close();
             }
         }
+
 
         private void btnCancelarAlteracaoProduto_Click(object sender, EventArgs e)
         {
@@ -65,39 +58,20 @@ namespace Inovaclinica
 
         private void btnSalvarAlteracaoProduto_Click(object sender, EventArgs e)
         {
-            string connectionString = ConfigurationManager.ConnectionStrings["InovaclinicaConnectionString"].ConnectionString;
 
-           
+            var produtoEditado = new ProdutoAtualizarDTO {
+                ProdutoID = int.Parse(labelProdutoID.Text),
+                Nome = nomeProduto.Text,
+                Descricao = descricaoProduto.Text,
+                Preco = decimal.Parse(precoProduto.Text),
+                DataCadastro = DateTime.Now,
+                DataValidade = DateTime.Parse(dataValidadeProduto.Text),
+                Estoque = int.Parse(estoqueProduto.Text),
+                Ativo = checkBoxAtivoProduto.Checked,
+            };
 
-            using (SqlConnection connection = new SqlConnection(connectionString))
-            {
-                DateTime dataValidade = DateTime.ParseExact(dataValidadeProduto.Text, "dd/MM/yyyy", CultureInfo.InvariantCulture);
-                string dataValidadeFormatada = dataValidade.ToString("yyyy-MM-dd");
-                string query = $"UPDATE Produtos SET Nome = @NomeProduto, Descricao = @DescricaoDetalhadaProduto, Estoque = @Estoque, DataValidade = @DataValidade, Ativo = @Ativo, Preco = @PrecoProduto WHERE ProdutoID = @ProdutoID";
-                SqlCommand command = new SqlCommand(query, connection);
-                command.Parameters.AddWithValue("@NomeProduto", nomeProduto.Text);
-                command.Parameters.AddWithValue("@DescricaoDetalhadaProduto", descricaoProduto.Text);
-                command.Parameters.AddWithValue("@Estoque", estoqueProduto.Text);
-                command.Parameters.AddWithValue("@DataValidade", dataValidadeFormatada);
-                decimal PrecoProduto = precoProduto.Value;
-                command.Parameters.AddWithValue("@PrecoProduto", PrecoProduto);
-                command.Parameters.AddWithValue("@ProdutoID", labelProdutoID.Text);
-                command.Parameters.AddWithValue("@Ativo", checkBoxAtivoProduto.Checked);
-
-
-                connection.Open();
-                int rowsAffected = command.ExecuteNonQuery(); // Executa o comando SQL
-
-                if (rowsAffected > 0)
-                {
-                    MessageBox.Show("Produto atualizado com sucesso!");
-                    //_formProdutos.LoadData();
-                }
-                else
-                {
-                    MessageBox.Show("Nenhuma alteração foi feita.");
-                }
-            }
+            _produtoService.AtualizarProduto(produtoEditado);
+            MessageBox.Show("Produto atualizado com sucesso!");
         }
 
         private void modalVisualizarProdutos_Load(object sender, EventArgs e) {
